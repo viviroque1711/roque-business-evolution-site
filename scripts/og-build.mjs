@@ -17,7 +17,7 @@ const fontCss = (f) => {
 const b64 = (p) => 'data:image/png;base64,' + fs.readFileSync(path.join(root, p)).toString('base64');
 
 const PAGES = {
-  home: ['Agência de IA, sites e software', 'Roque Business Evolution'],
+  home: ['Criação de sites e desenvolvimento de software', 'Roque Business Evolution'],
   'agencia-de-ia': ['Agência de IA', 'Agentes de inteligência artificial e automação'],
   'criacao-de-sites': ['Criação de sites profissionais', 'Com SEO e foco em conversão'],
   seo: ['SEO e busca com IA', 'Para ser encontrado no Google e nas buscas com IA'],

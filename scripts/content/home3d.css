@@ -145,3 +145,6 @@
 @media (prefers-reduced-motion: reduce) {
   .h3d-hero h1 .t, .h3d-stack-rot, .h3d-plane, .h3d-laptop, .h3d-phone, .h3d-portrait, .h3d-steps li { transition: none !important; }
 }
+
+/* o celular tem 370 px de altura: a cena precisa de espaço para ele não cobrir o título abaixo */
+.h3d-scene:has(> .h3d-phone) { height: 430px; }
