@@ -119,7 +119,7 @@
   .h3d-steps { grid-template-columns: 1fr; transform: none; gap: 8px; }
   .h3d-steps li { height: auto !important; border-radius: 8px; box-shadow: 6px 0 0 0 var(--gold) inset; padding: .9rem 1rem .9rem 1.4rem; display: grid; grid-template-columns: auto 1fr; gap: .1rem 1rem; }
   .h3d-steps b { grid-row: span 2; align-self: center; }
-  .h3d-steps.wait li { transform: translateX(-12px); opacity: .3; transition: transform .8s, opacity .8s; }
+  .h3d-steps.wait li { transform: translateX(-12px); transition: transform .8s; }
 }
 .h3d-steps.in li { transform: none; opacity: 1; }
 
