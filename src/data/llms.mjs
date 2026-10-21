@@ -1,10 +1,10 @@
 // Gera o /llms.txt (índice em texto simples para assistentes de IA). Uma frase por página dizendo o que ela entrega.
 export const LLMS_INTRO = {
   title: 'Roque Business Evolution',
-  summary: 'Roque Business Evolution é uma agência de IA (AgencyAI), de criação de sites e de desenvolvimento de software, com consultoria de transformação digital, SEO, GEO e AEO, CRM e dados. Empresa: Roque Business Evolution Serviços Ltda., CNPJ 47.308.584/0001-20. Fundadora: Viviane Roque.',
+  summary: 'Roque Business Evolution é uma empresa de transformação digital: criação de sites, desenvolvimento de site profissional, empresa de desenvolvimento de software e de sistemas personalizados, SEO, GEO e AEO, além de agentes de IA, automação, CRM e dados. Empresa: Roque Business Evolution Serviços Ltda., CNPJ 47.308.584/0001-20. Fundadora: Viviane Roque.',
   about: 'Contato pelo WhatsApp +55 11 97396-7161 ou contato@roquebusinessevolution.com. Produtos: Aurora Premium (https://aurorapremium.com/), sistema de agendamento e gestão para salões, barbearias, clínicas, spas e pet shops, e EngageBot (https://engagebot.com.br/), atendimento com IA no WhatsApp e no site. Fundadora: https://viviroque.com.br/. Não prometemos posição no Google nem citação em respostas de IA.',
 };
-export const GROUPS = ['Serviços de estratégia e transformação', 'Presença digital, SEO e conteúdo', 'Aquisição, vendas e relacionamento', 'Agência de IA, automação, software e dados', 'Para quem, método e contratação', 'Produtos', 'Blog e glossário', 'Empresa e contato'];
+export const GROUPS = ['Serviços de estratégia e transformação', 'Presença digital, SEO e conteúdo', 'Aquisição, vendas e relacionamento', 'IA, automação, software e dados', 'Para quem, método e contratação', 'Produtos', 'Blog e glossário', 'Empresa e contato'];
 const S = (group, entrega) => ({ group, entrega });
 export const LLMS = {
   '/transformacao-digital/': S(0, 'Consultoria de transformação digital: diagnóstico, PMO, governança, segurança de IA e capacitação de equipes.'),
@@ -39,7 +39,7 @@ export const LLMS = {
   '/blog/': S(6, 'Guias sobre agência de IA, GEO e AEO, SEO, automação, sites e adoção segura de IA.'),
   '/glossario/': S(6, 'Glossário de termos de IA, SEO, GEO, AEO, automação, CRM, SaaS e transformação digital.'),
   '/perguntas-frequentes/': S(6, 'Perguntas frequentes sobre a empresa, agência de IA, sites e SEO, contratação e produtos.'),
-  '/': S(7, 'Apresenta a Roque Business Evolution, seus serviços, produtos, metodologia e a fundadora.'),
+  '/': S(7, 'Criação de sites, desenvolvimento de site profissional, desenvolvimento de software e sistemas personalizados, SEO, GEO e AEO: apresenta a Roque Business Evolution, serviços, produtos, metodologia e a fundadora.'),
   '/sobre/': S(7, 'Missão, visão, pilares de atuação, produtos, empresa responsável e a fundadora Viviane Roque.'),
   '/proposito-e-impacto/': S(7, 'Propósito, missão, visão e compromisso com pequenos e médios empreendedores.'),
   '/contato/': S(7, 'Como falar com a Roque Business Evolution: WhatsApp, e-mail e Instagram.'),

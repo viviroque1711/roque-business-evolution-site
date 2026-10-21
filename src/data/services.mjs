@@ -32,7 +32,7 @@ export const SERVICE_GROUPS = [
   {
     id: 'ia-software', name: 'IA, automação, software e dados',
     items: [
-      { href: '/agencia-de-ia/', label: 'Agência de IA', short: 'Agentes de inteligência artificial e automação.' },
+      { href: '/agencia-de-ia/', label: 'Agentes de IA', short: 'Agentes de inteligência artificial e automação.' },
       { href: '/automacao-de-processos/', label: 'Automação de processos', short: 'Fluxos e integrações que eliminam tarefas repetitivas.' },
       { href: '/desenvolvimento-de-software/', label: 'Desenvolvimento de software', short: 'Aplicações web, MVPs, dashboards e integrações sob medida.' },
       { href: '/dados-e-business-intelligence/', label: 'Dados e business intelligence', short: 'Dashboards, indicadores e relatórios automáticos.' },

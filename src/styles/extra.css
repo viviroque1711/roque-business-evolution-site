@@ -121,3 +121,23 @@
 @media print { .rv-on .rv { opacity: 1 !important; transform: none !important; } .rd { display: none; } }
 
 .duo h3 a { display: inline-flex; align-items: center; min-height: 44px; }
+
+/* Cabeçalho preto em todas as páginas (21/10/2026): mesma identidade da primeira dobra da home. */
+.hd { background: #000; border-bottom-color: rgba(255, 255, 255, .1); }
+.hd.is-scrolled { box-shadow: 0 8px 24px rgba(0, 0, 0, .35); }
+.hd :focus-visible { outline-color: #C08A1E; }
+.hd-logo, .hd-word b { color: #fff; }
+.hd-word small { color: #C08A1E; }
+.hd-list a:not(.btn), .hd-sub-btn, .hd-burger { color: #fff; }
+.hd-list a:not(.btn):hover, .hd-list a[aria-current="page"], .hd-sub-btn:hover { border-bottom-color: #C08A1E; }
+.hd .hd-cta { background: #C08A1E; border-color: #C08A1E; color: #000; font-weight: 700; }
+.hd .hd-cta:hover { background: #D69C2A; border-color: #D69C2A; }
+@media (min-width: 1100px) {
+  .hd-sub a, .hd-list .hd-sub a:not(.btn) { color: var(--ink); border-bottom: 0; }
+  .hd-col-h { color: var(--gold-text); }
+}
+@media (max-width: 1099.98px) {
+  .hd-nav { background: #000; }
+  .hd-sub a, .hd-list .hd-sub a:not(.btn) { color: #C9D1DE; }
+  .hd-col-h { color: #C08A1E; }
+}

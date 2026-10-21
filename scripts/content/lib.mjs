@@ -87,6 +87,8 @@ export function writePage(page) {
   fs.writeFileSync(path.join(d, 'head.html'), headHtml(page));
   fs.writeFileSync(path.join(d, 'body.html'), page.body.trim() + '\n');
   fs.writeFileSync(path.join(d, 'ld.json'), JSON.stringify({ '@context': 'https://schema.org', '@graph': page.graph }, null, 1) + '\n');
+  if (page.css) fs.writeFileSync(path.join(d, 'style.css'), page.css.trim() + '\n');
+  else fs.rmSync(path.join(d, 'style.css'), { force: true });
   if (page.js) fs.writeFileSync(path.join(d, 'script.js'), page.js.trim() + '\n');
   else fs.rmSync(path.join(d, 'script.js'), { force: true });
   written.push(page);
@@ -100,7 +102,7 @@ export function finish() {
   const hashFile = path.join(root, 'scripts', 'content', '.hashes.json');
   const hashes = fs.existsSync(hashFile) ? JSON.parse(fs.readFileSync(hashFile, 'utf8')) : {};
   for (const p of written) {
-    const h = JSON.stringify([p.title, p.description, p.body, p.graph]);
+    const h = JSON.stringify([p.title, p.description, p.body, p.graph, p.css || '', p.js || '']);
     if (hashes[p.path] !== h) { hashes[p.path] = h; lm[p.path] = TODAY; }
   }
   fs.writeFileSync(lmFile, JSON.stringify(Object.fromEntries(Object.entries(lm).sort()), null, 2) + '\n');

@@ -1,0 +1,147 @@
+/* HOME 3D (aprovada pela Viviane em 21/10/2026). Primeira dobra em preto absoluto (pedido dela, sobrepõe a regra
+   "sem preto puro"): o H1 são os cinco termos comerciais, a rolagem acende um de cada vez e o globo do logo gira sempre
+   em câmera lenta. Cada seção tem um objeto em 3D; nada de texto corrido. Classes com prefixo h3d- para não colidir
+   com site.css nem com o motion.js. */
+.h3d { --black: #000; --gold-l: #C08A1E; --steel: #8FA3BF; --dim: rgba(255,255,255,.5); --t2: #B9C3D1; }
+.h3d-black { background: #000; color: #fff; }
+.h3d-black h2 { color: #fff; }
+.h3d-sec { padding: clamp(3.5rem, 9vw, 7rem) 0; overflow: hidden; }
+.h3d-sec h2 { max-width: 24ch; }
+.h3d-one { margin: 1rem 0 0; font-size: clamp(1.1rem, 1.8vw, 1.3rem); max-width: 46ch; color: var(--slate); }
+.h3d-black .h3d-one { color: #B9C3D1; }
+.h3d .btn.gold { background: #C08A1E; border-color: #C08A1E; color: #000; font-weight: 700; font-size: 1.1rem; min-height: 52px; }
+.h3d .btn.gold:hover { background: #D69C2A; border-color: #D69C2A; }
+.h3d-black :focus-visible { outline-color: #C08A1E; }
+
+/* 1. primeira dobra */
+.h3d-hero { position: relative; background: #000; color: #fff; }
+.js .h3d-hero.pin { height: 330vh; }
+.h3d-stage { position: relative; overflow: hidden; isolation: isolate; }
+.js .h3d-hero.pin .h3d-stage { position: sticky; top: var(--hd); height: calc(100vh - var(--hd)); height: calc(100svh - var(--hd)); }
+.h3d-field { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+.h3d-stage-in { max-width: var(--wrap); margin: 0 auto; padding: clamp(1.5rem, 4vh, 3rem) 1.25rem; height: 100%; display: grid; gap: 1rem; align-content: center; align-items: center; }
+@media (min-width: 900px) { .h3d-stage-in { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 2.5rem; } }
+.h3d-copy { min-width: 0; }
+.h3d-hero h1 { margin: 0; max-width: none; color: #fff; font: 500 clamp(1.3rem, 3vw, 2.4rem)/1.18 var(--display); letter-spacing: -.015em; }
+.h3d-hero h1 .t { display: block; position: relative; padding: .28em 0 .28em 1.5em; color: #fff; text-decoration: none; transition: color 1.2s ease, transform 1.2s cubic-bezier(.2,.7,.2,1); text-wrap: balance; }
+.h3d-hero h1 .t::before { content: ""; position: absolute; left: .2em; top: .78em; width: .55em; height: .55em; border-radius: 50%; border: 2px solid #C08A1E; background: #000; transition: background-color 1.2s ease, box-shadow 1.2s ease; }
+.h3d-hero h1 .t::after { content: ""; position: absolute; left: calc(.475em - 1px); top: 1.33em; bottom: -.76em; width: 2px; background: rgba(168,112,0,.45); }
+.h3d-hero h1 .t:last-child::after { display: none; }
+.h3d-hero.pin h1 .t { color: var(--dim); }
+.h3d-hero.pin h1 .t.seen { color: rgba(255,255,255,.75); }
+.h3d-hero.pin h1 .t.on { color: #fff; transform: translateX(.35em); }
+.h3d-hero h1 .t.on::before, .h3d-hero h1 .t.seen::before { background: #C08A1E; }
+.h3d-hero h1 .t.on::before { box-shadow: 0 0 22px 4px rgba(192,138,30,.6); }
+.h3d-hero h1 .t:hover { color: #fff; }
+.h3d-hero .btn { margin-top: clamp(1rem, 3vh, 2rem); }
+.h3d-globe { position: relative; min-width: 0; aspect-ratio: 1; width: min(100%, 470px); justify-self: center; }
+.h3d-globe canvas { width: 100%; height: 100%; display: block; }
+@media (max-width: 899px) {
+  .h3d-stage-in { align-content: start; padding-top: 1rem; }
+  .h3d-globe { order: -1; width: min(60vw, 250px, 30vh); }
+  .h3d-hero h1 { font-size: clamp(1.05rem, 4.6vw, 1.5rem); }
+}
+
+/* 2. três camadas */
+.h3d-layers { display: grid; gap: 2.5rem; align-items: center; }
+@media (min-width: 900px) { .h3d-layers { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 3rem; } }
+.h3d-stack { position: relative; height: clamp(320px, 42vw, 440px); perspective: 1100px; }
+.h3d-stack-rot { position: absolute; inset: 0; transform-style: preserve-3d; transform: rotateX(58deg) rotateZ(-38deg); transition: transform 1.4s cubic-bezier(.2,.7,.2,1); }
+.h3d-plane { position: absolute; left: 50%; top: 50%; width: min(70%, 340px); aspect-ratio: 1.25; translate: -50% -50%; transform-style: preserve-3d; border-radius: 10px; border: 1.5px solid #C08A1E; background: rgba(192,138,30,.07); box-shadow: 0 0 40px rgba(192,138,30,.12) inset; transition: transform 1.4s cubic-bezier(.2,.7,.2,1), background-color .6s, border-color .6s; display: grid; place-items: center; }
+.h3d-plane:nth-child(2) { transform: translateZ(80px); }
+.h3d-plane:nth-child(3) { transform: translateZ(160px); }
+.h3d-stack.open .h3d-plane:nth-child(2) { transform: translateZ(120px); }
+.h3d-stack.open .h3d-plane:nth-child(3) { transform: translateZ(240px); }
+.h3d-plane.lit { background: rgba(192,138,30,.22); border-color: #E0A93C; }
+.h3d-plane span { font: 500 clamp(1rem, 2vw, 1.35rem) var(--display); color: #fff; transform: rotateZ(38deg); }
+.h3d-plane i { position: absolute; width: 9px; height: 9px; border-radius: 50%; background: #C08A1E; }
+.h3d-plane i:nth-of-type(1) { left: -5px; top: -5px; } .h3d-plane i:nth-of-type(2) { right: -5px; top: -5px; }
+.h3d-plane i:nth-of-type(3) { left: -5px; bottom: -5px; } .h3d-plane i:nth-of-type(4) { right: -5px; bottom: -5px; }
+.h3d-layer-list { list-style: none; margin: 1.8rem 0 0; padding: 0; display: grid; gap: .5rem; }
+.h3d-layer-list a { display: grid; grid-template-columns: auto 1fr; gap: .2rem 1rem; padding: .9rem 1rem; border-radius: 6px; border: 1px solid rgba(255,255,255,.12); color: #fff; text-decoration: none; transition: border-color .4s, background-color .4s; }
+.h3d-layer-list a:hover, .h3d-layer-list a:focus-visible, .h3d-layer-list a.lit { border-color: #C08A1E; background: rgba(192,138,30,.08); }
+.h3d-layer-list b { grid-row: span 2; font: 500 1.6rem/1 var(--display); color: #C08A1E; align-self: center; }
+.h3d-layer-list strong { font: 600 1.1rem var(--body); }
+.h3d-layer-list small { color: #B9C3D1; font-size: .98rem; }
+
+/* 3. anel de serviços (sem JavaScript, vira uma grade comum) */
+.h3d-ring-wrap { margin-top: 2.5rem; }
+.h3d-ring { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1rem; }
+.h3d-tile { display: flex; flex-direction: column; justify-content: space-between; gap: 1.2rem; height: 100%; min-height: 230px; padding: 1.3rem; border-radius: 10px; text-decoration: none; background: #fff; color: var(--ink); border: 1px solid var(--line); transition: border-color .4s, box-shadow .4s; }
+.h3d-tile:hover, .h3d-tile:focus-visible { border-color: var(--gold); box-shadow: 0 16px 40px rgba(22,35,58,.16); }
+.h3d-tile svg { width: 46px; height: 46px; }
+.h3d-tile strong { display: block; font: 500 1.08rem/1.25 var(--display); }
+.h3d-tile small { display: block; margin-top: .45rem; color: var(--slate); font-size: .95rem; line-height: 1.35; }
+.h3d-ring-ctrl { display: none; }
+.h3d-ring-wrap.on { position: relative; height: clamp(320px, 38vw, 400px); perspective: 900px; touch-action: pan-y; cursor: grab; }
+.h3d-ring-wrap.on .h3d-ring { display: block; position: absolute; left: 50%; top: 50%; width: 0; height: 0; transform-style: preserve-3d; }
+.h3d-ring-wrap.on .h3d-ring > li { position: absolute; width: 230px; height: 250px; left: -115px; top: -125px; backface-visibility: hidden; }
+.h3d-ring-wrap.on + .h3d-ring-ctrl { display: flex; justify-content: center; gap: .75rem; margin-top: 1.5rem; }
+.h3d-ring-ctrl button { min-width: 48px; min-height: 48px; border-radius: 50%; border: 1.5px solid var(--ink); background: transparent; color: var(--ink); font: 600 1.2rem var(--body); cursor: pointer; }
+.h3d-ring-ctrl button:hover { background: var(--ink); color: #fff; }
+@media (max-width: 599px) { .h3d-ring-wrap.on .h3d-ring > li { width: 190px; height: 230px; left: -95px; top: -115px; } }
+
+/* 4. produtos em aparelhos */
+.h3d-prods { display: grid; gap: 3rem; margin-top: 2.5rem; }
+@media (min-width: 900px) { .h3d-prods { grid-template-columns: 7fr 5fr; align-items: end; } }
+.h3d-prod { display: grid; gap: 1.2rem; }
+.h3d-prod h3 { margin: 0; color: #fff; font: 500 1.4rem var(--display); }
+.h3d-prod ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: .5rem; }
+.h3d-prod li { padding: .45rem .8rem; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; font-size: .95rem; color: #B9C3D1; }
+.h3d-prod a.more { color: #C08A1E; font-weight: 600; justify-self: start; }
+.h3d-scene { perspective: 1200px; height: clamp(250px, 30vw, 340px); display: grid; place-items: center; }
+.h3d-laptop { width: min(100%, 520px); transform-style: preserve-3d; transform: rotateX(16deg) rotateY(-22deg); transition: transform 1.2s cubic-bezier(.2,.7,.2,1); }
+.h3d-laptop .scr { aspect-ratio: 16/10; border-radius: 12px 12px 0 0; border: 10px solid #1C2433; border-bottom-width: 14px; background: #0B1220; padding: 10px; display: grid; grid-template-columns: 60px 1fr; gap: 8px; }
+.h3d-laptop .base { height: 16px; margin: 0 -6%; border-radius: 0 0 14px 14px; background: #1F2836; transform: rotateX(70deg); transform-origin: top; }
+.h3d-cal-side { display: grid; gap: 6px; align-content: start; }
+.h3d-cal-side i { height: 8px; border-radius: 3px; background: rgba(143,163,191,.35); }
+.h3d-cal-side i:first-child { background: #C08A1E; }
+.h3d-cal { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; }
+.h3d-cal i { border-radius: 4px; background: rgba(143,163,191,.12); min-height: 22px; }
+.h3d-cal i.a { background: rgba(192,138,30,.75); } .h3d-cal i.b { background: rgba(143,163,191,.55); } .h3d-cal i.c { background: rgba(192,138,30,.35); }
+.h3d-phone { width: 180px; aspect-ratio: 9/18.5; border-radius: 28px; border: 9px solid #1C2433; background: #0B1220; padding: 16px 10px; display: flex; flex-direction: column; gap: 8px; justify-content: flex-end; transform: rotateY(24deg) rotateX(10deg); transform-style: preserve-3d; transition: transform 1.2s cubic-bezier(.2,.7,.2,1); }
+.h3d-bubble { max-width: 82%; padding: 6px 9px; border-radius: 12px; font-size: .72rem; line-height: 1.3; }
+.h3d-bubble.in { background: rgba(143,163,191,.22); color: #fff; align-self: flex-start; border-bottom-left-radius: 3px; }
+.h3d-bubble.out { background: #C08A1E; color: #000; align-self: flex-end; border-bottom-right-radius: 3px; }
+
+/* 5. escada de sete etapas */
+.h3d-steps-scene { perspective: 1400px; margin-top: 3rem; }
+.h3d-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px; align-items: end; transform: rotateX(28deg); transform-origin: bottom; }
+.h3d-steps li { border-radius: 8px 8px 0 0; background: #fff; border: 1px solid var(--line); padding: .9rem .7rem; display: flex; flex-direction: column; gap: .4rem; transform-origin: bottom; transition: transform 1s cubic-bezier(.2,.7,.2,1); box-shadow: 0 -6px 0 0 var(--gold) inset; }
+.h3d-steps b { font: 500 1.6rem/1 var(--display); color: var(--gold-text); }
+.h3d-steps strong { font: 600 1rem/1.25 var(--body); color: var(--ink); }
+.h3d-steps small { color: var(--slate); font-size: .88rem; line-height: 1.3; }
+.h3d-steps li:nth-child(1){height:140px}.h3d-steps li:nth-child(2){height:165px}.h3d-steps li:nth-child(3){height:190px}.h3d-steps li:nth-child(4){height:215px}.h3d-steps li:nth-child(5){height:240px}.h3d-steps li:nth-child(6){height:265px}.h3d-steps li:nth-child(7){height:290px}
+.h3d-steps.wait li { transform: scaleY(.15); }
+.h3d-steps.in li:nth-child(2){transition-delay:.12s}.h3d-steps.in li:nth-child(3){transition-delay:.24s}.h3d-steps.in li:nth-child(4){transition-delay:.36s}.h3d-steps.in li:nth-child(5){transition-delay:.48s}.h3d-steps.in li:nth-child(6){transition-delay:.6s}.h3d-steps.in li:nth-child(7){transition-delay:.72s}
+.h3d-more { display: inline-block; margin-top: 1.6rem; font-weight: 600; }
+@media (max-width: 899px) {
+  .h3d-steps { grid-template-columns: 1fr; transform: none; gap: 8px; }
+  .h3d-steps li { height: auto !important; border-radius: 8px; box-shadow: 6px 0 0 0 var(--gold) inset; padding: .9rem 1rem .9rem 1.4rem; display: grid; grid-template-columns: auto 1fr; gap: .1rem 1rem; }
+  .h3d-steps b { grid-row: span 2; align-self: center; }
+  .h3d-steps.wait li { transform: translateX(-12px); opacity: .3; transition: transform .8s, opacity .8s; }
+}
+.h3d-steps.in li { transform: none; opacity: 1; }
+
+/* 6. fundadora */
+.h3d-founder { display: grid; gap: 2.5rem; align-items: center; }
+@media (min-width: 900px) { .h3d-founder { grid-template-columns: 5fr 7fr; gap: 4rem; } }
+.h3d-pscene { perspective: 1000px; display: grid; place-items: center; }
+.h3d-portrait { position: relative; width: min(100%, 360px); transform-style: preserve-3d; transform: rotateY(-10deg) rotateX(4deg); transition: transform .9s cubic-bezier(.2,.7,.2,1); }
+.h3d-pnet { position: absolute; inset: -18% -24%; width: 148%; height: 136%; transform: translateZ(-80px); }
+.h3d-portrait img { position: relative; display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); transform: translateZ(30px); box-shadow: 0 30px 60px rgba(22,35,58,.18); }
+.h3d-marks { list-style: none; margin: 1.8rem 0 0; padding: 0; border-left: 2px solid var(--gold); }
+.h3d-marks li { position: relative; padding: .7rem 0 .7rem 1.5rem; display: grid; grid-template-columns: 4.6rem 1fr; gap: 1rem; align-items: baseline; }
+.h3d-marks li::before { content: ""; position: absolute; left: -7px; top: 1.05rem; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 2px solid var(--gold); }
+.h3d-marks b { font: 500 1.05rem var(--display); color: var(--gold-text); font-variant-numeric: tabular-nums; }
+.h3d-marks span { color: var(--ink); font-weight: 500; }
+
+/* 8. final */
+.h3d-final-in { display: grid; gap: 2rem; align-items: center; }
+@media (min-width: 900px) { .h3d-final-in { grid-template-columns: 7fr 5fr; } }
+.h3d-final canvas { width: 100%; max-width: 320px; aspect-ratio: 1; justify-self: center; display: block; }
+.h3d-final .btn { margin-top: 1.8rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .h3d-hero h1 .t, .h3d-stack-rot, .h3d-plane, .h3d-laptop, .h3d-phone, .h3d-portrait, .h3d-steps li { transition: none !important; }
+}

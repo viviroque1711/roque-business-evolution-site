@@ -20,4 +20,6 @@ Site estático (Astro, `trailingSlash: 'always'`, `build.format: 'directory'`) p
 - Dados oficiais: Roque Business Evolution Serviços Ltda., CNPJ 47.308.584/0001-20, contato@roquebusinessevolution.com, WhatsApp +55 11 97396-7161.
 - Não trocar nameservers, não mexer em MX/SPF/DKIM/DMARC/TXT ao apontar o domínio; virada de DNS só com autorização da Viviane. Este domínio recebe e-mail (contato@): testar envio e recebimento depois da virada.
 - O `@id` da Roque (`https://roquebusinessevolution.com/#org`) e o da Viviane (`https://viviroque.com.br/#viviane-roque`) são os mesmos nos três sites.
-- Fontes self-host (`@fontsource`), sem Google Fonts em tempo de execução. Sem preto puro, sem fundo creme, sem degradê decorativo.
+- Fontes self-host (`@fontsource`), sem Google Fonts em tempo de execução. Sem fundo creme, sem degradê decorativo. Preto puro (#000) só onde a Viviane pediu: cabeçalho de todas as páginas e as seções escuras da home.
+- Home 3D (aprovada em 21/10/2026): H1 = os cinco termos comerciais (criação de sites, desenvolvimento de site profissional, empresa de desenvolvimento de software, desenvolvimento de sistemas personalizados, SEO, GEO e AEO); H2 seguinte = "A Roque Business Evolution é uma empresa de transformação digital". Nada de texto corrido na home. Código em `scripts/content/home.mjs`, `home3d.css` e `home3d.js` (classes `h3d-`).
+- "Agência de IA" saiu do posicionamento (não ranqueia). O menu mostra "Agentes de IA"; a página /agencia-de-ia/ e o post sobre agência de IA aguardam decisão da Viviane.
