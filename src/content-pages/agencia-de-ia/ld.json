@@ -105,6 +105,14 @@
     },
     {
      "@type": "Question",
+     "name": "O que é um agente de IA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É um sistema de inteligência artificial que entende uma solicitação, usa informações e ferramentas autorizadas e executa tarefas, como responder um cliente ou agendar um horário, dentro de limites definidos."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Um agente de IA substitui a minha equipe?",
      "acceptedAnswer": {
       "@type": "Answer",
@@ -124,7 +132,7 @@
      "name": "É seguro usar IA com os dados dos meus clientes?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Depende de como o projeto é desenhado. Definimos permissões, limites de execução, controle de acesso e regras de aprovação humana, e orientamos sobre proteção de dados e LGPD conforme o escopo. Veja a página de transformação digital ."
+      "text": "Depende de como o projeto é desenhado. Definimos permissões, limites de execução, controle de acesso e regras de aprovação humana, e orientamos sobre proteção de dados e LGPD conforme o escopo."
      }
     },
     {

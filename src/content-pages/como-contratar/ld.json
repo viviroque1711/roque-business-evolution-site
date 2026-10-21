@@ -1,0 +1,107 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://roquebusinessevolution.com/como-contratar/#page",
+   "url": "https://roquebusinessevolution.com/como-contratar/",
+   "name": "Como contratar",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Como contratar",
+     "item": "https://roquebusinessevolution.com/como-contratar/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://roquebusinessevolution.com/como-contratar/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "A Roque Business Evolution publica os preços dos serviços?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. Cada projeto tem escopo próprio, e a proposta é escrita para o seu caso, com todos os itens de investimento discriminados."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Existe contrato mínimo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Depende da modalidade. Projetos fechados têm escopo e prazo definidos. Serviços recorrentes seguem as condições combinadas na proposta."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Posso começar com um projeto pequeno?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. As soluções são modulares e podem evoluir de forma progressiva, a partir de um primeiro projeto de menor escopo."
+     }
+    }
+   ]
+  }
+ ]
+}

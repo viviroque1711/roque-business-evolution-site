@@ -8,9 +8,11 @@ import '@fontsource/instrument-sans/latin-500.css';
 import '@fontsource/instrument-sans/latin-600.css';
 import '@fontsource/instrument-sans/latin-700.css';
 import '../styles/site.css';
+import '../styles/extra.css';
 import unbounded500 from '@fontsource/unbounded/files/unbounded-latin-500-normal.woff2?url';
 import instrument400 from '@fontsource/instrument-sans/files/instrument-sans-latin-400-normal.woff2?url';
 import instrument600 from '@fontsource/instrument-sans/files/instrument-sans-latin-600-normal.woff2?url';
+import motion from '../scripts/motion.js?raw';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import WhatsAppFloat from '../components/WhatsAppFloat.astro';
@@ -46,6 +48,7 @@ if (process.env.SITE_ENV === 'staging') {
 {css && <style is:inline set:html={css}></style>}
 </head>
 <body>
+<div class="rd" aria-hidden="true"></div>
 <SiteHeader />
 <main id="conteudo" tabindex="-1">
 <Fragment set:html={body} />
@@ -53,5 +56,6 @@ if (process.env.SITE_ENV === 'staging') {
 <SiteFooter updated={updated} />
 <WhatsAppFloat />
 {js && <script is:inline set:html={js}></script>}
+<script is:inline set:html={motion}></script>
 </body>
 </html>

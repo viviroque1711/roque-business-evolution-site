@@ -1,0 +1,107 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://roquebusinessevolution.com/diagnostico/#page",
+   "url": "https://roquebusinessevolution.com/diagnostico/",
+   "name": "Diagnóstico",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Diagnóstico",
+     "item": "https://roquebusinessevolution.com/diagnostico/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://roquebusinessevolution.com/diagnostico/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O que é um diagnóstico digital?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É uma análise estruturada de como a empresa usa tecnologia hoje, quais processos e sistemas funcionam, onde estão os gargalos e quais melhorias trariam mais resultado."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O diagnóstico serve para quem ainda não usa IA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. Ele identifica onde a IA e a automação fazem sentido, e onde ainda não fazem, antes de qualquer investimento."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O diagnóstico obriga a contratar outros serviços?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. O diagnóstico é um serviço de consultoria que pode ser contratado sozinho. Se fizer sentido, ele orienta os próximos passos."
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "CollectionPage",
+   "@id": "https://roquebusinessevolution.com/blog/#page",
+   "url": "https://roquebusinessevolution.com/blog/",
+   "name": "Blog da Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://roquebusinessevolution.com/blog/"
+    }
+   ]
+  },
+  {
+   "@type": "Blog",
+   "@id": "https://roquebusinessevolution.com/blog/#blog",
+   "name": "Blog da Roque Business Evolution",
+   "url": "https://roquebusinessevolution.com/blog/",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "blogPost": [
+    {
+     "@type": "BlogPosting",
+     "headline": "O que é uma Agência de IA e Quando Contratar",
+     "url": "https://roquebusinessevolution.com/blog/o-que-e-agencia-de-ia/"
+    },
+    {
+     "@type": "BlogPosting",
+     "headline": "GEO e AEO: como Preparar o Site para Buscas com IA",
+     "url": "https://roquebusinessevolution.com/blog/geo-e-aeo-seo-para-buscas-com-ia/"
+    },
+    {
+     "@type": "BlogPosting",
+     "headline": "Agente de IA no WhatsApp: como Funciona o Atendimento",
+     "url": "https://roquebusinessevolution.com/blog/agente-de-ia-no-whatsapp/"
+    },
+    {
+     "@type": "BlogPosting",
+     "headline": "SEO para Pequenas Empresas: por Onde Começar",
+     "url": "https://roquebusinessevolution.com/blog/seo-para-pequenas-empresas/"
+    },
+    {
+     "@type": "BlogPosting",
+     "headline": "Automação de Processos: o que Automatizar Primeiro",
+     "url": "https://roquebusinessevolution.com/blog/automacao-de-processos-o-que-automatizar/"
+    },
+    {
+     "@type": "BlogPosting",
+     "headline": "Como Adotar IA na Empresa com Governança e Segurança",
+     "url": "https://roquebusinessevolution.com/blog/adotar-ia-na-empresa-com-seguranca/"
+    },
+    {
+     "@type": "BlogPosting",
+     "headline": "Como Criar um Site Profissional que Aparece no Google",
+     "url": "https://roquebusinessevolution.com/blog/como-criar-um-site-profissional/"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,133 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://roquebusinessevolution.com/suporte-e-evolucao-continua/#page",
+   "url": "https://roquebusinessevolution.com/suporte-e-evolucao-continua/",
+   "name": "Suporte e Evolução Contínua de Sites e Sistemas",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "mainEntity": {
+    "@id": "https://roquebusinessevolution.com/suporte-e-evolucao-continua/#service"
+   }
+  },
+  {
+   "@type": "Service",
+   "@id": "https://roquebusinessevolution.com/suporte-e-evolucao-continua/#service",
+   "name": "Consultoria, suporte e evolução contínua",
+   "serviceType": "Suporte técnico e evolução de soluções digitais",
+   "description": "Monitoramento de aplicações e integrações, suporte técnico e funcional, revisão de indicadores, otimização de campanhas e páginas, ajustes em automações e agentes de IA e relatórios periódicos.",
+   "provider": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "Brasil"
+   },
+   "url": "https://roquebusinessevolution.com/suporte-e-evolucao-continua/"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Suporte e evolução contínua",
+     "item": "https://roquebusinessevolution.com/suporte-e-evolucao-continua/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://roquebusinessevolution.com/suporte-e-evolucao-continua/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O que inclui o suporte e a evolução contínua?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Monitoramento, suporte técnico e funcional, ajustes, otimização e relatórios, conforme o plano contratado para cada solução."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Preciso contratar suporte para o site criado pela Roque?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É uma opção. Sites, automações e agentes de IA precisam de manutenção e evolução, e o suporte contínuo cuida disso."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Com que frequência recebo relatórios?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A periodicidade é combinada na contratação, junto com os indicadores acompanhados."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O suporte cobre sistemas que a Roque não desenvolveu?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Depende do caso. Avaliamos a viabilidade técnica e o escopo antes de assumir o suporte."
+     }
+    }
+   ]
+  }
+ ]
+}

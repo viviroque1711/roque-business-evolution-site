@@ -1,0 +1,140 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://roquebusinessevolution.com/blog/agente-de-ia-no-whatsapp/#page",
+   "url": "https://roquebusinessevolution.com/blog/agente-de-ia-no-whatsapp/",
+   "name": "Agente de IA no WhatsApp: como funciona o atendimento automático",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://roquebusinessevolution.com/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Agente de IA no WhatsApp",
+     "item": "https://roquebusinessevolution.com/blog/agente-de-ia-no-whatsapp/"
+    }
+   ]
+  },
+  {
+   "@type": "BlogPosting",
+   "@id": "https://roquebusinessevolution.com/blog/agente-de-ia-no-whatsapp/#post",
+   "mainEntityOfPage": "https://roquebusinessevolution.com/blog/agente-de-ia-no-whatsapp/",
+   "headline": "Agente de IA no WhatsApp: como funciona o atendimento automático",
+   "description": "Como funciona um agente de IA no WhatsApp: o que ele faz, de onde aprende, quando passa para uma pessoa e que cuidados tomar com o atendimento.",
+   "inLanguage": "pt-BR",
+   "datePublished": "2026-10-21",
+   "dateModified": "2026-10-21",
+   "author": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "image": "https://roquebusinessevolution.com/og/blog.jpg",
+   "about": [
+    {
+     "@type": "Thing",
+     "name": "Agente de IA"
+    },
+    {
+     "@type": "Thing",
+     "name": "WhatsApp"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://roquebusinessevolution.com/blog/agente-de-ia-no-whatsapp/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O agente de IA atende fora do horário comercial?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. Ele responde a qualquer hora, e os casos que pedem uma pessoa ficam registrados para a equipe retomar."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O cliente percebe que está falando com IA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Recomendamos ser transparente: informar que o atendimento inicial é automático e oferecer a opção de falar com uma pessoa."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dá para integrar com agenda e CRM?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim, conforme as integrações disponíveis. O agente pode consultar e registrar informações nesses sistemas."
+     }
+    }
+   ]
+  }
+ ]
+}

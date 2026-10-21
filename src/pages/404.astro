@@ -4,8 +4,9 @@ import '@fontsource/unbounded/latin-500.css';
 import '@fontsource/instrument-sans/latin-400.css';
 import '@fontsource/instrument-sans/latin-700.css';
 import '../styles/site.css';
+import '../styles/extra.css';
 import { SITE } from '../data/site.mjs';
-import { SERVICOS } from '../data/nav.mjs';
+import { SERVICES } from '../data/nav.mjs';
 ---
 <!doctype html>
 <html lang={SITE.lang}>
@@ -23,7 +24,7 @@ import { SERVICOS } from '../data/nav.mjs';
   <p>O endereço que você abriu não foi encontrado. Volte para a página inicial ou escolha um caminho abaixo.</p>
   <p><a class="btn" href="/">Ir para a página inicial</a></p>
   <ul class="nf-links">
-    {SERVICOS.map((n) => <li><a href={n.href}>{n.label}</a></li>)}
+    {SERVICES.slice(0, 8).map((n) => <li><a href={n.href}>{n.label}</a></li>)}
   </ul>
 </main>
 </body>

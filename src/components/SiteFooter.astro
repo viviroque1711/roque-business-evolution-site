@@ -1,5 +1,5 @@
 ---
-import { SERVICOS, PRODUTOS, EMPRESA, LEGAL, WHATSAPP } from '../data/nav.mjs';
+import { SERVICE_GROUPS, AI_APPS, PRODUCTS, PARA_QUEM, EMPRESA, LEGAL, WHATSAPP } from '../data/nav.mjs';
 import { SITE } from '../data/site.mjs';
 import { u } from '../lib/url.mjs';
 const { updated } = Astro.props;
@@ -11,24 +11,29 @@ const fmt = updated ? updated.split('-').reverse().join('/') : '';
       <img class="ft-logo" src={u('/img/roque-logo-fundo-escuro.png')} width="248" height="289" alt="Roque Business Evolution" loading="lazy" decoding="async">
       <p class="ft-line">Estratégia para evoluir. Tecnologia para transformar. Inteligência para crescer.</p>
       <p class="ft-legal">{SITE.legalName}<br>CNPJ {SITE.cnpj}</p>
-    </div>
-    <nav class="ft-col" aria-label="Serviços">
-      <p class="ft-h">Serviços</p>
-      <ul>{SERVICOS.map((s) => <li><a href={u(s.href)}>{s.label}</a></li>)}</ul>
-    </nav>
-    <nav class="ft-col" aria-label="Produtos e empresa">
-      <p class="ft-h">Produtos</p>
-      <ul>{PRODUTOS.map((s) => <li><a href={s.external ? s.href : u(s.href)} rel={s.external ? 'noopener' : undefined}>{s.label}</a></li>)}</ul>
-      <p class="ft-h">Empresa</p>
-      <ul>{EMPRESA.map((s) => <li><a href={u(s.href)}>{s.label}</a></li>)}{LEGAL.map((s) => <li><a href={u(s.href)}>{s.label}</a></li>)}</ul>
-    </nav>
-    <nav class="ft-col" aria-label="Contato e fundadora">
-      <p class="ft-h">Contato</p>
-      <ul>
+      <ul class="ft-social">
         <li><a href={WHATSAPP.href} rel="noopener">WhatsApp {WHATSAPP.label}</a></li>
         <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
         <li><a href={SITE.instagram} rel="noopener me">Instagram</a></li>
       </ul>
+    </div>
+    {SERVICE_GROUPS.map((g) => (
+      <nav class="ft-col" aria-label={g.name}>
+        <p class="ft-h">{g.name}</p>
+        <ul>{g.items.map((s) => <li><a href={u(s.href)}>{s.label}</a></li>)}</ul>
+      </nav>
+    ))}
+    <nav class="ft-col" aria-label="Aplicações, produtos e para quem">
+      <p class="ft-h">Agentes de IA e plataformas</p>
+      <ul>{AI_APPS.map((s) => <li><a href={u(s.href)}>{s.label}</a></li>)}</ul>
+      <p class="ft-h">Produtos</p>
+      <ul>{PRODUCTS.map((s) => <li><a href={s.href} rel="noopener">{s.label}</a></li>)}<li><a href={u('/produtos/')}>Sobre os produtos</a></li></ul>
+      <p class="ft-h">Para quem</p>
+      <ul>{PARA_QUEM.map((s) => <li><a href={u(s.href)}>{s.label}</a></li>)}</ul>
+    </nav>
+    <nav class="ft-col" aria-label="Empresa e fundadora">
+      <p class="ft-h">Empresa</p>
+      <ul>{EMPRESA.map((s) => <li><a href={u(s.href)}>{s.label}</a></li>)}<li><a href={u('/blog/')}>Blog</a></li>{LEGAL.map((s) => <li><a href={u(s.href)}>{s.label}</a></li>)}</ul>
       <p class="ft-h">Fundadora</p>
       <ul>
         <li><a href={SITE.founder.site} rel="noopener">Viviane Roque</a></li>

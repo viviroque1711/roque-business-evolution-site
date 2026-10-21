@@ -1,0 +1,133 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://roquebusinessevolution.com/branding-e-identidade-digital/#page",
+   "url": "https://roquebusinessevolution.com/branding-e-identidade-digital/",
+   "name": "Branding e Identidade Digital para Empresas",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "mainEntity": {
+    "@id": "https://roquebusinessevolution.com/branding-e-identidade-digital/#service"
+   }
+  },
+  {
+   "@type": "Service",
+   "@id": "https://roquebusinessevolution.com/branding-e-identidade-digital/#service",
+   "name": "Branding, identidade digital e comunicação",
+   "serviceType": "Branding e identidade digital",
+   "description": "Estratégia de posicionamento, proposta de valor, identidade visual e aplicações digitais, tom de voz e padronização da comunicação.",
+   "provider": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "Brasil"
+   },
+   "url": "https://roquebusinessevolution.com/branding-e-identidade-digital/"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Branding e identidade digital",
+     "item": "https://roquebusinessevolution.com/branding-e-identidade-digital/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://roquebusinessevolution.com/branding-e-identidade-digital/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O que é branding?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É o conjunto de decisões que definem como a empresa se apresenta e é percebida: posicionamento, identidade visual, linguagem e experiência."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O que é identidade digital?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É a aplicação da marca nos canais digitais, como site, redes sociais, e-mail e anúncios, com o mesmo estilo e a mesma mensagem."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Vocês refazem logo e identidade visual?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim, conforme o escopo: a identidade visual e suas aplicações digitais fazem parte do serviço."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Branding ajuda no SEO?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Indiretamente. Uma marca clara facilita buscas pelo nome da empresa e deixa o conteúdo mais consistente, o que ajuda buscas com IA e buscadores a entender quem você é."
+     }
+    }
+   ]
+  }
+ ]
+}

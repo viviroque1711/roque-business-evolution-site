@@ -1,0 +1,115 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://roquebusinessevolution.com/para-grandes-empresas/#page",
+   "url": "https://roquebusinessevolution.com/para-grandes-empresas/",
+   "name": "Para grandes empresas",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Para grandes empresas",
+     "item": "https://roquebusinessevolution.com/para-grandes-empresas/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://roquebusinessevolution.com/para-grandes-empresas/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "A Roque Business Evolution atende grandes empresas?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. A fundadora tem experiência em operações de grande porte, incluindo PMO de projetos de arenas da Copa de 2014, e a empresa atua com governança, transformação digital e integração de sistemas."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O que é PMO?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "PMO (Project Management Office) é o escritório que padroniza e acompanha a gestão de projetos e do portfólio de uma organização, dando visibilidade, priorização e controle."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Vocês trabalham com metodologias ágeis?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim, incluindo frameworks ágeis em escala como SAFe e Scrum, com treinamento, rituais estruturados e métricas de agilidade."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como começa um projeto em uma grande empresa?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pelo diagnóstico : entrevistas, análise de processos e sistemas e identificação de ganhos rápidos, seguido de arquitetura, plano e roteiro de implementação."
+     }
+    }
+   ]
+  }
+ ]
+}

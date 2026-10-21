@@ -1,0 +1,235 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://roquebusinessevolution.com/glossario/#page",
+   "url": "https://roquebusinessevolution.com/glossario/",
+   "name": "Glossário",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Glossário",
+     "item": "https://roquebusinessevolution.com/glossario/"
+    }
+   ]
+  },
+  {
+   "@type": "DefinedTermSet",
+   "@id": "https://roquebusinessevolution.com/glossario/#termos",
+   "name": "Glossário de inteligência artificial, SEO e transformação digital",
+   "inLanguage": "pt-BR",
+   "hasDefinedTerm": [
+    {
+     "@type": "DefinedTerm",
+     "name": "Agência de IA",
+     "description": "Empresa que projeta, implanta e acompanha agentes de inteligência artificial e automações para outras empresas."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Agente de IA",
+     "description": "Sistema de inteligência artificial que entende uma solicitação e executa tarefas, usando informações e ferramentas autorizadas, dentro de limites definidos."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "AEO (Answer Engine Optimization)",
+     "description": "Otimização de conteúdo para mecanismos que respondem perguntas diretamente, com respostas claras e verificáveis."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Alucinação (em IA)",
+     "description": "Resposta gerada por IA que parece correta, mas contém informação inventada ou errada."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "API",
+     "description": "Interface que permite que dois sistemas troquem informações de forma automática."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Automação de processos",
+     "description": "Uso de sistemas para executar tarefas repetitivas e fluxos de trabalho seguindo regras definidas."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Canibalização de palavras-chave",
+     "description": "Situação em que duas páginas do mesmo site disputam a mesma busca e uma atrapalha a outra."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "CRM",
+     "description": "Sistema de gestão de relacionamento com clientes, que organiza contatos, conversas e oportunidades de venda."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Core Web Vitals",
+     "description": "Métricas do Google sobre carregamento, interatividade e estabilidade visual de uma página."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Dados estruturados",
+     "description": "Marcação no código da página que descreve o conteúdo (como perguntas e respostas, produtos ou organização) para os buscadores."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Dashboard",
+     "description": "Painel visual que reúne os principais indicadores de um negócio em um só lugar."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Funil de vendas",
+     "description": "Representação das etapas que uma oportunidade percorre, do primeiro contato ao fechamento."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "GEO (Generative Engine Optimization)",
+     "description": "Otimização do conteúdo para ser compreendido e utilizado por mecanismos de IA generativa."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Governança de IA",
+     "description": "Regras, responsabilidades e controles que definem como a IA pode ser usada e como o uso é acompanhado."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Intenção de busca",
+     "description": "Objetivo por trás de uma pesquisa: aprender, comparar opções, contratar ou encontrar uma marca específica."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "KPI",
+     "description": "Indicador-chave de desempenho: número que mostra se uma meta está sendo atingida."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Landing page",
+     "description": "Página criada para uma campanha ou oferta, com foco em levar o visitante a uma ação."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "LGPD",
+     "description": "Lei Geral de Proteção de Dados (Lei 13.709/2018), que regula o tratamento de dados pessoais no Brasil."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "llms.txt",
+     "description": "Arquivo de texto na raiz do site que resume a empresa e as páginas principais para assistentes de IA. É um apoio, e não garante citação."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "MVP",
+     "description": "Produto mínimo viável: a menor versão de um produto que já permite validar a ideia com usuários reais."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Multiempresa (multitenant)",
+     "description": "Plataforma única usada por várias empresas, com os dados de cada uma separados e protegidos."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Onboarding",
+     "description": "Processo de receber e orientar um novo cliente ou colaborador nos primeiros passos."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Palavra-chave de cauda longa",
+     "description": "Termo de busca mais específico e longo, normalmente com menos volume e intenção mais clara."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "PMO",
+     "description": "Escritório de gestão de projetos: padroniza e acompanha projetos e portfólio de uma organização."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "SaaS",
+     "description": "Software como serviço: sistema usado pela internet, normalmente por assinatura, sem instalação."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "SEO",
+     "description": "Conjunto de ações para que um site seja encontrado nos mecanismos de busca por pessoas com intenção relevante."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "SEO local",
+     "description": "Otimização para buscas geográficas e por proximidade, com o Perfil da Empresa no Google e páginas por região."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Sitemap",
+     "description": "Arquivo que lista as páginas de um site para os buscadores."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Topic cluster",
+     "description": "Grupo de conteúdos sobre um mesmo tema, ligado a uma página pilar, que constrói autoridade temática."
+    },
+    {
+     "@type": "DefinedTerm",
+     "name": "Webchat",
+     "description": "Chat de atendimento incorporado ao site da empresa."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,133 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://roquebusinessevolution.com/automacao-de-processos/#page",
+   "url": "https://roquebusinessevolution.com/automacao-de-processos/",
+   "name": "Automação de Processos Empresariais com IA",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "mainEntity": {
+    "@id": "https://roquebusinessevolution.com/automacao-de-processos/#service"
+   }
+  },
+  {
+   "@type": "Service",
+   "@id": "https://roquebusinessevolution.com/automacao-de-processos/#service",
+   "name": "Automação de processos empresariais",
+   "serviceType": "Automação de processos",
+   "description": "Mapeamento de processos automatizáveis, automação de fluxos de trabalho, integração de sistemas, alertas, propostas, relatórios e monitoramento.",
+   "provider": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "Brasil"
+   },
+   "url": "https://roquebusinessevolution.com/automacao-de-processos/"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Automação de processos",
+     "item": "https://roquebusinessevolution.com/automacao-de-processos/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://roquebusinessevolution.com/automacao-de-processos/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O que é automação de processos?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É fazer sistemas executarem sozinhos tarefas repetitivas e fluxos de trabalho, seguindo regras definidas, com registro do que foi feito."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quais processos vale automatizar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Os repetitivos, frequentes e previsíveis, como lembretes, distribuição de solicitações, propostas, relatórios e sincronização de dados."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Automação e inteligência artificial são a mesma coisa?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. A automação segue regras definidas. A IA acrescenta interpretação de linguagem e decisões mais flexíveis. Os dois podem trabalhar juntos, e a agência de IA da Roque faz essa combinação."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "E se a automação errar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Os fluxos têm tratamento de exceções, filas, registro de execução e aprovação humana em casos sensíveis."
+     }
+    }
+   ]
+  }
+ ]
+}

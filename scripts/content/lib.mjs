@@ -14,11 +14,12 @@ export const plain = (html) => unesc(html.replace(/<!--[\s\S]*?-->/g, '').replac
 export const abs = (p) => (p.startsWith('http') ? p : SITE.url + p);
 export const pageUrl = (p) => SITE.url + p;
 
+const ALL_ERRS = [];
 export function check(page) {
   const errs = [];
   if (page.title.length > 65) errs.push(`title ${page.title.length} > 65: ${page.title}`);
   if (page.description.length > 155) errs.push(`description ${page.description.length} > 155: ${page.description}`);
-  if (errs.length) throw new Error(`${page.path}: ${errs.join(' | ')}`);
+  if (errs.length) ALL_ERRS.push(`${page.path}: ${errs.join(' | ')}`);
 }
 
 /** <head> da página: title, description, canonical, robots, ícones, Open Graph e Twitter. */
@@ -92,6 +93,7 @@ export function writePage(page) {
 }
 
 export function finish() {
+  if (ALL_ERRS.length) { console.error(ALL_ERRS.join('\n')); throw new Error(ALL_ERRS.length + ' página(s) com título/descrição acima do limite'); }
   // lastmod: as páginas geradas hoje; mantém as datas antigas das que não mudaram de conteúdo
   const lmFile = path.join(root, 'src', 'data', 'lastmod.json');
   const lm = fs.existsSync(lmFile) ? JSON.parse(fs.readFileSync(lmFile, 'utf8')) : {};

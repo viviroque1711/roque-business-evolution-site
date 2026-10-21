@@ -74,6 +74,114 @@
    ]
   },
   {
+   "@type": "ItemList",
+   "name": "Serviços da Roque Business Evolution",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Transformação digital",
+     "url": "https://roquebusinessevolution.com/transformacao-digital/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Capacitação em IA",
+     "url": "https://roquebusinessevolution.com/capacitacao-em-ia/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Governança e segurança de IA",
+     "url": "https://roquebusinessevolution.com/governanca-e-seguranca-de-ia/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "name": "Suporte e evolução contínua",
+     "url": "https://roquebusinessevolution.com/suporte-e-evolucao-continua/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 5,
+     "name": "Criação de sites",
+     "url": "https://roquebusinessevolution.com/criacao-de-sites/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 6,
+     "name": "SEO",
+     "url": "https://roquebusinessevolution.com/seo/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 7,
+     "name": "Pesquisa de palavras-chave",
+     "url": "https://roquebusinessevolution.com/pesquisa-de-palavras-chave/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 8,
+     "name": "GEO e AEO",
+     "url": "https://roquebusinessevolution.com/geo-aeo/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 9,
+     "name": "Marketing de conteúdo",
+     "url": "https://roquebusinessevolution.com/marketing-de-conteudo/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 10,
+     "name": "Branding e identidade digital",
+     "url": "https://roquebusinessevolution.com/branding-e-identidade-digital/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 11,
+     "name": "Marketing digital e mídia paga",
+     "url": "https://roquebusinessevolution.com/marketing-digital-e-midia-paga/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 12,
+     "name": "CRM e vendas",
+     "url": "https://roquebusinessevolution.com/crm-e-vendas/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 13,
+     "name": "Reputação digital",
+     "url": "https://roquebusinessevolution.com/reputacao-digital/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 14,
+     "name": "Agência de IA",
+     "url": "https://roquebusinessevolution.com/agencia-de-ia/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 15,
+     "name": "Automação de processos",
+     "url": "https://roquebusinessevolution.com/automacao-de-processos/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 16,
+     "name": "Desenvolvimento de software",
+     "url": "https://roquebusinessevolution.com/desenvolvimento-de-software/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 17,
+     "name": "Dados e business intelligence",
+     "url": "https://roquebusinessevolution.com/dados-e-business-intelligence/"
+    }
+   ]
+  },
+  {
    "@type": "FAQPage",
    "@id": "https://roquebusinessevolution.com/servicos/#faq",
    "mainEntity": [
@@ -82,15 +190,7 @@
      "name": "Quais serviços a Roque Business Evolution oferece?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Consultoria de transformação digital, criação de sites, SEO e busca com IA, agentes de IA e automação, desenvolvimento de software e SaaS, marketing, CRM, dados e capacitação em IA. Esta página reúne os 17 serviços."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Todos os serviços têm página própria?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Os serviços prioritários têm página própria. Os demais aparecem nesta página e podem ser contratados conforme a capacidade e os parceiros de cada projeto."
+      "text": "Consultoria de transformação digital, criação de sites, SEO, GEO e AEO, agentes de IA e automação, desenvolvimento de software e SaaS, marketing, CRM, dados e capacitação em IA. Esta página reúne os 17 serviços, e cada um tem página própria."
      }
     },
     {
@@ -98,7 +198,7 @@
      "name": "Como a Roque Business Evolution trabalha?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Em sete fases: diagnóstico, pesquisa e estratégia, arquitetura da solução, implementação, testes e validação, publicação e operação, e mensuração e evolução."
+      "text": "Em sete fases: diagnóstico, pesquisa e estratégia, arquitetura da solução, implementação, testes e validação, publicação e operação, e mensuração e evolução. Veja a metodologia ."
      }
     },
     {
@@ -106,7 +206,15 @@
      "name": "Como são contratados os serviços?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Em projetos fechados, serviços recorrentes, consultoria especializada ou projetos híbridos de tecnologia e operação. A proposta discrimina implantação, mensalidade, ferramentas de terceiros, infraestrutura, mídia paga e suporte."
+      "text": "Em projetos fechados, serviços recorrentes, consultoria especializada ou projetos híbridos. A proposta discrimina implantação, mensalidade, ferramentas de terceiros, infraestrutura, mídia paga e suporte. Veja como contratar ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Por onde começar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pelo diagnóstico digital e de IA , que mostra onde há ganho possível e quais serviços fazem sentido."
      }
     },
     {

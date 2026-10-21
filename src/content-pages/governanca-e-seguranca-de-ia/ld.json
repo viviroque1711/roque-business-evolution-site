@@ -1,0 +1,133 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://roquebusinessevolution.com/governanca-e-seguranca-de-ia/#page",
+   "url": "https://roquebusinessevolution.com/governanca-e-seguranca-de-ia/",
+   "name": "Governança e Segurança de IA para Empresas",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "mainEntity": {
+    "@id": "https://roquebusinessevolution.com/governanca-e-seguranca-de-ia/#service"
+   }
+  },
+  {
+   "@type": "Service",
+   "@id": "https://roquebusinessevolution.com/governanca-e-seguranca-de-ia/#service",
+   "name": "Segurança, governança e confiabilidade de IA",
+   "serviceType": "Governança de inteligência artificial",
+   "description": "Avaliação de riscos, permissões e limites de execução, controles de acesso, proteção de credenciais, trilhas de auditoria, testes de qualidade e regras de aprovação humana.",
+   "provider": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "Brasil"
+   },
+   "url": "https://roquebusinessevolution.com/governanca-e-seguranca-de-ia/"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Governança e segurança de IA",
+     "item": "https://roquebusinessevolution.com/governanca-e-seguranca-de-ia/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://roquebusinessevolution.com/governanca-e-seguranca-de-ia/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O que é governança de IA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É o conjunto de regras, responsabilidades e controles que definem como a IA pode ser usada na empresa e como o seu uso é acompanhado."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O que é uma alucinação em IA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É quando o sistema gera uma resposta que parece correta, mas contém informação inventada ou errada. Testes e aprovação humana reduzem esse risco."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A governança garante conformidade com a LGPD?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ela apoia a proteção de dados com controles e orientações, mas não substitui assessoria jurídica nem auditoria independente."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Que controles um agente de IA deve ter?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Permissões e limites de execução, controle de acesso, registro das operações, testes e regras de aprovação humana para decisões de maior impacto."
+     }
+    }
+   ]
+  }
+ ]
+}

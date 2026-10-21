@@ -1,0 +1,133 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://roquebusinessevolution.com/dados-e-business-intelligence/#page",
+   "url": "https://roquebusinessevolution.com/dados-e-business-intelligence/",
+   "name": "Dados, Analytics e Business Intelligence",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "mainEntity": {
+    "@id": "https://roquebusinessevolution.com/dados-e-business-intelligence/#service"
+   }
+  },
+  {
+   "@type": "Service",
+   "@id": "https://roquebusinessevolution.com/dados-e-business-intelligence/#service",
+   "name": "Dados, analytics e inteligência de negócios",
+   "serviceType": "Business intelligence e analytics",
+   "description": "Diagnóstico de indicadores, integração e preparação de dados, dashboards gerenciais, análises de funil, retenção e custos, relatórios automáticos e acompanhamento de metas.",
+   "provider": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "Brasil"
+   },
+   "url": "https://roquebusinessevolution.com/dados-e-business-intelligence/"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Dados e business intelligence",
+     "item": "https://roquebusinessevolution.com/dados-e-business-intelligence/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://roquebusinessevolution.com/dados-e-business-intelligence/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O que é business intelligence?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É o conjunto de práticas e ferramentas que transformam dados em informação útil para decisões, normalmente por meio de dashboards e relatórios."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O que é um dashboard gerencial?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É um painel visual que reúne os principais indicadores da empresa em um só lugar, atualizado com os dados das suas ferramentas."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Preciso ter muitos dados para começar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. Começamos pelas decisões mais importantes e pelos dados que já existem, e evoluímos conforme a coleta melhora."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A IA analisa os dados sozinha?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A IA ajuda a identificar padrões e a sugerir recomendações, mas as decisões continuam com as pessoas, e as conclusões dependem da qualidade dos dados."
+     }
+    }
+   ]
+  }
+ ]
+}

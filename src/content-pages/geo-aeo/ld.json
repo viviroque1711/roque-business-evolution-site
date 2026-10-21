@@ -1,0 +1,141 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://roquebusinessevolution.com/geo-aeo/#page",
+   "url": "https://roquebusinessevolution.com/geo-aeo/",
+   "name": "GEO e AEO: SEO para Buscas com IA",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "mainEntity": {
+    "@id": "https://roquebusinessevolution.com/geo-aeo/#service"
+   }
+  },
+  {
+   "@type": "Service",
+   "@id": "https://roquebusinessevolution.com/geo-aeo/#service",
+   "name": "GEO e AEO: otimização para buscas com inteligência artificial",
+   "serviceType": "Otimização para mecanismos de resposta e IA generativa",
+   "description": "Auditoria da presença digital, páginas que respondem perguntas, perguntas frequentes com dados estruturados e consistência de informações para buscas tradicionais e com IA.",
+   "provider": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "Brasil"
+   },
+   "url": "https://roquebusinessevolution.com/geo-aeo/"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "GEO e AEO",
+     "item": "https://roquebusinessevolution.com/geo-aeo/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://roquebusinessevolution.com/geo-aeo/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Qual é a diferença entre SEO, GEO e AEO?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SEO otimiza o site para os resultados de busca tradicionais. AEO organiza respostas diretas para mecanismos que respondem perguntas. GEO prepara o conteúdo para sistemas de IA generativa. Os três se apoiam na mesma base técnica e de conteúdo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "GEO e AEO garantem que a minha empresa apareça no ChatGPT?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. Nenhuma ação garante citação em respostas de IA. O trabalho torna a informação mais clara e verificável, o que ajuda, mas a exibição depende de sistemas externos."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dados estruturados são suficientes?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. Os dados estruturados ajudam a descrever o conteúdo, mas precisam refletir o que está visível na página, e o conteúdo precisa ser útil e original."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como medir o resultado de GEO e AEO?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Acompanhamos referências identificáveis, tráfego vindo de ferramentas de IA e presença observável em respostas, além dos indicadores de SEO como impressões, cliques e conversões."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Posso usar IA para escrever o conteúdo do site?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pode, com revisão editorial e verificação factual. O conteúdo deve ser original, útil e fiel ao que a empresa realmente faz."
+     }
+    }
+   ]
+  }
+ ]
+}

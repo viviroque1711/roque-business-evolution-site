@@ -1,0 +1,133 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://roquebusinessevolution.com/capacitacao-em-ia/#page",
+   "url": "https://roquebusinessevolution.com/capacitacao-em-ia/",
+   "name": "Capacitação em IA para Empresas e Equipes",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "mainEntity": {
+    "@id": "https://roquebusinessevolution.com/capacitacao-em-ia/#service"
+   }
+  },
+  {
+   "@type": "Service",
+   "@id": "https://roquebusinessevolution.com/capacitacao-em-ia/#service",
+   "name": "Capacitação, treinamento e adoção de IA",
+   "serviceType": "Treinamento em inteligência artificial",
+   "description": "Diagnóstico de competências, treinamento prático em ferramentas de IA, engenharia de prompts, casos de uso por departamento, oficinas de automação e políticas internas.",
+   "provider": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "Brasil"
+   },
+   "url": "https://roquebusinessevolution.com/capacitacao-em-ia/"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Capacitação em IA",
+     "item": "https://roquebusinessevolution.com/capacitacao-em-ia/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://roquebusinessevolution.com/capacitacao-em-ia/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O que é engenharia de prompts?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É a técnica de escrever instruções claras para ferramentas de IA, para obter respostas úteis, consistentes e adequadas ao contexto."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A capacitação serve para qualquer área da empresa?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. Os casos de uso são mapeados por departamento, e o treinamento usa tarefas reais de cada equipe."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como evitar que a equipe compartilhe dados sensíveis com a IA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Com política interna de uso de IA, orientações de privacidade e segurança e treinamento sobre o que pode ser usado em cada ferramenta."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como saber se a equipe está usando bem a IA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Acompanhando adoção e produtividade com indicadores combinados no início do projeto."
+     }
+    }
+   ]
+  }
+ ]
+}

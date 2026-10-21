@@ -1,0 +1,133 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://roquebusinessevolution.com/agentes-de-ia-para-suporte/#page",
+   "url": "https://roquebusinessevolution.com/agentes-de-ia-para-suporte/",
+   "name": "Agente de IA para Suporte, Pós-Venda e Onboarding",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "mainEntity": {
+    "@id": "https://roquebusinessevolution.com/agentes-de-ia-para-suporte/#service"
+   }
+  },
+  {
+   "@type": "Service",
+   "@id": "https://roquebusinessevolution.com/agentes-de-ia-para-suporte/#service",
+   "name": "Agentes de IA para suporte, pós-venda e onboarding",
+   "serviceType": "Suporte automatizado com inteligência artificial",
+   "description": "Agentes de suporte e pós-venda, agentes de onboarding, consulta a bases de conhecimento, agentes internos para equipes e encaminhamento para atendentes humanos.",
+   "provider": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "Brasil"
+   },
+   "url": "https://roquebusinessevolution.com/agentes-de-ia-para-suporte/"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Agentes de IA para suporte",
+     "item": "https://roquebusinessevolution.com/agentes-de-ia-para-suporte/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://roquebusinessevolution.com/agentes-de-ia-para-suporte/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O agente de suporte responde só com o que a empresa autorizou?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. Ele usa a base de conhecimento definida e segue regras sobre o que pode responder, encaminhando para uma pessoa quando não souber."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O que é onboarding?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É o processo de receber e orientar um novo cliente ou colaborador nos primeiros passos, para que ele comece a usar o serviço ou a rotina com segurança."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O agente funciona para a equipe interna também?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. Agentes internos apoiam as equipes com consultas a procedimentos, políticas e documentos da empresa."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como a empresa acompanha a qualidade das respostas?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pelo registro das conversas e por indicadores como taxa de resolução, encaminhamentos para pessoas, erros e custo por interação."
+     }
+    }
+   ]
+  }
+ ]
+}

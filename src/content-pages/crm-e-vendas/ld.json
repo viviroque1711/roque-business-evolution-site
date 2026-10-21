@@ -1,0 +1,133 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://roquebusinessevolution.com/crm-e-vendas/#page",
+   "url": "https://roquebusinessevolution.com/crm-e-vendas/",
+   "name": "CRM e Inteligência Comercial: Funil de Vendas",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "mainEntity": {
+    "@id": "https://roquebusinessevolution.com/crm-e-vendas/#service"
+   }
+  },
+  {
+   "@type": "Service",
+   "@id": "https://roquebusinessevolution.com/crm-e-vendas/#service",
+   "name": "CRM, vendas e inteligência comercial",
+   "serviceType": "Consultoria comercial e CRM",
+   "description": "Diagnóstico do processo comercial, desenho de funil, implantação de CRM, qualificação de leads, automação de follow-ups e relatórios de desempenho.",
+   "provider": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "Brasil"
+   },
+   "url": "https://roquebusinessevolution.com/crm-e-vendas/"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "CRM e vendas",
+     "item": "https://roquebusinessevolution.com/crm-e-vendas/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://roquebusinessevolution.com/crm-e-vendas/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O que é um CRM?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "CRM (Customer Relationship Management) é o sistema que organiza contatos, conversas e oportunidades de venda em um só lugar."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O que é um funil de vendas?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É o caminho que a oportunidade percorre, do primeiro contato ao fechamento, dividido em etapas com critérios claros."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Vocês integram o CRM com WhatsApp e formulários?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. A integração entre formulários, campanhas, WhatsApp e CRM faz parte do serviço, conforme as ferramentas disponíveis."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como evitar perder oportunidades?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Com etapas definidas, responsáveis claros, automação de follow-ups e relatórios que mostram oportunidades paradas."
+     }
+    }
+   ]
+  }
+ ]
+}

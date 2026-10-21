@@ -1,0 +1,141 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://roquebusinessevolution.com/marketing-digital-e-midia-paga/#page",
+   "url": "https://roquebusinessevolution.com/marketing-digital-e-midia-paga/",
+   "name": "Marketing Digital e Mídia Paga (Google e Meta Ads)",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "mainEntity": {
+    "@id": "https://roquebusinessevolution.com/marketing-digital-e-midia-paga/#service"
+   }
+  },
+  {
+   "@type": "Service",
+   "@id": "https://roquebusinessevolution.com/marketing-digital-e-midia-paga/#service",
+   "name": "Marketing digital, mídia paga e aquisição de clientes",
+   "serviceType": "Marketing digital e gestão de tráfego pago",
+   "description": "Planejamento de campanhas, gestão de Google Ads e Meta Ads, funis de aquisição, landing pages, mensuração de conversões e integração com CRM.",
+   "provider": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "Brasil"
+   },
+   "url": "https://roquebusinessevolution.com/marketing-digital-e-midia-paga/"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Marketing digital e mídia paga",
+     "item": "https://roquebusinessevolution.com/marketing-digital-e-midia-paga/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://roquebusinessevolution.com/marketing-digital-e-midia-paga/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O que é mídia paga?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É a compra de espaço de anúncio em plataformas como Google e Meta para alcançar pessoas segmentadas, com pagamento pela exibição ou pelo clique."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quanto devo investir em anúncios?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Depende do mercado, da concorrência e do objetivo. A verba de mídia é definida junto com você e fica separada dos honorários da agência."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como vocês medem o resultado das campanhas?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pela mensuração de conversões, custo por oportunidade, taxa de conversão por etapa e integração com o CRM, conforme os dados disponíveis."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Vocês garantem um número de clientes?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. Os resultados dependem de mercado, concorrência, oferta, investimento e execução. Acompanhamos indicadores e otimizamos de forma contínua."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Preciso de site para anunciar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Precisa de uma página de destino. A Roque cria sites e landing pages para campanhas."
+     }
+    }
+   ]
+  }
+ ]
+}

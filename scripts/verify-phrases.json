@@ -2,8 +2,107 @@
  "/": [
   "Agência de IA, criação de sites e desenvolvimento de software para empresas que querem evoluir"
  ],
+ "/servicos/": [
+  "Serviços da Roque Business Evolution"
+ ],
  "/agencia-de-ia/": [
   "Agência de IA que coloca agentes de inteligência artificial para trabalhar na sua empresa"
+ ],
+ "/pesquisa-de-palavras-chave/": [
+  "Pesquisa de palavras-chave que descobre o que o seu público procura e por quê"
+ ],
+ "/geo-aeo/": [
+  "GEO e AEO: como preparar o seu site para buscas com inteligência artificial"
+ ],
+ "/marketing-de-conteudo/": [
+  "Marketing de conteúdo que atrai o público certo e constrói autoridade no seu tema"
+ ],
+ "/marketing-digital-e-midia-paga/": [
+  "Marketing digital e mídia paga para gerar oportunidades e acompanhar o custo de cada uma"
+ ],
+ "/branding-e-identidade-digital/": [
+  "Branding e identidade digital para a sua empresa comunicar com clareza e consistência"
+ ],
+ "/crm-e-vendas/": [
+  "CRM e vendas: organize o funil comercial e reduza oportunidades perdidas"
+ ],
+ "/reputacao-digital/": [
+  "Reputação digital e relacionamento com clientes para fortalecer a confiança na sua empresa"
+ ],
+ "/automacao-de-processos/": [
+  "Automação de processos empresariais para reduzir tarefas repetitivas e ganhar velocidade"
+ ],
+ "/dados-e-business-intelligence/": [
+  "Dados, analytics e business intelligence para decidir com informação confiável"
+ ],
+ "/capacitacao-em-ia/": [
+  "Capacitação em IA para a sua equipe usar inteligência artificial com produtividade e responsabilidade"
+ ],
+ "/governanca-e-seguranca-de-ia/": [
+  "Governança e segurança de IA para operar com controles, rastreabilidade e confiança"
+ ],
+ "/suporte-e-evolucao-continua/": [
+  "Suporte e evolução contínua para as soluções da sua empresa seguirem úteis e estáveis"
+ ],
+ "/agentes-de-ia-para-whatsapp/": [
+  "Agente de IA para WhatsApp: atendimento automático com inteligência artificial"
+ ],
+ "/agentes-de-ia-para-vendas/": [
+  "Agente de IA para vendas: qualifique leads e acompanhe oportunidades sem deixar nenhuma parada"
+ ],
+ "/agentes-de-ia-para-suporte/": [
+  "Agente de IA para suporte, pós-venda e onboarding com a base de conhecimento da sua empresa"
+ ],
+ "/proposito-e-impacto/": [
+  "Propósito e impacto da Roque Business Evolution"
+ ],
+ "/para-pequenas-e-medias-empresas/": [
+  "Tecnologia e inteligência artificial para pequenas e médias empresas crescerem com organização"
+ ],
+ "/para-grandes-empresas/": [
+  "Transformação digital, governança e inteligência artificial para grandes empresas"
+ ],
+ "/metodologia/": [
+  "Metodologia da Roque Business Evolution: sete fases do diagnóstico à evolução contínua"
+ ],
+ "/como-contratar/": [
+  "Como contratar a Roque Business Evolution: projetos, serviços recorrentes e consultoria"
+ ],
+ "/diagnostico/": [
+  "Diagnóstico digital e de IA: o primeiro passo para modernizar a sua empresa"
+ ],
+ "/produtos/": [
+  "Produtos da Roque Business Evolution: Aurora Premium e EngageBot"
+ ],
+ "/perguntas-frequentes/": [
+  "Perguntas frequentes sobre a Roque Business Evolution"
+ ],
+ "/glossario/": [
+  "Glossário de inteligência artificial, SEO e transformação digital"
+ ],
+ "/blog/": [
+  "Blog da Roque Business Evolution"
+ ],
+ "/blog/o-que-e-agencia-de-ia/": [
+  "O que é uma agência de IA e quando vale a pena contratar uma"
+ ],
+ "/blog/geo-e-aeo-seo-para-buscas-com-ia/": [
+  "GEO e AEO: como preparar o seu site para buscas com inteligência artificial"
+ ],
+ "/blog/agente-de-ia-no-whatsapp/": [
+  "Agente de IA no WhatsApp: como funciona o atendimento automático"
+ ],
+ "/blog/seo-para-pequenas-empresas/": [
+  "SEO para pequenas empresas: por onde começar a ser encontrado no Google"
+ ],
+ "/blog/automacao-de-processos-o-que-automatizar/": [
+  "Automação de processos: o que a sua empresa pode automatizar primeiro"
+ ],
+ "/blog/adotar-ia-na-empresa-com-seguranca/": [
+  "Como adotar inteligência artificial na empresa com governança e segurança"
+ ],
+ "/blog/como-criar-um-site-profissional/": [
+  "Como criar um site profissional que aparece no Google e traz clientes"
  ],
  "/criacao-de-sites/": [
   "Criação de sites profissionais que aparecem no Google e trazem clientes"
@@ -22,9 +121,6 @@
  ],
  "/engagebot/": [
   "EngageBot: atendimento com inteligência artificial no WhatsApp e no site"
- ],
- "/servicos/": [
-  "Serviços da Roque Business Evolution"
  ],
  "/sobre/": [
   "Sobre a Roque Business Evolution"

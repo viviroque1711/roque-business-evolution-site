@@ -1,0 +1,136 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://roquebusinessevolution.com/blog/como-criar-um-site-profissional/#page",
+   "url": "https://roquebusinessevolution.com/blog/como-criar-um-site-profissional/",
+   "name": "Como criar um site profissional que aparece no Google e traz clientes",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://roquebusinessevolution.com/blog/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Como criar um site profissional",
+     "item": "https://roquebusinessevolution.com/blog/como-criar-um-site-profissional/"
+    }
+   ]
+  },
+  {
+   "@type": "BlogPosting",
+   "@id": "https://roquebusinessevolution.com/blog/como-criar-um-site-profissional/#post",
+   "mainEntityOfPage": "https://roquebusinessevolution.com/blog/como-criar-um-site-profissional/",
+   "headline": "Como criar um site profissional que aparece no Google e traz clientes",
+   "description": "Como criar um site profissional para a sua empresa: planejamento, estrutura, conteúdo, SEO, velocidade e integração com WhatsApp.",
+   "inLanguage": "pt-BR",
+   "datePublished": "2026-10-21",
+   "dateModified": "2026-10-21",
+   "author": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "image": "https://roquebusinessevolution.com/og/blog.jpg",
+   "about": [
+    {
+     "@type": "Thing",
+     "name": "Criação de sites"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://roquebusinessevolution.com/blog/como-criar-um-site-profissional/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Quanto custa um site profissional?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Depende do escopo: número de páginas, integrações e conteúdo. A proposta discrimina cada item."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Preciso de blog no site?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não é obrigatório, mas conteúdos que respondem dúvidas ajudam a ser encontrado e a gerar confiança."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Site em Instagram substitui um site próprio?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. Redes sociais complementam, mas o site é o seu ativo próprio, que você controla e que os buscadores indexam."
+     }
+    }
+   ]
+  }
+ ]
+}
