@@ -1,0 +1,215 @@
+<html lang="pt-BR"><head>
+		<script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-58VD6QGM"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-58VD6QGM');</script>
+		<meta charset="UTF-8">
+		<link rel="icon" type="image/png" href="https://horizons-cdn.hostinger.com/23d8f09e-aaab-4b51-a1ec-ab7ca49e0c14/9ef61e70f923edf295973e41c51a9934.png">
+		<meta name="generator" content="Hostinger Horizons">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Cases de Sucesso - Roque Business Evolution</title>
+		<script type="module" crossorigin="" src="/assets/index-CmbU6tuX.js"></script>
+		<link rel="stylesheet" crossorigin="" href="/assets/index-g9aQUM5B.css">
+		<script type="module">
+window.onerror = (message, source, lineno, colno, errorObj) => {
+	const errorDetails = errorObj ? JSON.stringify({
+		name: errorObj.name,
+		message: errorObj.message,
+		stack: errorObj.stack,
+		source,
+		lineno,
+		colno,
+	}) : null;
+
+	window.parent.postMessage({
+		type: 'horizons-runtime-error',
+		message,
+		error: errorDetails
+	}, '*');
+};
+</script>
+		<script type="module">
+const observer = new MutationObserver((mutations) => {
+	for (const mutation of mutations) {
+		for (const addedNode of mutation.addedNodes) {
+			if (
+				addedNode.nodeType === Node.ELEMENT_NODE &&
+				(
+					addedNode.tagName?.toLowerCase() === 'vite-error-overlay' ||
+					addedNode.classList?.contains('backdrop')
+				)
+			) {
+				handleViteOverlay(addedNode);
+			}
+		}
+	}
+});
+
+observer.observe(document.documentElement, {
+	childList: true,
+	subtree: true
+});
+
+function handleViteOverlay(node) {
+	if (!node.shadowRoot) {
+		return;
+	}
+
+	const backdrop = node.shadowRoot.querySelector('.backdrop');
+
+	if (backdrop) {
+		const overlayHtml = backdrop.outerHTML;
+		const parser = new DOMParser();
+		const doc = parser.parseFromString(overlayHtml, 'text/html');
+		const messageBodyElement = doc.querySelector('.message-body');
+		const fileElement = doc.querySelector('.file');
+		const messageText = messageBodyElement ? messageBodyElement.textContent.trim() : '';
+		const fileText = fileElement ? fileElement.textContent.trim() : '';
+		const error = messageText + (fileText ? ' File:' + fileText : '');
+
+		window.parent.postMessage({
+			type: 'horizons-vite-error',
+			error,
+		}, '*');
+	}
+}
+</script>
+		<script type="module">
+const originalConsoleError = console.error;
+const MATCH_LINE_COL_REGEX = /:(\d+):(\d+)\)?\s*$/; // regex to match the :lineNum:colNum
+const MATCH_AT_REGEX = /^\s*at\s+(?:async\s+)?(?:.*?\s+)?\(?/; // regex to remove the 'at' keyword and any 'async' or function name
+const MATCH_PATH_REGEX = /^\//; // regex to remove the leading slash
+
+function parseStackFrameLine(line) {
+	const lineColMatch = line.match(MATCH_LINE_COL_REGEX);
+	if (!lineColMatch) return null;
+	const [, lineNum, colNum] = lineColMatch;
+	const suffix = `:${lineNum}:${colNum}`;
+	const idx = line.lastIndexOf(suffix);
+	if (idx === -1) return null;
+	const before = line.substring(0, idx);
+	const path = before.replace(MATCH_AT_REGEX, '').trim();
+	if (!path) return null;
+
+	try {
+		const pathname = new URL(path).pathname;
+		const filePath = pathname.replace(MATCH_PATH_REGEX, '') || pathname;
+		return `${filePath}:${lineNum}:${colNum}`;
+	} catch (e) {
+		const filePath = path.replace(MATCH_PATH_REGEX, '') || path;
+		return `${filePath}:${lineNum}:${colNum}`;
+	}
+}
+
+function getFilePathFromStack(stack, skipFrames = 0) {
+	if (!stack || typeof stack !== 'string') return null;
+	const lines = stack.split('\n').slice(1);
+
+	const frames = lines.map(line => parseStackFrameLine(line.replace(/\r$/, ''))).filter(Boolean);
+
+	return frames[skipFrames] ?? null;
+}
+
+console.error = function(...args) {
+	originalConsoleError.apply(console, args);
+
+	let errorString = '';
+	let filePath = null;
+
+	for (let i = 0; i < args.length; i++) {
+		const arg = args[i];
+		if (arg instanceof Error) {
+			filePath = getFilePathFromStack(arg.stack, 0);
+			errorString = `${arg.name}: ${arg.message}`;
+			if (filePath) {
+				errorString = `${errorString} at ${filePath}`;
+			}
+			break;
+		}
+	}
+
+	if (!errorString) {
+		errorString = args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : String(arg)).join(' ');
+		const stack = new Error().stack;
+		filePath = getFilePathFromStack(stack, 1);
+		if (filePath) {
+			errorString = `${errorString} at ${filePath}`;
+		}
+	}
+
+	window.parent.postMessage({
+		type: 'horizons-console-error',
+		error: errorString
+	}, '*');
+};
+</script>
+		<script type="module">
+const originalFetch = window.fetch;
+
+window.fetch = function(...args) {
+	const url = args[0] instanceof Request ? args[0].url : args[0];
+
+	// Skip WebSocket URLs
+	if (url.startsWith('ws:') || url.startsWith('wss:')) {
+		return originalFetch.apply(this, args);
+	}
+
+	return originalFetch.apply(this, args)
+		.then(async response => {
+			const contentType = response.headers.get('Content-Type') || '';
+
+			// Exclude HTML document responses
+			const isDocumentResponse =
+				contentType.includes('text/html') ||
+				contentType.includes('application/xhtml+xml');
+
+			if (!response.ok && !isDocumentResponse) {
+					const responseClone = response.clone();
+					const errorFromRes = await responseClone.text();
+					const requestUrl = response.url;
+					console.error(`Fetch error from ${requestUrl}: ${errorFromRes}`);
+			}
+
+			return response;
+		})
+		.catch(error => {
+			if (!url.match(/.html?$/i)) {
+				console.error(error);
+			}
+
+			throw error;
+		});
+};
+</script>
+		<script type="module">
+if (window.navigation && window.self !== window.top) {
+	window.navigation.addEventListener('navigate', (event) => {
+		const url = event.destination.url;
+
+		try {
+			const destinationUrl = new URL(url);
+			const destinationOrigin = destinationUrl.origin;
+			const currentOrigin = window.location.origin;
+
+			if (destinationOrigin === currentOrigin) {
+				return;
+			}
+		} catch (error) {
+			return;
+		}
+
+		window.parent.postMessage({
+			type: 'horizons-navigation-error',
+			url,
+		}, '*');
+	});
+}
+</script>
+	<link rel="preconnect" href="https://fonts.googleapis.com" data-react-helmet="true"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" data-react-helmet="true"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700;800&amp;family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet" data-react-helmet="true"><meta name="description" content="Conheça os casos de sucesso da Roque Business Evolution. Projetos reais de transformação digital, governança e eficiência operacional." data-react-helmet="true"></head>
+	<body>
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58VD6QGM"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<div id="root"><div class="min-h-screen bg-black text-white"><header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black/95 backdrop-blur-md shadow-lg" style="transform: none;"><nav class="container mx-auto px-4 py-3"><div class="flex items-center justify-between"><a class="flex items-center space-x-2" href="/"><div><img src="https://horizons-cdn.hostinger.com/23d8f09e-aaab-4b51-a1ec-ab7ca49e0c14/5c72b17de461735f58f695c688e6cb36.png" alt="Roque Business Evolution Logo" class="h-20 w-auto"></div></a><div class="hidden lg:flex items-center space-x-8"><a class="relative font-inter text-sm font-medium transition-colors hover:text-gold text-silver" href="/">Home</a><a class="relative font-inter text-sm font-medium transition-colors hover:text-gold text-silver" href="/sobre">Sobre</a><a class="relative font-inter text-sm font-medium transition-colors hover:text-gold text-silver" href="/enterprise">Enterprise</a><a class="relative font-inter text-sm font-medium transition-colors hover:text-gold text-silver" href="/pme">PME</a><a class="relative font-inter text-sm font-medium transition-colors hover:text-gold text-silver" href="/solutions">Soluções</a><a class="relative font-inter text-sm font-medium transition-colors hover:text-gold text-gold" href="/cases">Cases<div class="absolute -bottom-1 left-0 right-0 h-0.5 bg-gold" style="opacity: 1;"></div></a><a class="relative font-inter text-sm font-medium transition-colors hover:text-gold text-silver" href="/propositoeimpacto">Propósito e Impacto</a><a class="relative font-inter text-sm font-medium transition-colors hover:text-gold text-silver" href="/manifesto">Manifesto</a><a class="relative font-inter text-sm font-medium transition-colors hover:text-gold text-silver" href="/blog">Blog</a><a class="relative font-inter text-sm font-medium transition-colors hover:text-gold text-silver" href="/contact">Contato</a><button type="button" id="radix-:r0:" aria-haspopup="menu" aria-expanded="false" data-state="closed" class="flex items-center relative font-inter text-sm font-medium transition-colors hover:text-gold text-silver focus:outline-none">Produtos <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 h-4 w-4"><path d="m6 9 6 6 6-6"></path></svg></button></div><button class="lg:hidden text-white hover:text-gold transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button></div></nav></header><section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20"><div class="absolute inset-0 bg-gradient-to-br from-black via-dark-gray to-black"><img class="absolute inset-0 w-full h-full object-cover opacity-20" alt="Team celebrating success in a modern office" src="https://images.unsplash.com/photo-1479800800845-03752b6188fa"></div><div class="container mx-auto px-4 relative z-10"><div class="text-center max-w-4xl mx-auto" style="opacity: 1; transform: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-16 h-16 text-gold mx-auto mb-6"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg><h1 class="text-4xl md:text-6xl font-bold font-poppins mb-6">Cases de <span class="text-gold">Sucesso</span></h1><p class="text-xl text-silver mb-8">Resultados reais de empresas que transformaram suas operações com a Roque Business Evolution.</p></div></div></section><section class="py-24 bg-dark-gray"><div class="container mx-auto px-4"><div class="space-y-20"><div class="bg-black border border-silver/20 rounded-2xl overflow-hidden hover:border-gold/50 hover:shadow-2xl hover:shadow-gold/10 transition-all" style="opacity: 1; transform: none;"><div class="grid grid-cols-1 lg:grid-cols-2"><div class="relative h-80 lg:h-auto"><img src="https://horizons-cdn.hostinger.com/23d8f09e-aaab-4b51-a1ec-ab7ca49e0c14/374ba7fab58d3214d3402a07f9fa00dd.jpg" alt="Ajudamos a trazer a Internet para o Brasil - Implementação de WLAN" class="w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div><div class="absolute bottom-6 left-6"><span class="bg-gold text-black px-3 py-1 rounded-full text-sm font-semibold">Telecomunicações</span></div></div><div class="p-8 md:p-12"><h2 class="text-3xl font-bold font-poppins mb-2">Ajudamos a trazer a Internet para o Brasil - Implementação de WLAN</h2><p class="text-gold mb-6">Telecomunicações</p><div class="space-y-6"><div><h3 class="text-lg font-semibold mb-2 text-silver">Desafio:</h3><p class="text-white">Implementação de infraestrutura WLAN em larga escala em todo território nacional, com necessidade de coordenação de múltiplas equipes e fornecedores, em um momento crucial para a conectividade do país.</p></div><div><h3 class="text-lg font-semibold mb-2 text-silver">Solução:</h3><p class="text-white">Estruturação de PMO dedicado, metodologia de implementação padronizada, gestão de riscos e dependências, e coordenação de equipes distribuídas geograficamente para massificar o acesso à internet.</p></div><div><h3 class="text-lg font-semibold mb-3 text-silver">Resultados:</h3><div class="grid grid-cols-2 gap-4"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">Implementação de 5.000+ pontos de acesso</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">Redução de 30% no prazo de implementação</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">Zero incidentes críticos durante rollout</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">Peça fundamental na expansão da internet no Brasil</span></div></div></div></div></div></div><div class="bg-dark-gray/50 p-6 border-t border-silver/10"><p class="text-white italic mb-2">"A Roque foi fundamental para o sucesso do projeto. A governança estabelecida nos deu controle total sobre uma operação extremamente complexa e de impacto nacional."</p><p class="text-silver text-sm"><span class="font-semibold text-gold">Diretor de Infraestrutura</span></p></div></div><div class="bg-black border border-silver/20 rounded-2xl overflow-hidden hover:border-gold/50 hover:shadow-2xl hover:shadow-gold/10 transition-all" style="opacity: 1; transform: none;"><div class="grid grid-cols-1 lg:grid-cols-2"><div class="relative h-80 lg:h-auto"><img src="https://horizons-cdn.hostinger.com/23d8f09e-aaab-4b51-a1ec-ab7ca49e0c14/eba806c992787efb3c6a674c3878f1a2.jpg" alt="Migração da Telefonia Móvel Analógica para Digital até o 4G" class="w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div><div class="absolute bottom-6 left-6"><span class="bg-gold text-black px-3 py-1 rounded-full text-sm font-semibold">Telecomunicações</span></div></div><div class="p-8 md:p-12"><h2 class="text-3xl font-bold font-poppins mb-2">Migração da Telefonia Móvel Analógica para Digital até o 4G</h2><p class="text-gold mb-6">Telecomunicações</p><div class="space-y-6"><div><h3 class="text-lg font-semibold mb-2 text-silver">Desafio:</h3><p class="text-white">Migração de um sistema legado de telefonia móvel analógica para as tecnologias digitais (2G, 3G, e 4G) em uma operação 24/7, sem interrupção de serviços críticos para milhões de usuários.</p></div><div><h3 class="text-lg font-semibold mb-2 text-silver">Solução:</h3><p class="text-white">Planejamento detalhado de migração em fases, testes extensivos em laboratório, execução em janelas de manutenção noturnas, planos de rollback e treinamento de equipes de engenharia e operação.</p></div><div><h3 class="text-lg font-semibold mb-3 text-silver">Resultados:</h3><div class="grid grid-cols-2 gap-4"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">Migração de milhões de usuários</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">Zero downtime durante a transição</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">Redução de 40% em custos operacionais</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">Habilitação de serviços de dados móveis e 4G</span></div></div></div></div></div></div><div class="bg-dark-gray/50 p-6 border-t border-silver/10"><p class="text-white italic mb-2">"Processo de transformação impecável. A metodologia da Roque garantiu uma transição suave e sem impactos para o negócio, modernizando nossa rede para o futuro."</p><p class="text-silver text-sm"><span class="font-semibold text-gold">CTO</span></p></div></div><div class="bg-black border border-silver/20 rounded-2xl overflow-hidden hover:border-gold/50 hover:shadow-2xl hover:shadow-gold/10 transition-all" style="opacity: 1; transform: none;"><div class="grid grid-cols-1 lg:grid-cols-2"><div class="relative h-80 lg:h-auto"><img src="https://horizons-cdn.hostinger.com/23d8f09e-aaab-4b51-a1ec-ab7ca49e0c14/273722b58a2de2c7fc59d2ff3150112b.png" alt="Google Product Launches" class="w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div><div class="absolute bottom-6 left-6"><span class="bg-gold text-black px-3 py-1 rounded-full text-sm font-semibold">Tecnologia</span></div></div><div class="p-8 md:p-12"><h2 class="text-3xl font-bold font-poppins mb-2">Google Product Launches</h2><p class="text-gold mb-6">Tecnologia</p><div class="space-y-6"><div><h3 class="text-lg font-semibold mb-2 text-silver">Desafio:</h3><p class="text-white">Coordenação de lançamentos de produtos Google no mercado brasileiro, com múltiplas frentes de trabalho e prazos agressivos.</p></div><div><h3 class="text-lg font-semibold mb-2 text-silver">Solução:</h3><p class="text-white">Gestão de projetos ágil, coordenação de stakeholders, gestão de comunicação, controle de qualidade, go-to-market strategy.</p></div><div><h3 class="text-lg font-semibold mb-3 text-silver">Resultados:</h3><div class="grid grid-cols-2 gap-4"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">Lançamento de 15+ produtos</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">100% dos lançamentos no prazo</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">Cobertura de mídia acima da meta</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">Excelência na execução</span></div></div></div></div></div></div><div class="bg-dark-gray/50 p-6 border-t border-silver/10"><p class="text-white italic mb-2">"A capacidade da Roque de gerenciar projetos complexos com múltiplas variáveis foi essencial para nosso sucesso."</p><p class="text-silver text-sm"><span class="font-semibold text-gold">Product Marketing Manager</span></p></div></div><div class="bg-black border border-silver/20 rounded-2xl overflow-hidden hover:border-gold/50 hover:shadow-2xl hover:shadow-gold/10 transition-all" style="opacity: 1; transform: none;"><div class="grid grid-cols-1 lg:grid-cols-2"><div class="relative h-80 lg:h-auto"><img src="https://horizons-cdn.hostinger.com/23d8f09e-aaab-4b51-a1ec-ab7ca49e0c14/eea4286102e902d9ef99d5e8cbb29792.png" alt="Apple Product Launches" class="w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div><div class="absolute bottom-6 left-6"><span class="bg-gold text-black px-3 py-1 rounded-full text-sm font-semibold">Tecnologia</span></div></div><div class="p-8 md:p-12"><h2 class="text-3xl font-bold font-poppins mb-2">Apple Product Launches</h2><p class="text-gold mb-6">Tecnologia</p><div class="space-y-6"><div><h3 class="text-lg font-semibold mb-2 text-silver">Desafio:</h3><p class="text-white">Execução de lançamentos de produtos Apple com alto nível de sigilo, coordenação de eventos e operações de varejo.</p></div><div><h3 class="text-lg font-semibold mb-2 text-silver">Solução:</h3><p class="text-white">Gestão de projetos com confidencialidade, coordenação de eventos premium, treinamento de equipes de varejo, logística complexa.</p></div><div><h3 class="text-lg font-semibold mb-3 text-silver">Resultados:</h3><div class="grid grid-cols-2 gap-4"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">Eventos executados com perfeição</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">Sigilo mantido em 100% dos casos</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">Experiência premium para clientes</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">Operação de varejo sincronizada</span></div></div></div></div></div></div><div class="bg-dark-gray/50 p-6 border-t border-silver/10"><p class="text-white italic mb-2">"Profissionalismo e atenção aos detalhes incomparáveis. A Roque entende o que significa excelência operacional."</p><p class="text-silver text-sm"><span class="font-semibold text-gold">Retail Operations Director</span></p></div></div><div class="bg-black border border-silver/20 rounded-2xl overflow-hidden hover:border-gold/50 hover:shadow-2xl hover:shadow-gold/10 transition-all" style="opacity: 0; transform: translateY(0.365805px) translateZ(0px);"><div class="grid grid-cols-1 lg:grid-cols-2"><div class="relative h-80 lg:h-auto"><img src="https://images.unsplash.com/photo-1554224155-1696413565d3?w=800&amp;q=80" alt="FinanceHub" class="w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div><div class="absolute bottom-6 left-6"><span class="bg-gold text-black px-3 py-1 rounded-full text-sm font-semibold">Serviços Financeiros</span></div></div><div class="p-8 md:p-12"><h2 class="text-3xl font-bold font-poppins mb-2">FinanceHub</h2><p class="text-gold mb-6">Serviços Financeiros</p><div class="space-y-6"><div><h3 class="text-lg font-semibold mb-2 text-silver">Desafio:</h3><p class="text-white">Transformação digital de instituição financeira tradicional, com necessidade de modernizar sistemas legados e implementar novos canais digitais.</p></div><div><h3 class="text-lg font-semibold mb-2 text-silver">Solução:</h3><p class="text-white">Arquitetura de soluções cloud-native, migração gradual de sistemas, implementação de APIs, novos canais digitais, treinamento de equipes.</p></div><div><h3 class="text-lg font-semibold mb-3 text-silver">Resultados:</h3><div class="grid grid-cols-2 gap-4"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">Redução de 50% no time-to-market</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">Aumento de 200% em transações digitais</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">Redução de 35% em custos de TI</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">NPS aumentado em 40 pontos</span></div></div></div></div></div></div><div class="bg-dark-gray/50 p-6 border-t border-silver/10"><p class="text-white italic mb-2">"A Roque nos ajudou a fazer em 18 meses o que planejávamos para 5 anos. Transformação real e mensurável."</p><p class="text-silver text-sm"><span class="font-semibold text-gold">CEO</span></p></div></div><div class="bg-black border border-silver/20 rounded-2xl overflow-hidden hover:border-gold/50 hover:shadow-2xl hover:shadow-gold/10 transition-all" style="opacity: 0; transform: translateY(9.23555px) translateZ(0px);"><div class="grid grid-cols-1 lg:grid-cols-2"><div class="relative h-80 lg:h-auto"><img src="https://images.unsplash.com/photo-1585255318859-99a1202029c7?w=800&amp;q=80" alt="RetailMax" class="w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div><div class="absolute bottom-6 left-6"><span class="bg-gold text-black px-3 py-1 rounded-full text-sm font-semibold">Varejo</span></div></div><div class="p-8 md:p-12"><h2 class="text-3xl font-bold font-poppins mb-2">RetailMax</h2><p class="text-gold mb-6">Varejo</p><div class="space-y-6"><div><h3 class="text-lg font-semibold mb-2 text-silver">Desafio:</h3><p class="text-white">Rede de varejo com operação ineficiente, processos manuais, falta de visibilidade de estoque e baixa produtividade.</p></div><div><h3 class="text-lg font-semibold mb-2 text-silver">Solução:</h3><p class="text-white">Mapeamento e otimização de processos, implementação de ERP integrado, automação de workflows, dashboards gerenciais, treinamento.</p></div><div><h3 class="text-lg font-semibold mb-3 text-silver">Resultados:</h3><div class="grid grid-cols-2 gap-4"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">Aumento de 45% em produtividade</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">Redução de 60% em rupturas de estoque</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">Diminuição de 30% em custos operacionais</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gold flex-shrink-0"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg><span class="text-white text-sm">ROI alcançado em 8 meses</span></div></div></div></div></div></div><div class="bg-dark-gray/50 p-6 border-t border-silver/10"><p class="text-white italic mb-2">"Finalmente temos controle sobre nossa operação. Os processos fluem, temos visibilidade e tomamos decisões baseadas em dados."</p><p class="text-silver text-sm"><span class="font-semibold text-gold">Diretor de Operações</span></p></div></div></div></div></section><section class="py-24 bg-black"><div class="container mx-auto px-4"><div class="max-w-3xl mx-auto text-center" style="opacity: 1; transform: none;"><h2 class="text-3xl md:text-4xl font-bold font-poppins mb-6">Pronto para ser nosso próximo <span class="text-gold">Case de Sucesso</span>?</h2><p class="text-silver text-lg mb-8">Entre em contato e descubra como podemos transformar sua empresa.</p><a href="/contact"><button class="inline-flex items-center justify-center ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 rounded-md bg-gold hover:bg-gold/90 text-black font-semibold px-10 py-7 text-lg">Iniciar Minha Transformação<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button></a></div></div></section><footer class="bg-dark-gray border-t border-silver/10"><div class="container mx-auto px-4 py-12"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8"><div class="lg:col-span-2"><a class="inline-block mb-4" href="/"><img src="https://horizons-cdn.hostinger.com/23d8f09e-aaab-4b51-a1ec-ab7ca49e0c14/2ec13676dfaabdf32650caffcc41902c.png" alt="Roque Business Evolution Logo" class="h-16 w-auto"></a><p class="text-silver text-sm mb-4 max-w-sm">Transformamos empresas em máquinas de resultados escaláveis através de tecnologia inteligente e governança sólida.</p><div class="flex space-x-4"><a href="#" class="text-silver hover:text-gold transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a><a href="#" class="text-silver hover:text-gold transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a><a href="#" class="text-silver hover:text-gold transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a></div></div><div><span class="text-white font-semibold font-poppins block mb-4">Navegação</span><ul class="space-y-2"><li><a class="text-silver hover:text-gold transition-colors text-sm" href="/">Home</a></li><li><a class="text-silver hover:text-gold transition-colors text-sm" href="/enterprise">Enterprise</a></li><li><a class="text-silver hover:text-gold transition-colors text-sm" href="/pme">PME</a></li><li><a class="text-silver hover:text-gold transition-colors text-sm" href="/solutions">Soluções</a></li><li><a class="text-silver hover:text-gold transition-colors text-sm" href="/about">Sobre a Roque</a></li><li><a class="text-silver hover:text-gold transition-colors text-sm" href="/cases">Cases</a></li><li><a class="text-silver hover:text-gold transition-colors text-sm" href="/blog">Blog</a></li><li><a class="text-silver hover:text-gold transition-colors text-sm" href="/contact">Contato</a></li></ul></div><div><span class="text-white font-semibold font-poppins block mb-4">Produtos</span><ul class="space-y-2"><li><a class="text-silver hover:text-gold transition-colors text-sm" href="/products/aurora-premium">Aurora Premium</a></li><li><a class="text-silver hover:text-gold transition-colors text-sm" href="/products/lumo">LUMO</a></li><li><a class="text-silver hover:text-gold transition-colors text-sm" href="/products/orchestra-agile">Orchestra Agile</a></li></ul></div><div><span class="text-white font-semibold font-poppins block mb-4">Contato</span><ul class="space-y-3"><li class="flex items-start space-x-2 text-silver text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-1 flex-shrink-0 text-gold"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg><a href="mailto:contato@roquebusinessevolution.com" class="hover:text-gold">contato@roquebusinessevolution.com</a></li><li class="flex items-start space-x-2 text-silver text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-1 flex-shrink-0 text-gold"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><a href="tel:+5511973967161" class="hover:text-gold">+55 11 97396-7161</a></li><li class="flex items-start space-x-2 text-silver text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-1 flex-shrink-0 text-gold"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Av. Bartolomeu de Carlos, 401<br>Jardim Flor da Montanha, Guarulhos - SP<br>CEP: 07097-420</span></li></ul></div></div></div><div class="border-t border-silver/10"><div class="container mx-auto px-4 py-6"><div class="flex flex-col md:flex-row justify-between items-center text-silver text-sm"><p>© 2025 Roque Business Evolution. Todos os direitos reservados.</p><div class="flex space-x-6 mt-4 md:mt-0"><a href="#" class="hover:text-gold transition-colors">Política de Privacidade</a><a href="#" class="hover:text-gold transition-colors">Termos de Uso</a></div></div></div></div></footer><div class="relative group z-50"><a href="https://wa.me/5511973967161?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Roque%20Business%20Evolution." target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp" class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 hover:shadow-[#25D366]/50 transition-shadow" tabindex="0" style="opacity: 1; transform: none;"><div style="transform: scale(1.00704) translateZ(0px);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" class="w-8 h-8 text-white"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 .4c101.2 0 183.3 82.1 183.3 183.3 0 32.7-8.6 63.3-24.6 89.8l-15.5 25.4 26.2 15.2-96.2 25.2-22.8-11.9-25.4-15.5c-26.5-16.1-57.1-25.4-89.8-25.4-101.2 0-183.3-82.1-183.3-183.3 0-101.2 82.1-183.3 183.3-183.3zM223.9 119.2c-76.7 0-139.1 62.4-139.1 139.1 0 21.3 4.8 41.5 13.9 59.5l4.6 9.1-3.2 11.2-11.2-3.2c18 9.1 38.2 13.9 59.5 13.9h.1c76.7 0 139.1-62.4 139.1-139.1s-62.4-139.1-139.1-139.1zm79.9 163.8c-3.3 15.5-16.5 27.8-33.8 33.8-17.3 6-36.4 5.3-51-2.6-14.6-7.9-28-18.9-39.1-31.9s-19.8-28.2-27.8-43.2c-8.6-16-9.4-34.4-2.6-51 6.8-16.6 19.1-29.8 34.6-36.4 15.5-6.6 32.7-6 48.2-.2 15.5 5.8 28.7 17.3 35.4 32.7l.1.3c.2.5.3 1 .4 1.5.1.5.2 1 .2 1.5l.1.5c.2.5.3 1 .4 1.5v.1c.1.5.2 1 .2 1.5.3 1.5.4 3 .4 4.6 0 2-.2 3.9-.7 5.8l-1.9 8.2c-.4 1.8-.9 3.6-1.5 5.3l-.2.6c-.2.6-.4 1.2-.6 1.8-.2.6-.5 1.2-.7 1.8l-3.3 7.2c-1.1 2.5-2.2 4.9-3.4 7.2-1.2 2.3-2.4 4.6-3.7 6.7-2.6 4.3-5.3 8.3-8.1 12-2.8 3.7-5.7 7.1-8.5 10.1-2.9 3-5.7 5.7-8.5 8.1-2.8 2.4-5.5 4.5-8.1 6.3-2.6 1.8-5.1 3.3-7.5 4.5h-.1c-2.4 1.2-4.7 2.1-7 2.8h-.1c-2.3.6-4.5 1-6.7 1.1h-.1c-2.2.1-4.3 0-6.4-.3l-2.1-.4c-1.1-.2-2.1-.5-3.2-.8l-1.1-.3c-2.1-.6-4.2-1.4-6.2-2.4-2-1-3.9-2.1-5.7-3.4l-.1-.1c-1.8-1.3-3.5-2.7-5.1-4.2l-.1-.1c-1.6-1.5-3.1-3.1-4.5-4.8l-.1-.1c-1.4-1.7-2.7-3.5-3.9-5.4-1.2-1.9-2.3-3.8-3.4-5.8l-1-1.8c-1-1.8-2-3.6-2.9-5.5-.9-1.9-1.8-3.7-2.5-5.6l-.1-.3c-.7-1.9-1.4-3.8-2-5.7s-1.1-3.9-1.5-5.8c-.4-1.9-.7-3.9-1-5.8-.2-1.9-.3-3.9-.3-5.8 0-1.5.1-3.1.4-4.6.1-1.5.4-3 .8-4.5l.1-.3c.4-1.5.9-2.9 1.5-4.3.6-1.4 1.3-2.8 2-4.1l.1-.3c.8-1.3 1.6-2.6 2.5-3.8.9-1.2 1.8-2.4 2.8-3.5l.1-.1c1-1.1 2-2.2 3.1-3.2s2.2-2 3.3-2.9l.1-.1c1.1-.9 2.3-1.8 3.5-2.6.2-.1.4-.3.6-.4l.2-.1h.1c2.4-1.6 5-3 7.7-4.1 2.7-1.1 5.5-2 8.3-2.6l.3-.1c2.8-.5 5.6-.8 8.5-.8h.1c2.9 0 5.7.2 8.5.7l.3.1c2.8.5 5.5 1.2 8.2 2.1l.3.1c2.7.9 5.3 2.1 7.8 3.5l.2.1c2.5 1.4 4.9 3 7.2 4.8l.2.2c2.3 1.8 4.5 3.8 6.5 6l.2.2c2 2.2 3.8 4.6 5.5 7.1l.2.2c1.7 2.5 3.2 5.1 4.6 7.8l.1.3c1.4 2.7 2.6 5.4 3.6 8.2l.1.3c1 2.8 1.8 5.6 2.5 8.5.6 2.9.9 5.8 1 8.8.1 3 .1 6-.1 8.9z"></path></svg></div></a><div class="fixed bottom-[88px] right-8 md:bottom-[104px] z-50 bg-dark-gray text-white text-sm px-4 py-2 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none border border-silver/20">Fale conosco no WhatsApp<div class="absolute -bottom-1 right-5 w-3 h-3 bg-dark-gray border-b border-r border-silver/20 transform rotate-45"></div></div></div><div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none;"><ol tabindex="-1" class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"></ol></div></div></div>
+	
+</body></html>

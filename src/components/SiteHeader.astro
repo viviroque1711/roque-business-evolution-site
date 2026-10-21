@@ -1,0 +1,65 @@
+---
+// Cabeçalho único: uma barra só. Sem JavaScript, os submenus ficam abertos (links normais) e o menu não recolhe;
+// com JavaScript, "Serviços" e "Produtos" abrem por clique, foco ou passagem do mouse, e abaixo de 1024 px o menu vira botão.
+import { SERVICOS, PRODUTOS, EMPRESA, WHATSAPP } from '../data/nav.mjs';
+import { SITE } from '../data/site.mjs';
+import { u } from '../lib/url.mjs';
+---
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header class="hd" data-hd>
+  <div class="hd-bar">
+    <a class="hd-logo" href={u('/')} aria-label="Roque Business Evolution, página inicial">
+      <img src={u('/img/roque-simbolo.png')} width="44" height="43" alt="" decoding="async">
+      <span class="hd-word"><b>Roque</b><small>Business Evolution</small></span>
+    </a>
+    <button type="button" class="hd-burger" aria-expanded="false" aria-controls="hd-nav" data-burger>
+      <span class="hd-burger-ico" aria-hidden="true"><i></i><i></i></span>
+      <span class="hd-burger-txt">Menu</span>
+    </button>
+    <nav class="hd-nav" id="hd-nav" aria-label="Principal">
+      <ul class="hd-list">
+        <li class="has-sub">
+          <button type="button" class="hd-sub-btn" aria-expanded="false" aria-controls="sub-servicos" data-sub>Serviços</button>
+          <ul class="hd-sub" id="sub-servicos">
+            {SERVICOS.map((s) => <li><a href={u(s.href)}>{s.label}</a></li>)}
+          </ul>
+        </li>
+        <li class="has-sub">
+          <button type="button" class="hd-sub-btn" aria-expanded="false" aria-controls="sub-produtos" data-sub>Produtos</button>
+          <ul class="hd-sub" id="sub-produtos">
+            {PRODUTOS.map((s) => <li><a href={s.external ? s.href : u(s.href)} rel={s.external ? 'noopener' : undefined}>{s.label}</a></li>)}
+          </ul>
+        </li>
+        <li><a href={u(EMPRESA[0].href)} data-path={EMPRESA[0].href}>{EMPRESA[0].label}</a></li>
+        <li class="hd-cta-li"><a class="btn hd-cta" href={WHATSAPP.href} rel="noopener">Falar no WhatsApp</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<script is:inline define:vars={{ repo: SITE.repo }}>
+  (function () {
+    var root = document.documentElement; root.classList.add('js');
+    var btn = document.querySelector('[data-burger]'), nav = document.getElementById('hd-nav');
+    var subs = [].slice.call(document.querySelectorAll('[data-sub]'));
+    var wide = function () { return window.matchMedia('(min-width: 1024px)').matches; };
+    function setSub(b, open) { b.setAttribute('aria-expanded', open ? 'true' : 'false'); b.parentNode.classList.toggle('open', open); }
+    function closeSubs(except) { subs.forEach(function (b) { if (b !== except) setSub(b, false); }); }
+    function setMenu(open) { btn.setAttribute('aria-expanded', open ? 'true' : 'false'); nav.classList.toggle('open', open); if (!open) closeSubs(); }
+    btn.addEventListener('click', function () { setMenu(btn.getAttribute('aria-expanded') !== 'true'); });
+    subs.forEach(function (b) {
+      b.addEventListener('click', function () { var o = b.getAttribute('aria-expanded') !== 'true'; closeSubs(b); setSub(b, o); });
+      var li = b.parentNode;
+      li.addEventListener('mouseenter', function () { if (wide()) { closeSubs(b); setSub(b, true); } });
+      li.addEventListener('mouseleave', function () { if (wide()) setSub(b, false); });
+      li.addEventListener('focusout', function (e) { if (wide() && !li.contains(e.relatedTarget)) setSub(b, false); });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      var open = subs.filter(function (b) { return b.getAttribute('aria-expanded') === 'true'; })[0];
+      if (open) { setSub(open, false); open.focus(); } else if (btn.getAttribute('aria-expanded') === 'true') { setMenu(false); btn.focus(); }
+    });
+    document.addEventListener('click', function (e) { if (!nav.contains(e.target) && !btn.contains(e.target)) { closeSubs(); if (btn.getAttribute('aria-expanded') === 'true') setMenu(false); } });
+    var here = location.pathname.replace(new RegExp('^/' + repo), '');
+    nav.querySelectorAll('a[data-path]').forEach(function (a) { if (here.indexOf(a.getAttribute('data-path')) === 0) a.setAttribute('aria-current', 'page'); });
+  })();
+</script>

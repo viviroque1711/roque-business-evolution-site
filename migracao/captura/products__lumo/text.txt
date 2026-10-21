@@ -1,0 +1,123 @@
+Home
+Sobre
+Enterprise
+PME
+Soluções
+Cases
+Propósito e Impacto
+Manifesto
+Blog
+Contato
+Produtos
+Automação Conversacional Inteligente
+
+LUMO é a plataforma de automação para WhatsApp, SMS e e-mail que sua empresa de serviços precisa para escalar o atendimento.
+
+Solicitar Demonstração
+O Problema que LUMO Resolve
+
+Empresas de serviço perdem tempo e dinheiro com atendimento manual, agendamentos repetitivos e falta de follow-up. LUMO automatiza essas conversas, liberando sua equipe para focar em relacionamento e vendas.
+
+Recursos Poderosos
+IA Treinável
+
+Personalize o comportamento do bot com seus dados.
+
+Flow Builder Visual
+
+Crie fluxos de conversa complexos sem código.
+
+White-label
+
+Use sua própria marca e domine a experiência.
+
+Conversas Híbridas
+
+Alterne entre bot e atendimento humano sem esforço.
+
+Arquitetura Robusta e Moderna
+
+Front-end
+
+React
+
+API Gateway
+
+NestJS
+
+Serviços
+
+Microservices
+
+Provedores
+
+Meta / Resend
+
+React
+Node.js
+TypeScript
+NestJS
+PostgreSQL
+Redis
+BullMQ
+AWS S3
+Docker
+OpenAI
+Planos Acessíveis
+Starter
+
+R$ 49-97/mês
+
+1 Conexão WhatsApp
+1.000 Mensagens/mês
+Automações Básicas
+Suporte via E-mail
+Começar
+RECOMENDADO
+Pro
+
+R$ 197/mês
+
+3 Conexões WhatsApp
+5.000 Mensagens/mês
+Flow Builder Visual
+IA Trainer
+Suporte via Chat
+Começar
+Scale
+
+R$ 497/mês
+
+Conexões Ilimitadas
+Mensagens Sob Demanda
+Subcontas
+Suporte Prioritário
+Começar
+
+Transformamos empresas em máquinas de resultados escaláveis através de tecnologia inteligente e governança sólida.
+
+Navegação
+Home
+Enterprise
+PME
+Soluções
+Sobre a Roque
+Cases
+Blog
+Contato
+Produtos
+Aurora Premium
+LUMO
+Orchestra Agile
+Contato
+contato@roquebusinessevolution.com
++55 11 97396-7161
+Av. Bartolomeu de Carlos, 401
+Jardim Flor da Montanha, Guarulhos - SP
+CEP: 07097-420
+
+© 2025 Roque Business Evolution. Todos os direitos reservados.
+
+Política de Privacidade
+Termos de Uso
+Fale conosco no WhatsApp

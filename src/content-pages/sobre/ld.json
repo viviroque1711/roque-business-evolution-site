@@ -1,0 +1,123 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "AboutPage",
+   "@id": "https://roquebusinessevolution.com/sobre/#page",
+   "url": "https://roquebusinessevolution.com/sobre/",
+   "name": "Sobre a Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Sobre",
+     "item": "https://roquebusinessevolution.com/sobre/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://roquebusinessevolution.com/sobre/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Quem é a Roque Business Evolution?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A Roque Business Evolution é uma empresa de consultoria, tecnologia e transformação digital fundada por Viviane Roque. Seu nome empresarial é Roque Business Evolution Serviços Ltda."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quem fundou a Roque Business Evolution?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A fundadora é Viviane Roque, que trabalha com tecnologia e gestão de operações desde 1998. Conheça o site de Viviane Roque ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quais são a missão e a visão da empresa?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A missão é acelerar a evolução de empresas com inteligência artificial, tecnologia e métodos de gestão. A visão é ser referência em soluções integradas de IA e transformação digital para empresas que crescem de forma estruturada, sustentável e orientada por dados."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Que produtos a Roque Business Evolution mantém?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O Aurora Premium , sistema de agendamento e gestão lançado em 2025, e o EngageBot , atendimento com IA."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como falar com a Roque Business Evolution?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pelo WhatsApp +55 11 97396-7161 ou pelo e-mail contato@roquebusinessevolution.com ."
+     }
+    }
+   ]
+  }
+ ]
+}

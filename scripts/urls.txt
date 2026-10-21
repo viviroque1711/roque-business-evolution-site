@@ -1,0 +1,13 @@
+/
+/agencia-de-ia/
+/contato/
+/criacao-de-sites/
+/desenvolvimento-de-software/
+/engagebot/
+/politica-de-privacidade/
+/saas/
+/seo/
+/servicos/
+/sobre/
+/termos-de-uso/
+/transformacao-digital/

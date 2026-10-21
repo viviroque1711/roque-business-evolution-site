@@ -1,0 +1,123 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "CollectionPage",
+   "@id": "https://roquebusinessevolution.com/servicos/#page",
+   "url": "https://roquebusinessevolution.com/servicos/",
+   "name": "Serviços da Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Serviços",
+     "item": "https://roquebusinessevolution.com/servicos/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://roquebusinessevolution.com/servicos/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Quais serviços a Roque Business Evolution oferece?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Consultoria de transformação digital, criação de sites, SEO e busca com IA, agentes de IA e automação, desenvolvimento de software e SaaS, marketing, CRM, dados e capacitação em IA. Esta página reúne os 17 serviços."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Todos os serviços têm página própria?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Os serviços prioritários têm página própria. Os demais aparecem nesta página e podem ser contratados conforme a capacidade e os parceiros de cada projeto."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como a Roque Business Evolution trabalha?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Em sete fases: diagnóstico, pesquisa e estratégia, arquitetura da solução, implementação, testes e validação, publicação e operação, e mensuração e evolução."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como são contratados os serviços?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Em projetos fechados, serviços recorrentes, consultoria especializada ou projetos híbridos de tecnologia e operação. A proposta discrimina implantação, mensalidade, ferramentas de terceiros, infraestrutura, mídia paga e suporte."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A Roque Business Evolution garante resultados?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não garantimos posições no Google, citações em IA nem resultados financeiros sem condições objetivas definidas em contrato. Os resultados dependem de mercado, concorrência, investimento, dados e execução."
+     }
+    }
+   ]
+  }
+ ]
+}

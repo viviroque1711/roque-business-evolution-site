@@ -1,0 +1,142 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://roquebusinessevolution.com/engagebot/#page",
+   "url": "https://roquebusinessevolution.com/engagebot/",
+   "name": "EngageBot",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "mainEntity": {
+    "@id": "https://roquebusinessevolution.com/engagebot/#app"
+   }
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://roquebusinessevolution.com/engagebot/#app",
+   "name": "EngageBot",
+   "applicationCategory": "BusinessApplication",
+   "operatingSystem": "Web",
+   "url": "https://roquebusinessevolution.com/engagebot/",
+   "description": "Atendimento com inteligência artificial no WhatsApp e no site, com caixa de conversas e agente que aprende com o conteúdo da empresa.",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "creator": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "inLanguage": "pt-BR"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "EngageBot",
+     "item": "https://roquebusinessevolution.com/engagebot/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://roquebusinessevolution.com/engagebot/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O que é o EngageBot?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O EngageBot é um produto da Roque Business Evolution para atendimento com inteligência artificial no WhatsApp e no site da empresa."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O EngageBot responde sozinho?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim, com resposta automática que identifica a intenção da mensagem. As conversas ficam em uma caixa de conversas, onde a equipe acompanha o atendimento."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "De onde o agente aprende sobre a minha empresa?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Do site da empresa, de PDFs, documentos e do FAQ. Assim as respostas falam do seu negócio e não são genéricas."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O EngageBot funciona junto com o Aurora Premium?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "São produtos complementares da mesma empresa. O lembrete de agendamento já vem incluído no Aurora Premium , e o EngageBot é o atendimento com IA, para conversar com o cliente."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quanto custa o EngageBot?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Fale pelo WhatsApp para receber as condições atuais."
+     }
+    }
+   ]
+  }
+ ]
+}

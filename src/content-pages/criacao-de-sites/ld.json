@@ -1,0 +1,141 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://roquebusinessevolution.com/criacao-de-sites/#page",
+   "url": "https://roquebusinessevolution.com/criacao-de-sites/",
+   "name": "Criação de Sites Profissionais com SEO",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "mainEntity": {
+    "@id": "https://roquebusinessevolution.com/criacao-de-sites/#service"
+   }
+  },
+  {
+   "@type": "Service",
+   "@id": "https://roquebusinessevolution.com/criacao-de-sites/#service",
+   "name": "Criação de sites profissionais com SEO",
+   "serviceType": "Criação de sites",
+   "description": "Planejamento, design, desenvolvimento e otimização de sites institucionais, landing pages, blogs e lojas virtuais com SEO e foco em conversão.",
+   "provider": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "Brasil"
+   },
+   "url": "https://roquebusinessevolution.com/criacao-de-sites/"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Criação de sites",
+     "item": "https://roquebusinessevolution.com/criacao-de-sites/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://roquebusinessevolution.com/criacao-de-sites/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O que é um site profissional?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É um site planejado para apresentar a empresa com clareza, funcionar bem no celular, carregar rápido, ser encontrado nas buscas e levar o visitante a entrar em contato."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O site criado já fica pronto para aparecer no Google?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O site é entregue com a base técnica de SEO bem feita. A posição nas buscas depende de mercado, concorrência e conteúdo, e por isso não prometemos um lugar específico no Google."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Vocês criam landing pages e lojas virtuais?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim, landing pages para campanhas e lojas virtuais, conforme o escopo combinado."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Vocês cuidam de domínio, hospedagem e SSL?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. A configuração de domínio, hospedagem, SSL e ambientes de publicação faz parte do serviço."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dá para integrar o site ao WhatsApp?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dá. O site pode levar direto para uma conversa no WhatsApp e se integrar a formulários, CRM e sistemas de agendamento."
+     }
+    }
+   ]
+  }
+ ]
+}

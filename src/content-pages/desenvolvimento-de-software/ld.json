@@ -1,0 +1,141 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://roquebusinessevolution.com/desenvolvimento-de-software/#page",
+   "url": "https://roquebusinessevolution.com/desenvolvimento-de-software/",
+   "name": "Desenvolvimento de Software Sob Medida",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "mainEntity": {
+    "@id": "https://roquebusinessevolution.com/desenvolvimento-de-software/#service"
+   }
+  },
+  {
+   "@type": "Service",
+   "@id": "https://roquebusinessevolution.com/desenvolvimento-de-software/#service",
+   "name": "Desenvolvimento de software sob medida",
+   "serviceType": "Desenvolvimento de software",
+   "description": "Aplicações web, MVPs, portais, dashboards, integrações com APIs e sistemas legados, com testes, documentação, implantação e evolução.",
+   "provider": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "Brasil"
+   },
+   "url": "https://roquebusinessevolution.com/desenvolvimento-de-software/"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Desenvolvimento de software",
+     "item": "https://roquebusinessevolution.com/desenvolvimento-de-software/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://roquebusinessevolution.com/desenvolvimento-de-software/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "O que é desenvolvimento de software sob medida?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É criar um sistema pensado para o processo e para os dados de uma empresa específica, em vez de adaptar uma ferramenta pronta."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O que é um MVP?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "MVP é a menor versão de um produto que já permite testar a ideia com usuários reais. Ele reduz risco e investimento antes de construir o sistema completo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Vocês integram com sistemas que já uso?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim, por APIs de terceiros e também com sistemas legados, conforme a viabilidade técnica de cada caso."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "De quem é o software desenvolvido?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Escopo, propriedade intelectual, infraestrutura e suporte são definidos em contrato, projeto a projeto."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O software pode usar inteligência artificial?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pode. Integramos modelos de linguagem e serviços de IA aos sistemas, com controles de acesso e regras de aprovação humana. Veja a agência de IA ."
+     }
+    }
+   ]
+  }
+ ]
+}
