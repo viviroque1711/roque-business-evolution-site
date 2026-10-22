@@ -81,11 +81,6 @@
    "hasDefinedTerm": [
     {
      "@type": "DefinedTerm",
-     "name": "Agência de IA",
-     "description": "Empresa que projeta, implanta e acompanha agentes de inteligência artificial e automações para outras empresas."
-    },
-    {
-     "@type": "DefinedTerm",
      "name": "Agente de IA",
      "description": "Sistema de inteligência artificial que entende uma solicitação e executa tarefas, usando informações e ferramentas autorizadas, dentro de limites definidos."
     },

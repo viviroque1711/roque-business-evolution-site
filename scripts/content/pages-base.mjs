@@ -8,7 +8,7 @@ import { btn, li, cols, steps, sec, related, p, group, note, ENGAGEBOT, AURORA, 
 import { ORG_ID, SITE_ID, ENGAGE_ID, OG, org, website, webpage, service, finalCta, hero, servicePage } from './schema.mjs';
 
 const ia = servicePage({
-  path: '/agencia-de-ia/', og: 'agencia-de-ia', crumbName: 'Agência de IA',
+  path: '/agentes-de-ia/', og: 'agencia-de-ia', crumbName: 'Agência de IA',
   title: 'Agência de IA: Agentes de IA e Automação | Roque',
   description: 'Agência de IA da Roque Business Evolution: agentes de inteligência artificial, atendimento no WhatsApp e automação de processos para a sua empresa.',
   h1: 'Agência de IA que coloca agentes de inteligência artificial para trabalhar na sua empresa',
@@ -91,7 +91,7 @@ const sites = servicePage({
     { q: 'Vocês cuidam de domínio, hospedagem e SSL?', a: '<p>Sim. A configuração de domínio, hospedagem, SSL e ambientes de publicação faz parte do serviço.</p>' },
     { q: 'Dá para integrar o site ao WhatsApp?', a: '<p>Dá. O site pode levar direto para uma conversa no WhatsApp e se integrar a formulários, CRM e sistemas de agendamento.</p>' },
   ],
-  related: [['/seo/', 'SEO e busca com IA'], ['/agencia-de-ia/', 'Agência de IA'], ['/desenvolvimento-de-software/', 'Desenvolvimento de software'], ['/servicos/', 'Todos os serviços']],
+  related: [['/seo/', 'SEO e busca com IA'], ['/agentes-de-ia/', 'Agentes de IA para empresas'], ['/desenvolvimento-de-software/', 'Desenvolvimento de software'], ['/servicos/', 'Todos os serviços']],
   ctaH2: 'Vamos criar o site profissional da sua empresa', ctaP: 'Conte o que a sua empresa faz e o que o site precisa entregar. A Roque Business Evolution responde pelo WhatsApp.',
 });
 
@@ -129,7 +129,7 @@ const seo = servicePage({
     { q: 'A Roque Business Evolution garante que a minha empresa aparece no ChatGPT ou em respostas de IA?', a: '<p>Não. Organizamos as informações para serem claras e verificáveis, mas a exibição em respostas de IA depende de sistemas externos.</p>' },
     { q: 'O site precisa estar bem feito para o SEO funcionar?', a: '<p>Ajuda muito. Por isso a <a href="/criacao-de-sites/">criação de sites</a> da Roque Business Evolution já nasce com SEO técnico e conteúdo no HTML.</p>' },
   ],
-  related: [['/criacao-de-sites/', 'Criação de sites'], ['/agencia-de-ia/', 'Agência de IA'], ['/servicos/', 'Todos os serviços'], ['/sobre/', 'Sobre a Roque Business Evolution']],
+  related: [['/criacao-de-sites/', 'Criação de sites'], ['/agentes-de-ia/', 'Agentes de IA para empresas'], ['/servicos/', 'Todos os serviços'], ['/sobre/', 'Sobre a Roque Business Evolution']],
   ctaH2: 'Vamos fazer a sua empresa ser encontrada', ctaP: 'Conte o que a sua empresa vende e onde seus clientes procuram. A Roque Business Evolution responde pelo WhatsApp.',
 });
 
@@ -159,9 +159,9 @@ const soft = servicePage({
     { q: 'O que é um MVP?', a: '<p>MVP é a menor versão de um produto que já permite testar a ideia com usuários reais. Ele reduz risco e investimento antes de construir o sistema completo.</p>' },
     { q: 'Vocês integram com sistemas que já uso?', a: '<p>Sim, por APIs de terceiros e também com sistemas legados, conforme a viabilidade técnica de cada caso.</p>' },
     { q: 'De quem é o software desenvolvido?', a: '<p>Escopo, propriedade intelectual, infraestrutura e suporte são definidos em contrato, projeto a projeto.</p>' },
-    { q: 'O software pode usar inteligência artificial?', a: '<p>Pode. Integramos modelos de linguagem e serviços de IA aos sistemas, com controles de acesso e regras de aprovação humana. Veja a <a href="/agencia-de-ia/">agência de IA</a>.</p>' },
+    { q: 'O software pode usar inteligência artificial?', a: '<p>Pode. Integramos modelos de linguagem e serviços de IA aos sistemas, com controles de acesso e regras de aprovação humana. Veja a <a href="/agentes-de-ia/">agentes de IA</a>.</p>' },
   ],
-  related: [['/saas/', 'SaaS e plataformas'], ['/agencia-de-ia/', 'Agência de IA'], ['/transformacao-digital/', 'Transformação digital'], ['/servicos/', 'Todos os serviços']],
+  related: [['/saas/', 'SaaS e plataformas'], ['/agentes-de-ia/', 'Agentes de IA para empresas'], ['/transformacao-digital/', 'Transformação digital'], ['/servicos/', 'Todos os serviços']],
   ctaH2: 'Vamos desenhar o software da sua empresa', ctaP: 'Conte o problema que você quer resolver. A Roque Business Evolution responde pelo WhatsApp.',
 });
 
@@ -185,7 +185,7 @@ const saas = servicePage({
     { q: 'A Roque Business Evolution já criou plataformas SaaS?', a: '<p>Sim. Desenvolve e opera o <a href="https://aurorapremium.com/">Aurora Premium</a> e o <a href="https://engagebot.com.br/" rel="noopener">EngageBot</a>.</p>' },
     { q: 'Posso começar com um MVP?', a: '<p>Sim. Começar por um MVP reduz risco e investimento e permite validar a ideia antes de crescer.</p>' },
   ],
-  related: [['/desenvolvimento-de-software/', 'Desenvolvimento de software'], ['https://engagebot.com.br/', 'EngageBot'], ['/agencia-de-ia/', 'Agência de IA'], ['/servicos/', 'Todos os serviços']],
+  related: [['/desenvolvimento-de-software/', 'Desenvolvimento de software'], ['https://engagebot.com.br/', 'EngageBot'], ['/agentes-de-ia/', 'Agentes de IA para empresas'], ['/servicos/', 'Todos os serviços']],
   ctaH2: 'Vamos desenvolver a sua plataforma SaaS', ctaP: 'Conte a ideia e o público. A Roque Business Evolution responde pelo WhatsApp.',
 });
 
@@ -208,10 +208,10 @@ const transf = servicePage({
     { q: 'O que é transformação digital?', a: '<p>É modernizar processos, sistemas e a forma de trabalhar com tecnologia para a empresa operar melhor, atender melhor e decidir com mais dados.</p>' },
     { q: 'Por onde começar a transformação digital da minha empresa?', a: '<p>Pelo diagnóstico: entender os processos, os gargalos e as prioridades. A partir dele nasce um plano com indicadores e um roteiro de implementação.</p>' },
     { q: 'Como adotar inteligência artificial com segurança?', a: '<p>Com governança: permissões, limites de execução, controle de acesso, registro das operações e aprovação humana nas decisões de maior impacto.</p>' },
-    { q: 'A consultoria também implementa as mudanças?', a: '<p>Conforme o escopo. A Roque Business Evolution também desenvolve <a href="/desenvolvimento-de-software/">software</a>, automações e <a href="/agencia-de-ia/">agentes de IA</a>.</p>' },
+    { q: 'A consultoria também implementa as mudanças?', a: '<p>Conforme o escopo. A Roque Business Evolution também desenvolve <a href="/desenvolvimento-de-software/">software</a>, automações e <a href="/agentes-de-ia/">agentes de IA</a>.</p>' },
     { q: 'Vocês treinam as equipes?', a: '<p>Sim. A capacitação em IA e em novos processos é uma das frentes da consultoria.</p>' },
   ],
-  related: [['/agencia-de-ia/', 'Agência de IA'], ['/desenvolvimento-de-software/', 'Desenvolvimento de software'], ['/servicos/', 'Todos os serviços'], ['/sobre/', 'Sobre a Roque Business Evolution']],
+  related: [['/agentes-de-ia/', 'Agentes de IA para empresas'], ['/desenvolvimento-de-software/', 'Desenvolvimento de software'], ['/servicos/', 'Todos os serviços'], ['/sobre/', 'Sobre a Roque Business Evolution']],
   ctaH2: 'Vamos conversar sobre a transformação digital da sua empresa', ctaP: 'Conte onde sua operação trava hoje. A Roque Business Evolution responde pelo WhatsApp.',
 });
 
@@ -270,8 +270,8 @@ const GRUPOS = [
     ['Reputação digital e relacionamento com clientes', 'Avaliações, feedback, fidelização e campanhas de reativação.'],
   ]],
   ['IA, automação, software e dados', [
-    ['Agentes de IA e automação conversacional', 'Atendimento automatizado, assistentes comerciais e agentes de suporte.', '/agencia-de-ia/'],
-    ['Automação de processos empresariais', 'Integração entre áreas e ferramentas para reduzir tarefas repetitivas.', '/agencia-de-ia/#automacao'],
+    ['Agentes de IA e automação conversacional', 'Atendimento automatizado, assistentes comerciais e agentes de suporte.', '/agentes-de-ia/'],
+    ['Automação de processos empresariais', 'Integração entre áreas e ferramentas para reduzir tarefas repetitivas.', '/agentes-de-ia/#automacao'],
     ['Desenvolvimento de software, SaaS e integrações', 'Aplicações web, MVPs, plataformas SaaS e integrações.', '/desenvolvimento-de-software/'],
     ['Dados, analytics e inteligência de negócios', 'Dashboards, indicadores e relatórios para decidir com dados.'],
   ]],
@@ -346,8 +346,8 @@ const NODES = [
   // nome, x, y, href, grande, âncora do texto, dx, dy
   ['Sites', 105, 112, '/criacao-de-sites/', false, 'start', 14, -14],
   ['SEO e busca com IA', 245, 52, '/seo/', false, 'middle', 0, -18],
-  ['Agentes de IA', 380, 104, '/agencia-de-ia/', false, 'end', -2, -16],
-  ['Automação', 432, 215, '/agencia-de-ia/#automacao', false, 'end', 4, -16],
+  ['Agentes de IA', 380, 104, '/agentes-de-ia/', false, 'end', -2, -16],
+  ['Automação', 432, 215, '/agentes-de-ia/#automacao', false, 'end', 4, -16],
   ['Software e SaaS', 58, 218, '/desenvolvimento-de-software/', false, 'start', -6, -16],
   ['Transformação digital', 95, 330, '/transformacao-digital/', false, 'start', -4, 30],
   ['Aurora Premium', 372, 322, SITE.aurora, true, 'end', 6, -26],
@@ -371,7 +371,7 @@ const homeFaq = faq([
   { q: 'Quem está por trás da Roque Business Evolution?', a: '<p>A fundadora é Viviane Roque, que trabalha com tecnologia e gestão de operações desde 1998. Conheça a <a href="/sobre/">história da empresa</a>.</p>' },
 ], { pagePath: '/' });
 const SVC_HOME = [
-  ['Agência de IA', 'Agentes de inteligência artificial e automação de processos trabalhando dentro dos seus sistemas.', '/agencia-de-ia/'],
+  ['Agência de IA', 'Agentes de inteligência artificial e automação de processos trabalhando dentro dos seus sistemas.', '/agentes-de-ia/'],
   ['Criação de sites', 'Sites profissionais com SEO, design responsivo e foco em conversão.', '/criacao-de-sites/'],
   ['SEO e busca com IA', 'Pesquisa de palavras-chave, SEO técnico, conteúdo e GEO/AEO para ser encontrado.', '/seo/'],
   ['Desenvolvimento de software', 'Aplicações web, MVPs, dashboards e integrações sob medida.', '/desenvolvimento-de-software/'],

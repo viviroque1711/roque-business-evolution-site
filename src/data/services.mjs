@@ -32,7 +32,7 @@ export const SERVICE_GROUPS = [
   {
     id: 'ia-software', name: 'IA, automação, software e dados',
     items: [
-      { href: '/agencia-de-ia/', label: 'Agentes de IA', short: 'Agentes de inteligência artificial e automação.' },
+      { href: '/agentes-de-ia/', label: 'Agentes de IA', short: 'Agentes de inteligência artificial e automação.' },
       { href: '/automacao-de-processos/', label: 'Automação de processos', short: 'Fluxos e integrações que eliminam tarefas repetitivas.' },
       { href: '/desenvolvimento-de-software/', label: 'Software sob medida', short: 'Sistemas personalizados, MVPs, dashboards e integrações.' },
       { href: '/desenvolvimento-de-aplicativos/', label: 'Desenvolvimento de aplicativos', short: 'Apps Android e iOS, PWA e aplicativos web integrados ao seu sistema.' },
@@ -42,7 +42,7 @@ export const SERVICE_GROUPS = [
 ];
 export const SERVICES = SERVICE_GROUPS.flatMap((g) => g.items.map((i) => ({ ...i, group: g.id })));
 
-// Aplicações de agentes de IA e plataformas (páginas de apoio da agência de IA e do desenvolvimento)
+// Aplicações de agentes de IA e plataformas (páginas de apoio dos agentes de IA e do desenvolvimento)
 export const AI_APPS = [
   { href: '/agentes-de-ia-para-whatsapp/', label: 'Agente de IA para WhatsApp' },
   { href: '/agentes-de-ia-para-vendas/', label: 'Agente de IA para vendas' },

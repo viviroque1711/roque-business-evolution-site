@@ -222,10 +222,10 @@ export const automacao = servicePage({
   faq: [
     Q('O que é automação de processos?', 'É fazer sistemas executarem sozinhos tarefas repetitivas e fluxos de trabalho, seguindo regras definidas, com registro do que foi feito.'),
     Q('Quais processos vale automatizar?', 'Os repetitivos, frequentes e previsíveis, como lembretes, distribuição de solicitações, propostas, relatórios e sincronização de dados.'),
-    Q('Automação e inteligência artificial são a mesma coisa?', 'Não. A automação segue regras definidas. A IA acrescenta interpretação de linguagem e decisões mais flexíveis. Os dois podem trabalhar juntos, e a <a href="/agencia-de-ia/">agência de IA</a> da Roque faz essa combinação.'),
+    Q('Automação e inteligência artificial são a mesma coisa?', 'Não. A automação segue regras definidas. A IA acrescenta interpretação de linguagem e decisões mais flexíveis. Os dois podem trabalhar juntos, e a <a href="/agentes-de-ia/">agentes de IA</a> da Roque faz essa combinação.'),
     Q('E se a automação errar?', 'Os fluxos têm tratamento de exceções, filas, registro de execução e aprovação humana em casos sensíveis.'),
   ],
-  related: [['/agencia-de-ia/', 'Agência de IA'], ['/crm-e-vendas/', 'CRM e vendas'], ['/desenvolvimento-de-software/', 'Desenvolvimento de software'], ['/dados-e-business-intelligence/', 'Dados e business intelligence']],
+  related: [['/agentes-de-ia/', 'Agentes de IA para empresas'], ['/crm-e-vendas/', 'CRM e vendas'], ['/desenvolvimento-de-software/', 'Desenvolvimento de software'], ['/dados-e-business-intelligence/', 'Dados e business intelligence']],
   ctaH2: 'Vamos automatizar o que trava a sua operação', ctaP: 'Conte quais tarefas se repetem na sua empresa. A Roque Business Evolution responde pelo WhatsApp.',
 });
 
@@ -273,7 +273,7 @@ export const capacitacao = servicePage({
     Q('Como evitar que a equipe compartilhe dados sensíveis com a IA?', 'Com política interna de uso de IA, orientações de privacidade e segurança e treinamento sobre o que pode ser usado em cada ferramenta.'),
     Q('Como saber se a equipe está usando bem a IA?', 'Acompanhando adoção e produtividade com indicadores combinados no início do projeto.'),
   ],
-  related: [['/governanca-e-seguranca-de-ia/', 'Governança e segurança de IA'], ['/transformacao-digital/', 'Transformação digital'], ['/agencia-de-ia/', 'Agência de IA'], ['/automacao-de-processos/', 'Automação de processos']],
+  related: [['/governanca-e-seguranca-de-ia/', 'Governança e segurança de IA'], ['/transformacao-digital/', 'Transformação digital'], ['/agentes-de-ia/', 'Agentes de IA para empresas'], ['/automacao-de-processos/', 'Automação de processos']],
   ctaH2: 'Vamos preparar a sua equipe para usar IA', ctaP: 'Conte quais áreas querem começar. A Roque Business Evolution responde pelo WhatsApp.',
 });
 
@@ -297,7 +297,7 @@ export const governanca = servicePage({
     Q('A governança garante conformidade com a LGPD?', 'Ela apoia a proteção de dados com controles e orientações, mas não substitui assessoria jurídica nem auditoria independente.'),
     Q('Que controles um agente de IA deve ter?', 'Permissões e limites de execução, controle de acesso, registro das operações, testes e regras de aprovação humana para decisões de maior impacto.'),
   ],
-  related: [['/capacitacao-em-ia/', 'Capacitação em IA'], ['/agencia-de-ia/', 'Agência de IA'], ['/transformacao-digital/', 'Transformação digital'], ['/desenvolvimento-de-software/', 'Desenvolvimento de software']],
+  related: [['/capacitacao-em-ia/', 'Capacitação em IA'], ['/agentes-de-ia/', 'Agentes de IA para empresas'], ['/transformacao-digital/', 'Transformação digital'], ['/desenvolvimento-de-software/', 'Desenvolvimento de software']],
   ctaH2: 'Vamos colocar controles na IA da sua empresa', ctaP: 'Conte onde a IA já é usada ou será usada. A Roque Business Evolution responde pelo WhatsApp.',
 });
 
@@ -321,7 +321,7 @@ export const suporte = servicePage({
     Q('Com que frequência recebo relatórios?', 'A periodicidade é combinada na contratação, junto com os indicadores acompanhados.'),
     Q('O suporte cobre sistemas que a Roque não desenvolveu?', 'Depende do caso. Avaliamos a viabilidade técnica e o escopo antes de assumir o suporte.'),
   ],
-  related: [['/criacao-de-sites/', 'Criação de sites'], ['/agencia-de-ia/', 'Agência de IA'], ['/desenvolvimento-de-software/', 'Desenvolvimento de software'], ['/seo/', 'SEO e busca com IA']],
+  related: [['/criacao-de-sites/', 'Criação de sites'], ['/agentes-de-ia/', 'Agentes de IA para empresas'], ['/desenvolvimento-de-software/', 'Desenvolvimento de software'], ['/seo/', 'SEO e busca com IA']],
   ctaH2: 'Vamos cuidar para que as suas soluções sigam evoluindo', ctaP: 'Conte o que já está no ar e precisa de acompanhamento. A Roque Business Evolution responde pelo WhatsApp.',
 });
 
@@ -338,7 +338,7 @@ export const iaWhats = servicePage({
   sections: [
     { id: 'como-funciona', h2: 'Como funciona o atendimento automático com agente de IA no WhatsApp', html: `${p('O agente recebe a mensagem, identifica a intenção, busca a informação certa na base de conhecimento da empresa e responde. Se o caso pede uma pessoa, a conversa é encaminhada.')}${steps([['Mensagem do cliente', 'O cliente escreve no WhatsApp da empresa, como faria com uma pessoa.'], ['Entendimento', 'O agente identifica o que a pessoa quer.'], ['Resposta com o seu conteúdo', 'Responde com base no site, em documentos e no FAQ da empresa.'], ['Encaminhamento', 'Quando necessário, passa a conversa para a equipe.']])}` },
     { id: 'o-que-pode-fazer', h2: 'O que um agente de IA pode fazer no WhatsApp e no webchat', html: li(['Responder dúvidas frequentes sobre serviços, horários e processos.', 'Qualificar e classificar contatos.', 'Agendar e confirmar compromissos, conforme as integrações disponíveis.', 'Recuperar contatos e acompanhar oportunidades.', 'Encaminhar para atendentes humanos.', 'Registrar as conversas para consulta da equipe.']) },
-    { id: 'engagebot', h2: 'EngageBot: agente de IA para WhatsApp e site, pronto para usar', html: `${p('Para quem quer começar com um produto pronto, a Roque Business Evolution criou o ' + aEngage() + ': atendimento com inteligência artificial por WhatsApp e webchat, com caixa de conversas, resposta automática com detecção de intenção e agente que aprende com o site, PDFs, documentos e FAQ da empresa.')}${p('Para projetos sob medida, com integrações específicas, o trabalho é feito pela <a href="/agencia-de-ia/">agência de IA</a>.')}` },
+    { id: 'engagebot', h2: 'EngageBot: agente de IA para WhatsApp e site, pronto para usar', html: `${p('Para quem quer começar com um produto pronto, a Roque Business Evolution criou o ' + aEngage() + ': atendimento com inteligência artificial por WhatsApp e webchat, com caixa de conversas, resposta automática com detecção de intenção e agente que aprende com o site, PDFs, documentos e FAQ da empresa.')}${p('Para projetos sob medida, com integrações específicas, o trabalho é feito pela <a href="/agentes-de-ia/">agentes de IA</a>.')}` },
     { id: 'cuidados', h2: 'Cuidados com o agente de IA para WhatsApp: limites, privacidade e qualidade', html: `${li(['Limites claros do que o agente pode responder e executar.', 'Encaminhamento para uma pessoa em casos sensíveis.', 'Proteção de dados e adequação à LGPD, conforme o escopo.', 'Monitoramento de qualidade, erros, custos e desempenho.'])}` },
   ],
   faq: [
@@ -348,7 +348,7 @@ export const iaWhats = servicePage({
     Q('Qual a diferença entre o EngageBot e um agente sob medida?', 'O EngageBot é um produto pronto de atendimento com IA. O agente sob medida é um projeto desenhado para os sistemas e processos específicos da empresa.'),
     Q('O agente aprende com o meu site?', 'Sim. O agente pode aprender com o site, PDFs, documentos e o FAQ da empresa, para responder de forma coerente com o seu negócio.'),
   ],
-  related: [['/agencia-de-ia/', 'Agência de IA'], ['/agentes-de-ia-para-vendas/', 'Agentes de IA para vendas'], ['/agentes-de-ia-para-suporte/', 'Agentes de IA para suporte'], ['/automacao-de-processos/', 'Automação de processos']],
+  related: [['/agentes-de-ia/', 'Agentes de IA para empresas'], ['/agentes-de-ia-para-vendas/', 'Agentes de IA para vendas'], ['/agentes-de-ia-para-suporte/', 'Agentes de IA para suporte'], ['/automacao-de-processos/', 'Automação de processos']],
   ctaH2: 'Vamos colocar um agente de IA para atender no seu WhatsApp', ctaP: 'Conte como é o atendimento hoje. A Roque Business Evolution responde pelo WhatsApp.',
 });
 
@@ -372,7 +372,7 @@ export const iaVendas = servicePage({
     Q('Dá para integrar o agente com o meu CRM?', 'Sim, conforme as integrações disponíveis na ferramenta. Fazemos a integração com CRMs, agendas e APIs.'),
     Q('Como o agente evita prometer o que a empresa não oferece?', 'Com uma base de conhecimento oficial, regras sobre o que pode ser dito e encaminhamento para uma pessoa em casos de dúvida.'),
   ],
-  related: [['/crm-e-vendas/', 'CRM e vendas'], ['/agentes-de-ia-para-whatsapp/', 'Agentes de IA para WhatsApp'], ['/agencia-de-ia/', 'Agência de IA'], ['/marketing-digital-e-midia-paga/', 'Marketing digital e mídia paga']],
+  related: [['/crm-e-vendas/', 'CRM e vendas'], ['/agentes-de-ia-para-whatsapp/', 'Agentes de IA para WhatsApp'], ['/agentes-de-ia/', 'Agentes de IA para empresas'], ['/marketing-digital-e-midia-paga/', 'Marketing digital e mídia paga']],
   ctaH2: 'Vamos colocar um agente de IA para apoiar as suas vendas', ctaP: 'Conte como os leads chegam hoje. A Roque Business Evolution responde pelo WhatsApp.',
 });
 
@@ -396,7 +396,7 @@ export const iaSuporte = servicePage({
     Q('O agente funciona para a equipe interna também?', 'Sim. Agentes internos apoiam as equipes com consultas a procedimentos, políticas e documentos da empresa.'),
     Q('Como a empresa acompanha a qualidade das respostas?', 'Pelo registro das conversas e por indicadores como taxa de resolução, encaminhamentos para pessoas, erros e custo por interação.'),
   ],
-  related: [['/agentes-de-ia-para-whatsapp/', 'Agentes de IA para WhatsApp'], ['/governanca-e-seguranca-de-ia/', 'Governança e segurança de IA'], ['/agencia-de-ia/', 'Agência de IA'], ['/reputacao-digital/', 'Reputação digital']],
+  related: [['/agentes-de-ia-para-whatsapp/', 'Agentes de IA para WhatsApp'], ['/governanca-e-seguranca-de-ia/', 'Governança e segurança de IA'], ['/agentes-de-ia/', 'Agentes de IA para empresas'], ['/reputacao-digital/', 'Reputação digital']],
   ctaH2: 'Vamos colocar um agente de IA para apoiar o seu suporte', ctaP: 'Conte onde o suporte demora mais hoje. A Roque Business Evolution responde pelo WhatsApp.',
 });
 

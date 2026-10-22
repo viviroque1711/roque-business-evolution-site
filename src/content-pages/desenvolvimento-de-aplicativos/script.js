@@ -80,13 +80,28 @@
       d.push([hub, 4.5, 'hub']);
       return { quads: q, lines: l, dots: d };
     },
+    // agente no centro, ligado aos canais (WhatsApp, site, CRM, agenda) que giram em volta; pulsos correm pelos fios
+    agents: function (t) {
+      var q = [], l = [], d = [], hub = [0, 0, 0];
+      for (var k = 0; k < 4; k++) {
+        var a = t*.22 + k*Math.PI/2, r = 1.12, x = Math.cos(a)*r, z = Math.sin(a)*r, y = (k % 2 ? .38 : -.38);
+        q.push(rect(x, y, z, .5, .34).concat([k === 0 ? 'bubbleg' : 'bubble']));
+        q.push(rect(x - .04, y - .05, z + .001, .3, .05).concat(['line']));
+        q.push(rect(x - .08, y + .06, z + .001, .22, .05).concat([k === 0 ? 'blockg' : 'line']));
+        l.push([hub, [x, y, z], 'cite']);
+        var p = (t*.35 + k*.25) % 1; d.push([[x*p, y*p, z*p], 3, 'pulse']);
+      }
+      for (var m = 0; m < 40; m++) { var yy = 1 - (m + .5)/40*2, rr = Math.sqrt(1 - yy*yy), th = m*2.39996; d.push([[Math.cos(th)*rr*.34, yy*.34, Math.sin(th)*rr*.34], 1.8, 'pt']); }
+      d.push([hub, 6, 'hub']);
+      return { quads: q, lines: l, dots: d };
+    },
   };
   var FILL = {
     glass: [STEEL, .08, .75], front: [STEEL, .14, 1], bar: [STEEL, .3, .6], block: [STEEL, .42, 0], blockg: [GOLD, .8, 0], line: [STEEL, .6, 0], cta: [GOLD, 1, 0],
     cube: [STEEL, .12, .8], cubeg: [GOLD, .35, 1], top: [STEEL, .22, .85], topg: [GOLD, .65, 1], phone: [[40, 50, 68], 1, .9], screen: [[11, 18, 32], 1, 0],
     icon: [STEEL, .5, .8], icong: [GOLD, .8, 1], result: [STEEL, .14, .6], resultg: [GOLD, .32, 1], search: [STEEL, .2, .9], bubble: [STEEL, .2, .8], bubbleg: [GOLD, .38, 1],
   };
-  var SCALE = { sites: .4, software: .44, apps: .36, seo: .38, geo: .31 };
+  var SCALE = { sites: .4, software: .44, apps: .36, seo: .38, geo: .31, agents: .42 };
   var STROKE_GOLD = { cubeg: 1, topg: 1, resultg: 1, bubbleg: 1, icong: 1, front: 1, glass: 1 };
 
   if (c) {
@@ -99,7 +114,7 @@
     var frame = function (now) {
       var t = reduce ? 4 : (now - st.t0)/1000, intro = reduce ? 1 : Math.min(1, t/2.4), e = 1 - Math.pow(1 - intro, 3);
       st.ax += (st.tx - st.ax)*.04; st.ay += (st.ty - st.ay)*.04;
-      var swing = mode === 'apps' || mode === 'seo' ? Math.sin(t*.22)*.55 : t*(Math.PI*2/40);
+      var swing = mode === 'apps' || mode === 'seo' || mode === 'agents' ? Math.sin(t*.22)*.55 : t*(Math.PI*2/40);
       var ay = -.6 + swing + st.ay + (1 - e)*.9, ax = -.32 + st.ax + (mode === 'seo' ? .1 : 0);
       var ca = Math.cos(ay), sa = Math.sin(ay), cb = Math.cos(ax), sb = Math.sin(ax), S = st.w*(SCALE[mode] || .36)*dpr*(.85 + .15*e), ox = c.width/2, oy = c.height/2;
       var P = function (p) { var x = p[0]*ca + p[2]*sa, z = -p[0]*sa + p[2]*ca, y = p[1]*cb - z*sb; z = p[1]*sb + z*cb; var k = 1/(1 - z*.22); return [ox + x*S*k, oy + y*S*k, z]; };
@@ -125,7 +140,7 @@
         } else {
           var hub = it.s === 'hub';
           if (hub) { var gr = g.createRadialGradient(it.d[0], it.d[1], 0, it.d[0], it.d[1], 18*dpr); gr.addColorStop(0, 'rgba(255,214,140,.7)'); gr.addColorStop(1, 'rgba(255,214,140,0)'); g.fillStyle = gr; g.beginPath(); g.arc(it.d[0], it.d[1], 18*dpr, 0, Math.PI*2); g.fill(); }
-          g.fillStyle = hub ? col(GOLD, e) : col(it.z > 0 ? GOLD : STEEL, (.25 + .6*depth)*e);
+          g.fillStyle = hub || it.s === 'pulse' ? col(it.s === 'pulse' ? [255, 214, 140] : GOLD, e) : col(it.z > 0 ? GOLD : STEEL, (.25 + .6*depth)*e);
           g.beginPath(); g.arc(it.d[0], it.d[1], it.r*dpr, 0, Math.PI*2); g.fill();
         }
       });

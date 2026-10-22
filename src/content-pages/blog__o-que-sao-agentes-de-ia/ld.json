@@ -45,9 +45,9 @@
   },
   {
    "@type": "WebPage",
-   "@id": "https://roquebusinessevolution.com/blog/o-que-e-agencia-de-ia/#page",
-   "url": "https://roquebusinessevolution.com/blog/o-que-e-agencia-de-ia/",
-   "name": "O que é uma agência de IA e quando vale a pena contratar uma",
+   "@id": "https://roquebusinessevolution.com/blog/o-que-sao-agentes-de-ia/#page",
+   "url": "https://roquebusinessevolution.com/blog/o-que-sao-agentes-de-ia/",
+   "name": "O que são agentes de IA e quando a sua empresa precisa de um",
    "inLanguage": "pt-BR",
    "isPartOf": {
     "@id": "https://roquebusinessevolution.com/#website"
@@ -74,17 +74,17 @@
     {
      "@type": "ListItem",
      "position": 3,
-     "name": "O que é uma agência de IA",
-     "item": "https://roquebusinessevolution.com/blog/o-que-e-agencia-de-ia/"
+     "name": "O que são agentes de IA",
+     "item": "https://roquebusinessevolution.com/blog/o-que-sao-agentes-de-ia/"
     }
    ]
   },
   {
    "@type": "BlogPosting",
-   "@id": "https://roquebusinessevolution.com/blog/o-que-e-agencia-de-ia/#post",
-   "mainEntityOfPage": "https://roquebusinessevolution.com/blog/o-que-e-agencia-de-ia/",
-   "headline": "O que é uma agência de IA e quando vale a pena contratar uma",
-   "description": "Entenda o que é uma agência de IA, o que ela entrega, em que difere de uma agência de marketing e quando vale a pena contratar uma.",
+   "@id": "https://roquebusinessevolution.com/blog/o-que-sao-agentes-de-ia/#post",
+   "mainEntityOfPage": "https://roquebusinessevolution.com/blog/o-que-sao-agentes-de-ia/",
+   "headline": "O que são agentes de IA e quando a sua empresa precisa de um",
+   "description": "Entenda o que são agentes de IA, a diferença para um chatbot, o que eles fazem numa empresa e quando vale a pena ter um. Guia da Roque.",
    "inLanguage": "pt-BR",
    "datePublished": "2026-10-21",
    "dateModified": "2026-10-21",
@@ -98,25 +98,25 @@
    "about": [
     {
      "@type": "Thing",
-     "name": "Agência de IA"
+     "name": "Agente de IA"
     }
    ]
   },
   {
    "@type": "FAQPage",
-   "@id": "https://roquebusinessevolution.com/blog/o-que-e-agencia-de-ia/#faq",
+   "@id": "https://roquebusinessevolution.com/blog/o-que-sao-agentes-de-ia/#faq",
    "mainEntity": [
     {
      "@type": "Question",
-     "name": "Uma agência de IA substitui a minha equipe?",
+     "name": "Um agente de IA substitui a minha equipe?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Não. Ela automatiza tarefas repetitivas e apoia o atendimento, e as pessoas continuam nos casos que pedem atenção humana."
+      "text": "Não. Ele assume tarefas repetitivas, e as pessoas continuam nos casos que pedem atenção humana."
      }
     },
     {
      "@type": "Question",
-     "name": "Preciso entender de tecnologia para contratar?",
+     "name": "Preciso entender de tecnologia para ter um agente de IA?",
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Não. O diagnóstico traduz as possibilidades em linguagem de negócio e propõe um caminho por etapas."
@@ -124,10 +124,10 @@
     },
     {
      "@type": "Question",
-     "name": "Quanto tempo leva para ver resultado?",
+     "name": "Agência de IA e agentes de IA são a mesma coisa?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Depende do escopo. Projetos pequenos, como um agente de atendimento, podem ser implantados por etapas, e o resultado é acompanhado por indicadores."
+      "text": "Não. Agentes de IA são os assistentes que trabalham na empresa. Agência de IA é o nome dado a empresas que criam esses agentes, como faz a Roque Business Evolution."
      }
     }
    ]

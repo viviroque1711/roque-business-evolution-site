@@ -186,7 +186,7 @@ const software = hookPage({
 
 // ================================================================== DESENVOLVIMENTO DE APLICATIVOS (nova)
 const apps = hookPage({
-  key: 'apps', path: '/desenvolvimento-de-aplicativos/', og: 'desenvolvimento-de-software', crumbName: 'Desenvolvimento de aplicativos', mode: 'apps',
+  key: 'apps', path: '/desenvolvimento-de-aplicativos/', og: 'desenvolvimento-de-aplicativos', crumbName: 'Desenvolvimento de aplicativos', mode: 'apps',
   title: 'Desenvolvimento de Aplicativos para Empresas | Roque',
   description: 'Desenvolvimento de aplicativos para empresas: apps Android e iOS, aplicativo web e PWA integrados ao seu sistema, do protótipo à publicação. Roque.',
   h1: 'Desenvolvimento de aplicativos para empresas, do protótipo à publicação',
@@ -325,4 +325,53 @@ const geo = hookPage({
   ctaH2: 'Vamos preparar a sua empresa para as buscas com IA', ctaP: 'Conte o que você vende e como os clientes descrevem você.',
 });
 
-export const HOOK_PAGES = [sites, software, apps, seo, geo];
+// ================================================================== AGENTES DE IA PARA EMPRESAS (antes /agencia-de-ia/)
+// "agência de IA" tem de 10 a 100 buscas por mês; "agentes de IA" e "chatbot WhatsApp" têm de 1 mil a 10 mil cada.
+const agents = hookPage({
+  key: 'agents', path: '/agentes-de-ia/', og: 'agentes-de-ia', crumbName: 'Agentes de IA para empresas', mode: 'agents',
+  title: 'Agentes de IA para Empresas: WhatsApp e Automação | Roque',
+  description: 'Agentes de IA para empresas: atendimento no WhatsApp, vendas, suporte e automação de processos, com regras, limites e pessoas no controle. Roque.',
+  h1: 'Agentes de IA para empresas que atendem, vendem e automatizam',
+  lead: 'Agentes de IA são assistentes de inteligência artificial que conversam com os seus clientes e executam tarefas nos sistemas da empresa, dentro das regras que você define. A Roque Business Evolution projeta, implanta e acompanha esses agentes.',
+  jump: 'Ver o que eles fazem', objLabel: 'Agente de IA no centro, ligado ao WhatsApp, ao site, ao CRM e à agenda, em 3D',
+  msg: 'Olá! Quero um orçamento de agentes de IA para a minha empresa.',
+  serviceName: 'Agentes de IA para empresas', serviceType: 'Agentes de inteligência artificial',
+  serviceDescription: 'Projeto, implantação e acompanhamento de agentes de inteligência artificial para atendimento no WhatsApp e no site, vendas, suporte, agendamento e automação de processos, com regras, limites e escalonamento humano.',
+  blocks: [
+    { kind: 'spec', v: 'mist', id: 'o-que-fazem', h2: 'O que os agentes de IA fazem na sua empresa', one: 'Tarefas que se repetem todos os dias, feitas a qualquer hora.', args: [[
+      ['wa', 'Atendimento no WhatsApp', 'Responde dúvidas e encaminha pedidos. <a href="/agentes-de-ia-para-whatsapp/">Veja</a>.'],
+      ['chart', 'Vendas e qualificação de leads', 'Separa quem está pronto para comprar. <a href="/agentes-de-ia-para-vendas/">Veja</a>.'],
+      ['doc', 'Suporte e pós-venda', 'Responde com base nos seus documentos. <a href="/agentes-de-ia-para-suporte/">Veja</a>.'],
+      ['bell', 'Agendamento e confirmação', 'Marca, confirma e lembra horários.'],
+      ['eye', 'Consulta à base de conhecimento', 'Site, PDFs, perguntas frequentes e manuais.'],
+      ['nodes', 'Automação de processos', 'Dados andando sozinhos entre sistemas. <a href="/automacao-de-processos/">Veja</a>.'],
+      ['plug', 'Integração com CRM e agenda', 'O agente registra o que acontece na conversa.'],
+      ['robot', 'Passagem para uma pessoa', 'Casos difíceis vão para a sua equipe.'],
+    ]] },
+    { kind: 'flow', v: 'black', id: 'como-funciona', h2: 'Como um agente de IA funciona', one: 'Do recebimento da mensagem à tarefa feita.', args: [[
+      ['Recebe', 'A mensagem chega pelo WhatsApp ou pelo site'],
+      ['Entende', 'Identifica o que o cliente quer'],
+      ['Consulta', 'Busca nos seus documentos e sistemas'],
+      ['Executa', 'Responde, agenda ou registra'],
+      ['Encaminha', 'Passa para uma pessoa quando precisa'],
+    ]] },
+    { kind: 'pillars', v: 'white', id: 'com-controle', h2: 'Agentes de IA com controle', one: 'A inteligência artificial trabalha dentro das regras da sua empresa.', args: [[
+      ['lock', 'Regras e limites', ['O que o agente pode e não pode fazer', 'Aprovação humana nas decisões sensíveis', 'Registro de cada operação']],
+      ['eye', 'Privacidade', ['Dados dos clientes protegidos', 'Acesso só ao que é autorizado', 'Cuidados da LGPD']],
+      ['chart', 'Medição', ['Conversas resolvidas sozinho', 'Conversas passadas para a equipe', 'Tempo de resposta']],
+    ]] },
+    { kind: 'own', v: 'black', id: 'pronto-para-usar', h2: 'Quer começar com um produto pronto?', one: 'O EngageBot é o atendimento com IA da Roque, no WhatsApp e no site.', args: [] },
+  ],
+  faqH2: 'Perguntas frequentes sobre agentes de IA',
+  faq: [
+    Q('O que são agentes de IA?', 'São assistentes de inteligência artificial que entendem mensagens, consultam as informações autorizadas da empresa e executam tarefas, como responder, agendar ou registrar pedidos.'),
+    Q('Qual é a diferença entre chatbot e agente de IA?', 'O chatbot segue um roteiro de botões. O agente de IA entende a pergunta escrita do jeito do cliente, consulta informações e executa tarefas em outros sistemas.'),
+    Q('Agente de IA funciona no WhatsApp?', 'Funciona. O atendimento pode ser feito no WhatsApp e no site, com passagem para uma pessoa quando necessário. Veja o <a href="/agentes-de-ia-para-whatsapp/">agente de IA para WhatsApp</a>.'),
+    Q('O agente de IA substitui a minha equipe?', 'Não. Ele assume as tarefas repetitivas, e a equipe fica com os casos que pedem atenção humana.'),
+    Q('Quanto custa ter agentes de IA na empresa?', 'Depende dos canais, das integrações e do volume. Peça um orçamento pelo WhatsApp; a proposta separa implantação, mensalidade e ferramentas de terceiros.'),
+    Q('Agência de IA e agentes de IA são a mesma coisa?', 'Não. Agentes de IA são os assistentes que trabalham na empresa. A Roque Business Evolution é a empresa que cria, implanta e acompanha esses agentes.'),
+  ],
+  ctaH2: 'Vamos colocar agentes de IA para trabalhar na sua empresa', ctaP: 'Conte o que você quer automatizar ou melhorar no atendimento.',
+});
+
+export const HOOK_PAGES = [sites, software, apps, seo, geo, agents];

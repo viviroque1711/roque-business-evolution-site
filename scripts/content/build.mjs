@@ -5,14 +5,13 @@ import { writePage, finish, pagesDir } from './lib.mjs';
 import { OG } from './schema.mjs';
 import { PAGES as BASE } from './pages-base.mjs';
 import { home, servicos } from './home.mjs';
-import { ia } from './agencyai.mjs';
 import { SERVICE_PAGES } from './services-extra.mjs';
 import { INSTITUTIONAL } from './institutional.mjs';
 import { BLOG } from './blog.mjs';
 import { HOOK_PAGES } from './hooks.mjs';
 
 // As páginas dos ganchos comerciais (hooks.mjs) substituem as versões antigas do mesmo endereço.
-const ALL = [...HOOK_PAGES, home, servicos, ia, ...SERVICE_PAGES, ...INSTITUTIONAL, ...BLOG, ...BASE]
+const ALL = [...HOOK_PAGES, home, servicos, ...SERVICE_PAGES, ...INSTITUTIONAL, ...BLOG, ...BASE]
   .filter((p, i, arr) => arr.findIndex((q) => q.path === p.path) === i);
 // páginas geradas antes e que não existem mais saem junto (o gerador é a fonte da verdade)
 const keep = new Set(ALL.map((p) => (p.path === '/' ? '_home' : p.path.replace(/^\/|\/$/g, '').replace(/\//g, '__'))));

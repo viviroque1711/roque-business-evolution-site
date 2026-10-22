@@ -1,8 +1,8 @@
 /
-/agencia-de-ia/
 /agentes-de-ia-para-suporte/
 /agentes-de-ia-para-vendas/
 /agentes-de-ia-para-whatsapp/
+/agentes-de-ia/
 /automacao-de-processos/
 /blog/
 /blog/adotar-ia-na-empresa-com-seguranca/
@@ -10,7 +10,7 @@
 /blog/automacao-de-processos-o-que-automatizar/
 /blog/como-criar-um-site-profissional/
 /blog/geo-e-aeo-seo-para-buscas-com-ia/
-/blog/o-que-e-agencia-de-ia/
+/blog/o-que-sao-agentes-de-ia/
 /blog/seo-para-pequenas-empresas/
 /branding-e-identidade-digital/
 /capacitacao-em-ia/

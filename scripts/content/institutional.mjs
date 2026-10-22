@@ -90,7 +90,7 @@ export const enterprise = infoPage({
   msg: 'Olá! Quero conversar sobre transformação digital e governança para a minha empresa.',
   sections: [
     { id: 'governanca', h2: 'Governança, PMO e gestão de portfólio para grandes empresas', html: `${p('Em organizações complexas, a governança dá visibilidade e prioridade ao que gera valor. É uma área que a fundadora, <a href="https://viviroque.com.br/">Viviane Roque</a>, conhece de perto: atuou no PMO de projetos de grande porte.')}${li(['Estruturas de PMO e de PMO ágil.', 'Visibilidade do portfólio e priorização baseada em valor.', 'Gestão de riscos e de dependências.', 'Dashboards executivos de projetos e iniciativas.'])}` },
-    { id: 'transformacao', h2: 'Transformação digital e integração de sistemas para grandes empresas', html: `${li(['Digitalização de processos e modernização de sistemas legados.', 'Arquitetura de soluções escaláveis e integrações por APIs.', 'Integração entre sistemas corporativos, como ERP, CRM e BI, para eliminar silos e duplicidades.', 'Automação de ponta a ponta, com <a href="/automacao-de-processos/">automação de processos</a> e <a href="/agencia-de-ia/">agentes de IA</a>.'])}${p('Veja a <a href="/transformacao-digital/">consultoria de transformação digital</a> e o <a href="/desenvolvimento-de-software/">desenvolvimento de software</a>.')}` },
+    { id: 'transformacao', h2: 'Transformação digital e integração de sistemas para grandes empresas', html: `${li(['Digitalização de processos e modernização de sistemas legados.', 'Arquitetura de soluções escaláveis e integrações por APIs.', 'Integração entre sistemas corporativos, como ERP, CRM e BI, para eliminar silos e duplicidades.', 'Automação de ponta a ponta, com <a href="/automacao-de-processos/">automação de processos</a> e <a href="/agentes-de-ia/">agentes de IA</a>.'])}${p('Veja a <a href="/transformacao-digital/">consultoria de transformação digital</a> e o <a href="/desenvolvimento-de-software/">desenvolvimento de software</a>.')}` },
     { id: 'eficiencia', h2: 'Eficiência operacional e agilidade em escala para grandes empresas', html: `${li(['Mapeamento de processos atuais e futuros, identificação de desperdícios e de gargalos.', 'Frameworks ágeis em escala, como SAFe e Scrum, com treinamento e acompanhamento.', 'KPIs, <a href="/dados-e-business-intelligence/">dashboards e analytics</a> para decisões baseadas em dados.', 'Governança e segurança para adoção de IA. Veja a <a href="/governanca-e-seguranca-de-ia/">governança e segurança de IA</a>.'])}` },
     { id: 'abordagem', h2: 'Abordagem em fases para a transformação em grandes empresas', html: `${p('Toda iniciativa segue a <a href="/metodologia/">metodologia de sete fases</a> da Roque Business Evolution, do diagnóstico à evolução contínua, com critérios de aceite, indicadores e responsabilidades definidos desde o início.')}` },
   ],
@@ -210,7 +210,7 @@ export const produtos = infoPage({
     { id: 'engagebot', h2: 'EngageBot: atendimento com inteligência artificial no WhatsApp e no site', html: `${p('O EngageBot responde clientes no WhatsApp e no site, aprende com o conteúdo da empresa e organiza as conversas em uma caixa única. É o produto de atendimento com IA da Roque Business Evolution.')}<div class="btns"><a class="btn" href="${ENGAGEBOT}" rel="noopener">Conhecer o EngageBot</a></div>${p('Entenda <a href="/engagebot/">como o EngageBot funciona</a> e veja o <a href="/agentes-de-ia-para-whatsapp/">agente de IA para WhatsApp</a> sob medida.')}` },
     { id: 'saas', h2: 'Produtos SaaS: Aurora Premium e EngageBot, criados e operados pela Roque Business Evolution', html: `${p('Os dois produtos são plataformas SaaS multiempresa: várias empresas usam o mesmo sistema, com os dados separados. Essa experiência de criar e operar plataformas está disponível para projetos de clientes. Veja o <a href="/saas/">desenvolvimento de SaaS</a>.')}` },
   ],
-  related: [['/saas/', 'Desenvolvimento de SaaS'], ['/agencia-de-ia/', 'Agência de IA'], ['/desenvolvimento-de-software/', 'Desenvolvimento de software'], ['/sobre/', 'Sobre a Roque Business Evolution']],
+  related: [['/saas/', 'Desenvolvimento de SaaS'], ['/agentes-de-ia/', 'Agentes de IA para empresas'], ['/desenvolvimento-de-software/', 'Desenvolvimento de software'], ['/sobre/', 'Sobre a Roque Business Evolution']],
   faq: [
     Q('A Roque Business Evolution tem produtos próprios?', 'Sim. O Aurora Premium, sistema de agendamento e gestão, e o EngageBot, atendimento com IA no WhatsApp e no site.'),
     Q('O lembrete de agendamento do Aurora Premium é cobrado à parte?', 'Não. O lembrete de agendamento já vem incluído no Aurora Premium, e o EngageBot é o atendimento com IA para conversar com o cliente.'),
@@ -222,13 +222,13 @@ export const produtos = infoPage({
 // ------------------------------------------------------------------ PERGUNTAS FREQUENTES (grupos, um FAQPage)
 const GF = [
   { id: 'empresa', h2: 'Sobre a Roque Business Evolution', items: [
-    Q('O que é a Roque Business Evolution?', 'É uma agência de IA, de criação de sites e de desenvolvimento de software que ajuda empresas a modernizar processos, conquistar clientes e decidir com mais inteligência. A razão social é Roque Business Evolution Serviços Ltda.'),
+    Q('O que é a Roque Business Evolution?', 'É uma empresa de desenvolvimento de software e criação de sites profissionais: software sob medida, aplicativos, SEO, GEO e AEO e agentes de IA. A razão social é Roque Business Evolution Serviços Ltda.'),
     Q('Quem fundou a Roque Business Evolution?', 'A fundadora é <a href="https://viviroque.com.br/" rel="noopener">Viviane Roque</a>, que trabalha com tecnologia e gestão de operações desde 1998.'),
     Q('Que tipo de empresa a Roque Business Evolution atende?', 'Pequenas e médias empresas e grandes organizações. Veja as páginas <a href="/para-pequenas-e-medias-empresas/">para pequenas e médias empresas</a> e <a href="/para-grandes-empresas/">para grandes empresas</a>.'),
     Q('A Roque Business Evolution tem cases e depoimentos?', 'Não publicamos cases nem depoimentos enquanto não houver casos reais autorizados pelos clientes. Preferimos não apresentar o que não podemos comprovar.'),
   ] },
-  { id: 'ia', h2: 'Agência de IA e automação', items: [
-    Q('O que faz uma agência de IA?', 'Projeta, implanta e acompanha agentes de inteligência artificial e automações dentro das regras da empresa. Veja a <a href="/agencia-de-ia/">agência de IA</a>.'),
+  { id: 'ia', h2: 'Agentes de IA e automação', items: [
+    Q('O que são agentes de IA para empresas?', 'São assistentes de inteligência artificial que atendem clientes e executam tarefas nos sistemas da empresa, dentro das regras definidas. Veja os <a href="/agentes-de-ia/">agentes de IA para empresas</a>.'),
     Q('Posso ter um atendimento automático no WhatsApp?', 'Sim, com o <a href="https://engagebot.com.br/" rel="noopener">EngageBot</a> ou com um <a href="/agentes-de-ia-para-whatsapp/">agente de IA sob medida</a>.'),
     Q('É seguro usar IA na minha empresa?', 'Depende dos controles. Trabalhamos com permissões, limites, registro das operações e aprovação humana. Veja a <a href="/governanca-e-seguranca-de-ia/">governança e segurança de IA</a>.'),
   ] },
@@ -253,8 +253,8 @@ const faqPageData = faqGrouped(GF, { pagePath: '/perguntas-frequentes/' });
 export const faqGeral = {
   path: '/perguntas-frequentes/', og: 'faq',
   title: 'Perguntas Frequentes | Roque Business Evolution',
-  description: 'Perguntas frequentes sobre a Roque Business Evolution: agência de IA, sites e SEO, GEO e AEO, contratação, prazos e produtos.',
-  body: `${hero([{ name: 'Início', path: '/' }, { name: 'Perguntas frequentes', path: '/perguntas-frequentes/' }], 'Perguntas frequentes sobre a Roque Business Evolution', 'As perguntas frequentes reúnem as dúvidas mais comuns sobre a Roque Business Evolution, a agência de IA, a criação de sites, SEO, GEO e AEO, a contratação e os produtos.', `<div class="btns">${btn('Falar no WhatsApp', 'Olá! Tenho uma dúvida sobre a Roque Business Evolution.')}</div>`)}
+  description: 'Perguntas frequentes sobre a Roque Business Evolution: criação de sites, software sob medida, SEO, GEO e AEO, agentes de IA, contratação e produtos.',
+  body: `${hero([{ name: 'Início', path: '/' }, { name: 'Perguntas frequentes', path: '/perguntas-frequentes/' }], 'Perguntas frequentes sobre a Roque Business Evolution', 'As perguntas frequentes reúnem as dúvidas mais comuns sobre a Roque Business Evolution, a criação de sites, SEO, GEO e AEO, a contratação e os produtos.', `<div class="btns">${btn('Falar no WhatsApp', 'Olá! Tenho uma dúvida sobre a Roque Business Evolution.')}</div>`)}
 ${faqPageData.html}
 ${finalCta('Não achou a sua dúvida?', 'Pergunte pelo WhatsApp. A Roque Business Evolution responde.', 'Olá! Tenho uma dúvida sobre a Roque Business Evolution.')}`,
   get graph() { return [org(), website(), webpage('/perguntas-frequentes/', 'Perguntas frequentes', 'WebPage'), crumbLd([{ name: 'Início', path: '/' }, { name: 'Perguntas frequentes', path: '/perguntas-frequentes/' }]), faqPageData.ld]; },
@@ -262,8 +262,7 @@ ${finalCta('Não achou a sua dúvida?', 'Pergunte pelo WhatsApp. A Roque Busines
 
 // ------------------------------------------------------------------ GLOSSÁRIO
 const TERMOS = [
-  ['Agência de IA', 'Empresa que projeta, implanta e acompanha agentes de inteligência artificial e automações para outras empresas.'],
-  ['Agente de IA', 'Sistema de inteligência artificial que entende uma solicitação e executa tarefas, usando informações e ferramentas autorizadas, dentro de limites definidos.'],
+    ['Agente de IA', 'Sistema de inteligência artificial que entende uma solicitação e executa tarefas, usando informações e ferramentas autorizadas, dentro de limites definidos.'],
   ['AEO (Answer Engine Optimization)', 'Otimização de conteúdo para mecanismos que respondem perguntas diretamente, com respostas claras e verificáveis.'],
   ['Alucinação (em IA)', 'Resposta gerada por IA que parece correta, mas contém informação inventada ou errada.'],
   ['API', 'Interface que permite que dois sistemas troquem informações de forma automática.'],
@@ -299,12 +298,12 @@ export const glossario = {
   title: 'Glossário de IA, SEO e Transformação Digital | Roque',
   description: 'Glossário com os principais termos de inteligência artificial, SEO, GEO, AEO, automação, CRM, SaaS e transformação digital, explicados de forma simples.',
   body: `${hero(glossCrumb, 'Glossário de inteligência artificial, SEO e transformação digital', 'Este glossário explica de forma simples os termos mais usados em inteligência artificial, SEO, automação e transformação digital, para você decidir com mais segurança.')}
-<section class="sec white" id="termos" aria-labelledby="termos-h"><div class="wrap"><h2 id="termos-h">Termos de agência de IA, SEO, GEO, AEO e transformação digital</h2>
+<section class="sec white" id="termos" aria-labelledby="termos-h"><div class="wrap"><h2 id="termos-h">Termos de sites, software, SEO, GEO, AEO e inteligência artificial</h2>
 <dl class="gloss">
 ${TERMOS.map(([t, d]) => `<div><dt>${esc(t)}</dt><dd>${esc(d)}</dd></div>`).join('\n')}
 </dl>
 </div></section>
-${sec('mist', 'continue', 'Continue explorando', related([['/servicos/', 'Todos os serviços'], ['/agencia-de-ia/', 'Agência de IA'], ['/seo/', 'SEO'], ['/geo-aeo/', 'GEO e AEO'], ['/blog/', 'Blog']]))}
+${sec('mist', 'continue', 'Continue explorando', related([['/servicos/', 'Todos os serviços'], ['/agentes-de-ia/', 'Agentes de IA para empresas'], ['/seo/', 'SEO'], ['/geo-aeo/', 'GEO e AEO'], ['/blog/', 'Blog']]))}
 ${finalCta('Ficou com alguma dúvida?', 'Pergunte pelo WhatsApp. A Roque Business Evolution responde.', 'Olá! Tenho uma dúvida sobre os serviços da Roque Business Evolution.')}`,
   get graph() { return [org(), website(), webpage('/glossario/', 'Glossário', 'WebPage'), crumbLd(glossCrumb), { '@type': 'DefinedTermSet', '@id': pageUrl('/glossario/') + '#termos', name: 'Glossário de inteligência artificial, SEO e transformação digital', inLanguage: 'pt-BR', hasDefinedTerm: TERMOS.map(([t, d]) => ({ '@type': 'DefinedTerm', name: t, description: d })) }]; },
 };

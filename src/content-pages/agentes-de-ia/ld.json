@@ -45,9 +45,9 @@
   },
   {
    "@type": "WebPage",
-   "@id": "https://roquebusinessevolution.com/agencia-de-ia/#page",
-   "url": "https://roquebusinessevolution.com/agencia-de-ia/",
-   "name": "Agência de IA: Agentes de IA e Automação",
+   "@id": "https://roquebusinessevolution.com/agentes-de-ia/#page",
+   "url": "https://roquebusinessevolution.com/agentes-de-ia/",
+   "name": "Agentes de IA para Empresas: WhatsApp e Automação",
    "inLanguage": "pt-BR",
    "isPartOf": {
     "@id": "https://roquebusinessevolution.com/#website"
@@ -56,15 +56,15 @@
     "@id": "https://roquebusinessevolution.com/#org"
    },
    "mainEntity": {
-    "@id": "https://roquebusinessevolution.com/agencia-de-ia/#service"
+    "@id": "https://roquebusinessevolution.com/agentes-de-ia/#service"
    }
   },
   {
    "@type": "Service",
-   "@id": "https://roquebusinessevolution.com/agencia-de-ia/#service",
-   "name": "Agência de IA: agentes de inteligência artificial e automação",
-   "serviceType": "Agência de inteligência artificial",
-   "description": "Projeto, implantação e acompanhamento de agentes de inteligência artificial, atendimento automatizado e automação de processos empresariais.",
+   "@id": "https://roquebusinessevolution.com/agentes-de-ia/#service",
+   "name": "Agentes de IA para empresas",
+   "serviceType": "Agentes de inteligência artificial",
+   "description": "Projeto, implantação e acompanhamento de agentes de inteligência artificial para atendimento no WhatsApp e no site, vendas, suporte, agendamento e automação de processos, com regras, limites e escalonamento humano.",
    "provider": {
     "@id": "https://roquebusinessevolution.com/#org"
    },
@@ -72,7 +72,7 @@
     "@type": "Country",
     "name": "Brasil"
    },
-   "url": "https://roquebusinessevolution.com/agencia-de-ia/"
+   "url": "https://roquebusinessevolution.com/agentes-de-ia/"
   },
   {
    "@type": "BreadcrumbList",
@@ -86,61 +86,61 @@
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Agência de IA",
-     "item": "https://roquebusinessevolution.com/agencia-de-ia/"
+     "name": "Agentes de IA para empresas",
+     "item": "https://roquebusinessevolution.com/agentes-de-ia/"
     }
    ]
   },
   {
    "@type": "FAQPage",
-   "@id": "https://roquebusinessevolution.com/agencia-de-ia/#faq",
+   "@id": "https://roquebusinessevolution.com/agentes-de-ia/#faq",
    "mainEntity": [
     {
      "@type": "Question",
-     "name": "O que faz uma agência de IA?",
+     "name": "O que são agentes de IA?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Uma agência de IA projeta, implanta e acompanha agentes de inteligência artificial e automações que executam tarefas de atendimento, vendas e operação dentro das regras da empresa."
+      "text": "São assistentes de inteligência artificial que entendem mensagens, consultam as informações autorizadas da empresa e executam tarefas, como responder, agendar ou registrar pedidos."
      }
     },
     {
      "@type": "Question",
-     "name": "O que é um agente de IA?",
+     "name": "Qual é a diferença entre chatbot e agente de IA?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "É um sistema de inteligência artificial que entende uma solicitação, usa informações e ferramentas autorizadas e executa tarefas, como responder um cliente ou agendar um horário, dentro de limites definidos."
+      "text": "O chatbot segue um roteiro de botões. O agente de IA entende a pergunta escrita do jeito do cliente, consulta informações e executa tarefas em outros sistemas."
      }
     },
     {
      "@type": "Question",
-     "name": "Um agente de IA substitui a minha equipe?",
+     "name": "Agente de IA funciona no WhatsApp?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Não. O agente cuida das tarefas repetitivas e das dúvidas frequentes, e a conversa é encaminhada para uma pessoa quando o caso pede atenção humana."
+      "text": "Funciona. O atendimento pode ser feito no WhatsApp e no site, com passagem para uma pessoa quando necessário. Veja o agente de IA para WhatsApp ."
      }
     },
     {
      "@type": "Question",
-     "name": "A agência de IA atende pelo WhatsApp?",
+     "name": "O agente de IA substitui a minha equipe?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Sim. O atendimento automatizado pode funcionar no WhatsApp e no webchat. Conheça o EngageBot , atendimento com IA da Roque Business Evolution."
+      "text": "Não. Ele assume as tarefas repetitivas, e a equipe fica com os casos que pedem atenção humana."
      }
     },
     {
      "@type": "Question",
-     "name": "É seguro usar IA com os dados dos meus clientes?",
+     "name": "Quanto custa ter agentes de IA na empresa?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Depende de como o projeto é desenhado. Definimos permissões, limites de execução, controle de acesso e regras de aprovação humana, e orientamos sobre proteção de dados e LGPD conforme o escopo."
+      "text": "Depende dos canais, das integrações e do volume. Peça um orçamento pelo WhatsApp; a proposta separa implantação, mensalidade e ferramentas de terceiros."
      }
     },
     {
      "@type": "Question",
-     "name": "Quanto custa contratar uma agência de IA?",
+     "name": "Agência de IA e agentes de IA são a mesma coisa?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Depende do escopo. A proposta separa implantação, mensalidade, ferramentas de terceiros e suporte. Fale pelo WhatsApp para receber um diagnóstico do seu caso."
+      "text": "Não. Agentes de IA são os assistentes que trabalham na empresa. A Roque Business Evolution é a empresa que cria, implanta e acompanha esses agentes."
      }
     }
    ]

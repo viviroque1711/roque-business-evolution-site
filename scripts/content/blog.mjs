@@ -1,4 +1,4 @@
-// Blog da Roque Business Evolution: guias explicativos sobre agência de IA, GEO/AEO, SEO, automação e transformação digital.
+// Blog da Roque Business Evolution: guias explicativos sobre agentes de IA, GEO/AEO, SEO, automação e transformação digital.
 // Conteúdo conceitual e prático, sem estatística, sem cliente e sem resultado inventado. Autoria institucional (Roque Business Evolution).
 import { esc, faq, crumbLd, crumbHtml, pageUrl } from './lib.mjs';
 import { btn, li, cols, steps, sec, related, p, note, ENGAGEBOT } from './kit.mjs';
@@ -29,23 +29,23 @@ ${finalCta(c.ctaH2, c.ctaP, c.msg)}`;
 
 export const ARTIGOS = [
   article({
-    path: '/blog/o-que-e-agencia-de-ia/', og: 'blog', crumbName: 'O que é uma agência de IA',
-    title: 'O que é uma Agência de IA e Quando Contratar | Roque',
-    description: 'Entenda o que é uma agência de IA, o que ela entrega, em que difere de uma agência de marketing e quando vale a pena contratar uma.',
-    h1: 'O que é uma agência de IA e quando vale a pena contratar uma',
-    lead: 'Uma agência de IA ajuda empresas a usar inteligência artificial na prática: cria agentes que atendem clientes, automatiza processos e integra tudo aos sistemas que a empresa já tem. Este guia explica o que ela faz, como se diferencia de outras agências e como escolher.',
-    answer: 'Uma agência de IA projeta, implanta e acompanha agentes de inteligência artificial e automações para empresas. Vale contratar quando há tarefas repetitivas, atendimento com muito volume ou processos que dependem de informação espalhada, e a empresa quer resultado com controle e segurança.',
-    card: 'O que uma agência de IA faz, no que difere de uma agência de marketing e quando contratar.',
+    path: '/blog/o-que-sao-agentes-de-ia/', og: 'blog', crumbName: 'O que são agentes de IA',
+    title: 'O que São Agentes de IA e Quando a Empresa Precisa | Roque',
+    description: 'Entenda o que são agentes de IA, a diferença para um chatbot, o que eles fazem numa empresa e quando vale a pena ter um. Guia da Roque.',
+    h1: 'O que são agentes de IA e quando a sua empresa precisa de um',
+    lead: 'Agentes de IA são assistentes de inteligência artificial que conversam com clientes e executam tarefas nos sistemas da empresa. Este guia explica o que eles fazem, como se diferenciam de um chatbot e quando valem a pena.',
+    answer: 'Um agente de IA é um sistema de inteligência artificial que entende uma mensagem, consulta as informações autorizadas da empresa e executa uma tarefa, como responder, agendar ou registrar um pedido, dentro de limites definidos. Vale a pena quando há muitas mensagens repetidas ou tarefas manuais entre sistemas.',
+    card: 'O que um agente de IA faz, a diferença para um chatbot e quando ter um.',
     sections: [
-      { id: 'o-que-faz', h2: 'O que faz uma agência de IA', html: `${p('Uma agência de IA transforma inteligência artificial em solução de negócio. O trabalho costuma envolver quatro frentes:')}${li(['<b>Agentes de IA</b> que atendem clientes, qualificam leads e apoiam equipes.', '<b>Automação de processos</b> que conecta formulários, CRM, agenda e sistemas administrativos.', '<b>Integrações</b> com os sistemas, bancos de dados e APIs da empresa.', '<b>Governança</b>: permissões, limites, registro das operações e aprovação humana.'])}` },
-      { id: 'diferenca', h2: 'Agência de IA, agência de marketing e software house: qual a diferença', html: `${p('Uma agência de marketing foca em atrair e converter público. Uma software house constrói sistemas. Uma agência de IA combina estratégia, automação e inteligência artificial aplicada ao funcionamento da empresa, e muitas vezes usa as duas outras disciplinas para entregar.')}${p('Na Roque Business Evolution, por exemplo, a <a href="/agencia-de-ia/">agência de IA</a> trabalha junto com <a href="/criacao-de-sites/">criação de sites</a>, <a href="/seo/">SEO</a> e <a href="/desenvolvimento-de-software/">desenvolvimento de software</a>.')}` },
-      { id: 'quando-contratar', h2: 'Quando vale a pena contratar uma agência de IA', html: `${li(['O atendimento recebe muitas mensagens repetidas, principalmente no WhatsApp.', 'A equipe gasta tempo com tarefas manuais, como copiar dados entre sistemas.', 'Informações importantes estão espalhadas e difíceis de consultar.', 'A empresa quer usar IA, mas não sabe por onde começar com segurança.'])}${p('Se algum desses pontos se reconhece, um <a href="/diagnostico/">diagnóstico</a> mostra onde a IA traz ganho e onde ainda não faz sentido.')}` },
-      { id: 'como-escolher', h2: 'Como escolher uma agência de IA', html: `${li(['Peça para explicar o escopo, os limites e o que acontece quando o agente erra.', 'Verifique como são tratados os dados dos seus clientes e a privacidade.', 'Desconfie de promessas de resultado garantido.', 'Prefira quem faz diagnóstico antes de propor a solução.', 'Pergunte como o resultado será medido.'])}` },
+      { id: 'o-que-fazem', h2: 'O que os agentes de IA fazem numa empresa', html: `${p('Os agentes de IA assumem tarefas que se repetem e liberam a equipe para os casos que pedem atenção humana. Os usos mais comuns são:')}${li(['<b>Atendimento</b> no WhatsApp e no site, a qualquer hora.', '<b>Vendas</b>: qualificar contatos e acompanhar quem ainda não fechou.', '<b>Suporte e pós-venda</b> com base nos documentos da empresa.', '<b>Agendamento e confirmação</b> de horários.', '<b>Automação</b> de tarefas entre formulários, CRM, agenda e sistemas.'])}` },
+      { id: 'agente-ou-chatbot', h2: 'Agente de IA ou chatbot: qual é a diferença', html: `${p('O chatbot tradicional segue um roteiro de botões e respostas prontas. O agente de IA entende a pergunta escrita do jeito do cliente, consulta as informações da empresa e pode executar tarefas em outros sistemas. Os dois funcionam melhor quando passam a conversa para uma pessoa nos casos difíceis.')}` },
+      { id: 'quando-ter', h2: 'Quando a sua empresa precisa de um agente de IA', html: `${li(['O atendimento recebe muitas mensagens repetidas, principalmente no WhatsApp.', 'A equipe gasta tempo copiando dados entre sistemas.', 'Clientes esperam resposta fora do horário comercial.', 'Informações importantes estão espalhadas e difíceis de consultar.'])}${p('Se algum desses pontos se reconhece, veja os <a href="/agentes-de-ia/">agentes de IA para empresas</a> da Roque Business Evolution ou comece pelo <a href="/diagnostico/">diagnóstico</a>.')}` },
+      { id: 'cuidados', h2: 'Cuidados antes de colocar um agente de IA para trabalhar', html: `${li(['Defina o que o agente pode e o que não pode fazer.', 'Garanta a passagem para uma pessoa quando necessário.', 'Cuide da privacidade dos dados dos clientes, conforme a LGPD.', 'Desconfie de promessas de resultado garantido.', 'Combine como o resultado será medido.'])}` },
     ],
-    faq: [Q('Uma agência de IA substitui a minha equipe?', 'Não. Ela automatiza tarefas repetitivas e apoia o atendimento, e as pessoas continuam nos casos que pedem atenção humana.'), Q('Preciso entender de tecnologia para contratar?', 'Não. O diagnóstico traduz as possibilidades em linguagem de negócio e propõe um caminho por etapas.'), Q('Quanto tempo leva para ver resultado?', 'Depende do escopo. Projetos pequenos, como um agente de atendimento, podem ser implantados por etapas, e o resultado é acompanhado por indicadores.')],
-    related: [['/agencia-de-ia/', 'Agência de IA'], ['/agentes-de-ia-para-whatsapp/', 'Agente de IA para WhatsApp'], ['/automacao-de-processos/', 'Automação de processos'], ['/blog/adotar-ia-na-empresa-com-seguranca/', 'Como adotar IA com segurança']],
-    ctaH2: 'Vamos ver onde a IA ajuda a sua empresa', ctaP: 'Conte o seu momento. A Roque Business Evolution responde pelo WhatsApp.', msg: 'Olá! Li o artigo sobre agência de IA e quero conversar.',
-    about: [{ '@type': 'Thing', name: 'Agência de IA' }],
+    faq: [Q('Um agente de IA substitui a minha equipe?', 'Não. Ele assume tarefas repetitivas, e as pessoas continuam nos casos que pedem atenção humana.'), Q('Preciso entender de tecnologia para ter um agente de IA?', 'Não. O diagnóstico traduz as possibilidades em linguagem de negócio e propõe um caminho por etapas.'), Q('Agência de IA e agentes de IA são a mesma coisa?', 'Não. Agentes de IA são os assistentes que trabalham na empresa. Agência de IA é o nome dado a empresas que criam esses agentes, como faz a Roque Business Evolution.')],
+    related: [['/agentes-de-ia/', 'Agentes de IA para empresas'], ['/agentes-de-ia-para-whatsapp/', 'Agente de IA para WhatsApp'], ['/automacao-de-processos/', 'Automação de processos'], ['/blog/adotar-ia-na-empresa-com-seguranca/', 'Como adotar IA com segurança']],
+    ctaH2: 'Vamos ver onde um agente de IA ajuda a sua empresa', ctaP: 'Conte o seu momento. A Roque Business Evolution responde pelo WhatsApp.', msg: 'Olá! Li o artigo sobre agentes de IA e quero conversar.',
+    about: [{ '@type': 'Thing', name: 'Agente de IA' }],
   }),
   article({
     path: '/blog/geo-e-aeo-seo-para-buscas-com-ia/', og: 'blog', crumbName: 'GEO e AEO',
@@ -79,7 +79,7 @@ export const ARTIGOS = [
       { id: 'cuidados', h2: 'Cuidados com o atendimento automático no WhatsApp', html: `${li(['Defina o que o agente pode e não pode responder.', 'Garanta o encaminhamento para uma pessoa em casos sensíveis.', 'Revise as conversas para melhorar a base de conhecimento.', 'Cuide da privacidade e da adequação à LGPD.', 'Acompanhe indicadores: resolução, encaminhamentos, erros e custo.'])}${p('Veja o <a href="/agentes-de-ia-para-whatsapp/">agente de IA para WhatsApp</a> sob medida.')}` },
     ],
     faq: [Q('O agente de IA atende fora do horário comercial?', 'Sim. Ele responde a qualquer hora, e os casos que pedem uma pessoa ficam registrados para a equipe retomar.'), Q('O cliente percebe que está falando com IA?', 'Recomendamos ser transparente: informar que o atendimento inicial é automático e oferecer a opção de falar com uma pessoa.'), Q('Dá para integrar com agenda e CRM?', 'Sim, conforme as integrações disponíveis. O agente pode consultar e registrar informações nesses sistemas.')],
-    related: [['/agentes-de-ia-para-whatsapp/', 'Agentes de IA para WhatsApp'], ['/agentes-de-ia-para-vendas/', 'Agentes de IA para vendas'], ['/agencia-de-ia/', 'Agência de IA'], ['/governanca-e-seguranca-de-ia/', 'Governança e segurança de IA']],
+    related: [['/agentes-de-ia-para-whatsapp/', 'Agentes de IA para WhatsApp'], ['/agentes-de-ia-para-vendas/', 'Agentes de IA para vendas'], ['/agentes-de-ia/', 'Agentes de IA para empresas'], ['/governanca-e-seguranca-de-ia/', 'Governança e segurança de IA']],
     ctaH2: 'Vamos colocar um agente de IA no seu WhatsApp', ctaP: 'Conte como é o atendimento hoje. A Roque Business Evolution responde pelo WhatsApp.', msg: 'Olá! Li o artigo sobre agente de IA no WhatsApp e quero conversar.',
     about: [{ '@type': 'Thing', name: 'Agente de IA' }, { '@type': 'Thing', name: 'WhatsApp' }],
   }),
@@ -116,7 +116,7 @@ export const ARTIGOS = [
       { id: 'cuidados', h2: 'Cuidados para automatizar sem perder o controle', html: `${li(['Defina o que acontece quando algo foge do padrão.', 'Registre cada execução, para poder auditar.', 'Mantenha aprovação humana em operações financeiras e dados sensíveis.', 'Meça os resultados e ajuste o fluxo.'])}${p('Veja a <a href="/automacao-de-processos/">automação de processos</a> da Roque Business Evolution.')}` },
     ],
     faq: [Q('Automação é o mesmo que inteligência artificial?', 'Não. A automação segue regras definidas, enquanto a IA interpreta linguagem e toma decisões mais flexíveis. Podem ser combinadas.'), Q('Preciso trocar meus sistemas para automatizar?', 'Normalmente não. Muitas automações conectam os sistemas que a empresa já usa por meio de integrações.'), Q('Como saber se a automação deu certo?', 'Comparando tempo gasto, erros e volume antes e depois, com indicadores combinados no início.')],
-    related: [['/automacao-de-processos/', 'Automação de processos'], ['/agencia-de-ia/', 'Agência de IA'], ['/crm-e-vendas/', 'CRM e vendas'], ['/dados-e-business-intelligence/', 'Dados e business intelligence']],
+    related: [['/automacao-de-processos/', 'Automação de processos'], ['/agentes-de-ia/', 'Agentes de IA para empresas'], ['/crm-e-vendas/', 'CRM e vendas'], ['/dados-e-business-intelligence/', 'Dados e business intelligence']],
     ctaH2: 'Vamos descobrir o que automatizar na sua empresa', ctaP: 'Conte quais tarefas se repetem. A Roque Business Evolution responde pelo WhatsApp.', msg: 'Olá! Li o artigo sobre automação de processos e quero conversar.',
     about: [{ '@type': 'Thing', name: 'Automação de processos' }],
   }),
@@ -134,7 +134,7 @@ export const ARTIGOS = [
       { id: 'testes', h2: 'Passo 3: teste, monitore e mantenha uma pessoa na decisão', html: `${li(['Teste a qualidade e o comportamento antes de publicar.', 'Avalie respostas incorretas e alucinações.', 'Registre as operações para auditoria.', 'Mantenha aprovação humana em decisões de maior impacto.'])}${p('Veja a <a href="/governanca-e-seguranca-de-ia/">governança e segurança de IA</a> e a <a href="/capacitacao-em-ia/">capacitação em IA</a> para as equipes.')}` },
     ],
     faq: [Q('A IA pode vazar dados da minha empresa?', 'Pode, se for usada sem regras. Por isso definimos que dados podem ser usados, em quais ferramentas e com que controles.'), Q('Preciso de uma política de uso de IA?', 'Recomendamos. Ela deixa claro para a equipe o que é permitido, o que é proibido e quem decide.'), Q('Governança de IA substitui o jurídico?', 'Não. Ela apoia o uso responsável, mas não substitui assessoria jurídica nem auditoria independente quando exigidas.')],
-    related: [['/governanca-e-seguranca-de-ia/', 'Governança e segurança de IA'], ['/capacitacao-em-ia/', 'Capacitação em IA'], ['/transformacao-digital/', 'Transformação digital'], ['/agencia-de-ia/', 'Agência de IA']],
+    related: [['/governanca-e-seguranca-de-ia/', 'Governança e segurança de IA'], ['/capacitacao-em-ia/', 'Capacitação em IA'], ['/transformacao-digital/', 'Transformação digital'], ['/agentes-de-ia/', 'Agentes de IA para empresas']],
     ctaH2: 'Vamos adotar IA com segurança na sua empresa', ctaP: 'Conte onde a IA já é usada ou será usada. A Roque Business Evolution responde pelo WhatsApp.', msg: 'Olá! Li o artigo sobre adotar IA com segurança e quero conversar.',
     about: [{ '@type': 'Thing', name: 'Governança de IA' }],
   }),
@@ -164,9 +164,9 @@ const idxCrumb = [{ name: 'Início', path: '/' }, { name: 'Blog', path: '/blog/'
 export const blogIndex = {
   path: '/blog/', og: 'blog',
   title: 'Blog da Roque: IA, SEO, Automação e Transformação Digital',
-  description: 'Guias práticos da Roque Business Evolution sobre agência de IA, GEO e AEO, SEO, automação de processos, sites e transformação digital.',
+  description: 'Guias práticos da Roque Business Evolution sobre criação de sites, SEO, GEO e AEO, agentes de IA, automação de processos e transformação digital.',
   body: `${hero(idxCrumb, 'Blog da Roque Business Evolution', 'Guias práticos sobre inteligência artificial, SEO, GEO e AEO, automação de processos, criação de sites e transformação digital, escritos para quem decide em uma empresa.')}
-<section class="sec white" id="artigos" aria-labelledby="art-h"><div class="wrap"><h2 id="art-h">Artigos sobre agência de IA, SEO e transformação digital</h2>
+<section class="sec white" id="artigos" aria-labelledby="art-h"><div class="wrap"><h2 id="art-h">Artigos sobre sites, SEO, GEO e inteligência artificial</h2>
 <ul class="posts">
 ${ARTIGOS.map((a) => `<li><h3><a href="${a.path}">${esc(a.title.replace(/ \| Roque$/, ''))}</a></h3><p>${esc(a.lead)}</p></li>`).join('\n')}
 </ul></div></section>

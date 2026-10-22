@@ -14,14 +14,14 @@
  "/geo-aeo/": [
   "GEO e SEO para IA: como a sua empresa aparece no ChatGPT e no Google"
  ],
+ "/agentes-de-ia/": [
+  "Agentes de IA para empresas que atendem, vendem e automatizam"
+ ],
  "/": [
   "Empresa de desenvolvimento de software Criação de sites profissionais Software sob medida e sistemas personalizados SEO, GEO e AEO"
  ],
  "/servicos/": [
   "Serviços da Roque Business Evolution"
- ],
- "/agencia-de-ia/": [
-  "Agência de IA que coloca agentes de inteligência artificial para trabalhar na sua empresa"
  ],
  "/pesquisa-de-palavras-chave/": [
   "Pesquisa de palavras-chave que descobre o que o seu público procura e por quê"
@@ -95,8 +95,8 @@
  "/blog/": [
   "Blog da Roque Business Evolution"
  ],
- "/blog/o-que-e-agencia-de-ia/": [
-  "O que é uma agência de IA e quando vale a pena contratar uma"
+ "/blog/o-que-sao-agentes-de-ia/": [
+  "O que são agentes de IA e quando a sua empresa precisa de um"
  ],
  "/blog/geo-e-aeo-seo-para-buscas-com-ia/": [
   "GEO e AEO: como preparar o seu site para buscas com inteligência artificial"
