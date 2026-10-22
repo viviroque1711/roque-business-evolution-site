@@ -12,6 +12,7 @@ import '../styles/extra.css';
 import unbounded500 from '@fontsource/unbounded/files/unbounded-latin-500-normal.woff2?url';
 import instrument400 from '@fontsource/instrument-sans/files/instrument-sans-latin-400-normal.woff2?url';
 import instrument600 from '@fontsource/instrument-sans/files/instrument-sans-latin-600-normal.woff2?url';
+import instrument700 from '@fontsource/instrument-sans/files/instrument-sans-latin-700-normal.woff2?url';
 import motion from '../scripts/motion.js?raw';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
@@ -43,7 +44,7 @@ if (process.env.SITE_ENV === 'staging') {
 <html lang={SITE.lang}>
 <head>
 <Fragment set:html={head} />
-{[unbounded500, instrument400, instrument600].map((f) => <link rel="preload" as="font" type="font/woff2" href={f} crossorigin />)}
+{[unbounded500, instrument400, instrument600, instrument700].map((f) => <link rel="preload" as="font" type="font/woff2" href={f} crossorigin />)}
 {ld && <script type="application/ld+json" is:inline set:html={ld}></script>}
 {css && <style is:inline set:html={css}></style>}
 </head>
