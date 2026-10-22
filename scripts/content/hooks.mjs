@@ -130,7 +130,8 @@ const sites = hookPage({
     Q('Quanto custa a criação de um site profissional?', 'Depende do número de páginas, das integrações e do conteúdo. Peça um orçamento pelo WhatsApp e receba a proposta com escopo e prazo.'),
     Q('Quanto tempo leva para criar um site profissional?', 'O prazo depende do escopo e entra na proposta, etapa por etapa, antes do início do projeto.'),
     Q('O site já sai pronto para aparecer no Google?', 'Sim, com a base técnica de <a href="/seo/">SEO</a> e de <a href="/geo-aeo/">GEO e AEO</a> bem feita. A posição nas buscas depende de mercado e concorrência, e ninguém pode garanti-la.'),
-    Q('A Roque Business Evolution atende só em São Paulo?', 'Não. A Roque Business Evolution atende empresas de São Paulo e de todo o Brasil, com reuniões online.'),
+    Q('A Roque Business Evolution atende só em São Paulo?', 'Não. A Roque Business Evolution vai até a sua empresa em São Paulo e em Guarulhos e atende todo o Brasil com reuniões online. Veja a <a href="/criacao-de-sites-em-guarulhos/">criação de sites em Guarulhos</a>.'),
+    Q('Vocês fazem criação de sites com SEO?', 'Sim. Todo site sai com a base de SEO pronta: títulos, estrutura, velocidade, sitemap e dados estruturados, mais GEO e AEO para as IAs.'),
     Q('Vocês criam landing page?', 'Sim. Landing pages para campanhas e ofertas, com a mesma base de SEO e medição de conversões.'),
     Q('O site fica integrado ao WhatsApp?', 'Sim. O site leva direto para uma conversa no WhatsApp e pode se integrar a formulários, CRM e agenda online.'),
   ],
@@ -153,7 +154,7 @@ const software = hookPage({
       ['code', 'Sistemas web', 'Acessados de qualquer lugar, no navegador.'],
       ['design', 'Portais e áreas do cliente', 'Seu cliente resolve sozinho, a qualquer hora.'],
       ['chart', 'Dashboards e indicadores', 'Os números da operação em uma tela.'],
-      ['plug', 'Integrações e APIs', 'O sistema novo conversa com o que você já usa.'],
+      ['plug', 'Integração de sistemas e APIs', 'O sistema novo conversa com o ERP, o CRM e o que você já usa.'],
       ['nodes', 'Sistemas legados', 'Modernizados sem parar a operação.'],
       ['robot', 'IA dentro do sistema', 'Agentes e automações com regras e aprovação humana.'],
       ['grid', 'Plataformas SaaS', 'Sistemas multiempresa com assinatura. <a href="/saas/">Veja SaaS</a>.'],
@@ -178,7 +179,8 @@ const software = hookPage({
     Q('A Roque Business Evolution é uma empresa de desenvolvimento de software?', 'Sim. A Roque Business Evolution é uma empresa de desenvolvimento de software: cria sistemas personalizados, plataformas SaaS, aplicativos e integrações.'),
     Q('Quanto custa desenvolver um software sob medida?', 'Depende do escopo, das integrações e do prazo. Peça um orçamento pelo WhatsApp; a proposta chega com etapas, entregas e prazo.'),
     Q('O que é um MVP?', 'É a menor versão do sistema que já pode ser usada. Ela testa a ideia com usuários reais antes de investir no sistema completo.'),
-    Q('Vocês integram com os sistemas que eu já uso?', 'Sim, por APIs e também com sistemas legados, conforme a viabilidade técnica de cada caso.'),
+    Q('Vocês fazem integração de sistemas?', 'Sim. Integramos o sistema novo ao ERP, ao CRM, ao e-commerce e a outros sistemas por APIs, e também a sistemas legados, conforme a viabilidade técnica de cada caso.'),
+    Q('A Roque Business Evolution é uma software house?', 'Sim. Como software house, a Roque Business Evolution desenvolve software sob medida, sistemas web, aplicativos, plataformas SaaS e integrações, do escopo à evolução do sistema.'),
     Q('De quem é o software desenvolvido?', 'Propriedade, infraestrutura, suporte e manutenção são definidos em contrato, projeto a projeto.'),
   ],
   ctaH2: 'Vamos desenhar o software da sua empresa', ctaP: 'Conte o processo que você quer resolver.',
@@ -369,9 +371,67 @@ const agents = hookPage({
     Q('Agente de IA funciona no WhatsApp?', 'Funciona. O atendimento pode ser feito no WhatsApp e no site, com passagem para uma pessoa quando necessário. Veja o <a href="/agentes-de-ia-para-whatsapp/">agente de IA para WhatsApp</a>.'),
     Q('O agente de IA substitui a minha equipe?', 'Não. Ele assume as tarefas repetitivas, e a equipe fica com os casos que pedem atenção humana.'),
     Q('Quanto custa ter agentes de IA na empresa?', 'Depende dos canais, das integrações e do volume. Peça um orçamento pelo WhatsApp; a proposta separa implantação, mensalidade e ferramentas de terceiros.'),
+    Q('A Roque Business Evolution é uma empresa de inteligência artificial?', 'A Roque Business Evolution é uma empresa de desenvolvimento de software que cria agentes de IA e automação de processos com IA para empresas, ligados ao WhatsApp, ao site e aos sistemas que você já usa.'),
     Q('Agência de IA e agentes de IA são a mesma coisa?', 'Não. Agentes de IA são os assistentes que trabalham na empresa. A Roque Business Evolution é a empresa que cria, implanta e acompanha esses agentes.'),
   ],
   ctaH2: 'Vamos colocar agentes de IA para trabalhar na sua empresa', ctaP: 'Conte o que você quer automatizar ou melhorar no atendimento.',
 });
 
-export const HOOK_PAGES = [sites, software, apps, seo, geo, agents];
+
+// ================================================================== GUARULHOS (intenção local, 22/10/2026)
+// Busca principal: criação de sites em Guarulhos (+ desenvolvimento de sites em Guarulhos). Uma página por cidade, nunca
+// uma página por serviço e cidade. A Roque vai até o cliente; não recebe clientes em escritório próprio.
+const guarulhosBase = hookPage({
+  key: 'local', path: '/criacao-de-sites-em-guarulhos/', og: 'criacao-de-sites', crumbName: 'Criação de sites em Guarulhos', mode: 'sites',
+  title: 'Criação de Sites em Guarulhos e Software Sob Medida | Roque',
+  description: 'Criação de sites em Guarulhos e desenvolvimento de software e sistemas personalizados, com SEO e IA. Vamos até a sua empresa. Peça orçamento.',
+  h1: 'Criação de sites e desenvolvimento de software em Guarulhos',
+  lead: 'A Roque Business Evolution faz criação de sites em Guarulhos, desenvolvimento de sites e software sob medida para as empresas da cidade. Vamos até a sua empresa para entender o negócio, e o projeto segue com reuniões presenciais e online.',
+  jump: 'Ver o que fazemos em Guarulhos', objLabel: 'Três camadas de um site profissional se separando e se juntando em 3D',
+  msg: 'Olá! Minha empresa é de Guarulhos e quero um orçamento.',
+  serviceName: 'Criação de sites e desenvolvimento de software em Guarulhos', serviceType: 'Criação de sites e desenvolvimento de software',
+  serviceDescription: 'Criação e desenvolvimento de sites, software sob medida, sistemas personalizados, aplicativos, integração de sistemas, SEO local e agentes de IA para empresas de Guarulhos, com atendimento no endereço do cliente.',
+  blocks: [
+    { kind: 'spec', v: 'mist', id: 'o-que-fazemos', h2: 'O que a Roque Business Evolution faz em Guarulhos', one: 'Site, sistema e presença no Google, com a mesma equipe.', args: [[
+      ['design', 'Criação de sites', 'Site profissional com SEO. <a href="/criacao-de-sites/">Veja como funciona</a>.'],
+      ['text', 'Desenvolvimento e reformulação de sites', 'Seu site atual mais rápido e pronto para as buscas.'],
+      ['code', 'Software sob medida', 'Sistemas personalizados para o seu processo. <a href="/desenvolvimento-de-software/">Veja</a>.'],
+      ['phone', 'Aplicativos', 'Para o seu cliente e a sua equipe. <a href="/desenvolvimento-de-aplicativos/">Veja</a>.'],
+      ['pin', 'SEO local', 'Site e Perfil de Empresa no Google trabalhando juntos. <a href="/seo/">Veja SEO</a>.'],
+      ['ia', 'GEO e AEO', 'Respostas claras para as IAs. <a href="/geo-aeo/">Entenda</a>.'],
+      ['robot', 'Agentes de IA e automação', 'Atendimento e tarefas no WhatsApp e no site. <a href="/agentes-de-ia/">Veja</a>.'],
+      ['plug', 'Integração de sistemas', 'ERP, CRM e loja conversando entre si.'],
+    ]] },
+    { kind: 'pillars', v: 'white', id: 'como-atendemos', h2: 'Como a Roque Business Evolution atende em Guarulhos', one: 'No seu endereço quando precisa, online no dia a dia.', args: [[
+      ['pin', 'No seu endereço', ['Visita à sua empresa para o diagnóstico', 'Reuniões presenciais nas etapas principais', 'Treinamento da equipe no local, quando fizer sentido']],
+      ['wa', 'Online', ['Reuniões por vídeo no dia a dia', 'Cada etapa aprovada com você pelo WhatsApp', 'Atendimento também em São Paulo e em todo o Brasil']],
+    ]] },
+    { kind: 'chips', v: 'mist', id: 'para-quem', h2: 'Para quem fazemos sites e sistemas em Guarulhos', one: 'Pequenas, médias e grandes empresas.', args: [['Prestadores de serviço', 'Comércio e varejo', 'Clínicas e consultórios', 'Salões, estética e bem-estar', 'Indústria', 'Logística e transporte', 'Startups e novos negócios', 'Pequenas e médias empresas'], ['Pequenas e médias empresas']] },
+    { kind: 'flow', v: 'white', id: 'como-funciona', h2: 'Como funciona o projeto em Guarulhos', one: 'Cinco etapas, com a sua aprovação em cada uma.', args: [[
+      ['Visita e diagnóstico', 'Na sua empresa, em Guarulhos'],
+      ['Proposta', 'Escopo, etapas e prazo por escrito'],
+      ['Design e desenvolvimento', 'Entregas que você vê e aprova'],
+      ['Publicação e treinamento', 'No ar, com a equipe pronta para usar'],
+      ['Evolução', 'SEO, medição e melhorias contínuas'],
+    ]] },
+  ],
+  faqH2: 'Perguntas frequentes sobre criação de sites em Guarulhos',
+  faq: [
+    Q('A Roque Business Evolution atende em Guarulhos?', 'Sim. Vamos até a sua empresa em Guarulhos para o diagnóstico e as reuniões principais; o restante do projeto segue online.'),
+    Q('Vocês têm escritório para receber clientes?', 'Não recebemos clientes em escritório próprio. O atendimento acontece no seu endereço ou em reunião online.'),
+    Q('Quanto custa a criação de um site em Guarulhos?', 'Depende do número de páginas, das integrações e do conteúdo. Peça um orçamento pelo WhatsApp e receba a proposta com escopo e prazo.'),
+    Q('Vocês desenvolvem sistemas personalizados para empresas de Guarulhos?', 'Sim. Desenvolvemos software sob medida, sistemas web, aplicativos e integrações de sistemas para empresas de Guarulhos e região.'),
+    Q('Vocês ajudam a aparecer no Google Maps em Guarulhos?', 'Sim. Cuidamos do SEO local do site e orientamos o Perfil de Empresa no Google. A posição no mapa depende de vários fatores, e ninguém pode garanti-la.'),
+    Q('Vocês atendem também em São Paulo e em outras cidades?', 'Sim. Atendemos presencialmente em Guarulhos e em São Paulo e online em todo o Brasil.'),
+  ],
+  ctaH2: 'Vamos conversar sobre o projeto da sua empresa em Guarulhos', ctaP: 'Conte o que a sua empresa faz e o que precisa resolver.',
+});
+const AREAS = [{ '@type': 'City', name: 'Guarulhos', containedInPlace: { '@type': 'State', name: 'São Paulo' } }, { '@type': 'City', name: 'São Paulo' }];
+const guarulhos = {
+  ...guarulhosBase,
+  get graph() {
+    return guarulhosBase.graph.map((n) => (n && n['@type'] === 'Service' ? { ...n, areaServed: AREAS } : n));
+  },
+};
+
+export const HOOK_PAGES = [sites, software, apps, seo, geo, agents, guarulhos];

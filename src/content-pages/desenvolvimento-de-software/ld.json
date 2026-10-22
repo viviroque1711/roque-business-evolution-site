@@ -129,10 +129,18 @@
     },
     {
      "@type": "Question",
-     "name": "Vocês integram com os sistemas que eu já uso?",
+     "name": "Vocês fazem integração de sistemas?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Sim, por APIs e também com sistemas legados, conforme a viabilidade técnica de cada caso."
+      "text": "Sim. Integramos o sistema novo ao ERP, ao CRM, ao e-commerce e a outros sistemas por APIs, e também a sistemas legados, conforme a viabilidade técnica de cada caso."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A Roque Business Evolution é uma software house?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. Como software house, a Roque Business Evolution desenvolve software sob medida, sistemas web, aplicativos, plataformas SaaS e integrações, do escopo à evolução do sistema."
      }
     },
     {

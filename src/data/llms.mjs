@@ -27,6 +27,7 @@ export const LLMS = {
   '/automacao-de-processos/': S(3, 'Automação de fluxos de trabalho, integração de sistemas, alertas e relatórios.'),
   '/desenvolvimento-de-software/': S(3, 'Software sob medida e sistemas personalizados: sistemas web, MVPs, portais, dashboards, integrações e IA.'),
   '/desenvolvimento-de-aplicativos/': S(3, 'Desenvolvimento de aplicativos para empresas: apps Android e iOS, PWA e aplicativos web integrados ao sistema.'),
+  '/criacao-de-sites-em-guarulhos/': S(3, 'Criação de sites em Guarulhos e desenvolvimento de software e sistemas personalizados, com atendimento no endereço do cliente em Guarulhos e São Paulo.'),
   '/saas/': S(3, 'Desenvolvimento de SaaS e plataformas multiempresa.'),
   '/dados-e-business-intelligence/': S(3, 'Dashboards, indicadores, relatórios automáticos e insights com IA.'),
   '/servicos/': S(4, 'Índice dos 18 serviços, aplicações de agentes de IA, produtos e metodologia.'),

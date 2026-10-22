@@ -16,6 +16,7 @@
 /capacitacao-em-ia/
 /como-contratar/
 /contato/
+/criacao-de-sites-em-guarulhos/
 /criacao-de-sites/
 /crm-e-vendas/
 /dados-e-business-intelligence/

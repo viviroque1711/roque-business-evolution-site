@@ -137,6 +137,14 @@
     },
     {
      "@type": "Question",
+     "name": "A Roque Business Evolution é uma empresa de inteligência artificial?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A Roque Business Evolution é uma empresa de desenvolvimento de software que cria agentes de IA e automação de processos com IA para empresas, ligados ao WhatsApp, ao site e aos sistemas que você já usa."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Agência de IA e agentes de IA são a mesma coisa?",
      "acceptedAnswer": {
       "@type": "Answer",

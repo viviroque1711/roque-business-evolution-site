@@ -124,7 +124,15 @@
      "name": "A Roque Business Evolution atende só em São Paulo?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Não. A Roque Business Evolution atende empresas de São Paulo e de todo o Brasil, com reuniões online."
+      "text": "Não. A Roque Business Evolution vai até a sua empresa em São Paulo e em Guarulhos e atende todo o Brasil com reuniões online. Veja a criação de sites em Guarulhos ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Vocês fazem criação de sites com SEO?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. Todo site sai com a base de SEO pronta: títulos, estrutura, velocidade, sitemap e dados estruturados, mais GEO e AEO para as IAs."
      }
     },
     {

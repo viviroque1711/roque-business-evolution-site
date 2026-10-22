@@ -1,0 +1,159 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Empresa de desenvolvimento de software e criação de sites profissionais: software sob medida, aplicativos, SEO, GEO e AEO e transformação digital.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://roquebusinessevolution.com/criacao-de-sites-em-guarulhos/#page",
+   "url": "https://roquebusinessevolution.com/criacao-de-sites-em-guarulhos/",
+   "name": "Criação de Sites em Guarulhos e Software Sob Medida",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "mainEntity": {
+    "@id": "https://roquebusinessevolution.com/criacao-de-sites-em-guarulhos/#service"
+   }
+  },
+  {
+   "@type": "Service",
+   "@id": "https://roquebusinessevolution.com/criacao-de-sites-em-guarulhos/#service",
+   "name": "Criação de sites e desenvolvimento de software em Guarulhos",
+   "serviceType": "Criação de sites e desenvolvimento de software",
+   "description": "Criação e desenvolvimento de sites, software sob medida, sistemas personalizados, aplicativos, integração de sistemas, SEO local e agentes de IA para empresas de Guarulhos, com atendimento no endereço do cliente.",
+   "provider": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "areaServed": [
+    {
+     "@type": "City",
+     "name": "Guarulhos",
+     "containedInPlace": {
+      "@type": "State",
+      "name": "São Paulo"
+     }
+    },
+    {
+     "@type": "City",
+     "name": "São Paulo"
+    }
+   ],
+   "url": "https://roquebusinessevolution.com/criacao-de-sites-em-guarulhos/"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Criação de sites em Guarulhos",
+     "item": "https://roquebusinessevolution.com/criacao-de-sites-em-guarulhos/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://roquebusinessevolution.com/criacao-de-sites-em-guarulhos/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "A Roque Business Evolution atende em Guarulhos?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. Vamos até a sua empresa em Guarulhos para o diagnóstico e as reuniões principais; o restante do projeto segue online."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Vocês têm escritório para receber clientes?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não recebemos clientes em escritório próprio. O atendimento acontece no seu endereço ou em reunião online."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quanto custa a criação de um site em Guarulhos?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Depende do número de páginas, das integrações e do conteúdo. Peça um orçamento pelo WhatsApp e receba a proposta com escopo e prazo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Vocês desenvolvem sistemas personalizados para empresas de Guarulhos?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. Desenvolvemos software sob medida, sistemas web, aplicativos e integrações de sistemas para empresas de Guarulhos e região."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Vocês ajudam a aparecer no Google Maps em Guarulhos?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. Cuidamos do SEO local do site e orientamos o Perfil de Empresa no Google. A posição no mapa depende de vários fatores, e ninguém pode garanti-la."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Vocês atendem também em São Paulo e em outras cidades?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. Atendemos presencialmente em Guarulhos e em São Paulo e online em todo o Brasil."
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -14,6 +14,7 @@ export const EMPRESA = [
   { href: '/como-contratar/', label: 'Como contratar' },
   { href: '/glossario/', label: 'Glossário' },
   { href: '/perguntas-frequentes/', label: 'Perguntas frequentes' },
+  { href: '/criacao-de-sites-em-guarulhos/', label: 'Atendimento em Guarulhos' },
   { href: '/contato/', label: 'Contato' },
 ];
 export const LEGAL = [
