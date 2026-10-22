@@ -106,3 +106,6 @@
 .k3-final h2 { max-width: 22ch; }
 
 @media (prefers-reduced-motion: reduce) { .k3-stack-rot, .k3-plane, .k3-pillar { transition: none !important; } }
+
+.k3-after { margin-top: 1.6rem; font-weight: 600; color: var(--ink); }
+.k3-black .k3-after { color: #fff; }

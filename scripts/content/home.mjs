@@ -8,6 +8,7 @@ import { SERVICE_GROUPS, SERVICES, AI_APPS, PRODUCTS } from '../../src/data/serv
 import { esc, faq, crumbLd, crumbHtml, pageUrl, wa } from './lib.mjs';
 import { btn, li, cols, steps, sec, related, p, ENGAGEBOT, AURORA } from './kit.mjs';
 import { org, website, webpage, finalCta, hero } from './schema.mjs';
+import { IC, spec } from './hooks.mjs';
 
 const Q = (q, a) => ({ q, a: `<p>${a}</p>` });
 const read = (f) => fs.readFileSync(path.join(import.meta.dirname, f), 'utf8');
@@ -88,6 +89,20 @@ ${gold('Pedir orçamento no WhatsApp')}</div>
 <div class="h3d-plane"><i></i><i></i><i></i><i></i><span>Operação</span></div>
 <div class="h3d-plane"><i></i><i></i><i></i><i></i><span>Presença</span></div>
 </div></div>
+</div></section>
+
+<section class="h3d-sec white" id="como-escolher" aria-labelledby="como-escolher-h"><div class="wrap">
+<h2 id="como-escolher-h">Qual é a melhor empresa de desenvolvimento de software?</h2>
+<p class="h3d-one">A melhor empresa de desenvolvimento de software é a que entende o seu negócio antes de escrever código e entrega em etapas que você aprova. Confira estes seis pontos.</p>
+${spec([
+  ['nodes', 'Entende o negócio primeiro?', 'Diagnóstico do processo antes da proposta.'],
+  ['doc', 'Escopo e prazo por escrito?', 'Etapas, entregas e critérios de aceite claros.'],
+  ['code', 'Entrega em etapas?', 'MVP e versões que você testa e aprova.'],
+  ['plug', 'Integra com o que você já usa?', 'ERP, CRM, WhatsApp e sistemas legados.'],
+  ['lock', 'O software é de quem?', 'Propriedade, acessos e código definidos em contrato.'],
+  ['grid', 'Tem software próprio no ar?', 'Produto em operação mostra como a empresa trabalha.'],
+])}
+<p class="h3d-one h3d-after">A Roque Business Evolution desenvolve e opera o <a href="${AURORA}" rel="noopener">Aurora Premium</a> e o <a href="${ENGAGEBOT}" rel="noopener">EngageBot</a>.</p>
 </div></section>
 
 <section class="h3d-sec mist" id="servicos" aria-labelledby="servicos-h"><div class="wrap">

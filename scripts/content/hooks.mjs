@@ -59,19 +59,20 @@ const anatomy = (layers) => `<div class="k3-anat"><ol class="k3-layers">${layers
 const own = () => `<div class="k3-own"><a href="${AURORA}" rel="noopener"><b>Aurora Premium</b><span>Sistema de agendamento e gestão para salões, barbearias, clínicas, spas e pet shops.</span></a><a href="${ENGAGEBOT}" rel="noopener"><b>EngageBot</b><span>Atendimento com inteligência artificial no WhatsApp e no site.</span></a></div>`;
 
 const BLOCK = { spec, flow, pillars, chips, anatomy, own };
+export { IC, spec };
 
 function hookPage(c) {
   const crumb = [{ name: 'Início', path: '/' }, { name: c.crumbName, path: c.path }];
   const f = faq(c.faq, { pagePath: c.path, heading: c.faqH2 });
   const sections = c.blocks.map((b) => `<section class="k3-sec ${b.v === 'black' ? 'k3-black' : b.v === 'white' ? 'white k3-white' : 'mist'}" id="${b.id}" aria-labelledby="${b.id}-h"><div class="wrap">
 <h2 id="${b.id}-h">${esc(b.h2)}</h2>${b.one ? `<p class="k3-one">${b.one}</p>` : ''}
-${BLOCK[b.kind](...b.args)}
+${BLOCK[b.kind](...b.args)}${b.after ? `<p class="k3-one k3-after">${b.after}</p>` : ''}
 </div></section>`).join('\n');
   const next = Object.entries(HOOKS).filter(([k]) => k !== c.key).map(([, [h, t, ic]]) => `<li><a href="${h}">${ic}<span>${esc(t)}</span></a></li>`).join('');
   const body = `<div class="k3">
 <section class="k3-hero" aria-labelledby="h1"><div class="k3-hero-in">
 <div>${crumbHtml(crumb)}<h1 id="h1">${esc(c.h1)}</h1><p class="k3-lead">${c.lead}</p>
-<div class="k3-btns"><a class="btn gold" href="${wa(c.msg)}" rel="noopener">Pedir orçamento no WhatsApp</a><a class="btn line" href="#${c.blocks[0].id}">${esc(c.jump)}</a></div></div>
+<div class="k3-btns"><a class="btn gold" href="${wa(c.msg)}" rel="noopener">Pedir orçamento no WhatsApp</a><a class="btn line" href="#${c.jumpTo || c.blocks[0].id}">${esc(c.jump)}</a></div></div>
 <div class="k3-obj" role="img" aria-label="${esc(c.objLabel)}"><canvas data-k3-obj="${c.mode}"></canvas></div>
 </div></section>
 ${sections}
@@ -98,7 +99,17 @@ const sites = hookPage({
   msg: 'Olá! Quero um orçamento para a criação do site da minha empresa.',
   serviceName: 'Criação de sites profissionais com SEO', serviceType: 'Criação de sites',
   serviceDescription: 'Criação e desenvolvimento de sites profissionais, landing pages, blogs e lojas virtuais com SEO, GEO e AEO, design responsivo, integração com WhatsApp e medição de conversões.',
+  jumpTo: 'o-que-entra',
   blocks: [
+    // dobra "como escolher": a pergunta principal do Google (As pessoas também perguntam, 22/10/2026) logo depois da abertura
+    { kind: 'spec', v: 'white', id: 'como-escolher', h2: 'Qual é o melhor criador de site profissional?', one: 'Um construtor pronto, como o Wix, serve para um site simples que você mesmo monta. Para o site trazer clientes, confira estes seis pontos antes de escolher quem vai criá-lo.', args: [[
+      ['seo', 'Aparece no Google e nas IAs?', 'SEO, GEO e AEO feitos desde o primeiro dia, não depois.'],
+      ['text', 'Quem escreve o texto?', 'O texto que vende e responde às buscas faz parte do projeto.'],
+      ['fast', 'Abre rápido no celular?', 'Site leve, testado no celular antes de publicar.'],
+      ['wa', 'Vira contato?', 'WhatsApp, formulário e medição de cada conversão.'],
+      ['lock', 'O domínio é seu?', 'Domínio e acessos no nome da sua empresa.'],
+      ['chart', 'Tem quem cuide depois?', 'Medição, ajustes e evolução depois do lançamento.'],
+    ]], after: 'A criação de sites da Roque Business Evolution entrega os seis.' },
     { kind: 'spec', v: 'mist', id: 'o-que-entra', h2: 'O que entra na criação de sites profissionais', one: 'Tudo o que um site precisa para ser encontrado e virar contato, em um só projeto.', args: [[
       ['design', 'Design sob medida', 'Identidade da sua marca, sem modelo pronto.'],
       ['text', 'Texto que vende', 'Escrito para o seu cliente e para as buscas.'],
@@ -243,7 +254,17 @@ const seo = hookPage({
   msg: 'Olá! Quero um orçamento de SEO para a minha empresa.',
   serviceName: 'Agência de SEO', serviceType: 'SEO',
   serviceDescription: 'Pesquisa de palavras-chave, mapa de palavras por página, SEO técnico, on-page, off-page e local, conteúdo, Perfil da Empresa no Google, GEO e AEO, com relatórios no Google Search Console.',
+  jumpTo: 'o-que-fazemos',
   blocks: [
+    // dobra "como escolher": a pergunta principal do Google (As pessoas também perguntam, 22/10/2026) logo depois da abertura
+    { kind: 'spec', v: 'white', id: 'como-escolher', h2: 'Qual é a melhor agência de SEO?', one: 'A melhor agência de SEO é a que mostra o que vai fazer, mede com os dados da sua empresa e não promete posição garantida. Confira estes seis pontos antes de contratar.', args: [[
+      ['seo', 'Começa por um diagnóstico?', 'Auditoria técnica e pesquisa de palavras-chave antes da proposta.'],
+      ['doc', 'O plano vem por escrito?', 'Frentes, entregas e prazos claros.'],
+      ['chart', 'Mede com dados que são seus?', 'Search Console e Analytics no nome da sua empresa.'],
+      ['lock', 'Promete a primeira posição?', 'Desconfie: ninguém pode garantir posição no Google.'],
+      ['pin', 'Cuida do SEO local?', 'Site e Perfil de Empresa no Google trabalhando juntos.'],
+      ['ia', 'Pensa nas buscas com IA?', 'GEO e AEO para as respostas do ChatGPT, do Gemini e do Claude.'],
+    ]], after: 'A agência de SEO da Roque Business Evolution trabalha com os seis.' },
     { kind: 'spec', v: 'mist', id: 'o-que-fazemos', h2: 'O que a agência de SEO da Roque faz', one: 'Do que o seu cliente pesquisa até o contato no seu site.', args: [[
       ['seo', 'Pesquisa de palavras-chave', 'O que o cliente digita quando quer contratar.'],
       ['doc', 'Mapa de palavras por página', 'Uma busca principal por página, sem disputa interna.'],
@@ -339,7 +360,17 @@ const agents = hookPage({
   msg: 'Olá! Quero um orçamento de agentes de IA para a minha empresa.',
   serviceName: 'Agentes de IA para empresas', serviceType: 'Agentes de inteligência artificial',
   serviceDescription: 'Projeto, implantação e acompanhamento de agentes de inteligência artificial para atendimento no WhatsApp e no site, vendas, suporte, agendamento e automação de processos, com regras, limites e escalonamento humano.',
+  jumpTo: 'o-que-fazem',
   blocks: [
+    // dobra "como escolher": a pergunta principal do Google (As pessoas também perguntam, 22/10/2026) logo depois da abertura
+    { kind: 'spec', v: 'white', id: 'como-escolher', h2: 'Qual é o melhor agente de IA para empresas?', one: 'O melhor agente de IA é o que conhece as informações da sua empresa, atende onde o seu cliente já está e deixa as pessoas no controle. Confira estes seis pontos.', args: [[
+      ['doc', 'Aprende com a sua empresa?', 'Site, documentos e perguntas frequentes como base.'],
+      ['wa', 'Atende onde o cliente está?', 'WhatsApp e site no mesmo atendimento.'],
+      ['plug', 'Faz tarefas, além de responder?', 'Agenda, registra pedidos e consulta sistemas.'],
+      ['eye', 'Passa o caso para uma pessoa?', 'A equipe assume quando o atendimento pede.'],
+      ['lock', 'Tem regras e limites?', 'Usa só informações autorizadas, com aprovação humana onde importa.'],
+      ['chart', 'Dá para acompanhar?', 'Conversas e resultados visíveis para a sua equipe.'],
+    ]], after: 'Pronto ou personalizado: comece pelo EngageBot ou peça um agente sob medida. A Roque Business Evolution cria os dois.' },
     { kind: 'spec', v: 'mist', id: 'o-que-fazem', h2: 'O que os agentes de IA fazem na sua empresa', one: 'Tarefas que se repetem todos os dias, feitas a qualquer hora.', args: [[
       ['wa', 'Atendimento no WhatsApp', 'Responde dúvidas e encaminha pedidos. <a href="/agentes-de-ia-para-whatsapp/">Veja</a>.'],
       ['chart', 'Vendas e qualificação de leads', 'Separa quem está pronto para comprar. <a href="/agentes-de-ia-para-vendas/">Veja</a>.'],
