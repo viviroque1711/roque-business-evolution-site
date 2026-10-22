@@ -19,6 +19,7 @@
 /criacao-de-sites/
 /crm-e-vendas/
 /dados-e-business-intelligence/
+/desenvolvimento-de-aplicativos/
 /desenvolvimento-de-software/
 /diagnostico/
 /engagebot/

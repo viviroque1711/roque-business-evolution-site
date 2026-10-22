@@ -118,7 +118,7 @@
   function onHero() {
     if (reduce) return;
     var b = hero.getBoundingClientRect(), total = b.height - stage.offsetHeight;
-    var p = Math.min(1, Math.max(0, -b.top/Math.max(1, total))), i = Math.min(4, Math.floor(p*5.2));
+    var p = Math.min(1, Math.max(0, -b.top/Math.max(1, total))), n = Math.max(1, terms.length), i = Math.min(n - 1, Math.floor(p*(n + .2)));
     terms.forEach(function (el, k) { el.classList.toggle('on', k === i); el.classList.toggle('seen', k < i); });
     globe.setActive(i);
   }

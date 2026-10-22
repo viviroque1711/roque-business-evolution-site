@@ -10,7 +10,7 @@
    "url": "https://roquebusinessevolution.com/",
    "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
    "email": "contato@roquebusinessevolution.com",
-   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "description": "Empresa de desenvolvimento de software e criação de sites profissionais: software sob medida, aplicativos, SEO, GEO e AEO e transformação digital.",
    "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
@@ -47,7 +47,7 @@
    "@type": "WebPage",
    "@id": "https://roquebusinessevolution.com/seo/#page",
    "url": "https://roquebusinessevolution.com/seo/",
-   "name": "SEO e Busca com IA (GEO/AEO)",
+   "name": "Agência de SEO: Google e Buscas com IA",
    "inLanguage": "pt-BR",
    "isPartOf": {
     "@id": "https://roquebusinessevolution.com/#website"
@@ -62,9 +62,9 @@
   {
    "@type": "Service",
    "@id": "https://roquebusinessevolution.com/seo/#service",
-   "name": "SEO e busca com IA (GEO e AEO)",
-   "serviceType": "Agência de SEO",
-   "description": "SEO técnico, on-page, off-page e local, pesquisa de palavras-chave, conteúdo e otimização para buscas com inteligência artificial (GEO e AEO).",
+   "name": "Agência de SEO",
+   "serviceType": "SEO",
+   "description": "Pesquisa de palavras-chave, mapa de palavras por página, SEO técnico, on-page, off-page e local, conteúdo, Perfil da Empresa no Google, GEO e AEO, com relatórios no Google Search Console.",
    "provider": {
     "@id": "https://roquebusinessevolution.com/#org"
    },
@@ -86,7 +86,7 @@
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "SEO e busca com IA",
+     "name": "Agência de SEO",
      "item": "https://roquebusinessevolution.com/seo/"
     }
    ]
@@ -97,42 +97,50 @@
    "mainEntity": [
     {
      "@type": "Question",
-     "name": "O que é SEO?",
+     "name": "O que faz uma agência de SEO?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "SEO é o conjunto de ações que ajuda o seu site a ser encontrado nos mecanismos de busca, como o Google, por pessoas com intenção relevante para o seu negócio."
+      "text": "Uma agência de SEO pesquisa o que o seu cliente procura, corrige a parte técnica do site, cria o conteúdo certo e acompanha os resultados nas buscas."
      }
     },
     {
      "@type": "Question",
-     "name": "O que são GEO e AEO?",
+     "name": "Quanto custa uma agência de SEO?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "GEO é a otimização para mecanismos de resposta generativos, e AEO é a otimização para mecanismos de resposta. Ambos complementam o SEO e organizam a informação para buscas com IA."
+      "text": "Depende do tamanho do site e do trabalho mensal. Peça um orçamento pelo WhatsApp; a proposta mostra as entregas de cada mês."
      }
     },
     {
      "@type": "Question",
-     "name": "O SEO garante a primeira posição no Google?",
+     "name": "A agência de SEO garante a primeira posição no Google?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Não. Ninguém pode garantir posição. O trabalho aumenta as chances com base técnica, conteúdo e autoridade, e acompanha os resultados com indicadores."
+      "text": "Não. Ninguém pode garantir posição. O trabalho aumenta as chances com base técnica, conteúdo e autoridade, e os resultados são acompanhados no Search Console."
      }
     },
     {
      "@type": "Question",
-     "name": "A Roque Business Evolution garante que a minha empresa aparece no ChatGPT ou em respostas de IA?",
+     "name": "Qual é a diferença entre SEO e Google Ads?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Não. Organizamos as informações para serem claras e verificáveis, mas a exibição em respostas de IA depende de sistemas externos."
+      "text": "No Google Ads você paga por clique enquanto o anúncio roda. No SEO você aparece nos resultados orgânicos, sem pagar por clique."
      }
     },
     {
      "@type": "Question",
-     "name": "O site precisa estar bem feito para o SEO funcionar?",
+     "name": "Vocês fazem SEO local?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Ajuda muito. Por isso a criação de sites da Roque Business Evolution já nasce com SEO técnico e conteúdo no HTML."
+      "text": "Sim. Configuramos o Perfil da Empresa no Google e trabalhamos as buscas da sua região."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "SEO também ajuda a aparecer no ChatGPT?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ajuda. As IAs buscam na internet e preferem páginas claras e bem posicionadas. Veja GEO e SEO para IA ."
      }
     }
    ]

@@ -1,6 +1,21 @@
 {
+ "/criacao-de-sites/": [
+  "Criação de sites profissionais que aparecem no Google e nas IAs"
+ ],
+ "/desenvolvimento-de-software/": [
+  "Software sob medida e sistemas personalizados para a sua empresa"
+ ],
+ "/desenvolvimento-de-aplicativos/": [
+  "Desenvolvimento de aplicativos para empresas, do protótipo à publicação"
+ ],
+ "/seo/": [
+  "Agência de SEO para a sua empresa aparecer no Google"
+ ],
+ "/geo-aeo/": [
+  "GEO e SEO para IA: como a sua empresa aparece no ChatGPT e no Google"
+ ],
  "/": [
-  "Criação de sites Desenvolvimento de site profissional Empresa de desenvolvimento de software Desenvolvimento de sistemas personalizados SEO, GEO e AEO"
+  "Empresa de desenvolvimento de software Criação de sites profissionais Software sob medida e sistemas personalizados SEO, GEO e AEO"
  ],
  "/servicos/": [
   "Serviços da Roque Business Evolution"
@@ -10,9 +25,6 @@
  ],
  "/pesquisa-de-palavras-chave/": [
   "Pesquisa de palavras-chave que descobre o que o seu público procura e por quê"
- ],
- "/geo-aeo/": [
-  "GEO e AEO: como preparar o seu site para buscas com inteligência artificial"
  ],
  "/marketing-de-conteudo/": [
   "Marketing de conteúdo que atrai o público certo e constrói autoridade no seu tema"
@@ -103,15 +115,6 @@
  ],
  "/blog/como-criar-um-site-profissional/": [
   "Como criar um site profissional que aparece no Google e traz clientes"
- ],
- "/criacao-de-sites/": [
-  "Criação de sites profissionais que aparecem no Google e trazem clientes"
- ],
- "/seo/": [
-  "SEO para sua empresa ser encontrada no Google e nas buscas com IA"
- ],
- "/desenvolvimento-de-software/": [
-  "Desenvolvimento de software sob medida, do MVP ao sistema em produção"
  ],
  "/saas/": [
   "Desenvolvimento de SaaS: plataformas que a Roque cria e opera"

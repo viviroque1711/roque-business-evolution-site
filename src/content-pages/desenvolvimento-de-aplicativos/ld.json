@@ -1,0 +1,141 @@
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://roquebusinessevolution.com/#org",
+   "name": "Roque Business Evolution",
+   "legalName": "Roque Business Evolution Serviços Ltda.",
+   "taxID": "47.308.584/0001-20",
+   "url": "https://roquebusinessevolution.com/",
+   "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
+   "email": "contato@roquebusinessevolution.com",
+   "description": "Empresa de desenvolvimento de software e criação de sites profissionais: software sob medida, aplicativos, SEO, GEO e AEO e transformação digital.",
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+55-11-97396-7161",
+    "email": "contato@roquebusinessevolution.com",
+    "availableLanguage": "pt-BR"
+   },
+   "sameAs": [
+    "https://www.instagram.com/roquebusinessevolution/"
+   ],
+   "founder": {
+    "@id": "https://viviroque.com.br/#viviane-roque"
+   },
+   "brand": [
+    {
+     "@id": "https://aurorapremium.com/#org"
+    },
+    {
+     "@id": "https://roquebusinessevolution.com/engagebot/#app"
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://roquebusinessevolution.com/#website",
+   "url": "https://roquebusinessevolution.com/",
+   "name": "Roque Business Evolution",
+   "inLanguage": "pt-BR",
+   "publisher": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://roquebusinessevolution.com/desenvolvimento-de-aplicativos/#page",
+   "url": "https://roquebusinessevolution.com/desenvolvimento-de-aplicativos/",
+   "name": "Desenvolvimento de Aplicativos para Empresas",
+   "inLanguage": "pt-BR",
+   "isPartOf": {
+    "@id": "https://roquebusinessevolution.com/#website"
+   },
+   "about": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "mainEntity": {
+    "@id": "https://roquebusinessevolution.com/desenvolvimento-de-aplicativos/#service"
+   }
+  },
+  {
+   "@type": "Service",
+   "@id": "https://roquebusinessevolution.com/desenvolvimento-de-aplicativos/#service",
+   "name": "Desenvolvimento de aplicativos para empresas",
+   "serviceType": "Desenvolvimento de aplicativos",
+   "description": "Desenvolvimento de aplicativos Android e iOS, aplicativos web e PWA para empresas, com integração a sistemas e APIs, login, notificações, painel administrativo, testes e publicação.",
+   "provider": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "Brasil"
+   },
+   "url": "https://roquebusinessevolution.com/desenvolvimento-de-aplicativos/"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Início",
+     "item": "https://roquebusinessevolution.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Desenvolvimento de aplicativos",
+     "item": "https://roquebusinessevolution.com/desenvolvimento-de-aplicativos/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://roquebusinessevolution.com/desenvolvimento-de-aplicativos/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Quanto custa desenvolver um aplicativo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Depende das telas, das integrações e das plataformas. Peça um orçamento pelo WhatsApp e receba a proposta com escopo e prazo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Qual é a diferença entre PWA e app nativo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O PWA é instalado pelo navegador e funciona no Android e no iPhone. O app nativo fica nas lojas de aplicativos e usa mais recursos do celular."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Vocês publicam o aplicativo na Google Play e na App Store?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim, quando o projeto prevê app nativo. A publicação usa a conta de desenvolvedor da sua empresa."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O aplicativo se conecta ao meu sistema?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. O app usa os mesmos dados do seu sistema por APIs, e a Roque Business Evolution também desenvolve o software sob medida por trás dele."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "De quem é o aplicativo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Propriedade, contas nas lojas, suporte e manutenção são definidos em contrato, projeto a projeto."
+     }
+    }
+   ]
+  }
+ ]
+}

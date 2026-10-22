@@ -17,7 +17,7 @@ export const org = () => ({
   url: SITE.url + '/',
   logo: SITE.url + '/img/roque-logo-fundo-claro.png',
   email: SITE.email,
-  description: 'Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.',
+  description: 'Empresa de desenvolvimento de software e criação de sites profissionais: software sob medida, aplicativos, SEO, GEO e AEO e transformação digital.',
   contactPoint: { '@type': 'ContactPoint', contactType: 'customer service', telephone: '+55-11-97396-7161', email: SITE.email, availableLanguage: 'pt-BR' },
   sameAs: [SITE.instagram],
   founder: { '@id': SITE.founder.id },

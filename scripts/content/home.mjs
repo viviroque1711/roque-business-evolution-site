@@ -17,10 +17,11 @@ const gold = (text, msg = ORC) => `<a class="btn gold" href="${wa(msg)}" rel="no
 // ---------------------------------------------------------------- home
 // Os cinco termos do H1, exatamente como as pessoas pesquisam, cada um levando à página do serviço.
 const TERMOS = [
-  ['/criacao-de-sites/', 'Criação de sites'],
-  ['/criacao-de-sites/', 'Desenvolvimento de site profissional'],
-  ['/desenvolvimento-de-software/', 'Empresa de desenvolvimento de software'],
-  ['/desenvolvimento-de-software/', 'Desenvolvimento de sistemas personalizados'],
+  // Decisão de 22/10/2026 (Planejador de palavras-chave + Google Trends): a home é dona de "empresa de desenvolvimento de
+  // software" (o primeiro termo aponta para a própria página); os outros levam à página dona de cada busca.
+  ['#empresa', 'Empresa de desenvolvimento de software'],
+  ['/criacao-de-sites/', 'Criação de sites profissionais'],
+  ['/desenvolvimento-de-software/', 'Software sob medida e sistemas personalizados'],
   ['/seo/', 'SEO, GEO e AEO'],
 ];
 const I = {
@@ -32,16 +33,18 @@ const I = {
   seo: '<circle cx="20" cy="20" r="11" fill="none" stroke="#A87000" stroke-width="2.5"/><path d="M28 28l10 10" stroke="#A87000" stroke-width="3"/>',
   geo: '<path d="M8 12h30v18H20l-8 7v-7H8z" fill="none" stroke="#A87000" stroke-width="2"/><circle cx="17" cy="21" r="2" fill="#A87000"/><circle cx="23" cy="21" r="2" fill="#A87000"/><circle cx="29" cy="21" r="2" fill="#A87000"/>',
   auto: '<circle cx="23" cy="23" r="7" fill="none" stroke="#A87000" stroke-width="2.5"/><path d="M23 6v6M23 34v6M6 23h6M34 23h6M11 11l4 4M31 31l4 4M35 11l-4 4M15 31l-4 4" stroke="#A87000" stroke-width="2.5"/>',
+  app: '<rect x="14" y="5" width="18" height="36" rx="4" fill="none" stroke="#A87000" stroke-width="2.2"/><path d="M20 35h6" stroke="#A87000" stroke-width="2.2"/>',
   td: '<path d="M10 34V20M18 34V14M26 34V22M34 34V10" stroke="#A87000" stroke-width="3"/>',
 };
 const ANEL = [
   ['/criacao-de-sites/', 'site', 'Criação de sites', 'Site institucional, rápido e pronto para o Google'],
   ['/criacao-de-sites/', 'lp', 'Site profissional e landing page', 'Páginas que transformam visita em contato'],
-  ['/desenvolvimento-de-software/', 'code', 'Desenvolvimento de software', 'Do MVP ao sistema em produção'],
+  ['/desenvolvimento-de-software/', 'code', 'Software sob medida', 'Do MVP ao sistema em produção'],
   ['/desenvolvimento-de-software/', 'sys', 'Sistemas personalizados', 'Feitos para o jeito que sua empresa trabalha'],
+  ['/desenvolvimento-de-aplicativos/', 'app', 'Desenvolvimento de aplicativos', 'Apps Android e iOS, PWA e web'],
   ['/saas/', 'saas', 'Plataformas SaaS', 'Sistemas multiempresa com assinatura'],
-  ['/seo/', 'seo', 'SEO', 'Sua empresa encontrada no Google'],
-  ['/geo-aeo/', 'geo', 'GEO e AEO', 'Citada nas respostas do ChatGPT, Gemini e Claude'],
+  ['/seo/', 'seo', 'Agência de SEO', 'Sua empresa encontrada no Google'],
+  ['/geo-aeo/', 'geo', 'GEO e SEO para IA', 'Clara para ChatGPT, Gemini e Claude'],
   ['/automacao-de-processos/', 'auto', 'Automação de processos', 'Menos tarefa repetida, mais tempo para vender'],
   ['/transformacao-digital/', 'td', 'Transformação digital', 'Diagnóstico, plano e implantação'],
 ];
@@ -50,6 +53,7 @@ const ETAPAS = [['Diagnóstico', 'Negócio, público e processos'], ['Pesquisa',
 const homeFaq = faq([
   Q('Quanto custa a criação de um site profissional?', 'Depende do número de páginas, das integrações e do conteúdo. Peça um orçamento pelo WhatsApp e receba a proposta com escopo e prazo. Veja como funciona a <a href="/criacao-de-sites/">criação de sites</a>.'),
   Q('A Roque Business Evolution é uma empresa de desenvolvimento de software?', 'Sim. A Roque Business Evolution faz <a href="/desenvolvimento-de-software/">desenvolvimento de software</a> e de sistemas personalizados, plataformas <a href="/saas/">SaaS</a> e integrações, além da criação de sites.'),
+  Q('A Roque Business Evolution desenvolve aplicativos?', 'Sim. Fazemos o <a href="/desenvolvimento-de-aplicativos/">desenvolvimento de aplicativos</a> Android e iOS, PWA e aplicativos web, ligados ao seu sistema.'),
   Q('O que é SEO, GEO e AEO?', '<a href="/seo/">SEO</a> coloca o site da sua empresa no Google. <a href="/geo-aeo/">GEO e AEO</a> organizam o conteúdo para as IAs, como ChatGPT, Gemini e Claude, entenderem e citarem a sua empresa.'),
   Q('A Roque Business Evolution garante a primeira posição no Google?', 'Não. Ninguém pode garantir posição no Google nem citação em respostas de IA. Garantimos o trabalho feito seguindo as orientações oficiais dos buscadores, com indicadores acompanhados.'),
   Q('Quem está por trás da Roque Business Evolution?', 'A fundadora é <a href="https://viviroque.com.br/" rel="noopener">Viviane Roque</a>, que trabalha com tecnologia e gestão de operações desde 1998. Conheça a <a href="/sobre/">história da empresa</a>.'),
@@ -57,8 +61,8 @@ const homeFaq = faq([
 
 export const home = {
   path: '/', og: 'home',
-  title: 'Criação de Sites e Desenvolvimento de Software | Roque',
-  description: 'Criação de sites, site profissional, desenvolvimento de software e sistemas personalizados, SEO, GEO e AEO. Peça orçamento à Roque Business Evolution.',
+  title: 'Empresa de Desenvolvimento de Software e Criação de Sites | Roque',
+  description: 'Empresa de desenvolvimento de software e criação de sites profissionais, com SEO, GEO e AEO, software sob medida e aplicativos. Peça orçamento à Roque.',
   themeColor: '#000000',
   css: read('home3d.css'),
   js: read('home3d.js'),
@@ -75,8 +79,8 @@ ${gold('Pedir orçamento no WhatsApp')}</div>
 <div><h2 id="empresa-h">A Roque Business Evolution é uma empresa de transformação digital</h2>
 <p class="h3d-one">Três camadas que trabalham juntas na sua empresa.</p>
 <ol class="h3d-layer-list">
-<li><a href="/criacao-de-sites/" data-h3d-layer="2"><b>1</b><strong>Presença</strong><small>Criação de sites e site profissional</small></a></li>
-<li><a href="/desenvolvimento-de-software/" data-h3d-layer="1"><b>2</b><strong>Operação</strong><small>Software e sistemas personalizados</small></a></li>
+<li><a href="/criacao-de-sites/" data-h3d-layer="2"><b>1</b><strong>Presença</strong><small>Criação de sites profissionais</small></a></li>
+<li><a href="/desenvolvimento-de-software/" data-h3d-layer="1"><b>2</b><strong>Operação</strong><small>Software sob medida e aplicativos</small></a></li>
 <li><a href="/seo/" data-h3d-layer="0"><b>3</b><strong>Descoberta</strong><small>SEO, GEO e AEO no Google e nas IAs</small></a></li>
 </ol></div>
 <div class="h3d-stack" data-h3d-stack aria-hidden="true"><div class="h3d-stack-rot">
@@ -134,7 +138,7 @@ ${homeFaq.html.replace('class="sec paper"', 'class="sec mist"')}
 <div><h2 id="cta-h">Vamos tirar o seu projeto do papel</h2><p class="h3d-one">Site, sistema ou SEO: conte o que você precisa.</p>${gold('Pedir orçamento no WhatsApp')}</div>
 <canvas data-h3d-mini aria-hidden="true"></canvas>
 </div></section></div>`,
-  get graph() { return [org(), website(), webpage('/', 'Roque Business Evolution: criação de sites e desenvolvimento de software'), homeFaq.ld]; },
+  get graph() { return [org(), website(), webpage('/', 'Roque Business Evolution: empresa de desenvolvimento de software e criação de sites'), homeFaq.ld]; },
 };
 
 const FASES_HOME = [['Diagnóstico', 'Negócio, público e processos.'], ['Pesquisa e estratégia', 'Mercado e oportunidades.'], ['Arquitetura', 'Escopo e integrações.'], ['Implementação', 'Construção e conteúdo.'], ['Testes', 'Validação e aprovação.'], ['Publicação', 'Produção e operação.'], ['Evolução', 'Indicadores e melhorias.']];
@@ -143,7 +147,7 @@ const servicosHtml = `<div class="sv-groups">${SERVICE_GROUPS.map((g) => `<div c
 // ---------------------------------------------------------------- índice dos serviços
 const servCrumb = [{ name: 'Início', path: '/' }, { name: 'Serviços', path: '/servicos/' }];
 const servFaq = faq([
-  Q('Quais serviços a Roque Business Evolution oferece?', 'Consultoria de transformação digital, criação de sites, SEO, GEO e AEO, agentes de IA e automação, desenvolvimento de software e SaaS, marketing, CRM, dados e capacitação em IA. Esta página reúne os 17 serviços, e cada um tem página própria.'),
+  Q('Quais serviços a Roque Business Evolution oferece?', 'Criação de sites profissionais, software sob medida, desenvolvimento de aplicativos, SEO, GEO e AEO, agentes de IA e automação, SaaS, transformação digital, marketing, CRM, dados e capacitação em IA. Esta página reúne os ' + SERVICES.length + ' serviços, e cada um tem página própria.'),
   Q('Como a Roque Business Evolution trabalha?', 'Em sete fases: diagnóstico, pesquisa e estratégia, arquitetura da solução, implementação, testes e validação, publicação e operação, e mensuração e evolução. Veja a <a href="/metodologia/">metodologia</a>.'),
   Q('Como são contratados os serviços?', 'Em projetos fechados, serviços recorrentes, consultoria especializada ou projetos híbridos. A proposta discrimina implantação, mensalidade, ferramentas de terceiros, infraestrutura, mídia paga e suporte. Veja <a href="/como-contratar/">como contratar</a>.'),
   Q('Por onde começar?', 'Pelo <a href="/diagnostico/">diagnóstico digital e de IA</a>, que mostra onde há ganho possível e quais serviços fazem sentido.'),
@@ -151,10 +155,10 @@ const servFaq = faq([
 ], { pagePath: '/servicos/' });
 export const servicos = {
   path: '/servicos/', og: 'servicos',
-  title: 'Serviços de IA, Sites, SEO e Software | Roque',
-  description: 'Os 17 serviços da Roque Business Evolution: agência de IA, sites, SEO, GEO e AEO, software, CRM, dados, transformação digital e capacitação em IA.',
-  body: `${hero(servCrumb, 'Serviços da Roque Business Evolution', 'A Roque Business Evolution reúne serviços de inteligência artificial, sites, SEO, software e estratégia, para que a empresa evolua com tecnologia que se conecta ao negócio. São 17 serviços, cada um com página própria.', `<div class="btns">${btn('Falar no WhatsApp', 'Olá! Quero conhecer os serviços da Roque Business Evolution.')}</div>`)}
-<section class="sec white" id="lista" aria-labelledby="lista-h"><div class="wrap"><h2 id="lista-h">Os 17 serviços de IA, sites, SEO e software da Roque Business Evolution</h2>${servicosHtml}</div></section>
+  title: 'Serviços: Sites, Software, Aplicativos e SEO | Roque',
+  description: `Os ${SERVICES.length} serviços da Roque Business Evolution: criação de sites, software sob medida, aplicativos, SEO, GEO e AEO, agentes de IA, CRM e dados.`,
+  body: `${hero(servCrumb, 'Serviços da Roque Business Evolution', 'A Roque Business Evolution é uma empresa de desenvolvimento de software e criação de sites que reúne serviços de sites, software, aplicativos, SEO, GEO e AEO, inteligência artificial e estratégia. São ' + SERVICES.length + ' serviços, cada um com página própria.', `<div class="btns">${btn('Falar no WhatsApp', 'Olá! Quero conhecer os serviços da Roque Business Evolution.')}</div>`)}
+<section class="sec white" id="lista" aria-labelledby="lista-h"><div class="wrap"><h2 id="lista-h">Os ${SERVICES.length} serviços de sites, software, aplicativos e SEO da Roque Business Evolution</h2>${servicosHtml}</div></section>
 ${sec('mist', 'aplicacoes', 'Serviços de agentes de IA e plataformas', `<p class="read">Páginas de apoio que detalham aplicações da agência de IA e do desenvolvimento de plataformas.</p>${related(AI_APPS.map((a) => [a.href, a.label]))}`)}
 ${sec('white', 'produtos', 'Serviços e produtos próprios da Roque Business Evolution', `<p class="read">Além dos serviços, a Roque Business Evolution desenvolve e opera o <a href="${AURORA}" rel="noopener">Aurora Premium</a> e o <a href="${ENGAGEBOT}" rel="noopener">EngageBot</a>. Veja <a href="/produtos/">os produtos</a>.</p>`)}
 ${sec('mist', 'metodologia', 'Metodologia de trabalho da Roque Business Evolution', `<p class="read">Todo projeto segue sete fases, para reduzir riscos, organizar investimentos e medir a evolução. <a href="/metodologia/">Veja a metodologia completa</a>.</p><ol class="fases">${FASES_HOME.map(([b, t]) => `<li><b>${esc(b)}</b><span>${esc(t)}</span></li>`).join('')}</ol>`)}

@@ -10,7 +10,7 @@
    "url": "https://roquebusinessevolution.com/",
    "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
    "email": "contato@roquebusinessevolution.com",
-   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "description": "Empresa de desenvolvimento de software e criação de sites profissionais: software sob medida, aplicativos, SEO, GEO e AEO e transformação digital.",
    "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
@@ -47,7 +47,7 @@
    "@type": "WebPage",
    "@id": "https://roquebusinessevolution.com/geo-aeo/#page",
    "url": "https://roquebusinessevolution.com/geo-aeo/",
-   "name": "GEO e AEO: SEO para Buscas com IA",
+   "name": "GEO e SEO para IA: Como Aparecer no ChatGPT",
    "inLanguage": "pt-BR",
    "isPartOf": {
     "@id": "https://roquebusinessevolution.com/#website"
@@ -62,9 +62,9 @@
   {
    "@type": "Service",
    "@id": "https://roquebusinessevolution.com/geo-aeo/#service",
-   "name": "GEO e AEO: otimização para buscas com inteligência artificial",
-   "serviceType": "Otimização para mecanismos de resposta e IA generativa",
-   "description": "Auditoria da presença digital, páginas que respondem perguntas, perguntas frequentes com dados estruturados e consistência de informações para buscas tradicionais e com IA.",
+   "name": "GEO e SEO para IA",
+   "serviceType": "Otimização para buscas com inteligência artificial (GEO e AEO)",
+   "description": "GEO e AEO: auditoria de como as IAs veem a empresa, conteúdo que responde, perguntas frequentes com dados estruturados, consistência da marca, llms.txt, robôs de IA liberados e monitoramento de citações.",
    "provider": {
     "@id": "https://roquebusinessevolution.com/#org"
    },
@@ -86,7 +86,7 @@
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "GEO e AEO",
+     "name": "GEO e SEO para IA",
      "item": "https://roquebusinessevolution.com/geo-aeo/"
     }
    ]
@@ -97,42 +97,50 @@
    "mainEntity": [
     {
      "@type": "Question",
-     "name": "Qual é a diferença entre SEO, GEO e AEO?",
+     "name": "O que é GEO?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "SEO otimiza o site para os resultados de busca tradicionais. AEO organiza respostas diretas para mecanismos que respondem perguntas. GEO prepara o conteúdo para sistemas de IA generativa. Os três se apoiam na mesma base técnica e de conteúdo."
+      "text": "GEO (Generative Engine Optimization) é preparar o conteúdo do site para ser entendido e citado por inteligências artificiais como ChatGPT, Gemini e Claude."
      }
     },
     {
      "@type": "Question",
-     "name": "GEO e AEO garantem que a minha empresa apareça no ChatGPT?",
+     "name": "O que é AEO?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Não. Nenhuma ação garante citação em respostas de IA. O trabalho torna a informação mais clara e verificável, o que ajuda, mas a exibição depende de sistemas externos."
+      "text": "AEO (Answer Engine Optimization) é organizar respostas diretas para as perguntas do seu cliente, no formato que buscadores e assistentes destacam."
      }
     },
     {
      "@type": "Question",
-     "name": "Dados estruturados são suficientes?",
+     "name": "Como fazer a minha empresa aparecer no ChatGPT?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Não. Os dados estruturados ajudam a descrever o conteúdo, mas precisam refletir o que está visível na página, e o conteúdo precisa ser útil e original."
+      "text": "Com um site claro e bem posicionado nas buscas, respostas diretas, dados consistentes em vários lugares e páginas liberadas para os robôs de IA. É o trabalho de GEO."
      }
     },
     {
      "@type": "Question",
-     "name": "Como medir o resultado de GEO e AEO?",
+     "name": "Dá para garantir que a minha empresa seja citada pelas IAs?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Acompanhamos referências identificáveis, tráfego vindo de ferramentas de IA e presença observável em respostas, além dos indicadores de SEO como impressões, cliques e conversões."
+      "text": "Não. Ninguém controla as respostas das IAs. O trabalho aumenta as chances e é acompanhado mês a mês."
      }
     },
     {
      "@type": "Question",
-     "name": "Posso usar IA para escrever o conteúdo do site?",
+     "name": "Como medir o resultado de GEO?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Pode, com revisão editorial e verificação factual. O conteúdo deve ser original, útil e fiel ao que a empresa realmente faz."
+      "text": "Pelo relatório de citações em IA do Bing Webmaster Tools, por perguntas de teste feitas todo mês às IAs e pelo tráfego que chega de ferramentas de IA."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O que é llms.txt?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É um arquivo em texto simples que resume o site para as inteligências artificiais, página por página."
      }
     }
    ]

@@ -10,7 +10,7 @@
    "url": "https://roquebusinessevolution.com/",
    "logo": "https://roquebusinessevolution.com/img/roque-logo-fundo-claro.png",
    "email": "contato@roquebusinessevolution.com",
-   "description": "Agência de IA, criação de sites, SEO, desenvolvimento de software e transformação digital para empresas que querem evoluir.",
+   "description": "Empresa de desenvolvimento de software e criação de sites profissionais: software sob medida, aplicativos, SEO, GEO e AEO e transformação digital.",
    "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
@@ -47,7 +47,7 @@
    "@type": "WebPage",
    "@id": "https://roquebusinessevolution.com/desenvolvimento-de-software/#page",
    "url": "https://roquebusinessevolution.com/desenvolvimento-de-software/",
-   "name": "Desenvolvimento de Software Sob Medida",
+   "name": "Software Sob Medida e Sistemas Personalizados",
    "inLanguage": "pt-BR",
    "isPartOf": {
     "@id": "https://roquebusinessevolution.com/#website"
@@ -62,9 +62,9 @@
   {
    "@type": "Service",
    "@id": "https://roquebusinessevolution.com/desenvolvimento-de-software/#service",
-   "name": "Desenvolvimento de software sob medida",
+   "name": "Desenvolvimento de software sob medida e sistemas personalizados",
    "serviceType": "Desenvolvimento de software",
-   "description": "Aplicações web, MVPs, portais, dashboards, integrações com APIs e sistemas legados, com testes, documentação, implantação e evolução.",
+   "description": "Desenvolvimento de software sob medida, sistemas personalizados, sistemas web, portais, dashboards, integrações com APIs e sistemas legados, com IA, testes, implantação e evolução.",
    "provider": {
     "@id": "https://roquebusinessevolution.com/#org"
    },
@@ -86,7 +86,7 @@
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Desenvolvimento de software",
+     "name": "Software sob medida",
      "item": "https://roquebusinessevolution.com/desenvolvimento-de-software/"
     }
    ]
@@ -97,10 +97,26 @@
    "mainEntity": [
     {
      "@type": "Question",
-     "name": "O que é desenvolvimento de software sob medida?",
+     "name": "O que é software sob medida?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "É criar um sistema pensado para o processo e para os dados de uma empresa específica, em vez de adaptar uma ferramenta pronta."
+      "text": "É um sistema criado para o processo e para os dados de uma empresa específica, em vez de uma ferramenta pronta adaptada."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A Roque Business Evolution é uma empresa de desenvolvimento de software?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. A Roque Business Evolution é uma empresa de desenvolvimento de software: cria sistemas personalizados, plataformas SaaS, aplicativos e integrações."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quanto custa desenvolver um software sob medida?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Depende do escopo, das integrações e do prazo. Peça um orçamento pelo WhatsApp; a proposta chega com etapas, entregas e prazo."
      }
     },
     {
@@ -108,15 +124,15 @@
      "name": "O que é um MVP?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "MVP é a menor versão de um produto que já permite testar a ideia com usuários reais. Ele reduz risco e investimento antes de construir o sistema completo."
+      "text": "É a menor versão do sistema que já pode ser usada. Ela testa a ideia com usuários reais antes de investir no sistema completo."
      }
     },
     {
      "@type": "Question",
-     "name": "Vocês integram com sistemas que já uso?",
+     "name": "Vocês integram com os sistemas que eu já uso?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Sim, por APIs de terceiros e também com sistemas legados, conforme a viabilidade técnica de cada caso."
+      "text": "Sim, por APIs e também com sistemas legados, conforme a viabilidade técnica de cada caso."
      }
     },
     {
@@ -124,15 +140,7 @@
      "name": "De quem é o software desenvolvido?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Escopo, propriedade intelectual, infraestrutura e suporte são definidos em contrato, projeto a projeto."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "O software pode usar inteligência artificial?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Pode. Integramos modelos de linguagem e serviços de IA aos sistemas, com controles de acesso e regras de aprovação humana. Veja a agência de IA ."
+      "text": "Propriedade, infraestrutura, suporte e manutenção são definidos em contrato, projeto a projeto."
      }
     }
    ]

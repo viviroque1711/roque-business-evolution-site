@@ -1,4 +1,4 @@
-// Os 17 serviços do portfólio (5.1 a 5.17), em quatro grupos. Fonte única do menu, do rodapé, do índice /servicos/,
+// Os 17 serviços do portfólio (5.1 a 5.17) mais desenvolvimento de aplicativos (22/10/2026), em quatro grupos. Fonte única do menu, do rodapé, do índice /servicos/,
 // da home e da constelação 3D. Todos têm página própria.
 export const SERVICE_GROUPS = [
   {
@@ -13,10 +13,10 @@ export const SERVICE_GROUPS = [
   {
     id: 'presenca', name: 'Presença digital e visibilidade',
     items: [
-      { href: '/criacao-de-sites/', label: 'Criação de sites', short: 'Sites profissionais com SEO, design responsivo e foco em conversão.' },
-      { href: '/seo/', label: 'SEO', short: 'SEO técnico, on-page, off-page e local.' },
+      { href: '/criacao-de-sites/', label: 'Criação de sites profissionais', short: 'Sites profissionais com SEO, GEO, design responsivo e foco em conversão.' },
+      { href: '/seo/', label: 'Agência de SEO', short: 'Palavras-chave, SEO técnico, conteúdo e SEO local.' },
       { href: '/pesquisa-de-palavras-chave/', label: 'Pesquisa de palavras-chave', short: 'Intenção de busca, contexto semântico e mapa por página.' },
-      { href: '/geo-aeo/', label: 'GEO e AEO', short: 'Conteúdo claro para buscas com inteligência artificial.' },
+      { href: '/geo-aeo/', label: 'GEO e SEO para IA', short: 'Conteúdo claro para ChatGPT, Gemini e outras IAs.' },
       { href: '/marketing-de-conteudo/', label: 'Marketing de conteúdo', short: 'Estratégia editorial e autoridade temática.' },
       { href: '/branding-e-identidade-digital/', label: 'Branding e identidade digital', short: 'Posicionamento, identidade visual e tom de voz.' },
     ],
@@ -34,7 +34,8 @@ export const SERVICE_GROUPS = [
     items: [
       { href: '/agencia-de-ia/', label: 'Agentes de IA', short: 'Agentes de inteligência artificial e automação.' },
       { href: '/automacao-de-processos/', label: 'Automação de processos', short: 'Fluxos e integrações que eliminam tarefas repetitivas.' },
-      { href: '/desenvolvimento-de-software/', label: 'Desenvolvimento de software', short: 'Aplicações web, MVPs, dashboards e integrações sob medida.' },
+      { href: '/desenvolvimento-de-software/', label: 'Software sob medida', short: 'Sistemas personalizados, MVPs, dashboards e integrações.' },
+      { href: '/desenvolvimento-de-aplicativos/', label: 'Desenvolvimento de aplicativos', short: 'Apps Android e iOS, PWA e aplicativos web integrados ao seu sistema.' },
       { href: '/dados-e-business-intelligence/', label: 'Dados e business intelligence', short: 'Dashboards, indicadores e relatórios automáticos.' },
     ],
   },
