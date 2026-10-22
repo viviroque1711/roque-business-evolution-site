@@ -148,3 +148,6 @@
 
 /* o celular tem 370 px de altura: a cena precisa de espaço para ele não cobrir o título abaixo */
 .h3d-scene:has(> .h3d-phone) { height: 430px; }
+
+.h3d a.more, .h3d-prod a.more { display: inline-flex; align-items: center; min-height: 44px; }
+.h3d-more { display: inline-flex; align-items: center; min-height: 44px; }

@@ -51,10 +51,10 @@
       st.tiltX += (st.tx - st.tiltX)*.03; st.tiltY += (st.ty - st.tiltY)*.03;
       var ay = st.angle + st.extra + st.tiltY, ax = -.14 + st.tiltX;
       var ca = Math.cos(ay), sa = Math.sin(ay), cb = Math.cos(ax), sb = Math.sin(ax);
-      var S = st.w*.41*dpr, ox = canvas.width/2, oy = canvas.height/2;
+      var S = st.w*.37*dpr, ox = canvas.width/2, oy = canvas.height/2;
       function proj(p) { var x = p.x*ca + p.z*sa, z = -p.x*sa + p.z*ca, y = p.y*cb - z*sb; z = p.y*sb + z*cb; var k = 1/(1 - z*.3); return { X: ox + x*S*k, Y: oy + y*S*k, z: z, k: k }; }
       g.clearRect(0, 0, canvas.width, canvas.height);
-      var halo = g.createRadialGradient(ox, oy, S*.2, ox, oy, S*1.3); halo.addColorStop(0, 'rgba(192,138,30,.09)'); halo.addColorStop(1, 'rgba(192,138,30,0)'); g.fillStyle = halo; g.fillRect(0, 0, canvas.width, canvas.height);
+      var halo = g.createRadialGradient(ox, oy, S*.2, ox, oy, Math.min(S*1.3, canvas.width/2, canvas.height/2)); halo.addColorStop(0, 'rgba(192,138,30,.09)'); halo.addColorStop(1, 'rgba(192,138,30,0)'); g.fillStyle = halo; g.fillRect(0, 0, canvas.width, canvas.height);
       g.lineWidth = 1.2*dpr; g.strokeStyle = 'rgba(192,138,30,' + (.5*ease) + ')'; g.beginPath(); g.arc(ox, oy, S*1.03, Math.PI*.55, Math.PI*.55 + Math.PI*2*ease); g.stroke();
       g.beginPath(); ring.forEach(function (p, j) { var c = proj(p); if (j) g.lineTo(c.X, c.Y); else g.moveTo(c.X, c.Y); }); g.closePath(); g.strokeStyle = 'rgba(143,163,191,' + (.14*ease) + ')'; g.lineWidth = dpr; g.stroke();
       var P = all.map(proj);
@@ -146,7 +146,8 @@
     var ang = 0, target = 0, dragging = false, dx = 0, d0 = 0, auto = true, R = 0;
     wrap.classList.add('on');
     var layout = function () { var w = tiles[0].offsetWidth; R = Math.round((w + 24)/2/Math.tan(Math.PI/tiles.length)); tiles.forEach(function (t, i) { t.style.transform = 'rotateY(' + (i*step) + 'deg) translateZ(' + R + 'px)'; }); };
-    var tick = function () { if (auto && !dragging) target -= .04; ang += (target - ang)*.06; ringEl.style.transform = 'translateZ(-' + Math.max(0, R - 170) + 'px) rotateX(-6deg) rotateY(' + ang + 'deg)'; requestAnimationFrame(tick); };
+    var front = []; var facing = function () { tiles.forEach(function (t, i) { var on = Math.cos((i*step + ang)*Math.PI/180) > .8; if (front[i] !== on) { front[i] = on; t.style.pointerEvents = on ? '' : 'none'; } }); };
+    var tick = function () { if (auto && !dragging) target -= .04; ang += (target - ang)*.06; facing(); ringEl.style.transform = 'translateZ(-' + Math.max(0, R - 170) + 'px) rotateX(-6deg) rotateY(' + ang + 'deg)'; requestAnimationFrame(tick); };
     var ctrl = wrap.nextElementSibling;
     ctrl.querySelector('[data-prev]').addEventListener('click', function () { auto = false; target = Math.round(target/step)*step + step; });
     ctrl.querySelector('[data-next]').addEventListener('click', function () { auto = false; target = Math.round(target/step)*step - step; });

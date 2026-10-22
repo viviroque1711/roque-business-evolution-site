@@ -101,7 +101,7 @@
     cube: [STEEL, .12, .8], cubeg: [GOLD, .35, 1], top: [STEEL, .22, .85], topg: [GOLD, .65, 1], phone: [[40, 50, 68], 1, .9], screen: [[11, 18, 32], 1, 0],
     icon: [STEEL, .5, .8], icong: [GOLD, .8, 1], result: [STEEL, .14, .6], resultg: [GOLD, .32, 1], search: [STEEL, .2, .9], bubble: [STEEL, .2, .8], bubbleg: [GOLD, .38, 1],
   };
-  var SCALE = { sites: .4, software: .44, apps: .36, seo: .38, geo: .31, agents: .42 };
+  var SCALE = { sites: .36, software: .38, apps: .34, seo: .32, geo: .29, agents: .30 };
   var STROKE_GOLD = { cubeg: 1, topg: 1, resultg: 1, bubbleg: 1, icong: 1, front: 1, glass: 1 };
 
   if (c) {
@@ -120,7 +120,7 @@
       var P = function (p) { var x = p[0]*ca + p[2]*sa, z = -p[0]*sa + p[2]*ca, y = p[1]*cb - z*sb; z = p[1]*sb + z*cb; var k = 1/(1 - z*.22); return [ox + x*S*k, oy + y*S*k, z]; };
       var sh = shape(t);
       g.clearRect(0, 0, c.width, c.height);
-      var halo = g.createRadialGradient(ox, oy, S*.1, ox, oy, S*1.7); halo.addColorStop(0, 'rgba(192,138,30,.10)'); halo.addColorStop(1, 'rgba(192,138,30,0)'); g.fillStyle = halo; g.fillRect(0, 0, c.width, c.height);
+      var halo = g.createRadialGradient(ox, oy, S*.1, ox, oy, Math.min(S*1.7, c.width/2, c.height/2)); halo.addColorStop(0, 'rgba(192,138,30,.10)'); halo.addColorStop(1, 'rgba(192,138,30,0)'); g.fillStyle = halo; g.fillRect(0, 0, c.width, c.height);
       var items = [];
       sh.quads.forEach(function (qd) { var pts = qd.slice(0, 4).map(P), z = (pts[0][2] + pts[1][2] + pts[2][2] + pts[3][2])/4; items.push({ z: z, q: pts, s: qd[4] }); });
       sh.lines.forEach(function (ln) { var a = P(ln[0]), b = P(ln[1]); items.push({ z: (a[2] + b[2])/2 - .001, l: [a, b], s: ln[2] }); });
