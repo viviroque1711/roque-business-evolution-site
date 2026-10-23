@@ -109,3 +109,7 @@
 
 .k3-after { margin-top: 1.6rem; font-weight: 600; color: var(--ink); }
 .k3-black .k3-after { color: #fff; }
+
+/* aparelhos na abertura (devices.css): mais largos que o objeto antigo */
+.k3-obj.k3-dev { aspect-ratio: auto; width: min(100%, 560px); }
+@media (max-width: 899px) { .k3-obj.k3-dev { width: min(100%, 440px); margin-bottom: .5rem; } }

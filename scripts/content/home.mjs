@@ -9,6 +9,7 @@ import { esc, faq, crumbLd, crumbHtml, pageUrl, wa } from './lib.mjs';
 import { btn, li, cols, steps, sec, related, p, ENGAGEBOT, AURORA } from './kit.mjs';
 import { org, website, webpage, finalCta, hero } from './schema.mjs';
 import { IC, spec } from './hooks.mjs';
+import { homeAurora, homeEngageBot, DEVICE_CSS, DEVICE_JS } from './devices.mjs';
 
 const Q = (q, a) => ({ q, a: `<p>${a}</p>` });
 const read = (f) => fs.readFileSync(path.join(import.meta.dirname, f), 'utf8');
@@ -65,8 +66,8 @@ export const home = {
   title: 'Empresa de Desenvolvimento de Software e Criação de Sites | Roque',
   description: 'Empresa de desenvolvimento de software e criação de sites profissionais, com SEO, GEO e AEO, software sob medida e aplicativos. Peça orçamento à Roque.',
   themeColor: '#000000',
-  css: read('home3d.css'),
-  js: read('home3d.js'),
+  css: read('home3d.css') + '\n' + DEVICE_CSS,
+  js: read('home3d.js') + '\n' + DEVICE_JS,
   body: `<div class="h3d">
 <section class="h3d-hero" data-h3d-hero aria-labelledby="h1"><div class="h3d-stage">
 <canvas class="h3d-field" aria-hidden="true"></canvas>
@@ -118,10 +119,10 @@ ${ANEL.map(([h, ic, t, s]) => `<li><a class="h3d-tile" href="${h}"><svg viewBox=
 <h2 id="produtos-h">Produtos da Roque Business Evolution</h2>
 <p class="h3d-one">Dois SaaS que nós criamos e operamos.</p>
 <div class="h3d-prods">
-<div class="h3d-prod"><div class="h3d-scene" data-h3d-tilt aria-hidden="true"><div class="h3d-laptop"><div class="scr"><div class="h3d-cal-side"><i></i><i></i><i></i><i></i><i></i></div><div class="h3d-cal">${'a,,b,c,,a,c,,b,,a,c,c,b,,a'.split(',').map((c) => `<i${c ? ` class="${c}"` : ''}></i>`).join('')}</div></div><div class="base"></div></div></div>
+<div class="h3d-prod">${homeAurora()}
 <h3>Aurora Premium</h3><ul><li>Agenda online</li><li>Lembrete no WhatsApp</li><li>Financeiro e comissão</li><li>Salões, clínicas, spas e pet shops</li></ul>
 <a class="more" href="${AURORA}" rel="noopener">Conhecer o Aurora Premium</a></div>
-<div class="h3d-prod"><div class="h3d-scene" data-h3d-tilt aria-hidden="true"><div class="h3d-phone"><div class="h3d-bubble in">Vocês atendem sábado?</div><div class="h3d-bubble out">Sim, das 9h às 14h. Quer que eu reserve um horário?</div><div class="h3d-bubble in">Quero, às 10h</div></div></div>
+<div class="h3d-prod">${homeEngageBot()}
 <h3>EngageBot</h3><ul><li>Atendimento com IA</li><li>WhatsApp e site</li><li>Aprende com seus documentos</li></ul>
 <a class="more" href="${ENGAGEBOT}" rel="noopener">Conhecer o EngageBot</a></div>
 </div>

@@ -12,10 +12,11 @@ import path from 'node:path';
 import { esc, faq, crumbLd, crumbHtml, wa, pageUrl } from './lib.mjs';
 import { AURORA, ENGAGEBOT } from './kit.mjs';
 import { org, website, webpage, service, OG } from './schema.mjs';
+import { SCENES, DEVICE_CSS, DEVICE_JS } from './devices.mjs';
 
 const read = (f) => fs.readFileSync(path.join(import.meta.dirname, f), 'utf8');
-const CSS = read('hook3d.css');
-const JS = read('hook3d.js');
+const CSS = read('hook3d.css') + '\n' + DEVICE_CSS;
+const JS = read('hook3d.js') + '\n' + DEVICE_JS;
 const Q = (q, a) => ({ q, a: `<p>${a}</p>` });
 const S = (d) => `<svg viewBox="0 0 46 46" aria-hidden="true" focusable="false">${d}</svg>`;
 const G = '#A87000';
@@ -73,7 +74,7 @@ ${BLOCK[b.kind](...b.args)}${b.after ? `<p class="k3-one k3-after">${b.after}</p
 <section class="k3-hero" aria-labelledby="h1"><div class="k3-hero-in">
 <div>${crumbHtml(crumb)}<h1 id="h1">${esc(c.h1)}</h1><p class="k3-lead">${c.lead}</p>
 <div class="k3-btns"><a class="btn gold" href="${wa(c.msg)}" rel="noopener">Pedir orçamento no WhatsApp</a><a class="btn line" href="#${c.jumpTo || c.blocks[0].id}">${esc(c.jump)}</a></div></div>
-<div class="k3-obj" role="img" aria-label="${esc(c.objLabel)}"><canvas data-k3-obj="${c.mode}"></canvas></div>
+<div class="k3-obj k3-dev">${SCENES[c.mode]()}</div>
 </div></section>
 ${sections}
 </div>
