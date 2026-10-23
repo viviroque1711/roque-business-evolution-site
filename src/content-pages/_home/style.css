@@ -213,7 +213,7 @@
 .ui-dash .logo, .ui-inbox .logo { width: 4cqw; aspect-ratio: 1; border-radius: 1cqw; background: #C08A1E; margin-bottom: 1.5cqw; }
 .ui-dash .nav, .ui-inbox .nav { height: 1.3cqw; border-radius: 99px; background: rgba(255,255,255,.22); }
 .ui-dash .nav.on, .ui-inbox .nav.on { background: #C08A1E; }
-.ui-dash main { padding: 2.6cqw 3cqw; display: grid; grid-template-rows: auto auto 1fr auto; gap: 2cqw; min-width: 0; }
+.ui-dash .ui-main { padding: 2.6cqw 3cqw; display: grid; grid-template-rows: auto auto 1fr auto; gap: 2cqw; min-width: 0; }
 .ui-dash header, .ui-inbox header { display: flex; align-items: center; gap: 1.6cqw; }
 .ui-dash header b, .ui-inbox header b { font-size: 2.6cqw; }
 .ui-dash header small, .ui-inbox header small { font-size: 1.5cqw; color: #8A5C00; background: #FBF3E2; padding: .4cqw 1cqw; border-radius: 99px; }
@@ -318,7 +318,7 @@
 .ui-ai { display: grid; grid-template-columns: 17% 1fr; background: #fff; }
 .ui-ai aside { background: #F4F6F9; padding: 3cqw 2cqw; display: flex; flex-direction: column; gap: 1.8cqw; }
 .ui-ai aside .nb { height: 3cqw; border-radius: 1cqw; background: #16233A; margin-bottom: 1.5cqw; }
-.ui-ai main { position: relative; padding: 4cqw 7cqw; display: flex; flex-direction: column; gap: 3cqw; }
+.ui-ai .ui-main { position: relative; padding: 4cqw 7cqw; display: flex; flex-direction: column; gap: 3cqw; }
 .ui-ai .u, .ui-mai .u { align-self: flex-end; max-width: 75%; background: #EEF1F5; border-radius: 2.4cqw 2.4cqw .6cqw 2.4cqw; padding: 1.6cqw 2.4cqw; font-size: 2cqw; }
 .ui-ai .a { display: grid; grid-template-columns: auto 1fr; gap: 2cqw; }
 .ui-ai .spark { width: 3.4cqw; aspect-ratio: 1; border-radius: 1cqw; background: conic-gradient(from 45deg, #C08A1E, #16233A, #C08A1E); }
@@ -352,7 +352,7 @@
 
 /* caixa de conversas (notebook) */
 .ui-inbox { display: grid; grid-template-columns: 15% 1fr; background: #F4F6F9; }
-.ui-inbox main { padding: 3cqw; display: flex; flex-direction: column; gap: 1.6cqw; }
+.ui-inbox .ui-main { padding: 3cqw; display: flex; flex-direction: column; gap: 1.6cqw; }
 .ui-inbox .conv { display: flex; align-items: center; gap: 2cqw; background: #fff; border: 1px solid #E3E8EF; border-radius: 1.4cqw; padding: 1.6cqw 2cqw; }
 .ui-inbox .conv .av { width: 4cqw; aspect-ratio: 1; border-radius: 50%; background: #C9D1DC; flex: none; }
 .ui-inbox .conv span { display: grid; flex: 1; min-width: 0; }

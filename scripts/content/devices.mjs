@@ -20,11 +20,11 @@ const scene = (inner, label, extra = '') => `<div class="dv-scene ${extra}" data
 // ---------------------------------------------------------------- telas
 const dashboard = (title = 'Painel da operação') => `<div class="ui ui-dash">
 <aside${d(.2)}><i class="logo"></i><i class="nav on"></i><i class="nav"></i><i class="nav"></i><i class="nav"></i><i class="nav"></i><i class="nav"></i></aside>
-<main><header${d(.5)}><b>${title}</b><small>Dados de exemplo</small><i class="av"></i></header>
+<div class="ui-main"><header${d(.5)}><b>${title}</b><small>Dados de exemplo</small><i class="av"></i></header>
 <div class="kpis"><div class="kpi"${d(.9)}><small>Pedidos hoje</small><b>128</b></div><div class="kpi"${d(1.2)}><small>Em andamento</small><b>37</b></div><div class="kpi g"${d(1.5)}><small>Concluídos</small><b>91</b></div></div>
 <div class="chart"${d(1.9)}><small>Pedidos por dia</small><div class="bars">${[38, 52, 46, 64, 58, 76, 70, 88].map((h, i) => `<i style="--h:${h}%;--d:${2.2 + i * .15}s"></i>`).join('')}</div></div>
 <div class="table">${['Cliente', 'Pedido', 'Status'].map((t) => `<em>${t}</em>`).join('')}${[['Ana M.', '#1042', 'Pago'], ['Carlos R.', '#1043', 'Separando'], ['Beatriz L.', '#1044', 'Enviado']].map((r, i) => `<span class="tr"${d(3.4 + i * .35)}>${r.map((c, j) => `<span${j === 2 ? ' class="tag"' : ''}>${c}</span>`).join('')}</span>`).join('')}</div>
-</main></div>`;
+</div></div>`;
 
 const appScreen = `<div class="ui ui-app"><header${d(.3)}><small>Quinta-feira</small><b>Agenda de hoje</b></header>
 ${[['09:00', 'Avaliação', 'Mariana S.'], ['10:30', 'Retorno', 'Paulo T.'], ['13:00', 'Consulta', 'Júlia P.'], ['15:30', 'Visita técnica', 'Roberto A.']].map(([h, s, n], i) => `<div class="card"${d(.8 + i * .45)}><b>${h}</b><span><strong>${s}</strong><small>${n}</small></span></div>`).join('')}
@@ -47,9 +47,9 @@ const serpMobile = `<div class="ui ui-mserp"><div class="q"${d(.4)}><i class="mg
 
 const aiQuestion = 'Qual empresa faz criação de sites com SEO em Guarulhos?';
 const aiScreen = `<div class="ui ui-ai"><aside${d(.2)}><i class="nb"></i><i class="ln"></i><i class="ln"></i><i class="ln"></i><i class="ln"></i></aside>
-<main><div class="u"${d(.6)}>${aiQuestion}</div>
+<div class="ui-main"><div class="u"${d(.6)}>${aiQuestion}</div>
 <div class="a"><i class="spark"${d(1.2)}></i><div>${[96, 88, 92, 70].map((w, i) => `<i class="ln" style="width:${w}%;--d:${1.5 + i * .45}s"></i>`).join('')}<div class="src"${d(3.6)}><small>Fontes</small><span class="me">suaempresa.com.br</span><span>guia-local.com.br</span></div></div></div>
-<div class="input"${d(.3)}><i></i></div></main></div>`;
+<div class="input"${d(.3)}><i></i></div></div></div>`;
 
 const aiMobile = `<div class="ui ui-mai"><div class="u"${d(.6)}>${aiQuestion}</div><div class="a">${[94, 86, 90, 64].map((w, i) => `<i class="ln" style="width:${w}%;--d:${1.5 + i * .45}s"></i>`).join('')}<span class="me"${d(3.6)}>suaempresa.com.br</span></div></div>`;
 
@@ -62,9 +62,9 @@ const chat = (name = 'Sua Empresa') => `<div class="ui ui-chat"><header><i class
 <div class="input"><i></i></div></div>`;
 
 const inbox = `<div class="ui ui-inbox"><aside${d(.2)}><i class="logo"></i><i class="nav on"></i><i class="nav"></i><i class="nav"></i><i class="nav"></i></aside>
-<main><header${d(.4)}><b>Caixa de conversas</b><small>Dados de exemplo</small></header>
+<div class="ui-main"><header${d(.4)}><b>Caixa de conversas</b><small>Dados de exemplo</small></header>
 ${[['Mariana S.', 'Quero agendar para sábado', 'Agendado', 'ok'], ['Paulo T.', 'Qual o valor da consulta?', 'Respondido', 'ok'], ['Júlia P.', 'Preciso falar com alguém', 'Com a equipe', 'hu'], ['Roberto A.', 'Vocês entregam em Guarulhos?', 'Respondido', 'ok']].map(([n, m, t, k], i) => `<div class="conv"${d(.9 + i * .4)}><i class="av"></i><span><b>${n}</b><small>${m}</small></span><em class="${k}">${t}</em></div>`).join('')}
-</main></div>`;
+</div></div>`;
 
 // ---------------------------------------------------------------- cenas por serviço (abertura das páginas)
 export const SCENES = {
