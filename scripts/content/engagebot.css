@@ -15,7 +15,7 @@ html .eb-stage { display: none; }
 @media (min-width: 900px) {
   html .eb-story { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 5vw, 5rem); align-items: start; }
   html .eb-feats li { min-height: 62vh; display: flex; flex-direction: column; justify-content: center; padding: 2rem 0 2rem 2rem; }
-  html.js .eb-feats li:not(.on) { opacity: .32; }
+  html.js .eb-feats li:not(.on) h3, html.js .eb-feats li:not(.on) p { color: #5A6578; } /* item inativo: cinza com contraste, sem opacity (axe) */
   html .eb-mob { display: none; }
   html .eb-stage { display: block; position: sticky; top: calc(var(--hd, 76px) + 4vh); height: min(80vh, 640px); perspective: 1600px; }
   html .eb-screen { position: absolute; inset: 0; display: grid; place-items: center; opacity: 0; visibility: hidden; transform: rotateY(-22deg) translate3d(8%, 0, -160px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1), visibility 0s .9s; }
