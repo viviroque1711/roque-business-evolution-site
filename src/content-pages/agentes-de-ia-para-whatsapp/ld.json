@@ -100,7 +100,7 @@
      "name": "Como funciona um agente de IA no WhatsApp?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Ele recebe a mensagem, entende a intenção, consulta a base de conhecimento da empresa e responde. Quando preciso, passa a conversa para uma pessoa."
+      "text": "Ele recebe a mensagem, entende a intenção, consulta a base de conhecimento da empresa e responde. Quando preciso, passa a conversa para uma pessoa. A Roque Business Evolution entrega esse atendimento de duas formas: pronto, com o EngageBot, ou sob medida para a sua operação."
      }
     },
     {
@@ -108,7 +108,7 @@
      "name": "O agente substitui meus atendentes?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Não. Ele cuida das perguntas frequentes e do primeiro atendimento, e a equipe assume os casos que pedem atenção humana."
+      "text": "Não. Ele cuida das perguntas frequentes e do primeiro atendimento, e a equipe assume os casos que pedem atenção humana. Na Roque Business Evolution, a passagem para uma pessoa faz parte do desenho de todo agente."
      }
     },
     {
@@ -116,7 +116,7 @@
      "name": "Preciso de uma conta do WhatsApp Business?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "O atendimento automatizado usa canais oficiais de mensagem, e os requisitos dependem da solução escolhida. Explicamos o que é necessário no diagnóstico."
+      "text": "O atendimento automatizado usa canais oficiais de mensagem, e os requisitos dependem da solução escolhida. Explicamos o que é necessário no diagnóstico. A Roque Business Evolution orienta e acompanha essa configuração com você."
      }
     },
     {
@@ -132,7 +132,7 @@
      "name": "O agente aprende com o meu site?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Sim. O agente pode aprender com o site, PDFs, documentos e o FAQ da empresa, para responder de forma coerente com o seu negócio."
+      "text": "Sim. O agente pode aprender com o site, PDFs, documentos e o FAQ da empresa, para responder de forma coerente com o seu negócio. É assim que funciona o EngageBot, o agente de atendimento que a Roque Business Evolution desenvolve e opera."
      }
     }
    ]

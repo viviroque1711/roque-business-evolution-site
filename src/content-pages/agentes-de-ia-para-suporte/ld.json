@@ -100,7 +100,7 @@
      "name": "O agente de suporte responde só com o que a empresa autorizou?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Sim. Ele usa a base de conhecimento definida e segue regras sobre o que pode responder, encaminhando para uma pessoa quando não souber."
+      "text": "Sim. Ele usa a base de conhecimento definida e segue regras sobre o que pode responder, encaminhando para uma pessoa quando não souber. Na Roque Business Evolution, a base de conhecimento e as regras do agente são definidas e testadas com você antes de ele entrar no ar."
      }
     },
     {
@@ -108,7 +108,7 @@
      "name": "O que é onboarding?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "É o processo de receber e orientar um novo cliente ou colaborador nos primeiros passos, para que ele comece a usar o serviço ou a rotina com segurança."
+      "text": "É o processo de receber e orientar um novo cliente ou colaborador nos primeiros passos, para que ele comece a usar o serviço ou a rotina com segurança. A Roque Business Evolution cria agentes de IA que conduzem esse primeiro passo com o conteúdo da sua empresa, a qualquer hora."
      }
     },
     {
@@ -116,7 +116,7 @@
      "name": "O agente funciona para a equipe interna também?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Sim. Agentes internos apoiam as equipes com consultas a procedimentos, políticas e documentos da empresa."
+      "text": "Sim. Agentes internos apoiam as equipes com consultas a procedimentos, políticas e documentos da empresa. A Roque Business Evolution projeta agentes internos ligados aos seus documentos e procedimentos, com acesso controlado por permissão."
      }
     },
     {
@@ -124,7 +124,7 @@
      "name": "Como a empresa acompanha a qualidade das respostas?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Pelo registro das conversas e por indicadores como taxa de resolução, encaminhamentos para pessoas, erros e custo por interação."
+      "text": "Pelo registro das conversas e por indicadores como taxa de resolução, encaminhamentos para pessoas, erros e custo por interação. Nos agentes da Roque Business Evolution, esses indicadores são combinados no início do projeto e acompanhados depois da implantação."
      }
     }
    ]

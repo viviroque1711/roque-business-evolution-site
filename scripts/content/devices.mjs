@@ -40,18 +40,18 @@ const siteMobile = `<div class="ui ui-msite"><div class="mnav"${d(.6)}><i class=
 
 const serpScreen = `<div class="ui ui-serp"><div class="bar"><i></i><i></i><i></i><span>busca</span></div>
 <div class="q"${d(.3)}><i class="mg"></i>criação de sites em guarulhos</div>
-<div class="res">${[0, 1, 2, 3].map((i) => `<div class="r r${i}"><small>site${i + 1}.com.br</small><b class="ln" style="width:${[62, 70, 55, 66][i]}%"></b><i class="ln" style="width:88%"></i></div>`).join('')}
-<div class="r me"><small>suaempresa.com.br</small><b>Criação de sites em Guarulhos | Sua Empresa</b><i class="ln" style="width:88%"></i></div></div></div>`;
+<div class="res">${[['guiadosites.com.br', 'Como escolher quem cria o seu site: 7 cuidados', 'Antes de contratar, confira prazo, SEO, domínio no seu nome e quem cuida depois do lançamento.'], ['portaldenegocios.com.br', 'Criação de sites em Guarulhos: o que avaliar', 'Lista de pontos para comparar propostas de criação de sites na região.'], ['construtorweb.com', 'Monte seu site sozinho em minutos', 'Modelos prontos para quem quer montar o próprio site.'], ['blogdomarketing.com.br', 'Quanto custa um site profissional em 2026?', 'Entenda o que muda o preço: páginas, textos, integrações e manutenção.']].map(([u, t, d], i) => `<div class="r r${i}"><small>${u}</small><b>${t}</b><span>${d}</span></div>`).join('')}
+<div class="r me"><small>suaempresa.com.br</small><b>Criação de sites em Guarulhos | Sua Empresa</b><span>Sites rápidos, com SEO e WhatsApp, feitos para quem quer ser encontrado. Peça orçamento.</span></div></div></div></div>`;
 
 const serpMobile = `<div class="ui ui-mserp"><div class="q"${d(.4)}><i class="mg"></i>criação de sites</div><div class="map"${d(.9)}><i class="pin"></i></div><div class="me"${d(1.6)}><b>Sua Empresa</b><small>Criação de sites · Guarulhos</small><span><i>Ligar</i><i>WhatsApp</i><i>Site</i></span></div><div class="r"${d(2.2)}>${lines(2, [70, 90])}</div></div>`;
 
 const aiQuestion = 'Qual empresa faz criação de sites com SEO em Guarulhos?';
 const aiScreen = `<div class="ui ui-ai"><aside${d(.2)}><i class="nb"></i><i class="ln"></i><i class="ln"></i><i class="ln"></i><i class="ln"></i></aside>
 <div class="ui-main"><div class="u"${d(.6)}>${aiQuestion}</div>
-<div class="a"><i class="spark"${d(1.2)}></i><div>${[96, 88, 92, 70].map((w, i) => `<i class="ln" style="width:${w}%;--d:${1.5 + i * .45}s"></i>`).join('')}<div class="src"${d(3.6)}><small>Fontes</small><span class="me">suaempresa.com.br</span><span>guia-local.com.br</span></div></div></div>
+<div class="a"><i class="spark"${d(1.2)}></i><div><p class="txt"${d(1.6)}>Para criação de sites com SEO em Guarulhos, uma opção é a <b>Sua Empresa</b>: cria sites rápidos, com SEO e WhatsApp integrado, e atende presencialmente na região.</p><p class="txt"${d(2.4)}>Antes de decidir, peça uma proposta com escopo, prazo e o que vem incluído.</p><div class="src"${d(3.6)}><small>Fontes</small><span class="me">suaempresa.com.br</span><span>guia-local.com.br</span></div></div></div>
 <div class="input"${d(.3)}><i></i></div></div></div>`;
 
-const aiMobile = `<div class="ui ui-mai"><div class="u"${d(.6)}>${aiQuestion}</div><div class="a">${[94, 86, 90, 64].map((w, i) => `<i class="ln" style="width:${w}%;--d:${1.5 + i * .45}s"></i>`).join('')}<span class="me"${d(3.6)}>suaempresa.com.br</span></div></div>`;
+const aiMobile = `<div class="ui ui-mai"><div class="u"${d(.6)}>${aiQuestion}</div><div class="a"><p class="txt"${d(1.6)}>Uma opção é a <b>Sua Empresa</b>: cria sites rápidos, com SEO e WhatsApp, e atende em Guarulhos.</p><span class="me"${d(3.6)}>suaempresa.com.br</span></div></div>`;
 
 const chat = (name = 'Sua Empresa') => `<div class="ui ui-chat"><header><i class="av"></i><span><b>${name}</b><small>online</small></span></header>
 <div class="msgs"><p class="in"${d(.6)}>Oi! Vocês atendem sábado?</p>
@@ -164,7 +164,7 @@ export const SCENES_EXTRA = {
   conteudo: () => scene(mac(editorScreen) + phone(siteMobile), 'Notebook com o editor do blog e a lista do que conferir antes de publicar, e o celular com o artigo no ar'),
   midia: () => scene(mac(dashboard('Campanhas e conversões')) + phone(siteMobile), 'Notebook com o painel das campanhas e o celular com a página de destino'),
   marca: () => scene(mac(brandScreen) + phone(feedScreen), 'Notebook com o manual da marca, cores, tipografia e botões, e o celular com o perfil da marca nas redes'),
-  dados: () => scene(mac(dashboard('Indicadores da empresa')) + phone(appScreen), 'Notebook com um painel de indicadores e gráficos, e o celular com o mesmo painel'),
+  dados: () => auroraStack('financeiro'),
   plano: () => scene(mac(roadmapScreen) + phone(appScreen), 'Notebook com o plano de transformação digital em etapas, do diagnóstico à evolução contínua'),
   produtos: () => homeAurora(),
   contato: (msg = 'Olá! Quero conversar com a Roque Business Evolution.') => scene(phone(waCompose(msg)), 'Celular com o WhatsApp da Roque Business Evolution e a mensagem pronta para enviar', 'solo'),
@@ -176,11 +176,22 @@ const chatEng = (items) => { let t = .5; return `<div class="ui ui-chat ui-eng">
 export const ENG = { engChat, chatEng, webchat, inboxEng, knowledge, activation, mac, phone, scene };
 export const waPhone = (msg) => scene(phone(waCompose(msg)), 'Celular com o WhatsApp da Roque Business Evolution e a mensagem pronta para enviar', 'solo dv-cta');
 
+
+// ---------------------------------------------------------------- PORTFÓLIO REAL (26/10/2026, pedido da Viviane: "nada de imagem genérica")
+// Sites criados pela Roque, capturados de verdade e rolando dentro dos aparelhos: roquebusinessevolution.com e aurorapremium.com.
+// Sistema real: telas do Aurora Premium, desenvolvido e operado pela Roque. Imagens em public/img/portfolio.
+const IMG = '/img/portfolio/';
+const realScreens = (kind) => `<div class="ui ui-real${kind === 'm' ? ' m' : ''}">${kind === 'd' ? `<div class="bar"><i></i><i></i><i></i><span><em class="u1">roquebusinessevolution.com</em><em class="u2">aurorapremium.com</em></span></div>` : ''}
+<div class="vp"><img class="s1" src="${IMG}site-roque-business-evolution-${kind === 'd' ? 'desktop' : 'celular'}.webp" alt="" width="${kind === 'd' ? 1000 : 420}" height="${kind === 'd' ? 2916 : 3661}" decoding="async"><img class="s2" src="${IMG}site-aurora-premium-${kind === 'd' ? 'desktop' : 'celular'}.webp" alt="" width="${kind === 'd' ? 1000 : 420}" height="${kind === 'd' ? 2916 : 3661}" loading="lazy" decoding="async"></div></div>`;
+const chipsSites = `<div class="rs-chips" aria-hidden="true"><span class="c1">SEO, GEO e AEO desde o primeiro dia</span><span class="c2">WhatsApp a um toque</span><span class="c3">Rápido no celular</span></div>`;
+export const realSites = () => `<div class="dv-scene dv-real" data-dv role="img" aria-label="Notebook e celular navegando em sites criados pela Roque Business Evolution: roquebusinessevolution.com e aurorapremium.com, rolando da primeira dobra até as seções seguintes"><div class="dv-tilt"><div class="dv-rig">${mac(realScreens('d'))}${phone(realScreens('m'))}${chipsSites}</div></div><i class="dv-floor" aria-hidden="true"></i><span class="dv-cap" aria-hidden="true">Sites criados pela Roque: <b class="u1">roquebusinessevolution.com</b><b class="u2">aurorapremium.com</b></span></div>`;
+export const auroraStack = (front = 'financeiro') => { const back = front === 'financeiro' ? 'agenda' : 'financeiro'; return `<div class="dv-scene dv-stack" data-dv role="img" aria-label="Telas reais do Aurora Premium, sistema de agendamento e gestão desenvolvido e operado pela Roque Business Evolution: ${front === 'financeiro' ? 'controle financeiro e agenda' : 'agenda e controle financeiro'} no notebook e no celular"><div class="dv-tilt"><div class="dv-rig"><img class="st-a" src="${IMG}aurora-premium-${front}.webp" alt="" width="1100" height="733" decoding="async"><img class="st-b" src="${IMG}aurora-premium-${back}.webp" alt="" width="1100" height="733" loading="lazy" decoding="async"><div class="rs-chips" aria-hidden="true"><span class="c1">Sistema real em produção</span><span class="c2">Web e celular</span><span class="c3">Feito pela Roque</span></div></div></div><i class="dv-floor" aria-hidden="true"></i><span class="dv-cap" aria-hidden="true">Aurora Premium: sistema desenvolvido e operado pela Roque</span></div>`; };
+
 // ---------------------------------------------------------------- cenas por serviço (abertura das páginas)
 export const SCENES = {
-  sites: () => scene(mac(siteScreen) + phone(siteMobile), 'Notebook e celular mostrando um site profissional sendo montado: cabeçalho, título, botão do WhatsApp e seções'),
-  software: () => scene(mac(dashboard('Sistema de pedidos')) + phone(appScreen), 'Notebook com um sistema sob medida abrindo: menu, indicadores, gráfico e tabela, e o celular com o aplicativo do mesmo sistema'),
-  apps: () => scene(mac(dashboard('Painel do aplicativo'), 'back') + phone(appScreen, 'front'), 'Celular com um aplicativo de agenda recebendo um novo agendamento, ligado ao painel no notebook', 'focus-phone'),
+  sites: () => realSites(),
+  software: () => auroraStack('financeiro'),
+  apps: () => auroraStack('agenda'),
   seo: () => scene(mac(serpScreen) + phone(serpMobile), 'Notebook com uma página de resultados de busca em que o site da empresa sobe até a primeira posição, e o celular com o perfil da empresa no mapa'),
   geo: () => scene(mac(aiScreen) + phone(aiMobile), 'Notebook e celular com um assistente de inteligência artificial respondendo a uma pergunta e citando o site da empresa como fonte'),
   agents: () => scene(mac(inbox) + phone(chat()), 'Celular com um agente de IA atendendo no WhatsApp e agendando um horário, e o notebook com a caixa de conversas'),

@@ -18,7 +18,7 @@ html .xp-hero .btn.ghost { background: transparent; border-color: rgba(255,255,2
 html .xp-hero .btn.ghost:hover { border-color: #fff; background: transparent; }
 html .xp-hero :focus-visible { outline-color: var(--xg); }
 html .xp-hero a:not(.btn) { color: #F2D69C; }
-html .xp-dev { position: relative; width: min(100%, 580px); justify-self: center; transform: translate3d(0, var(--sy, 0px), 0); }
+html .xp-dev { position: relative; width: min(100%, 660px); justify-self: center; transform: translate3d(0, var(--sy, 0px), 0); }
 @media (max-width: 899px) { .xp-dev { order: -1; width: min(88vw, 440px); margin-bottom: -.4rem; } }
 /* piso em perspectiva: linhas finas correndo devagar na direção de quem lê */
 html .xp-floor { position: absolute; left: -50%; right: -50%; bottom: -10%; height: 70%; z-index: -1; pointer-events: none;

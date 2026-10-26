@@ -111,7 +111,7 @@
      "name": "A IA pode vazar dados da minha empresa?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Pode, se for usada sem regras. Por isso definimos que dados podem ser usados, em quais ferramentas e com que controles."
+      "text": "Pode, se for usada sem regras. Por isso definimos que dados podem ser usados, em quais ferramentas e com que controles. Na Roque Business Evolution, essas regras fazem parte da governança e segurança de IA de cada projeto."
      }
     },
     {
@@ -119,7 +119,7 @@
      "name": "Preciso de uma política de uso de IA?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Recomendamos. Ela deixa claro para a equipe o que é permitido, o que é proibido e quem decide."
+      "text": "Recomendamos. Ela deixa claro para a equipe o que é permitido, o que é proibido e quem decide. A Roque Business Evolution escreve essa política com você e treina a equipe para aplicá-la."
      }
     },
     {
@@ -127,7 +127,7 @@
      "name": "Governança de IA substitui o jurídico?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Não. Ela apoia o uso responsável, mas não substitui assessoria jurídica nem auditoria independente quando exigidas."
+      "text": "Não. Ela apoia o uso responsável, mas não substitui assessoria jurídica nem auditoria independente quando exigidas. A Roque Business Evolution cuida da parte técnica e de processos, ao lado do seu jurídico."
      }
     }
    ]

@@ -100,7 +100,7 @@
      "name": "O que é automação de processos?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "É fazer sistemas executarem sozinhos tarefas repetitivas e fluxos de trabalho, seguindo regras definidas, com registro do que foi feito."
+      "text": "É fazer sistemas executarem sozinhos tarefas repetitivas e fluxos de trabalho, seguindo regras definidas, com registro do que foi feito. A Roque Business Evolution mapeia o processo, automatiza o que se repete e deixa a aprovação humana onde importa."
      }
     },
     {
@@ -108,7 +108,7 @@
      "name": "Quais processos vale automatizar?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Os repetitivos, frequentes e previsíveis, como lembretes, distribuição de solicitações, propostas, relatórios e sincronização de dados."
+      "text": "Os repetitivos, frequentes e previsíveis, como lembretes, distribuição de solicitações, propostas, relatórios e sincronização de dados. No diagnóstico, a Roque Business Evolution aponta quais processos da sua empresa trazem mais ganho ao serem automatizados."
      }
     },
     {
@@ -124,7 +124,7 @@
      "name": "E se a automação errar?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Os fluxos têm tratamento de exceções, filas, registro de execução e aprovação humana em casos sensíveis."
+      "text": "Os fluxos têm tratamento de exceções, filas, registro de execução e aprovação humana em casos sensíveis. É assim que a Roque Business Evolution entrega cada automação, testada antes de entrar em produção."
      }
     }
    ]

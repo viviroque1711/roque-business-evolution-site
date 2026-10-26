@@ -109,7 +109,7 @@
      "name": "O EngageBot responde sozinho?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Sim, com resposta automática que identifica a intenção da mensagem. As conversas ficam em uma caixa de conversas, onde a equipe acompanha o atendimento."
+      "text": "Sim, com resposta automática que identifica a intenção da mensagem. As conversas ficam em uma caixa de conversas, onde a equipe acompanha o atendimento. O EngageBot é desenvolvido e operado pela Roque Business Evolution."
      }
     },
     {
@@ -117,7 +117,7 @@
      "name": "De onde o agente aprende sobre a minha empresa?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Do site da empresa, de PDFs, documentos e do FAQ. Assim as respostas falam do seu negócio e não são genéricas."
+      "text": "Do site da empresa, de PDFs, documentos e do FAQ. Assim as respostas falam do seu negócio e não são genéricas. A Roque Business Evolution desenvolve e opera o EngageBot."
      }
     },
     {
@@ -133,7 +133,7 @@
      "name": "Quanto custa o EngageBot?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Fale pelo WhatsApp para receber as condições atuais."
+      "text": "Fale pelo WhatsApp para receber as condições atuais. A Roque Business Evolution responde pelo WhatsApp +55 11 97396-7161."
      }
     }
    ]
