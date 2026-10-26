@@ -3,10 +3,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { SITE } from '../../src/data/site.mjs';
+import { xpBody, XP_CSS, XP_JS } from './xp.mjs';
 
 export const root = path.resolve(import.meta.dirname, '..', '..');
 export const pagesDir = path.join(root, 'src', 'content-pages');
-export const TODAY = '2026-10-21';
+export const TODAY = '2026-10-26';
 
 export const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const unesc = (s) => s.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&nbsp;/g, ' ');
@@ -81,6 +82,8 @@ export const wa = (text) => `https://wa.me/${SITE.wa.number}?text=${encodeURICom
 const written = [];
 export function writePage(page) {
   check(page);
+  // páginas do molde simples ganham a experiência 3D (xp.mjs); as que têm CSS próprio (home, ganchos) ficam como estão
+  if (!page.css && !page.noXp) page = { ...page, body: xpBody(page.body, page.path), css: XP_CSS + (page.xpCss ? '\n' + page.xpCss : ''), js: XP_JS + (page.xpJs ? '\n' + page.xpJs : ''), themeColor: page.themeColor || '#000000' };
   const dir = page.path === '/' ? '_home' : page.path.replace(/^\/|\/$/g, '').replace(/\//g, '__');
   const d = path.join(pagesDir, dir);
   fs.mkdirSync(d, { recursive: true });
