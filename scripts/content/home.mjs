@@ -9,6 +9,7 @@ import { esc, faq, crumbLd, crumbHtml, pageUrl, wa } from './lib.mjs';
 import { btn, li, cols, steps, sec, related, p, ENGAGEBOT, AURORA } from './kit.mjs';
 import { org, website, webpage, finalCta, hero } from './schema.mjs';
 import { IC, spec } from './hooks.mjs';
+import { choose, CHOOSE_CSS } from './choose.mjs';
 import { homeAurora, homeEngageBot, DEVICE_CSS, DEVICE_JS } from './devices.mjs';
 
 const Q = (q, a) => ({ q, a: `<p>${a}</p>` });
@@ -66,7 +67,7 @@ export const home = {
   title: 'Empresa de Desenvolvimento de Software e Criação de Sites | Roque',
   description: 'Empresa de desenvolvimento de software e criação de sites profissionais, com SEO, GEO e AEO, software sob medida e aplicativos. Peça orçamento à Roque.',
   themeColor: '#000000',
-  css: read('home3d.css') + '\n' + DEVICE_CSS,
+  css: read('home3d.css') + '\n' + DEVICE_CSS + '\n' + CHOOSE_CSS,
   js: read('home3d.js') + '\n' + DEVICE_JS,
   body: `<div class="h3d">
 <section class="h3d-hero" data-h3d-hero aria-labelledby="h1"><div class="h3d-stage">
@@ -94,16 +95,20 @@ ${gold('Pedir orçamento no WhatsApp')}</div>
 
 <section class="h3d-sec white" id="como-escolher" aria-labelledby="como-escolher-h"><div class="wrap">
 <h2 id="como-escolher-h">Qual é a melhor empresa de desenvolvimento de software?</h2>
-<p class="h3d-one">A melhor empresa de desenvolvimento de software é a que entende o seu negócio antes de escrever código e entrega em etapas que você aprova. Confira estes seis pontos.</p>
-${spec([
-  ['nodes', 'Entende o negócio primeiro?', 'Diagnóstico do processo antes da proposta.'],
-  ['doc', 'Escopo e prazo por escrito?', 'Etapas, entregas e critérios de aceite claros.'],
-  ['code', 'Entrega em etapas?', 'MVP e versões que você testa e aprova.'],
-  ['plug', 'Integra com o que você já usa?', 'ERP, CRM, WhatsApp e sistemas legados.'],
-  ['lock', 'O software é de quem?', 'Propriedade, acessos e código definidos em contrato.'],
-  ['grid', 'Tem software próprio no ar?', 'Produto em operação mostra como a empresa trabalha.'],
-])}
-<p class="h3d-one h3d-after">A Roque Business Evolution desenvolve e opera o <a href="${AURORA}" rel="noopener">Aurora Premium</a> e o <a href="${ENGAGEBOT}" rel="noopener">EngageBot</a>.</p>
+${choose(
+  'A melhor empresa de desenvolvimento de software é a que entende o seu negócio antes de escrever código e entrega em etapas que você aprova. <strong>É assim que a Roque Business Evolution trabalha:</strong> entra na sua operação, desenha a solução com você e entrega o sistema funcionando, do diagnóstico à evolução contínua.',
+  [
+    [IC.nodes, 'Entende o negócio antes do código?', 'Todo projeto começa pelo diagnóstico do seu processo, antes da proposta.'],
+    [IC.doc, 'Escopo e prazo por escrito?', 'Requisitos, etapas, entregas e critérios de aceite definidos no início.'],
+    [IC.code, 'Entrega em etapas?', 'Primeiro o MVP, depois versões que você testa e aprova.'],
+    [IC.plug, 'Integra com o que você já usa?', 'Integramos com ERP, CRM, WhatsApp, APIs e sistemas legados.'],
+    [IC.lock, 'O software é de quem?', 'Propriedade, acessos e suporte ficam definidos no seu contrato.'],
+    [IC.chart, 'Cuida depois da entrega?', '<a href="/suporte-e-evolucao-continua/">Suporte e evolução contínua</a> depois que o sistema entra em produção.'],
+  ],
+  `A prova está no ar: a Roque Business Evolution desenvolve e mantém os próprios produtos, o <a href="${AURORA}" rel="noopener">Aurora Premium</a> e o <a href="${ENGAGEBOT}" rel="noopener">EngageBot</a>.`,
+  'Olá! Quero um diagnóstico para desenvolver um sistema para a minha empresa.',
+  ['/metodologia/', 'Ver a metodologia'],
+)}
 </div></section>
 
 <section class="h3d-sec mist" id="servicos" aria-labelledby="servicos-h"><div class="wrap">

@@ -13,9 +13,10 @@ import { esc, faq, crumbLd, crumbHtml, wa, pageUrl } from './lib.mjs';
 import { AURORA, ENGAGEBOT } from './kit.mjs';
 import { org, website, webpage, service, OG } from './schema.mjs';
 import { SCENES, DEVICE_CSS, DEVICE_JS } from './devices.mjs';
+import { choose as chooseBlock, CHOOSE_CSS } from './choose.mjs';
 
 const read = (f) => fs.readFileSync(path.join(import.meta.dirname, f), 'utf8');
-const CSS = read('hook3d.css') + '\n' + DEVICE_CSS;
+const CSS = read('hook3d.css') + '\n' + DEVICE_CSS + '\n' + CHOOSE_CSS;
 const JS = read('hook3d.js') + '\n' + DEVICE_JS;
 const Q = (q, a) => ({ q, a: `<p>${a}</p>` });
 const S = (d) => `<svg viewBox="0 0 46 46" aria-hidden="true" focusable="false">${d}</svg>`;
@@ -59,7 +60,8 @@ const anatomy = (layers) => `<div class="k3-anat"><ol class="k3-layers">${layers
 <div class="k3-stack" data-k3-stack aria-hidden="true"><div class="k3-stack-rot">${layers.slice().reverse().map(([b]) => `<div class="k3-plane"><span>${esc(b)}</span></div>`).join('')}</div></div></div>`;
 const own = () => `<div class="k3-own"><a href="${AURORA}" rel="noopener"><b>Aurora Premium</b><span>Sistema de agendamento e gestão para salões, barbearias, clínicas, spas e pet shops.</span></a><a href="${ENGAGEBOT}" rel="noopener"><b>EngageBot</b><span>Atendimento com inteligência artificial no WhatsApp e no site.</span></a></div>`;
 
-const BLOCK = { spec, flow, pillars, chips, anatomy, own };
+const choose = (answer, rows, proof, msg, more) => chooseBlock(answer, rows.map(([ic, q, h]) => [IC[ic], q, h]), proof, msg, more);
+const BLOCK = { spec, flow, pillars, chips, anatomy, own, choose };
 export { IC, spec };
 
 function hookPage(c) {
@@ -103,14 +105,20 @@ const sites = hookPage({
   jumpTo: 'o-que-entra',
   blocks: [
     // dobra "como escolher": a pergunta principal do Google (As pessoas também perguntam, 22/10/2026) logo depois da abertura
-    { kind: 'spec', v: 'white', id: 'como-escolher', h2: 'Qual é o melhor criador de site profissional?', one: 'Um construtor pronto, como o Wix, serve para um site simples que você mesmo monta. Para o site trazer clientes, confira estes seis pontos antes de escolher quem vai criá-lo.', args: [[
-      ['seo', 'Aparece no Google e nas IAs?', 'SEO, GEO e AEO feitos desde o primeiro dia, não depois.'],
-      ['text', 'Quem escreve o texto?', 'O texto que vende e responde às buscas faz parte do projeto.'],
-      ['fast', 'Abre rápido no celular?', 'Site leve, testado no celular antes de publicar.'],
-      ['wa', 'Vira contato?', 'WhatsApp, formulário e medição de cada conversão.'],
-      ['lock', 'O domínio é seu?', 'Domínio e acessos no nome da sua empresa.'],
-      ['chart', 'Tem quem cuide depois?', 'Medição, ajustes e evolução depois do lançamento.'],
-    ]], after: 'A criação de sites da Roque Business Evolution entrega os seis.' },
+    { kind: 'choose', v: 'white', id: 'como-escolher', h2: 'Qual é o melhor criador de site profissional?', args: [
+      'Para um site simples que você mesmo monta, um construtor pronto, como o Wix, resolve. Para o site trazer clientes, o melhor é quem entrega SEO, texto, velocidade e WhatsApp no mesmo projeto. <strong>É assim que a Roque Business Evolution cria sites:</strong> os seis pontos abaixo já vêm no projeto.',
+      [
+        ['seo', 'Aparece no Google e nas IAs?', 'SEO, GEO e AEO feitos desde o primeiro dia, não depois.'],
+        ['text', 'Quem escreve o texto?', 'Nós escrevemos o texto que vende e responde às buscas.'],
+        ['fast', 'Abre rápido no celular?', 'Site leve, testado no celular antes de publicar.'],
+        ['wa', 'Vira contato?', 'WhatsApp, formulário e medição de cada conversão.'],
+        ['lock', 'O domínio é seu?', 'Domínio e acessos ficam no nome da sua empresa.'],
+        ['chart', 'Tem quem cuide depois?', 'Medição, ajustes e evolução depois do lançamento.'],
+      ],
+      'Este site foi feito assim: rápido, com SEO, GEO e AEO, e com o WhatsApp a um toque.',
+      'Olá! Quero um diagnóstico para criar o site da minha empresa.',
+      ['#o-que-entra', 'Ver o que entra no projeto'],
+    ] },
     { kind: 'spec', v: 'mist', id: 'o-que-entra', h2: 'O que entra na criação de sites profissionais', one: 'Tudo o que um site precisa para ser encontrado e virar contato, em um só projeto.', args: [[
       ['design', 'Design sob medida', 'Identidade da sua marca, sem modelo pronto.'],
       ['text', 'Texto que vende', 'Escrito para o seu cliente e para as buscas.'],
@@ -258,14 +266,20 @@ const seo = hookPage({
   jumpTo: 'o-que-fazemos',
   blocks: [
     // dobra "como escolher": a pergunta principal do Google (As pessoas também perguntam, 22/10/2026) logo depois da abertura
-    { kind: 'spec', v: 'white', id: 'como-escolher', h2: 'Qual é a melhor agência de SEO?', one: 'A melhor agência de SEO é a que mostra o que vai fazer, mede com os dados da sua empresa e não promete posição garantida. Confira estes seis pontos antes de contratar.', args: [[
-      ['seo', 'Começa por um diagnóstico?', 'Auditoria técnica e pesquisa de palavras-chave antes da proposta.'],
-      ['doc', 'O plano vem por escrito?', 'Frentes, entregas e prazos claros.'],
-      ['chart', 'Mede com dados que são seus?', 'Search Console e Analytics no nome da sua empresa.'],
-      ['lock', 'Promete a primeira posição?', 'Desconfie: ninguém pode garantir posição no Google.'],
-      ['pin', 'Cuida do SEO local?', 'Site e Perfil de Empresa no Google trabalhando juntos.'],
-      ['ia', 'Pensa nas buscas com IA?', 'GEO e AEO para as respostas do ChatGPT, do Gemini e do Claude.'],
-    ]], after: 'A agência de SEO da Roque Business Evolution trabalha com os seis.' },
+    { kind: 'choose', v: 'white', id: 'como-escolher', h2: 'Qual é a melhor agência de SEO?', args: [
+      'A melhor agência de SEO é a que mostra o que vai fazer, mede com os dados da sua empresa e não promete posição garantida. <strong>É assim que a agência de SEO da Roque Business Evolution trabalha</strong>, do diagnóstico ao relatório.',
+      [
+        ['seo', 'Começa por um diagnóstico?', 'Auditoria técnica e pesquisa de palavras-chave antes da proposta.'],
+        ['doc', 'O plano vem por escrito?', 'Frentes, entregas e prazos definidos por escrito.'],
+        ['chart', 'Mede com dados que são seus?', 'Search Console e Analytics no nome da sua empresa.'],
+        ['lock', 'Promete a primeira posição?', 'Não. Ninguém pode garantir posição no Google, e nós não prometemos.'],
+        ['pin', 'Cuida do SEO local?', 'Site e Perfil de Empresa no Google trabalhando juntos.'],
+        ['ia', 'Pensa nas buscas com IA?', 'GEO e AEO para as respostas do ChatGPT, do Gemini e do Claude.'],
+      ],
+      'Uma busca principal por página, sem disputa interna: é o mesmo método usado neste site.',
+      'Olá! Quero um diagnóstico de SEO para a minha empresa.',
+      ['#o-que-fazemos', 'Ver o que a agência faz'],
+    ] },
     { kind: 'spec', v: 'mist', id: 'o-que-fazemos', h2: 'O que a agência de SEO da Roque faz', one: 'Do que o seu cliente pesquisa até o contato no seu site.', args: [[
       ['seo', 'Pesquisa de palavras-chave', 'O que o cliente digita quando quer contratar.'],
       ['doc', 'Mapa de palavras por página', 'Uma busca principal por página, sem disputa interna.'],
@@ -364,14 +378,20 @@ const agents = hookPage({
   jumpTo: 'o-que-fazem',
   blocks: [
     // dobra "como escolher": a pergunta principal do Google (As pessoas também perguntam, 22/10/2026) logo depois da abertura
-    { kind: 'spec', v: 'white', id: 'como-escolher', h2: 'Qual é o melhor agente de IA para empresas?', one: 'O melhor agente de IA é o que conhece as informações da sua empresa, atende onde o seu cliente já está e deixa as pessoas no controle. Confira estes seis pontos.', args: [[
-      ['doc', 'Aprende com a sua empresa?', 'Site, documentos e perguntas frequentes como base.'],
-      ['wa', 'Atende onde o cliente está?', 'WhatsApp e site no mesmo atendimento.'],
-      ['plug', 'Faz tarefas, além de responder?', 'Agenda, registra pedidos e consulta sistemas.'],
-      ['eye', 'Passa o caso para uma pessoa?', 'A equipe assume quando o atendimento pede.'],
-      ['lock', 'Tem regras e limites?', 'Usa só informações autorizadas, com aprovação humana onde importa.'],
-      ['chart', 'Dá para acompanhar?', 'Conversas e resultados visíveis para a sua equipe.'],
-    ]], after: 'Pronto ou personalizado: comece pelo EngageBot ou peça um agente sob medida. A Roque Business Evolution cria os dois.' },
+    { kind: 'choose', v: 'white', id: 'como-escolher', h2: 'Qual é o melhor agente de IA para empresas?', args: [
+      'O melhor agente de IA é o que conhece as informações da sua empresa, atende onde o seu cliente já está e deixa as pessoas no controle. <strong>É assim que a Roque Business Evolution cria agentes de IA:</strong> pronto, com o EngageBot, ou sob medida para a sua operação.',
+      [
+        ['doc', 'Aprende com a sua empresa?', 'O agente usa o seu site, documentos e perguntas frequentes como base.'],
+        ['wa', 'Atende onde o cliente está?', 'WhatsApp e site no mesmo atendimento.'],
+        ['plug', 'Faz tarefas, além de responder?', 'No agente sob medida: agenda, registra pedidos e consulta sistemas.'],
+        ['eye', 'Passa o caso para uma pessoa?', 'A sua equipe assume quando o atendimento pede.'],
+        ['lock', 'Tem regras e limites?', 'Só informações autorizadas, com aprovação humana onde importa.'],
+        ['chart', 'Dá para acompanhar?', 'As conversas ficam visíveis para a sua equipe.'],
+      ],
+      `A Roque Business Evolution também opera o próprio agente de atendimento, o <a href="${ENGAGEBOT}" rel="noopener">EngageBot</a>.`,
+      'Olá! Quero um diagnóstico para usar agentes de IA na minha empresa.',
+      ['#o-que-fazem', 'Ver o que os agentes fazem'],
+    ] },
     { kind: 'spec', v: 'mist', id: 'o-que-fazem', h2: 'O que os agentes de IA fazem na sua empresa', one: 'Tarefas que se repetem todos os dias, feitas a qualquer hora.', args: [[
       ['wa', 'Atendimento no WhatsApp', 'Responde dúvidas e encaminha pedidos. <a href="/agentes-de-ia-para-whatsapp/">Veja</a>.'],
       ['chart', 'Vendas e qualificação de leads', 'Separa quem está pronto para comprar. <a href="/agentes-de-ia-para-vendas/">Veja</a>.'],
