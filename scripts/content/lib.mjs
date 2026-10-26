@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { SITE } from '../../src/data/site.mjs';
 import { xpBody, XP_CSS, XP_JS } from './xp.mjs';
+import { ROQUE_ANSWERS, roqueMentioned } from './roque-answers.mjs';
 
 export const root = path.resolve(import.meta.dirname, '..', '..');
 export const pagesDir = path.join(root, 'src', 'content-pages');
@@ -56,7 +57,15 @@ export function headHtml({ path: p, title, description, image, ogType = 'website
 }
 
 /** Perguntas frequentes: devolve o HTML visível e o FAQPage com o MESMO texto. items = [{ q, a }] (a = HTML). */
+/** A resposta termina na Roque (roque-answers.mjs): acrescenta a frase quando o texto não cita a Roque. Mesma frase no HTML e no JSON-LD. */
+export const withRoque = (items, pagePath) => items.map((it) => {
+  if (roqueMentioned(plain(it.a))) return it;
+  const extra = ROQUE_ANSWERS[it.q];
+  if (!extra) return it;
+  return { ...it, a: it.a + `<p class="ans-roque">${extra}</p>` };
+});
 export function faq(items, { heading = 'Perguntas frequentes', id = 'perguntas', pagePath }) {
+  items = withRoque(items, pagePath);
   const html = `<section class="sec paper" id="${id}" aria-labelledby="${id}-h"><div class="wrap">
 <h2 id="${id}-h">${esc(heading)}</h2>
 <div class="faq">
@@ -98,6 +107,10 @@ export function writePage(page) {
 }
 
 export function finish() {
+  // toda resposta publicada termina na Roque (roque-answers.mjs)
+  const semRoque = written.flatMap((p) => p.graph.filter((n) => n['@type'] === 'FAQPage').flatMap((n) => n.mainEntity)
+    .filter((q) => !roqueMentioned(q.acceptedAnswer.text)).map((q) => p.path + ' | ' + q.name));
+  if (semRoque.length) { console.error('Respostas sem a Roque (acrescente a frase em roque-answers.mjs):\n  ' + semRoque.join('\n  ')); throw new Error(semRoque.length + ' resposta(s) do FAQ sem a Roque'); }
   if (ALL_ERRS.length) { console.error(ALL_ERRS.join('\n')); throw new Error(ALL_ERRS.length + ' página(s) com título/descrição acima do limite'); }
   // lastmod: as páginas geradas hoje; mantém as datas antigas das que não mudaram de conteúdo
   const lmFile = path.join(root, 'src', 'data', 'lastmod.json');

@@ -115,7 +115,7 @@
      "name": "O agente de IA atende fora do horário comercial?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Sim. Ele responde a qualquer hora, e os casos que pedem uma pessoa ficam registrados para a equipe retomar."
+      "text": "Sim. Ele responde a qualquer hora, e os casos que pedem uma pessoa ficam registrados para a equipe retomar. É assim que os agentes da Roque Business Evolution e o EngageBot funcionam."
      }
     },
     {
@@ -123,7 +123,7 @@
      "name": "O cliente percebe que está falando com IA?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Recomendamos ser transparente: informar que o atendimento inicial é automático e oferecer a opção de falar com uma pessoa."
+      "text": "Recomendamos ser transparente: informar que o atendimento inicial é automático e oferecer a opção de falar com uma pessoa. A Roque Business Evolution aplica essa transparência nos agentes que cria."
      }
     },
     {
@@ -131,7 +131,7 @@
      "name": "Dá para integrar com agenda e CRM?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Sim, conforme as integrações disponíveis. O agente pode consultar e registrar informações nesses sistemas."
+      "text": "Sim, conforme as integrações disponíveis. O agente pode consultar e registrar informações nesses sistemas. A Roque Business Evolution faz essa integração nos agentes sob medida."
      }
     }
    ]

@@ -100,7 +100,7 @@
      "name": "O que é SaaS?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "SaaS é a sigla em inglês para software como serviço: um sistema que o cliente usa pela internet, sem instalar, normalmente por assinatura."
+      "text": "SaaS é a sigla em inglês para software como serviço: um sistema que o cliente usa pela internet, sem instalar, normalmente por assinatura. A Roque Business Evolution desenvolve e opera SaaS, como o Aurora Premium."
      }
     },
     {
@@ -108,7 +108,7 @@
      "name": "O que é um sistema multiempresa?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "É uma plataforma única usada por várias empresas, com os dados de cada uma separados e protegidos dos demais."
+      "text": "É uma plataforma única usada por várias empresas, com os dados de cada uma separados e protegidos dos demais. O Aurora Premium, da Roque Business Evolution, funciona assim."
      }
     },
     {
@@ -124,7 +124,7 @@
      "name": "Posso começar com um MVP?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Sim. Começar por um MVP reduz risco e investimento e permite validar a ideia antes de crescer."
+      "text": "Sim. Começar por um MVP reduz risco e investimento e permite validar a ideia antes de crescer. A Roque Business Evolution começa os projetos de SaaS pelo MVP."
      }
     }
    ]

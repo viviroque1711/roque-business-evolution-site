@@ -17,8 +17,9 @@ export const aEngage = (label = 'EngageBot') => `<a href="${ENGAGEBOT}" rel="noo
 export const aAurora = (label = 'Aurora Premium') => `<a href="${AURORA}" rel="noopener">${label}</a>`;
 
 // ---- FAQ em grupos: vários <h2> temáticos, UM FAQPage com o mesmo texto das perguntas visíveis
-import { plain, pageUrl } from './lib.mjs';
+import { plain, pageUrl, withRoque } from './lib.mjs';
 export function faqGrouped(groups, { pagePath, variants = ['white', 'mist'] }) {
+  groups = groups.map((g) => ({ ...g, items: withRoque(g.items, pagePath) }));
   const all = groups.flatMap((g) => g.items);
   const html = groups.map((g, gi) => `<section class="sec ${variants[gi % variants.length]}" id="${g.id}" aria-labelledby="${g.id}-h"><div class="wrap"><h2 id="${g.id}-h">${esc(g.h2)}</h2><div class="faq">
 ${g.items.map((it, i) => `<details${gi === 0 && i === 0 ? ' open' : ''}><summary><h3 class="faq-q">${esc(it.q)}</h3></summary><div class="ans">${it.a}</div></details>`).join('\n')}

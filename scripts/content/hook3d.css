@@ -17,7 +17,7 @@
 /* abertura */
 .k3-hero { position: relative; background: #000; color: #fff; overflow: hidden; isolation: isolate; }
 .k3-hero-in { max-width: var(--wrap); margin: 0 auto; padding: clamp(2rem, 6vw, 4.5rem) 1.25rem clamp(2.5rem, 6vw, 4.5rem); display: grid; gap: 1.5rem; align-items: center; }
-@media (min-width: 900px) { .k3-hero-in { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 3rem; min-height: min(78vh, 640px); } }
+@media (min-width: 900px) { .k3-hero-in { grid-template-columns: minmax(0, 11fr) minmax(0, 10fr); gap: 3rem; min-height: min(78vh, 640px); } }
 .k3-hero .crumb { color: var(--t2); margin: 0 0 1.2rem; }
 .k3-hero .crumb a { color: #fff; }
 .k3-hero h1 { margin: 0; max-width: 18ch; color: #fff; font: 500 clamp(1.9rem, 4.6vw, 3.3rem)/1.1 var(--display); letter-spacing: -.02em; }
@@ -111,5 +111,5 @@
 .k3-black .k3-after { color: #fff; }
 
 /* aparelhos na abertura (devices.css): mais largos que o objeto antigo */
-.k3-obj.k3-dev { aspect-ratio: auto; width: min(100%, 560px); }
+.k3-obj.k3-dev { aspect-ratio: auto; width: min(100%, 660px); }
 @media (max-width: 899px) { .k3-obj.k3-dev { width: min(100%, 440px); margin-bottom: .5rem; } }
