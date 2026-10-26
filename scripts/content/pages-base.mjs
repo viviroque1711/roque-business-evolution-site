@@ -2,7 +2,12 @@
 // linguagem de site. Regras de verdade: nenhum depoimento, cliente, case, número de resultado ou avaliação; nenhuma promessa de posição
 // no Google nem de citação em IA; sem preços; EngageBot só com o que está no ar (fase 1).
 
+import fs from 'node:fs';
+import path from 'node:path';
 import { SITE } from '../../src/data/site.mjs';
+import { ENG, homeAurora, homeEngageBot } from './devices.mjs';
+const EB_CSS = fs.readFileSync(path.join(import.meta.dirname, 'engagebot.css'), 'utf8');
+const EB_JS = fs.readFileSync(path.join(import.meta.dirname, 'engagebot.js'), 'utf8');
 import { esc, faq, crumbLd, crumbHtml, wa, pageUrl } from './lib.mjs';
 import { btn, li, cols, steps, sec, related, p, group, note, ENGAGEBOT, AURORA, aEngage, aAurora } from './kit.mjs';
 import { ORG_ID, SITE_ID, ENGAGE_ID, OG, org, website, webpage, service, finalCta, hero, servicePage } from './schema.mjs';
@@ -216,6 +221,22 @@ const transf = servicePage({
 });
 
 // ================================================================== ENGAGEBOT
+// Página exclusiva (26/10/2026): cada recurso tem a sua tela, que troca enquanto a pessoa lê (eb-story). Só a fase 1.
+const { chatEng, inboxEng, knowledge, activation, webchat, mac, phone, scene } = ENG;
+const EB_FEATS = [
+  ['Atendimento por WhatsApp e webchat', 'O mesmo agente atende nos dois canais.'],
+  ['Caixa de conversas', 'Todas as conversas ficam em um só lugar, para a equipe acompanhar.'],
+  ['Resposta automática com detecção de intenção', 'O agente identifica o que o cliente precisa antes de responder.'],
+  ['Agente que aprende com a sua empresa', 'Ele estuda o seu site, PDFs, documentos e o FAQ.'],
+  ['Ativação guiada', 'A configuração acontece passo a passo.'],
+];
+const EB_SCREENS = [
+  () => scene(mac(webchat) + phone(chatEng([['in', 'Vocês abrem no feriado?'], ['intent', 'Intenção: horário'], ['out', 'Abrimos das 9h às 13h, como está no aviso do nosso site.'], ['in', 'Obrigada!'], ['out', 'Por nada! Posso ajudar em algo mais?']])), 'O mesmo agente atendendo no chat do site e no WhatsApp'),
+  () => scene(mac(inboxEng), 'Caixa de conversas com as conversas do WhatsApp e do site, cada uma com o seu status', 'mac-only'),
+  () => scene(phone(chatEng([['in', 'Quero trocar o tamanho da blusa'], ['intent', 'Intenção: troca'], ['typing'], ['out', 'Claro! A troca é feita em até 30 dias após a compra.'], ['src', 'Resposta com base na política de trocas']])), 'O agente identifica que a cliente quer fazer uma troca e responde com a política da empresa', 'solo'),
+  () => scene(mac(knowledge), 'O que o agente aprendeu: as páginas do site, o catálogo, a política de trocas e as perguntas frequentes', 'mac-only'),
+  () => scene(phone(activation), 'Ativação guiada em quatro passos: conectar o WhatsApp, instalar o chat no site, ensinar o agente, testar e ativar', 'solo'),
+];
 const engFaq = faq([
   { q: 'O que é o EngageBot?', a: '<p>O EngageBot é um produto da Roque Business Evolution para atendimento com inteligência artificial no WhatsApp e no site da empresa.</p>' },
   { q: 'O EngageBot responde sozinho?', a: '<p>Sim, com resposta automática que identifica a intenção da mensagem. As conversas ficam em uma caixa de conversas, onde a equipe acompanha o atendimento.</p>' },
@@ -225,20 +246,34 @@ const engFaq = faq([
 ], { pagePath: '/engagebot/' });
 const engCrumb = [{ name: 'Início', path: '/' }, { name: 'EngageBot', path: '/engagebot/' }];
 const engage = {
-  path: '/engagebot/', og: 'engagebot',
+  path: '/engagebot/', og: 'engagebot', xpCss: EB_CSS, xpJs: EB_JS,
   title: 'EngageBot: Atendimento com IA no WhatsApp | Roque',
   description: 'EngageBot: atendimento com inteligência artificial no WhatsApp e no site da sua empresa, com caixa de conversas e agente treinado com o seu conteúdo.',
   body: `<!-- REVISAR: aguardando a Viviane confirmar o que está no ar. Só a fase 1 do blueprint entra no texto (atendimento por WhatsApp e webchat, caixa de conversas, resposta automática com detecção de intenção, agente que aprende com o site e documentos, ativação guiada). Fase 2 (agendamentos, captura de leads e orçamentos) e fase 3 (inteligência de negócios) ficam de fora até a confirmação. Sem preço e sem promessa de tempo de ativação. -->
 ${hero(engCrumb, 'EngageBot: atendimento com inteligência artificial no WhatsApp e no site', 'O EngageBot é o atendimento com inteligência artificial da Roque Business Evolution: responde seus clientes no WhatsApp e no site, aprende com o conteúdo da sua empresa e organiza as conversas em um só lugar.', `<div class="btns"><a class="btn" href="${ENGAGEBOT}" rel="noopener">Acessar o EngageBot</a><a class="btn ghost" href="${wa('Olá! Quero conhecer o EngageBot.')}" rel="noopener">Falar no WhatsApp</a></div>`)}
-${sec('white', 'o-que-faz', 'O que o EngageBot faz no atendimento com IA', `<p class="read">O EngageBot atende clientes por WhatsApp e webchat, entende o que a pessoa quer e responde na hora, com o que a sua empresa já sabe.</p>${li([
-  '<b>Atendimento por WhatsApp e webchat.</b> O mesmo agente atende nos dois canais.',
-  '<b>Caixa de conversas.</b> Todas as conversas ficam em um só lugar, para a equipe acompanhar.',
-  '<b>Resposta automática com detecção de intenção.</b> O agente identifica o que o cliente precisa antes de responder.',
-  '<b>Agente que aprende com a sua empresa.</b> Ele estuda o seu site, PDFs, documentos e o FAQ.',
-  '<b>Ativação guiada.</b> A configuração acontece passo a passo.',
-])}`)}
-${sec('mist', 'como-aprende', 'Como o EngageBot aprende o seu negócio', `<p class="read">O agente aprende com o que a sua empresa já publica e escreve, para responder de forma coerente com o seu negócio.</p>${steps([['Site da empresa', 'O agente lê as páginas do seu site.'], ['PDFs e documentos', 'Catálogos, tabelas e manuais entram na base de conhecimento.'], ['FAQ', 'Suas respostas frequentes viram respostas do agente.']])}`)}
-${sec('white', 'com-aurora', 'EngageBot e Aurora Premium: produtos que se complementam', `<p class="read">O EngageBot e o <a href="https://aurorapremium.com/">Aurora Premium</a> nascem da mesma empresa e cobrem partes diferentes do relacionamento com o cliente.</p>${li(['<b>Aurora Premium.</b> Sistema de agendamento e gestão para salões, barbearias, clínicas, spas e pet shops. O lembrete de agendamento já vem incluído.', '<b>EngageBot.</b> O atendimento com IA para conversar com o cliente no WhatsApp e no site.'])}`)}
+<section class="sec white xp-wide eb-sec" id="o-que-faz" aria-labelledby="o-que-faz-h"><div class="wrap">
+<h2 id="o-que-faz-h">O que o EngageBot faz no atendimento com IA</h2>
+<p class="read">O EngageBot atende clientes por WhatsApp e webchat, entende o que a pessoa quer e responde na hora, com o que a sua empresa já sabe.</p>
+<div class="eb-story" data-eb-story>
+<ol class="eb-feats">${EB_FEATS.map(([b, t], i) => `<li data-eb="${i}"${i === 0 ? ' class="on"' : ''}><span class="eb-n">${String(i + 1).padStart(2, '0')}</span><h3>${b}</h3><p>${t}</p><div class="eb-mob" aria-hidden="true">${EB_SCREENS[i]()}</div></li>`).join('')}</ol>
+<div class="eb-stage" aria-hidden="true">${EB_SCREENS.map((f, i) => `<div class="eb-screen${i === 0 ? ' on' : ''}" data-eb-screen="${i}">${f()}</div>`).join('')}<div class="eb-dots">${EB_FEATS.map((_, i) => `<i${i === 0 ? ' class="on"' : ''}></i>`).join('')}</div></div>
+</div></div></section>
+<section class="sec mist xp-wide eb-sec" id="como-aprende" aria-labelledby="como-aprende-h"><div class="wrap">
+<h2 id="como-aprende-h">Como o EngageBot aprende o seu negócio</h2>
+<p class="read">O agente aprende com o que a sua empresa já publica e escreve, para responder de forma coerente com o seu negócio.</p>
+<div class="eb-learn" data-eb-learn>
+<ol class="eb-src">${[['www', 'Site da empresa', 'O agente lê as páginas do seu site.'], ['PDF', 'PDFs e documentos', 'Catálogos, tabelas e manuais entram na base de conhecimento.'], ['?', 'FAQ', 'Suas respostas frequentes viram respostas do agente.']].map(([ic, b, t], i) => `<li style="--i:${i}"><i class="eb-ic">${ic}</i><span><b>${b}</b>${t}</span></li>`).join('')}</ol>
+<div class="eb-core" aria-hidden="true"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0 16C45 16 45 50 100 50"/><path d="M0 50H100"/><path d="M0 84C45 84 45 50 100 50"/><path class="flow" d="M0 16C45 16 45 50 100 50"/><path class="flow" d="M0 50H100"/><path class="flow" d="M0 84C45 84 45 50 100 50"/></svg></div>
+<div class="eb-agent" aria-hidden="true"><i class="r1"></i><i class="r2"></i><b>Agente</b><small>base de conhecimento da sua empresa</small></div>
+<div class="eb-out" aria-hidden="true"><p class="q">Qual o prazo de troca?</p><p class="a">Até 30 dias após a compra, como está na nossa política de trocas.</p><small>Exemplo de resposta</small></div>
+</div></div></section>
+<section class="sec white xp-wide eb-sec" id="com-aurora" aria-labelledby="com-aurora-h"><div class="wrap">
+<h2 id="com-aurora-h">EngageBot e Aurora Premium: produtos que se complementam</h2>
+<p class="read">O EngageBot e o <a href="https://aurorapremium.com/">Aurora Premium</a> nascem da mesma empresa e cobrem partes diferentes do relacionamento com o cliente.</p>
+<div class="eb-duo">
+<article class="eb-prod"><div class="eb-vis">${homeAurora()}</div><h3><a href="https://aurorapremium.com/">Aurora Premium</a></h3><p>Sistema de agendamento e gestão para salões, barbearias, clínicas, spas e pet shops. O lembrete de agendamento já vem incluído.</p></article>
+<article class="eb-prod eb-dark"><div class="eb-vis">${homeEngageBot()}</div><h3><a href="${ENGAGEBOT}" rel="noopener">EngageBot</a></h3><p>O atendimento com IA para conversar com o cliente no WhatsApp e no site.</p></article>
+</div></div></section>
 ${engFaq.html.replace('class="sec paper"', 'class="sec mist"')}
 ${finalCta('Vamos colocar o EngageBot para atender os seus clientes', 'Conte como é o seu atendimento hoje. A Roque Business Evolution responde pelo WhatsApp.', 'Olá! Quero conhecer o EngageBot.')}`,
   get graph() {

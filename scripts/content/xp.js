@@ -1,0 +1,47 @@
+// EXPERIÊNCIA 3D DAS PÁGINAS DE CONTEÚDO (xp.mjs): parallax do aparelho da abertura, linha do tempo das etapas que se
+// preenche com a rolagem e cartões que inclinam com o mouse. Um único ouvinte de rolagem (passivo, uma vez por quadro),
+// nada roda fora da tela, nada com prefers-reduced-motion. O texto já está no HTML.
+(function () {
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = matchMedia('(pointer: fine)').matches;
+  var hero = document.querySelector('.xp-hero');
+  var dev = hero && hero.querySelector('.xp-dev');
+  var steps = [].slice.call(document.querySelectorAll('.steps'));
+  var live = new Set();
+  var heroOn = true, ticking = false;
+
+  if ('IntersectionObserver' in window) {
+    if (hero) new IntersectionObserver(function (es) { heroOn = es[0].isIntersecting; hero.classList.toggle('xp-off', !heroOn); }).observe(hero);
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) live.add(e.target); else live.delete(e.target); }); frame(); }, { rootMargin: '10% 0px' });
+    steps.forEach(function (s) { io.observe(s); });
+  } else steps.forEach(function (s) { live.add(s); });
+
+  function frame() {
+    ticking = false;
+    var vh = innerHeight;
+    // primeiro lê tudo, depois escreve (sem forçar o layout a cada lista)
+    var work = [];
+    live.forEach(function (s) {
+      var b = s.getBoundingClientRect(), lis = [].slice.call(s.children);
+      work.push([s, b, lis, lis.map(function (li) { return li.getBoundingClientRect().top; })]);
+    });
+    work.forEach(function (w) {
+      var s = w[0], b = w[1], p = reduce ? 1 : Math.max(0, Math.min(1, (vh * .62 - b.top) / Math.max(1, b.height))), mark = b.top + b.height * p;
+      s.style.setProperty('--p', p.toFixed(3));
+      w[2].forEach(function (li, i) { li.classList.toggle('on', reduce || p >= 1 || w[3][i] + 20 <= mark); });
+    });
+    if (dev && heroOn && !reduce) { var y = pageYOffset; dev.style.setProperty('--sy', Math.min(120, y * .18).toFixed(1) + 'px'); }
+  }
+  addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }, { passive: true });
+  addEventListener('resize', frame, { passive: true });
+  frame();
+
+  // cartões que inclinam na direção do mouse
+  if (fine && !reduce) [].slice.call(document.querySelectorAll('.facts li, .related a')).forEach(function (el) {
+    el.addEventListener('pointermove', function (e) {
+      var b = el.getBoundingClientRect(), x = (e.clientX - b.left) / b.width - .5, y = (e.clientY - b.top) / b.height - .5;
+      el.style.setProperty('--tx', (x * 8).toFixed(2) + 'deg'); el.style.setProperty('--ty', (-y * 8).toFixed(2) + 'deg');
+    });
+    el.addEventListener('pointerleave', function () { el.style.removeProperty('--tx'); el.style.removeProperty('--ty'); });
+  });
+})();

@@ -4,6 +4,12 @@
 (function () {
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var dpr = Math.min(2, window.devicePixelRatio || 1);
+  // desempenho (26/10/2026): computador mais fraco = menos pixels e menos pontos; nada roda fora da tela nem com a aba oculta
+  var lowCpu = (navigator.hardwareConcurrency || 8) <= 4 || matchMedia('(max-width: 899px)').matches;
+  if (lowCpu) dpr = Math.min(dpr, 1.25);
+  var slow = 0, probe = 0, probeLast = 0;
+  function measure(now) { if (probeLast) { if (now - probeLast > 28) slow++; probe++; } probeLast = now; if (probe < 90) requestAnimationFrame(measure); else if (slow > 25) { dpr = 1; lowCpu = true; dispatchEvent(new Event('resize')); } }
+  if (!reduce) requestAnimationFrame(measure);
   var hero = document.querySelector('[data-h3d-hero]');
   if (!hero) return;
   if (!reduce) hero.classList.add('pin');
@@ -31,7 +37,8 @@
     var pulses = []; for (var q = 0; q < 7; q++) pulses.push({ e: Math.floor(Math.random()*E.length), t: Math.random(), v: .0025 + Math.random()*.002 });
     var st = { active: -1, glow: [0,0,0,0,0], angle: opts.angle || 0, extra: 0, from: 0, to: 0, et: 1, tx: 0, ty: 0, tiltX: 0, tiltY: 0, w: 0, region: null, t0: performance.now(), last: performance.now(), visible: true, running: true };
     var spin = Math.PI*2/(opts.period || 48);
-    function size() { var b = canvas.getBoundingClientRect(); st.w = b.width; canvas.width = b.width*dpr; canvas.height = b.width*dpr; }
+    function size() { var b = canvas.getBoundingClientRect(); st.w = b.width; canvas.width = b.width*dpr; canvas.height = b.width*dpr; st.rect = b; }
+    addEventListener('scroll', function () { st.rect = null; }, { passive: true });
     canvas.parentElement.addEventListener('pointermove', function (e) { var b = canvas.getBoundingClientRect(); st.tx = ((e.clientY-b.top)/b.height-.5)*.3; st.ty = ((e.clientX-b.left)/b.width-.5)*.4; });
     canvas.parentElement.addEventListener('pointerleave', function () { st.tx = 0; st.ty = 0; });
     function regionAngle(i) { var sx = 0, sz = 0; REGION[i].forEach(function (k) { sx += pts[k].x; sz += pts[k].z; }); return Math.atan2(sx, sz); }
@@ -66,7 +73,7 @@
         else { g.strokeStyle = 'rgba(143,163,191,' + ((.05+.16*depth)*local) + ')'; g.lineWidth = .7*dpr; }
         g.beginPath(); g.moveTo(pa.X, pa.Y); g.lineTo(pa.X + (pb.X-pa.X)*local, pa.Y + (pb.Y-pa.Y)*local); g.stroke();
       });
-      if (!reduce && intro >= 1) pulses.forEach(function (pu) {
+      if (!reduce && !lowCpu && intro >= 1) pulses.forEach(function (pu) {
         pu.t += pu.v; if (pu.t > 1) { pu.t = 0; pu.e = Math.floor(Math.random()*E.length); }
         var ed = E[pu.e], pa = P[ed[0]], pb = P[ed[1]], depth = ((pa.z+pb.z)/2+1)/2; if (depth < .35) return;
         var X = pa.X + (pb.X-pa.X)*pu.t, Y = pa.Y + (pb.Y-pa.Y)*pu.t, gr = g.createRadialGradient(X, Y, 0, X, Y, 6*dpr);
@@ -80,7 +87,7 @@
         if (h > .05) { var gr = g.createRadialGradient(X, Y, 0, X, Y, rr*4); gr.addColorStop(0, 'rgba(255,200,90,' + (.45*h) + ')'); gr.addColorStop(1, 'rgba(255,200,90,0)'); g.fillStyle = gr; g.beginPath(); g.arc(X, Y, rr*4, 0, Math.PI*2); g.fill(); }
         g.fillStyle = 'rgba(' + Math.round(150+60*front+40*h) + ',' + Math.round(100+45*front+50*h) + ',' + Math.round(10+25*front+40*h) + ',' + ((.3+.7*front)*ease) + ')'; g.beginPath(); g.arc(X, Y, rr, 0, Math.PI*2); g.fill();
       });
-      if (st.active >= 0) { var sx = 0, sy = 0; REGION[st.active].forEach(function (k) { sx += P[k].X; sy += P[k].Y; }); var b = canvas.getBoundingClientRect(); st.region = { x: b.left + sx/REGION[st.active].length/dpr, y: b.top + sy/REGION[st.active].length/dpr }; } else st.region = null;
+      if (st.active >= 0) { var sx = 0, sy = 0; REGION[st.active].forEach(function (k) { sx += P[k].X; sy += P[k].Y; }); var b = st.rect || (st.rect = canvas.getBoundingClientRect()); st.region = { x: b.left + sx/REGION[st.active].length/dpr, y: b.top + sy/REGION[st.active].length/dpr }; } else st.region = null;
       if ((!reduce || intro < 1) && st.visible) requestAnimationFrame(frame); else st.running = false;
     }
     size(); addEventListener('resize', size); requestAnimationFrame(frame);
@@ -92,20 +99,24 @@
 
   // ---------------------------------------------------------------- campo de dados e fio termo -> globo
   var stage = hero.querySelector('.h3d-stage'), fc = hero.querySelector('.h3d-field'), f = fc.getContext('2d');
-  var fw = 0, fh = 0, dots = [], wire = 0, terms = [].slice.call(hero.querySelectorAll('h1 .t')), fieldOn = true, fieldRun = true;
-  function sizeField() { var b = fc.getBoundingClientRect(); fw = b.width; fh = b.height; fc.width = fw*dpr; fc.height = fh*dpr; var n = Math.round(Math.min(90, fw*fh/14000)); dots = []; for (var i = 0; i < n; i++) dots.push({ x: Math.random()*fw, y: Math.random()*fh, vx: (Math.random()-.5)*.07, vy: -(.03+Math.random()*.07), s: Math.random() }); }
+  var fieldRect = null, termRect = [], fw = 0, fh = 0, dots = [], wire = 0, terms = [].slice.call(hero.querySelectorAll('h1 .t')), fieldOn = true, fieldRun = true;
+  function sizeField() { var b = fc.getBoundingClientRect(); fw = b.width; fh = b.height; fc.width = fw*dpr; fc.height = fh*dpr; var n = Math.round(Math.min(lowCpu ? 34 : 60, fw*fh/(lowCpu ? 26000 : 18000))); fieldRect = null; dots = []; for (var i = 0; i < n; i++) dots.push({ x: Math.random()*fw, y: Math.random()*fh, vx: (Math.random()-.5)*.07, vy: -(.03+Math.random()*.07), s: Math.random() }); }
   function drawField() {
     f.setTransform(dpr, 0, 0, dpr, 0, 0); f.clearRect(0, 0, fw, fh);
     f.strokeStyle = 'rgba(143,163,191,.06)'; f.lineWidth = 1; var hz = fh*.64, vx0 = fw*.72, i, j;
     for (i = -12; i <= 12; i++) { f.beginPath(); f.moveTo(vx0, hz); f.lineTo(vx0 + i*fw*.12, fh); f.stroke(); }
     for (j = 1; j < 8; j++) { var yy = hz + (fh-hz)*Math.pow(j/8, 1.8); f.beginPath(); f.moveTo(0, yy); f.lineTo(fw, yy); f.stroke(); }
     dots.forEach(function (d) { if (!reduce) { d.x += d.vx; d.y += d.vy; if (d.y < -10) { d.y = fh+10; d.x = Math.random()*fw; } if (d.x < -10) d.x = fw+10; if (d.x > fw+10) d.x = -10; } });
-    for (i = 0; i < dots.length; i++) for (j = i+1; j < dots.length; j++) { var a = dots[i], b = dots[j], dd = Math.hypot(a.x-b.x, a.y-b.y); if (dd < 120) { f.strokeStyle = 'rgba(143,163,191,' + ((1-dd/120)*.16) + ')'; f.beginPath(); f.moveTo(a.x, a.y); f.lineTo(b.x, b.y); f.stroke(); } }
-    dots.forEach(function (d) { f.fillStyle = d.s > .85 ? 'rgba(192,138,30,.8)' : 'rgba(143,163,191,.5)'; f.beginPath(); f.arc(d.x, d.y, d.s > .85 ? 1.8 : 1.1, 0, Math.PI*2); f.fill(); });
+    var bk = [[], [], []];
+    for (i = 0; i < dots.length; i++) for (j = i+1; j < dots.length; j++) { var a = dots[i], b = dots[j], ddx = a.x-b.x, ddy = a.y-b.y, d2 = ddx*ddx + ddy*ddy; if (d2 < 14400) { var k3 = d2 < 3600 ? 2 : d2 < 8100 ? 1 : 0; bk[k3].push(a.x, a.y, b.x, b.y); } }
+    for (var kb = 0; kb < 3; kb++) { var L = bk[kb]; if (!L.length) continue; f.strokeStyle = 'rgba(143,163,191,' + [.03, .07, .12][kb] + ')'; f.beginPath(); for (var m = 0; m < L.length; m += 4) { f.moveTo(L[m], L[m+1]); f.lineTo(L[m+2], L[m+3]); } f.stroke(); }
+    f.fillStyle = 'rgba(143,163,191,.5)'; f.beginPath(); dots.forEach(function (d) { if (d.s <= .85) { f.moveTo(d.x + 1.1, d.y); f.arc(d.x, d.y, 1.1, 0, Math.PI*2); } }); f.fill();
+    f.fillStyle = 'rgba(192,138,30,.8)'; f.beginPath(); dots.forEach(function (d) { if (d.s > .85) { f.moveTo(d.x + 1.8, d.y); f.arc(d.x, d.y, 1.8, 0, Math.PI*2); } }); f.fill();
     var act = globe.st.active, reg = globe.st.region;
     wire += (((act >= 0 && reg && innerWidth >= 900 && !reduce) ? 1 : 0) - wire)*.04;
     if (wire > .02 && act >= 0 && reg) {
-      var sr = stage.getBoundingClientRect(), range = document.createRange(); range.selectNodeContents(terms[act]); var rs = range.getClientRects(), lr = rs[rs.length-1] || terms[act].getBoundingClientRect();
+      if (!fieldRect) { fieldRect = stage.getBoundingClientRect(); termRect = terms.map(function (tm) { var range = document.createRange(); range.selectNodeContents(tm); var rs = range.getClientRects(); return rs[rs.length-1] || tm.getBoundingClientRect(); }); }
+      var sr = fieldRect, lr = termRect[act];
       var x1 = lr.right - sr.left + 18, y1 = lr.top + lr.height/2 - sr.top, x2 = reg.x - sr.left, y2 = reg.y - sr.top, mx = x1 + (x2-x1)*.55;
       f.strokeStyle = 'rgba(192,138,30,' + (.55*wire) + ')'; f.lineWidth = 1.2; f.setLineDash([2, 5]); f.beginPath(); f.moveTo(x1, y1); f.bezierCurveTo(mx, y1, mx, y2, x1 + (x2-x1)*wire, y1 + (y2-y1)*wire); f.stroke(); f.setLineDash([]);
       f.fillStyle = 'rgba(255,214,140,' + wire + ')'; f.beginPath(); f.arc(x1, y1, 3, 0, Math.PI*2); f.fill();
@@ -116,6 +127,7 @@
   if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { fieldOn = es[0].isIntersecting; if (fieldOn && !fieldRun && !reduce) { fieldRun = true; requestAnimationFrame(drawField); } }).observe(fc);
 
   function onHero() {
+    fieldRect = null;
     if (reduce) return;
     var b = hero.getBoundingClientRect(), total = b.height - stage.offsetHeight;
     var p = Math.min(1, Math.max(0, -b.top/Math.max(1, total))), n = Math.max(1, terms.length), i = Math.min(n - 1, Math.floor(p*(n + .2)));
@@ -147,15 +159,20 @@
     wrap.classList.add('on');
     var layout = function () { var w = tiles[0].offsetWidth; R = Math.round((w + 24)/2/Math.tan(Math.PI/tiles.length)); tiles.forEach(function (t, i) { t.style.transform = 'rotateY(' + (i*step) + 'deg) translateZ(' + R + 'px)'; }); };
     var front = []; var facing = function () { tiles.forEach(function (t, i) { var on = Math.cos((i*step + ang)*Math.PI/180) > .8; if (front[i] !== on) { front[i] = on; t.style.pointerEvents = on ? '' : 'none'; } }); };
-    var tick = function () { if (auto && !dragging) target -= .04; ang += (target - ang)*.06; facing(); ringEl.style.transform = 'translateZ(-' + Math.max(0, R - 170) + 'px) rotateX(-6deg) rotateY(' + ang + 'deg)'; requestAnimationFrame(tick); };
+    var ringOn = false, ringRun = false;
+    var tick = function () { if (auto && !dragging) target -= .04; ang += (target - ang)*.06; facing(); ringEl.style.transform = 'translateZ(-' + Math.max(0, R - 170) + 'px) rotateX(-6deg) rotateY(' + ang + 'deg)';
+      var busy = auto || dragging || Math.abs(target - ang) > .02; if (ringOn && busy && !document.hidden) requestAnimationFrame(tick); else ringRun = false; };
+    var wake = function () { if (!ringRun && ringOn) { ringRun = true; requestAnimationFrame(tick); } };
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { ringOn = es[0].isIntersecting; wake(); }).observe(wrap); else ringOn = true;
+    document.addEventListener('visibilitychange', wake);
     var ctrl = wrap.nextElementSibling;
-    ctrl.querySelector('[data-prev]').addEventListener('click', function () { auto = false; target = Math.round(target/step)*step + step; });
-    ctrl.querySelector('[data-next]').addEventListener('click', function () { auto = false; target = Math.round(target/step)*step - step; });
-    wrap.addEventListener('pointerdown', function (e) { if (e.target.closest('a') && e.pointerType !== 'mouse') return; dragging = true; auto = false; dx = e.clientX; d0 = target; });
+    ctrl.querySelector('[data-prev]').addEventListener('click', function () { auto = false; target = Math.round(target/step)*step + step; wake(); });
+    ctrl.querySelector('[data-next]').addEventListener('click', function () { auto = false; target = Math.round(target/step)*step - step; wake(); });
+    wrap.addEventListener('pointerdown', function (e) { if (e.target.closest('a') && e.pointerType !== 'mouse') return; dragging = true; auto = false; dx = e.clientX; d0 = target; wake(); });
     addEventListener('pointermove', function (e) { if (dragging) target = d0 + (e.clientX - dx)*.3; });
     addEventListener('pointerup', function () { if (dragging) { dragging = false; target = Math.round(target/step)*step; } });
-    tiles.forEach(function (t, i) { t.addEventListener('focusin', function () { auto = false; target = -i*step; }); });
-    layout(); addEventListener('resize', layout); requestAnimationFrame(tick);
+    tiles.forEach(function (t, i) { t.addEventListener('focusin', function () { auto = false; target = -i*step; wake(); }); });
+    layout(); addEventListener('resize', layout); tick();
   }
 
   // ---------------------------------------------------------------- objetos que inclinam
