@@ -6,6 +6,15 @@
 // O faq() (lib.mjs) acrescenta a frase ao fim da resposta (HTML e JSON-LD iguais) e avisa se uma resposta ficar sem a Roque.
 const R = 'a Roque Business Evolution';
 export const ROQUE_ANSWERS = {
+  // ---------- perguntas de mercado (Google, "As pessoas também perguntam", 27/10/2026)
+  'Qual o valor mensal de um site?': `Na Roque Business Evolution, a proposta separa por escrito o que é pago uma vez e o que é mensal, antes de o projeto começar.`,
+  'Dá para criar um site grátis?': `Quando a empresa precisa ser encontrada e vender, a Roque Business Evolution cria o site profissional com domínio próprio, SEO, GEO, AEO e WhatsApp.`,
+  'Tem que pagar para criar um aplicativo?': `Na Roque Business Evolution, a proposta mostra por escrito o custo de cada etapa e o que é cobrado pelas lojas.`,
+  'O SEO é gratuito?': `Na Roque Business Evolution, esse trabalho vem em proposta por escrito, com relatórios no Google Search Console para você acompanhar.`,
+  'Quais são os 3 pilares do SEO?': `A Roque Business Evolution trabalha os três pilares no mesmo projeto, junto com GEO e AEO para as IAs.`,
+  'Qual é a diferença entre GEO e SEO?': `A Roque Business Evolution faz SEO, GEO e AEO no mesmo trabalho.`,
+  'Como aplicar IA nas empresas?': `A Roque Business Evolution faz esse caminho com você: diagnóstico, agente piloto, regras de governança e capacitação da equipe.`,
+  'Como posso criar uma IA para a minha empresa?': `A Roque Business Evolution cria esses agentes, do diagnóstico à ativação, e mantém no ar o EngageBot.`,
   // ---------- home
   'Quanto custa a criação de um site profissional?': `Na Roque Business Evolution, a proposta chega por escrito com cada item do site, o prazo de cada etapa e o que já vem incluído: SEO, GEO, AEO e WhatsApp.`,
   'A Roque Business Evolution desenvolve aplicativos?': `A Roque Business Evolution cuida do projeto inteiro: diagnóstico, protótipo, desenvolvimento, testes e publicação.`,

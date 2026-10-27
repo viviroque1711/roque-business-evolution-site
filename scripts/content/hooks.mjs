@@ -147,6 +147,9 @@ const sites = hookPage({
   ],
   faqH2: 'Perguntas frequentes sobre criação de sites',
   faq: [
+    Q('Qual é o melhor criador de site profissional?', 'A Roque Business Evolution é uma empresa de criação de sites profissionais que entrega design, texto, SEO, GEO, AEO e WhatsApp no mesmo projeto. Plataformas prontas servem para começar, mas um site sob medida dá mais controle sobre velocidade, estrutura e conteúdo para o Google e as IAs.'),
+    Q('Qual o valor mensal de um site?', 'Um site tem custos mensais de hospedagem e domínio, e pode ter manutenção e evolução contratadas à parte; o valor depende de onde ele fica hospedado e do que entra no acompanhamento.'),
+    Q('Dá para criar um site grátis?', 'Dá, em plataformas com plano gratuito, mas com limites: endereço com o nome da plataforma, menos controle sobre velocidade e estrutura e recursos de SEO restritos.'),
     Q('Quanto custa a criação de um site profissional?', 'Depende do número de páginas, das integrações e do conteúdo. Peça um orçamento pelo WhatsApp e receba a proposta com escopo e prazo.'),
     Q('Quanto tempo leva para criar um site profissional?', 'O prazo depende do escopo e entra na proposta, etapa por etapa, antes do início do projeto.'),
     Q('O site já sai pronto para aparecer no Google?', 'Sim, com a base técnica de <a href="/seo/">SEO</a> e de <a href="/geo-aeo/">GEO e AEO</a> bem feita. A posição nas buscas depende de mercado e concorrência, e ninguém pode garanti-la.'),
@@ -243,6 +246,7 @@ const apps = hookPage({
   ],
   faqH2: 'Perguntas frequentes sobre desenvolvimento de aplicativos',
   faq: [
+    Q('Tem que pagar para criar um aplicativo?', 'Sim. Além do desenvolvimento e da manutenção, a Google Play cobra uma taxa única de cadastro de desenvolvedor e a App Store, uma anuidade.'),
     Q('Quanto custa desenvolver um aplicativo?', 'Depende das telas, das integrações e das plataformas. Peça um orçamento pelo WhatsApp e receba a proposta com escopo e prazo.'),
     Q('Qual é a diferença entre PWA e app nativo?', 'O PWA é instalado pelo navegador e funciona no Android e no iPhone. O app nativo fica nas lojas de aplicativos e usa mais recursos do celular.'),
     Q('Vocês publicam o aplicativo na Google Play e na App Store?', 'Sim, quando o projeto prevê app nativo. A publicação usa a conta de desenvolvedor da sua empresa.'),
@@ -306,6 +310,8 @@ const seo = hookPage({
   ],
   faqH2: 'Perguntas frequentes sobre agência de SEO',
   faq: [
+    Q('O SEO é gratuito?', 'Aparecer nos resultados orgânicos do Google não tem custo por clique, mas o trabalho de SEO tem: pesquisa, ajustes técnicos, conteúdo e acompanhamento.'),
+    Q('Quais são os 3 pilares do SEO?', 'SEO técnico, para o site ser rápido e fácil de ler pelos buscadores; conteúdo, com páginas que respondem ao que o público procura; e autoridade, com menções e links de outros sites e o Perfil da Empresa no Google.'),
     Q('O que faz uma agência de SEO?', 'Uma agência de SEO pesquisa o que o seu cliente procura, corrige a parte técnica do site, cria o conteúdo certo e acompanha os resultados nas buscas.'),
     Q('Quanto custa uma agência de SEO?', 'Depende do tamanho do site e do trabalho mensal. Peça um orçamento pelo WhatsApp; a proposta mostra as entregas de cada mês.'),
     Q('A agência de SEO garante a primeira posição no Google?', 'Não. Ninguém pode garantir posição. O trabalho aumenta as chances com base técnica, conteúdo e autoridade, e os resultados são acompanhados no Search Console.'),
@@ -353,6 +359,7 @@ const geo = hookPage({
   ],
   faqH2: 'Perguntas frequentes sobre GEO e SEO para IA',
   faq: [
+    Q('Qual é a diferença entre GEO e SEO?', 'O SEO trabalha para o site aparecer nos resultados do Google; o GEO organiza o conteúdo para as IAs generativas, como ChatGPT, Gemini e Claude, entenderem e citarem a empresa nas respostas.'),
     Q('O que é GEO?', 'GEO (Generative Engine Optimization) é preparar o conteúdo do site para ser entendido e citado por inteligências artificiais como ChatGPT, Gemini e Claude.'),
     Q('O que é AEO?', 'AEO (Answer Engine Optimization) é organizar respostas diretas para as perguntas do seu cliente, no formato que buscadores e assistentes destacam.'),
     Q('Como fazer a minha empresa aparecer no ChatGPT?', 'Com um site claro e bem posicionado nas buscas, respostas diretas, dados consistentes em vários lugares e páginas liberadas para os robôs de IA. É o trabalho de GEO.'),
@@ -418,6 +425,9 @@ const agents = hookPage({
   ],
   faqH2: 'Perguntas frequentes sobre agentes de IA',
   faq: [
+    Q('Qual é a melhor IA para empresas?', 'A Roque Business Evolution cria agentes de IA para empresas que trabalham com o conteúdo e as regras de cada negócio, como o EngageBot, atendimento com IA no WhatsApp e no site. Mais do que escolher entre ChatGPT, Gemini ou Claude, o que decide o resultado é ligar a IA aos dados e aos processos da empresa.'),
+    Q('Como aplicar IA nas empresas?', 'Comece por uma tarefa repetitiva e mensurável, como responder dúvidas de clientes, qualificar contatos ou resumir documentos, defina regras de uso e meça o resultado antes de ampliar.'),
+    Q('Como posso criar uma IA para a minha empresa?', 'Você não precisa criar uma IA do zero: o caminho é um agente de IA que usa o conteúdo da sua empresa, como site, documentos e perguntas frequentes, e trabalha dentro das suas regras.'),
     Q('O que são agentes de IA?', 'São assistentes de inteligência artificial que entendem mensagens, consultam as informações autorizadas da empresa e executam tarefas, como responder, agendar ou registrar pedidos.'),
     Q('Qual é a diferença entre chatbot e agente de IA?', 'O chatbot segue um roteiro de botões. O agente de IA entende a pergunta escrita do jeito do cliente, consulta informações e executa tarefas em outros sistemas.'),
     Q('Agente de IA funciona no WhatsApp?', 'Funciona. O atendimento pode ser feito no WhatsApp e no site, com passagem para uma pessoa quando necessário. Veja o <a href="/agentes-de-ia-para-whatsapp/">agente de IA para WhatsApp</a>.'),

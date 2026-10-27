@@ -97,6 +97,14 @@
    "mainEntity": [
     {
      "@type": "Question",
+     "name": "Qual é a diferença entre GEO e SEO?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O SEO trabalha para o site aparecer nos resultados do Google; o GEO organiza o conteúdo para as IAs generativas, como ChatGPT, Gemini e Claude, entenderem e citarem a empresa nas respostas. A Roque Business Evolution faz SEO, GEO e AEO no mesmo trabalho."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "O que é GEO?",
      "acceptedAnswer": {
       "@type": "Answer",
