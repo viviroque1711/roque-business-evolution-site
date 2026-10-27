@@ -97,6 +97,22 @@
    "mainEntity": [
     {
      "@type": "Question",
+     "name": "O SEO é gratuito?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Aparecer nos resultados orgânicos do Google não tem custo por clique, mas o trabalho de SEO tem: pesquisa, ajustes técnicos, conteúdo e acompanhamento. Na Roque Business Evolution, esse trabalho vem em proposta por escrito, com relatórios no Google Search Console para você acompanhar."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quais são os 3 pilares do SEO?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "SEO técnico, para o site ser rápido e fácil de ler pelos buscadores; conteúdo, com páginas que respondem ao que o público procura; e autoridade, com menções e links de outros sites e o Perfil da Empresa no Google. A Roque Business Evolution trabalha os três pilares no mesmo projeto, junto com GEO e AEO para as IAs."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "O que faz uma agência de SEO?",
      "acceptedAnswer": {
       "@type": "Answer",

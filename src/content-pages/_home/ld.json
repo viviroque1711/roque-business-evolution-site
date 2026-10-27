@@ -62,42 +62,50 @@
    "mainEntity": [
     {
      "@type": "Question",
-     "name": "Quanto custa a criação de um site profissional?",
+     "name": "O que é uma empresa de desenvolvimento de software?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Depende do número de páginas, das integrações e do conteúdo. Peça um orçamento pelo WhatsApp e receba a proposta com escopo e prazo. Veja como funciona a criação de sites . Na Roque Business Evolution, a proposta chega por escrito com cada item do site, o prazo de cada etapa e o que já vem incluído: SEO, GEO, AEO e WhatsApp."
+      "text": "É a empresa que cria sistemas, aplicativos, sites e integrações sob medida para o processo de outro negócio, do levantamento do que precisa ser feito ao software funcionando, com suporte depois da entrega. A Roque Business Evolution é uma empresa de desenvolvimento de software: faz software sob medida , sistemas personalizados, aplicativos , plataformas SaaS , integrações e sites, e mantém em produção o Aurora Premium e o EngageBot."
      }
     },
     {
      "@type": "Question",
-     "name": "A Roque Business Evolution é uma empresa de desenvolvimento de software?",
+     "name": "O que faz uma empresa de desenvolvimento de software?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Sim. A Roque Business Evolution faz desenvolvimento de software e de sistemas personalizados, plataformas SaaS e integrações, além da criação de sites."
+      "text": "Entende o processo do cliente, define o escopo, desenha a arquitetura, programa, testa, publica e continua evoluindo o sistema. Na Roque Business Evolution, esse caminho tem sete etapas, do diagnóstico à evolução contínua, e você aprova cada uma. Veja a metodologia ."
      }
     },
     {
      "@type": "Question",
-     "name": "A Roque Business Evolution desenvolve aplicativos?",
+     "name": "Quanto custa contratar uma empresa de desenvolvimento de software?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Sim. Fazemos o desenvolvimento de aplicativos Android e iOS, PWA e aplicativos web, ligados ao seu sistema. A Roque Business Evolution cuida do projeto inteiro: diagnóstico, protótipo, desenvolvimento, testes e publicação."
+      "text": "Depende do tamanho do sistema, das integrações e do prazo: um sistema simples custa bem menos que uma plataforma com várias áreas e integrações. Na Roque Business Evolution, o valor chega por escrito depois do diagnóstico, separado por etapa, e você aprova cada entrega antes de seguir."
      }
     },
     {
      "@type": "Question",
-     "name": "O que é SEO, GEO e AEO?",
+     "name": "Quanto tempo leva para desenvolver um software?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "SEO coloca o site da sua empresa no Google. GEO e AEO organizam o conteúdo para as IAs, como ChatGPT, Gemini e Claude, entenderem e citarem a sua empresa. A Roque Business Evolution faz os três no mesmo trabalho, e o próprio site da Roque é construído com esse método."
+      "text": "Depende do escopo. Começar por um MVP, a primeira versão com o essencial, coloca o sistema em uso mais cedo e deixa o restante para as versões seguintes. Na Roque Business Evolution, o prazo de cada etapa vem por escrito na proposta, antes de o projeto começar."
      }
     },
     {
      "@type": "Question",
-     "name": "A Roque Business Evolution garante a primeira posição no Google?",
+     "name": "Como escolher uma empresa de desenvolvimento de software?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Não. Ninguém pode garantir posição no Google nem citação em respostas de IA. Garantimos o trabalho feito seguindo as orientações oficiais dos buscadores, com indicadores acompanhados. O que a Roque Business Evolution entrega é o método completo, com relatórios no Google Search Console para você acompanhar cada mês."
+      "text": "Veja se ela entende o seu negócio antes do código, coloca escopo, prazo e valor por escrito, entrega em etapas, integra com o que você já usa, deixa claro de quem é o software e cuida da evolução depois da entrega. É assim que a Roque Business Evolution trabalha."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A empresa de desenvolvimento de software precisa ser da minha cidade?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. Reuniões online resolvem a maior parte do projeto; o que importa é ter etapas claras e acompanhamento. A Roque Business Evolution vai até a sua empresa em São Paulo e em Guarulhos e atende todo o Brasil com reuniões online."
      }
     },
     {
@@ -105,7 +113,7 @@
      "name": "Quem está por trás da Roque Business Evolution?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "A fundadora é Viviane Roque , que trabalha com tecnologia e gestão de operações desde 1998. Conheça a história da empresa ."
+      "text": "A fundadora é Viviane Roque , que trabalha com tecnologia e gestão de operações desde 1998. A Roque Business Evolution nasceu dessa experiência. Conheça a história da empresa ."
      }
     }
    ]

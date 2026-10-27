@@ -97,6 +97,14 @@
    "mainEntity": [
     {
      "@type": "Question",
+     "name": "Tem que pagar para criar um aplicativo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. Além do desenvolvimento e da manutenção, a Google Play cobra uma taxa única de cadastro de desenvolvedor e a App Store, uma anuidade. Na Roque Business Evolution, a proposta mostra por escrito o custo de cada etapa e o que é cobrado pelas lojas."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Quanto custa desenvolver um aplicativo?",
      "acceptedAnswer": {
       "@type": "Answer",

@@ -97,6 +97,30 @@
    "mainEntity": [
     {
      "@type": "Question",
+     "name": "Qual é a melhor IA para empresas?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A Roque Business Evolution cria agentes de IA para empresas que trabalham com o conteúdo e as regras de cada negócio, como o EngageBot, atendimento com IA no WhatsApp e no site. Mais do que escolher entre ChatGPT, Gemini ou Claude, o que decide o resultado é ligar a IA aos dados e aos processos da empresa."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como aplicar IA nas empresas?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Comece por uma tarefa repetitiva e mensurável, como responder dúvidas de clientes, qualificar contatos ou resumir documentos, defina regras de uso e meça o resultado antes de ampliar. A Roque Business Evolution faz esse caminho com você: diagnóstico, agente piloto, regras de governança e capacitação da equipe."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como posso criar uma IA para a minha empresa?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Você não precisa criar uma IA do zero: o caminho é um agente de IA que usa o conteúdo da sua empresa, como site, documentos e perguntas frequentes, e trabalha dentro das suas regras. A Roque Business Evolution cria esses agentes, do diagnóstico à ativação, e mantém no ar o EngageBot."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "O que são agentes de IA?",
      "acceptedAnswer": {
       "@type": "Answer",

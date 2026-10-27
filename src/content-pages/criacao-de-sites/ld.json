@@ -97,6 +97,30 @@
    "mainEntity": [
     {
      "@type": "Question",
+     "name": "Qual é o melhor criador de site profissional?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A Roque Business Evolution é uma empresa de criação de sites profissionais que entrega design, texto, SEO, GEO, AEO e WhatsApp no mesmo projeto. Plataformas prontas servem para começar, mas um site sob medida dá mais controle sobre velocidade, estrutura e conteúdo para o Google e as IAs."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Qual o valor mensal de um site?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Um site tem custos mensais de hospedagem e domínio, e pode ter manutenção e evolução contratadas à parte; o valor depende de onde ele fica hospedado e do que entra no acompanhamento. Na Roque Business Evolution, a proposta separa por escrito o que é pago uma vez e o que é mensal, antes de o projeto começar."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Dá para criar um site grátis?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dá, em plataformas com plano gratuito, mas com limites: endereço com o nome da plataforma, menos controle sobre velocidade e estrutura e recursos de SEO restritos. Quando a empresa precisa ser encontrada e vender, a Roque Business Evolution cria o site profissional com domínio próprio, SEO, GEO, AEO e WhatsApp."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Quanto custa a criação de um site profissional?",
      "acceptedAnswer": {
       "@type": "Answer",
