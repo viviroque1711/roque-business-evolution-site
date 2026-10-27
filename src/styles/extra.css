@@ -141,3 +141,26 @@
   .hd-sub a, .hd-list .hd-sub a:not(.btn) { color: #C9D1DE; }
   .hd-col-h { color: #C08A1E; }
 }
+
+/* ---------- rodapé (27/10/2026): marca e contato, Serviços (4 famílias), A Roque (5 colunas), barra final com o legal */
+.ft2 { padding-top: 3.5rem; }
+.ft2 > div { max-width: var(--wrap); margin: 0 auto; padding: 0 1.25rem; }
+.ft2-top { display: grid; gap: 1.5rem; padding-bottom: 2rem !important; border-bottom: 1px solid var(--line-ink); }
+.ft2-marca { display: flex; gap: 1.25rem; align-items: center; }
+.ft2-marca .ft-logo { width: 72px; margin: 0; }
+.ft2-marca p { margin: 0 0 .35rem; }
+.ft2-contato { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; align-items: center; }
+.ft2-contato a { display: inline-flex; align-items: center; min-height: 44px; }
+.ft2-contato .ft2-wa { font-weight: 700; }
+@media (min-width: 900px) { .ft2-top { grid-template-columns: 1.3fr 1fr; align-items: center; } .ft2-contato { justify-content: flex-end; } }
+.ft2-bloco { padding-top: 2rem !important; }
+.ft2-titulo { margin: 0 0 .75rem; font: 500 1.05rem/1.2 var(--display); color: #fff; letter-spacing: .01em; }
+.ft2-cols { display: grid; gap: 1.25rem 1.5rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 900px) { .ft2-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); } .ft2-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+.ft2 .ft-h { margin: 0 0 .35rem !important; color: #F2D69C; font-size: .95rem; }
+.ft2 .ft-col li a { min-height: 40px; font-size: .95rem; }
+@media (min-width: 900px) { .ft2 .ft-col li a { min-height: 32px; } }
+.ft2-base { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; align-items: center; justify-content: space-between; margin-top: 2.5rem !important; padding-top: 1.25rem !important; padding-bottom: 1.5rem !important; border-top: 1px solid var(--line-ink); }
+.ft2-base .ft-copy { margin: 0; padding: 0; border: 0; }
+.ft2-legal { list-style: none; margin: 0; padding: 0; display: flex; gap: 1.5rem; }
+.ft2-legal a { display: inline-flex; align-items: center; min-height: 44px; color: var(--on-ink-2); font-size: .9375rem; }

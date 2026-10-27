@@ -63,104 +63,21 @@ const homeFaq = faq([
   Q('Quem está por trás da Roque Business Evolution?', 'A fundadora é <a href="https://viviroque.com.br/" rel="noopener">Viviane Roque</a>, que trabalha com tecnologia e gestão de operações desde 1998. A Roque Business Evolution nasceu dessa experiência. Conheça a <a href="/sobre/">história da empresa</a>.'),
 ], { pagePath: '/', heading: 'Perguntas frequentes sobre empresa de desenvolvimento de software' });
 
+// HOME v7 (27/10/2026, rodada final aprovada pela Viviane): protótipo sobre o design system (tokens + bundle + home.css,
+// com escopo #conteudo), levado para cá por scripts de porta (home-v7/): abertura em quatro momentos (mouse e rotação
+// automática), camadas em placas 3D que viram de frente, "Qual é a melhor" com o passo a passo, o que a Roque desenvolve
+// (software com as áreas conectadas, sites, aplicativos, IA), EngageBot e o FAQ só da home. FAQ do JSON-LD = FAQ visível.
+const V7 = (f) => read('home-v7/' + f);
+const HOME_FAQ = JSON.parse(V7('faq.json'));
 export const home = {
   path: '/', og: 'home',
   title: 'Empresa de Desenvolvimento de Software e Criação de Sites | Roque',
   description: 'Empresa de desenvolvimento de software e criação de sites profissionais, com SEO, GEO e AEO, software sob medida e aplicativos. Peça orçamento à Roque.',
   themeColor: '#000000',
-  css: read('home3d.css') + '\n' + DEVICE_CSS + '\n' + CHOOSE_CSS,
-  js: read('home3d.js') + '\n' + DEVICE_JS,
-  body: `<div class="h3d">
-<section class="h3d-hero" data-h3d-hero aria-labelledby="h1"><div class="h3d-stage">
-<canvas class="h3d-field" aria-hidden="true"></canvas>
-<div class="h3d-stage-in">
-<div class="h3d-copy"><h1 id="h1">${TERMOS.map(([h, t]) => `<a class="t" href="${h}">${esc(t)}</a>`).join('\n')}</h1>
-${gold('Pedir orçamento no WhatsApp')}</div>
-<div class="h3d-globe" role="img" aria-label="Logo da Roque Business Evolution: uma rede de nós girando em 3D"><canvas data-h3d-globe></canvas></div>
-</div></div></section>
-
-<section class="h3d-sec h3d-black" id="empresa" aria-labelledby="empresa-h"><div class="wrap h3d-layers">
-<div><h2 id="empresa-h">A Roque Business Evolution é uma empresa de transformação digital</h2>
-<p class="h3d-one">Três camadas que trabalham juntas na sua empresa.</p>
-<ol class="h3d-layer-list">
-<li><a href="/criacao-de-sites/" data-h3d-layer="2"><b>1</b><strong>Presença</strong><small>Criação de sites profissionais</small></a></li>
-<li><a href="/desenvolvimento-de-software/" data-h3d-layer="1"><b>2</b><strong>Operação</strong><small>Software sob medida e aplicativos</small></a></li>
-<li><a href="/seo/" data-h3d-layer="0"><b>3</b><strong>Descoberta</strong><small>SEO, GEO e AEO no Google e nas IAs</small></a></li>
-</ol></div>
-<div class="h3d-stack" data-h3d-stack aria-hidden="true"><div class="h3d-stack-rot">
-<div class="h3d-plane"><i></i><i></i><i></i><i></i><span>Descoberta</span></div>
-<div class="h3d-plane"><i></i><i></i><i></i><i></i><span>Operação</span></div>
-<div class="h3d-plane"><i></i><i></i><i></i><i></i><span>Presença</span></div>
-</div></div>
-</div></section>
-
-<section class="h3d-sec white" id="como-escolher" aria-labelledby="como-escolher-h"><div class="wrap">
-<h2 id="como-escolher-h">Qual é a melhor empresa de desenvolvimento de software?</h2>
-${choose(
-  'A melhor empresa de desenvolvimento de software é a que entende o seu negócio antes de escrever código e entrega em etapas que você aprova. <strong>É assim que a Roque Business Evolution trabalha:</strong> entra na sua operação, desenha a solução com você e entrega o sistema funcionando, do diagnóstico à evolução contínua.',
-  [
-    [IC.nodes, 'Entende o negócio antes do código?', 'Todo projeto começa pelo diagnóstico do seu processo, antes da proposta.'],
-    [IC.doc, 'Escopo e prazo por escrito?', 'Requisitos, etapas, entregas e critérios de aceite definidos no início.'],
-    [IC.code, 'Entrega em etapas?', 'Primeiro o MVP, depois versões que você testa e aprova.'],
-    [IC.plug, 'Integra com o que você já usa?', 'Integramos com ERP, CRM, WhatsApp, APIs e sistemas legados.'],
-    [IC.lock, 'O software é de quem?', 'Propriedade, acessos e suporte ficam definidos no seu contrato.'],
-    [IC.chart, 'Cuida depois da entrega?', '<a href="/suporte-e-evolucao-continua/">Suporte e evolução contínua</a> depois que o sistema entra em produção.'],
-  ],
-  `A prova está no ar: a Roque Business Evolution desenvolve e mantém os próprios produtos, o <a href="${AURORA}" rel="noopener">Aurora Premium</a> e o <a href="${ENGAGEBOT}" rel="noopener">EngageBot</a>.`,
-  'Olá! Quero um diagnóstico para desenvolver um sistema para a minha empresa.',
-  ['/metodologia/', 'Ver a metodologia'],
-)}
-</div></section>
-
-<section class="h3d-sec mist" id="servicos" aria-labelledby="servicos-h"><div class="wrap">
-<h2 id="servicos-h">Serviços de criação de sites, software, SEO, GEO e AEO</h2>
-<p class="h3d-one">Gire o anel e escolha por onde começar. Veja <a href="/servicos/">todos os serviços</a>.</p>
-<div class="h3d-ring-wrap" data-h3d-ring><ul class="h3d-ring">
-${ANEL.map(([h, ic, t, s]) => `<li><a class="h3d-tile" href="${h}"><svg viewBox="0 0 46 46" aria-hidden="true">${I[ic]}</svg><span><strong>${esc(t)}</strong><small>${esc(s)}</small></span></a></li>`).join('\n')}
-</ul></div>
-<div class="h3d-ring-ctrl"><button type="button" data-prev aria-label="Serviço anterior">‹</button><button type="button" data-next aria-label="Próximo serviço">›</button></div>
-</div></section>
-
-<section class="h3d-sec h3d-black" id="produtos" aria-labelledby="produtos-h"><div class="wrap">
-<h2 id="produtos-h">Produtos da Roque Business Evolution</h2>
-<p class="h3d-one">Dois SaaS que nós criamos e operamos.</p>
-<div class="h3d-prods">
-<div class="h3d-prod">${homeAurora()}
-<h3>Aurora Premium</h3><ul><li>Agenda online</li><li>Lembrete no WhatsApp</li><li>Financeiro e comissão</li><li>Salões, clínicas, spas e pet shops</li></ul>
-<a class="more" href="${AURORA}" rel="noopener">Conhecer o Aurora Premium</a></div>
-<div class="h3d-prod">${homeEngageBot()}
-<h3>EngageBot</h3><ul><li>Atendimento com IA</li><li>WhatsApp e site</li><li>Aprende com seus documentos</li></ul>
-<a class="more" href="${ENGAGEBOT}" rel="noopener">Conhecer o EngageBot</a></div>
-</div>
-</div></section>
-
-<section class="h3d-sec mist" id="como-trabalhamos" aria-labelledby="como-h"><div class="wrap">
-<h2 id="como-h">Como a Roque Business Evolution trabalha</h2>
-<p class="h3d-one">Sete etapas, do diagnóstico à evolução contínua.</p>
-<div class="h3d-steps-scene"><ol class="h3d-steps" data-h3d-steps>${ETAPAS.map(([b, t], i) => `<li><b>${i + 1}</b><strong>${esc(b)}</strong><small>${esc(t)}</small></li>`).join('')}</ol></div>
-<a class="h3d-more" href="/metodologia/">Ver a metodologia</a>
-</div></section>
-
-<section class="h3d-sec white" id="fundadora" aria-labelledby="fundadora-h"><div class="wrap h3d-founder">
-<div class="h3d-pscene" data-h3d-tilt><div class="h3d-portrait"><canvas class="h3d-pnet" data-h3d-pnet aria-hidden="true"></canvas><img src="/img/viviane-roque-retrato-510w.webp" srcset="/img/viviane-roque-retrato-340w.webp 340w, /img/viviane-roque-retrato-510w.webp 510w" sizes="(min-width: 900px) 360px, 80vw" width="510" height="564" alt="Viviane Roque, fundadora da Roque Business Evolution" loading="lazy" decoding="async"></div></div>
-<div><h2 id="fundadora-h">Viviane Roque, fundadora da Roque Business Evolution</h2>
-<ol class="h3d-marks">
-<li><b>1998</b><span>Tecnologia e operações, da telefonia analógica ao 4G</span></li>
-<li><b>2014</b><span>Telecomunicações e novas tecnologias nas arenas da Copa</span></li>
-<li><b>Depois</b><span>Lançamentos de Google e Apple e sistemas para municípios</span></li>
-<li><b>2025</b><span>Lança o Aurora Premium</span></li>
-</ol>
-<a class="h3d-more" href="/sobre/">Conhecer a história</a></div>
-</div></section>
-</div>
-
-${homeFaq.html.replace('class="sec paper"', 'class="sec mist"')}
-
-<div class="h3d"><section class="h3d-sec h3d-black h3d-final" id="conversar" aria-labelledby="cta-h"><div class="wrap h3d-final-in">
-<div><h2 id="cta-h">Vamos tirar o seu projeto do papel</h2><p class="h3d-one">Site, sistema ou SEO: conte o que você precisa.</p>${gold('Pedir orçamento no WhatsApp')}</div>
-<canvas data-h3d-mini aria-hidden="true"></canvas>
-</div></section></div>`,
-  get graph() { return [org(), website(), webpage('/', 'Roque Business Evolution: empresa de desenvolvimento de software e criação de sites'), homeFaq.ld]; },
+  css: V7('home.css'),
+  js: V7('home.js'),
+  body: V7('body.html'),
+  get graph() { return [org(), website(), webpage('/', 'Roque Business Evolution: empresa de desenvolvimento de software e criação de sites'), { '@type': 'FAQPage', '@id': pageUrl('/') + '#faq', mainEntity: HOME_FAQ }]; },
 };
 
 const FASES_HOME = [['Diagnóstico', 'Negócio, público e processos.'], ['Pesquisa e estratégia', 'Mercado e oportunidades.'], ['Arquitetura', 'Escopo e integrações.'], ['Implementação', 'Construção e conteúdo.'], ['Testes', 'Validação e aprovação.'], ['Publicação', 'Produção e operação.'], ['Evolução', 'Indicadores e melhorias.']];

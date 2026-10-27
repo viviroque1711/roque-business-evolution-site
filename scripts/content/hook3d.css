@@ -113,3 +113,40 @@
 /* aparelhos na abertura (devices.css): mais largos que o objeto antigo */
 .k3-obj.k3-dev { aspect-ratio: auto; width: min(100%, 660px); }
 @media (max-width: 899px) { .k3-obj.k3-dev { width: min(100%, 440px); margin-bottom: .5rem; } }
+
+/* ---------- anatomia em placas 3D (27/10/2026): placas de vidro e ouro com a camada dentro; a escolhida vira de frente */
+.cm3 { position: relative; height: clamp(460px, 46vw, 600px); }
+.cm3-pilha { position: absolute; left: 0; right: 0; top: 50%; }
+.cm3-placa { position: absolute; left: 0; top: 0; width: 100%; z-index: calc(10 - var(--i)); transform: translate3d(0, calc(-50% + (var(--i) - 2) * var(--gap, 40px)), 0); transition: opacity .5s; }
+.cm3-placa .rx { animation: none; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+.cm3-placa .rx-moldura { filter: drop-shadow(0 18px 18px rgba(0,0,0,.45)); }
+.cm3-placa.acesa .rx { transform: translateY(-16px); }
+.cm3-placa.acesa .rx-moldura { filter: drop-shadow(0 0 16px rgba(192,138,30,.6)) drop-shadow(0 22px 20px rgba(0,0,0,.5)); }
+.cm-fio { position: absolute; z-index: 0; width: 2px; height: var(--gap, 40px); background: #C08A1E; opacity: .7; transform: translateX(-1px); }
+.cm-fio.a { left: 4.25%; top: 50.6%; } .cm-fio.b { left: 61.6%; top: 5.6%; } .cm-fio.c { left: 95.4%; top: 44.8%; } .cm-fio.d { left: 35.1%; top: 86.6%; }
+.cm3-sombra { position: absolute; left: 14%; right: 10%; bottom: 2%; height: 40px; border-radius: 50%; background: radial-gradient(closest-side, rgba(192,138,30,.22), rgba(192,138,30,0)); }
+.cm-tela { background: #0B1220 !important; color: #fff; font-family: var(--body); transition: transform .9s cubic-bezier(.2,.7,.2,1), box-shadow .6s, border-radius .6s; }
+.cm-topo { display: flex; align-items: center; gap: 14px; height: 72px; padding: 0 26px; background: #000; }
+.cm-topo b { padding: 6px 16px; border-radius: 999px; background: #C08A1E; color: #000; font-size: 24px; } .cm-topo span { font-size: 20px; color: #C9D1DE; }
+.cm-corpo { position: relative; height: 468px; overflow: hidden; }
+.cm-img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.cm-txt { height: 100%; padding: 30px 34px; background: #fff; color: #16233A; } .cm-txt b { display: block; font: 500 34px/1.15 var(--display); }
+.cm-txt p { margin: 14px 0; font-size: 22px; line-height: 1.4; color: #3A4558; } .cm-txt ul { margin: 0; padding-left: 26px; font-size: 21px; line-height: 1.6; } .cm-txt li::marker { color: #A87000; }
+.cm-serp { height: 100%; padding: 22px 26px; background: #fff; color: #16233A; }
+.cm-serp .q { padding: 14px 22px; border: 2px solid #D8DDE5; border-radius: 999px; font-size: 24px; }
+.cm-serp .r { margin-top: 16px; padding: 16px 20px; border-radius: 12px; background: #FBF6EC; border: 2px solid #C08A1E; }
+.cm-serp .r small { display: block; font-size: 18px; color: #1F7A55; } .cm-serp .r b { display: block; font-size: 25px; color: #1A3E8C; } .cm-serp .r span { display: block; margin-top: 4px; font-size: 19px; color: #3A4558; }
+.cm-serp .chips { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 10px; } .cm-serp .chips i { font-style: normal; padding: 8px 16px; border-radius: 999px; background: #16233A; color: #fff; font-size: 18px; }
+.cm-vel { height: 100%; display: grid; grid-template-columns: 250px 1fr; gap: 30px; align-items: center; padding: 0 40px; }
+.cm-vel .g { position: relative; width: 230px; height: 230px; border-radius: 50%; background: conic-gradient(#C08A1E 0 82%, rgba(255,255,255,.1) 82% 100%); display: grid; place-items: center; }
+.cm-vel .g i { position: absolute; inset: 22px; border-radius: 50%; background: #0B1220; } .cm-vel .g b { position: relative; font: 500 34px var(--display); color: #F2D69C; }
+.cm-vel ul { margin: 0; padding-left: 24px; font-size: 24px; line-height: 1.7; } .cm-vel li::marker { color: #C08A1E; }
+.cm-conv { height: 100%; display: grid; grid-template-columns: 1.2fr 1fr; gap: 26px; padding: 30px; background: #F4F6F9; color: #16233A; }
+.cm-conv .f { display: grid; gap: 12px; align-content: start; } .cm-conv .f i { font-style: normal; padding: 14px 18px; border: 2px solid #D8DDE5; border-radius: 10px; background: #fff; font-size: 20px; color: #5A6578; }
+.cm-conv .f span, .cm-conv .w span { padding: 16px; border-radius: 12px; text-align: center; font-weight: 700; font-size: 21px; }
+.cm-conv .f span { background: #A87000; color: #000; } .cm-conv .w { display: grid; gap: 14px; align-content: center; } .cm-conv .wa { background: #1F7A55; color: #fff; } .cm-conv .ag { background: #16233A; color: #fff; }
+.cm3-placa.vira { z-index: 30; opacity: 1 !important; }
+.cm3-placa.vira .cm-tela { z-index: 3; border-radius: 16px; box-shadow: 0 0 0 5px #C08A1E, 0 0 40px 8px rgba(192,138,30,.45), 0 40px 80px rgba(0,0,0,.6); }
+.cm3.virou .cm3-placa:not(.vira) { opacity: .25; }
+@media (max-width: 899px) { .cm3 { height: 420px; } }
+.cm-conv .w { display: flex; flex-direction: column; justify-content: center; gap: 14px; }

@@ -151,20 +151,47 @@
     requestAnimationFrame(frame);
   }
 
-  // ---------------------------------------------------------------- anatomia em camadas
-  var stack = document.querySelector('[data-k3-stack]');
-  if (stack) {
-    var rot = stack.firstElementChild, planes = [].slice.call(rot.children), items = [].slice.call(document.querySelectorAll('[data-k3-layer]'));
-    var n = planes.length;
-    var place = function (open) { planes.forEach(function (p, i) { p.style.transform = 'translateZ(' + ((i - (n - 1)/2)*(open ? 70 : 34)) + 'px)'; }); };
-    var light = function (i) { planes.forEach(function (p, k) { p.classList.toggle('lit', k === i); }); items.forEach(function (it, k) { it.classList.toggle('lit', k === i); }); };
-    items.forEach(function (it, i) { it.addEventListener('pointerenter', function () { light(i); }); it.addEventListener('pointerleave', function () { light(-1); }); });
-    place(false);
-    var onScroll = function () {
-      var b = stack.getBoundingClientRect(), p = Math.min(1, Math.max(0, 1 - (b.top + b.height/2)/innerHeight));
-      place(p > .25);
-      if (!reduce) { rot.style.transform = 'rotateX(' + (60 - p*12) + 'deg) rotateZ(' + (-36 + p*20) + 'deg)'; var i = Math.min(n - 1, Math.floor(Math.max(0, p - .3)/.5*n)); if (p > .3 && p < .85) light(n - 1 - i); }
+  // ---------------------------------------------------------------- anatomia em placas 3D: a pilha monta e desmonta sozinha
+  // (sem depender da rolagem); a camada acesa troca a cada 3,5 s; mouse, foco ou toque numa camada vira a placa de frente.
+  var box = document.querySelector('[data-cm3]');
+  if (box) {
+    var placas = [].slice.call(box.querySelectorAll('.cm3-placa')), items = [].slice.call(document.querySelectorAll('[data-k3-layer]'));
+    var n = placas.length, vis = false, raf = 0, t0 = performance.now(), fixo = -1, fAtual = 0, ultimo = 'mouse';
+    var acende = function (k) { placas.forEach(function (p, i) { p.classList.toggle('acesa', i === k); }); items.forEach(function (it, i) { it.classList.toggle('lit', i === k); }); };
+    var vira = function () {
+      var br = box.getBoundingClientRect();
+      placas.forEach(function (p, i) {
+        var on = i === fixo, tela = p.querySelector('.cm-tela'), dev = p.querySelector('.rx');
+        p.classList.toggle('vira', on);
+        if (on) {
+          var dr = dev.getBoundingClientRect(), s = Math.min(br.width * 1.02 / tela.offsetWidth, br.height * .9 / tela.offsetHeight);
+          var tx = br.left + br.width / 2 - dr.left - tela.offsetWidth * s / 2, ty = br.top + br.height / 2 - dr.top - tela.offsetHeight * s / 2;
+          tela.classList.add('frente'); tela.style.transform = 'matrix3d(' + s + ',0,0,0,0,' + s + ',0,0,0,0,1,0,' + tx.toFixed(1) + ',' + ty.toFixed(1) + ',0,1)';
+        } else if (tela.classList.contains('frente')) { tela.classList.remove('frente'); if (tela.dataset.h) tela.style.transform = tela.dataset.h; }
+      });
+      box.classList.toggle('virou', fixo >= 0);
     };
-    addEventListener('scroll', onScroll, { passive: true }); onScroll();
+    var frame = function (now) {
+      var w = box.clientWidth, g0 = w * .07, g1 = w * .15, s = (now - t0) / 1000;
+      var alvo = fixo >= 0 ? 1 : (reduce ? .5 : .5 - .5 * Math.cos(s / 9 * Math.PI * 2));
+      fAtual = reduce ? alvo : fAtual + (alvo - fAtual) * (fixo >= 0 ? .12 : .5);
+      var gap = (g0 + (g1 - g0) * fAtual).toFixed(1) + 'px';
+      placas.forEach(function (p) { p.style.setProperty('--gap', gap); });
+      if (fixo < 0) acende(Math.floor(s / 3.5) % n);
+      vira();
+      raf = vis && !reduce && !document.hidden ? requestAnimationFrame(frame) : 0;
+    };
+    var liga = function () { if (!raf) raf = requestAnimationFrame(frame); };
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { vis = es[0].isIntersecting; if (vis) liga(); }, { threshold: .15 }).observe(box); else { vis = true; liga(); }
+    document.addEventListener('visibilitychange', function () { if (!document.hidden && vis) liga(); });
+    addEventListener('pointerdown', function (e) { ultimo = e.pointerType; }, { capture: true, passive: true });
+    items.forEach(function (it, i) {
+      var pega = function () { fixo = i; acende(i); liga(); }, solta = function () { fixo = -1; liga(); };
+      it.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') pega(); });
+      it.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') solta(); });
+      it.addEventListener('focus', pega); it.addEventListener('blur', solta);
+      it.addEventListener('click', function () { if (ultimo !== 'mouse') { if (fixo === i) solta(); else pega(); } });
+    });
+    frame(performance.now());
   }
 })();

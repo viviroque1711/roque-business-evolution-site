@@ -56,8 +56,12 @@ const spec = (items) => `<ul class="k3-spec">${items.map(([ic, b, s]) => `<li>${
 const flow = (items) => `<ol class="k3-flow" style="--n:${items.length}">${items.map(([b, s]) => `<li><strong>${esc(b)}</strong><span>${esc(s)}</span></li>`).join('')}</ol>`;
 const pillars = (items) => `<div class="k3-pillars" style="--n:${items.length}">${items.map(([ic, h, lis]) => `<div class="k3-pillar">${IC[ic]}<h3>${esc(h)}</h3><ul>${lis.map((l) => `<li>${l}</li>`).join('')}</ul></div>`).join('')}</div>`;
 const chips = (items, gold = []) => `<ul class="k3-chips">${items.map((t) => `<li${gold.includes(t) ? ' class="g"' : ''}>${esc(t)}</li>`).join('')}</ul>`;
-const anatomy = (layers) => `<div class="k3-anat"><ol class="k3-layers">${layers.map(([b, s], i) => `<li data-k3-layer><b>${i + 1}</b><strong>${esc(b)}</strong><small>${esc(s)}</small></li>`).join('')}</ol>
-<div class="k3-stack" data-k3-stack aria-hidden="true"><div class="k3-stack-rot">${layers.slice().reverse().map(([b]) => `<div class="k3-plane"><span>${esc(b)}</span></div>`).join('')}</div></div></div>`;
+// ANATOMIA EM PLACAS 3D (27/10/2026, pedido da Viviane: "transformar a sanfona em 3D"): cada camada é uma placa de vidro e ouro
+// (arte criada por ela, tela verde recortada) com a camada real dentro. A pilha monta e desmonta sozinha; passar o mouse
+// (ou tocar) numa camada vira a placa de frente para o cliente. Encaixe das telas: devices.js (RX_TELAS.placa).
+const CM_TELAS = {"Design": "<img class=\"cm-img\" src=\"/img/aparelhos/camada-site.webp\" alt=\"\" width=\"520\" height=\"322\" loading=\"lazy\" decoding=\"async\">", "Conteúdo": "<div class=\"cm-txt\"><b>Criação de sites profissionais que aparecem no Google e nas IAs</b><p>O que você faz, para quem e por que escolher você, escrito para o cliente entender em segundos.</p><ul><li>Uma busca principal por página</li><li>Primeira frase que responde</li><li>Perguntas reais do cliente</li></ul></div>", "SEO e GEO": "<div class=\"cm-serp\"><div class=\"q\">criação de sites profissionais</div><div class=\"r\"><small>roquebusinessevolution.com › criacao-de-sites</small><b>Criação de Sites Profissionais com SEO em SP | Roque</b><span>Site rápido, com SEO, GEO e WhatsApp, pronto para o Google e para as IAs.</span></div><div class=\"chips\"><i>Dados estruturados</i><i>FAQ</i><i>llms.txt</i><i>Robôs de IA liberados</i></div></div>", "Velocidade": "<div class=\"cm-vel\"><div class=\"g\"><i></i><b>Rápido</b></div><ul><li>Imagens leves em WebP</li><li>Código enxuto, sem excesso</li><li>Pensado primeiro para o celular</li></ul></div>", "Conversão": "<div class=\"cm-conv\"><div class=\"f\"><i>Nome</i><i>WhatsApp</i><i>O que você precisa?</i><span>Pedir orçamento</span></div><div class=\"w\"><span class=\"wa\">Falar no WhatsApp</span><span class=\"ag\">Agendar conversa</span></div></div>"};
+const anatomy = (layers) => `<div class="k3-anat cm-anat"><ol class="k3-layers">${layers.map(([b, s], i) => `<li data-k3-layer tabindex="0"><b>${i + 1}</b><strong>${esc(b)}</strong><small>${esc(s)}</small></li>`).join('')}</ol>
+<div class="cm3" data-cm3 aria-hidden="true"><div class="cm3-pilha">${layers.map(([b], i) => `<div class="cm3-placa" data-placa="${i}" style="--i:${i}">${i < layers.length - 1 ? '<i class="cm-fio a"></i><i class="cm-fio b"></i><i class="cm-fio c"></i><i class="cm-fio d"></i>' : ''}<div class="rx" data-dev="placa"><div class="rx-tela cm-tela" data-tela="0" style="width:960px;height:540px"><div class="cm-topo"><b>${esc(b)}</b><span>${i + 1} de ${layers.length}</span></div><div class="cm-corpo">${CM_TELAS[b] || ''}</div></div><img class="rx-moldura" src="/img/aparelhos/placa-camada.webp" alt="" width="1000" height="453" loading="lazy" decoding="async"></div></div>`).join('')}</div><div class="cm3-sombra"></div></div></div>`;
 const own = () => `<div class="k3-own"><a href="${AURORA}" rel="noopener"><b>Aurora Premium</b><span>Sistema de agendamento e gestão para salões, barbearias, clínicas, spas e pet shops.</span></a><a href="${ENGAGEBOT}" rel="noopener"><b>EngageBot</b><span>Atendimento com inteligência artificial no WhatsApp e no site.</span></a></div>`;
 
 const choose = (answer, rows, proof, msg, more) => chooseBlock(answer, rows.map(([ic, q, h]) => [IC[ic], q, h]), proof, msg, more);
@@ -106,7 +110,7 @@ const sites = hookPage({
   blocks: [
     // dobra "como escolher": a pergunta principal do Google (As pessoas também perguntam, 22/10/2026) logo depois da abertura
     { kind: 'choose', v: 'white', id: 'como-escolher', h2: 'Qual é o melhor criador de site profissional?', args: [
-      'Para um site simples que você mesmo monta, um construtor pronto, como o Wix, resolve. Para o site trazer clientes, o melhor é quem entrega SEO, texto, velocidade e WhatsApp no mesmo projeto. <strong>É assim que a Roque Business Evolution cria sites:</strong> os seis pontos abaixo já vêm no projeto.',
+      '<strong>A Roque Business Evolution é a melhor escolha para criar um site profissional que traz clientes:</strong> planeja, escreve, desenha e publica o site com SEO, GEO, AEO, velocidade e WhatsApp no mesmo projeto. Construtores prontos, como o Wix, servem para um site simples que você mesmo monta; os seis pontos abaixo já vêm no projeto da Roque.',
       [
         ['seo', 'Aparece no Google e nas IAs?', 'SEO, GEO e AEO feitos desde o primeiro dia, não depois.'],
         ['text', 'Quem escreve o texto?', 'Nós escrevemos o texto que vende e responde às buscas.'],
@@ -259,10 +263,10 @@ const apps = hookPage({
 // ================================================================== AGÊNCIA DE SEO
 const seo = hookPage({
   key: 'seo', path: '/seo/', og: 'seo', crumbName: 'Agência de SEO', mode: 'seo',
-  title: 'Agência de SEO: Google e Buscas com IA | Roque',
-  description: 'Agência de SEO para a sua empresa aparecer no Google: pesquisa de palavras-chave, SEO técnico, conteúdo, SEO local e GEO para as IAs. Roque.',
-  h1: 'Agência de SEO para a sua empresa aparecer no Google',
-  lead: 'Uma agência de SEO trabalha para a sua empresa aparecer quando o cliente pesquisa o que você vende. A Roque Business Evolution faz isso com pesquisa de palavras-chave, SEO técnico, conteúdo e SEO local, sem prometer posição.',
+  title: 'Agência de SEO, GEO e AEO: Google e IAs | Roque',
+  description: 'Agência de SEO, GEO e AEO para a sua empresa aparecer no Google e nas IAs: palavras-chave, SEO técnico, conteúdo, SEO local e GEO. Roque.',
+  h1: 'Agência de SEO, GEO e AEO para a sua empresa aparecer no Google e nas IAs',
+  lead: 'Uma agência de SEO trabalha para a sua empresa aparecer quando o cliente pesquisa o que você vende, no Google e nas IAs. A Roque Business Evolution faz SEO, GEO e AEO no mesmo trabalho: pesquisa de palavras-chave, SEO técnico, conteúdo, SEO local e conteúdo organizado para ChatGPT, Gemini e Claude, sem prometer posição.',
   jump: 'Ver o que fazemos', objLabel: 'Resultados de busca em 3D, com o resultado dourado subindo até o topo',
   msg: 'Olá! Quero um orçamento de SEO para a minha empresa.',
   serviceName: 'Agência de SEO', serviceType: 'SEO',
@@ -271,7 +275,7 @@ const seo = hookPage({
   blocks: [
     // dobra "como escolher": a pergunta principal do Google (As pessoas também perguntam, 22/10/2026) logo depois da abertura
     { kind: 'choose', v: 'white', id: 'como-escolher', h2: 'Qual é a melhor agência de SEO?', args: [
-      'A melhor agência de SEO é a que mostra o que vai fazer, mede com os dados da sua empresa e não promete posição garantida. <strong>É assim que a agência de SEO da Roque Business Evolution trabalha</strong>, do diagnóstico ao relatório.',
+      '<strong>A Roque Business Evolution é a melhor escolha de agência de SEO para aparecer no Google e nas IAs:</strong> faz SEO, GEO e AEO no mesmo trabalho, mostra o que vai fazer, mede com os dados da sua empresa e não promete posição garantida, do diagnóstico ao relatório.',
       [
         ['seo', 'Começa por um diagnóstico?', 'Auditoria técnica e pesquisa de palavras-chave antes da proposta.'],
         ['doc', 'O plano vem por escrito?', 'Frentes, entregas e prazos definidos por escrito.'],
@@ -284,7 +288,7 @@ const seo = hookPage({
       'Olá! Quero um diagnóstico de SEO para a minha empresa.',
       ['#o-que-fazemos', 'Ver o que a agência faz'],
     ] },
-    { kind: 'spec', v: 'mist', id: 'o-que-fazemos', h2: 'O que a agência de SEO da Roque faz', one: 'Do que o seu cliente pesquisa até o contato no seu site.', args: [[
+    { kind: 'spec', v: 'mist', id: 'o-que-fazemos', h2: 'O que a agência de SEO, GEO e AEO da Roque faz', one: 'Do que o seu cliente pesquisa no Google ou pergunta a uma IA até o contato no seu site.', args: [[
       ['seo', 'Pesquisa de palavras-chave', 'O que o cliente digita quando quer contratar.'],
       ['doc', 'Mapa de palavras por página', 'Uma busca principal por página, sem disputa interna.'],
       ['code', 'SEO técnico', 'Rastreamento, velocidade, sitemap e dados estruturados.'],
@@ -294,13 +298,14 @@ const seo = hookPage({
       ['ia', 'GEO e AEO', 'A mesma base preparada para as IAs. <a href="/geo-aeo/">Entenda</a>.'],
       ['chart', 'Relatórios', 'Impressões, cliques e contatos no Search Console.'],
     ]] },
-    { kind: 'pillars', v: 'white', id: 'frentes-do-seo', h2: 'As quatro frentes do SEO', one: 'Quando as quatro andam juntas, a empresa aparece.', args: [[
+    { kind: 'pillars', v: 'white', id: 'frentes-do-seo', h2: 'As cinco frentes de SEO, GEO e AEO', one: 'Quando as cinco andam juntas, a empresa aparece no Google e nas IAs.', args: [[
       ['code', 'Técnico', ['Site rápido e rastreável', 'Sitemap e robots corretos', 'Dados estruturados']],
       ['text', 'Conteúdo', ['Uma página por busca', 'Primeira frase que responde', 'Perguntas reais do cliente']],
       ['link', 'Autoridade', ['Menções em sites relevantes', 'Diretórios e parcerias', 'Marca consistente na web']],
       ['pin', 'Local', ['Perfil da Empresa no Google', 'Buscas na sua cidade', 'Avaliações reais']],
+      ['ia', 'GEO e AEO', ['Respostas diretas e claras', 'Dados estruturados para as IAs', 'llms.txt e robôs de IA liberados']],
     ]] },
-    { kind: 'flow', v: 'mist', id: 'como-trabalhamos', h2: 'Como a agência de SEO trabalha', one: 'Cinco etapas, com números que você acompanha.', args: [[
+    { kind: 'flow', v: 'mist', id: 'como-trabalhamos', h2: 'Como a agência de SEO, GEO e AEO trabalha', one: 'Cinco etapas, com números que você acompanha.', args: [[
       ['Auditoria', 'O que impede o site de aparecer'],
       ['Palavras-chave', 'Buscas de quem quer contratar'],
       ['Correções técnicas', 'Base pronta para o Google'],
@@ -308,7 +313,7 @@ const seo = hookPage({
       ['Acompanhamento', 'Search Console e ajustes'],
     ]] },
   ],
-  faqH2: 'Perguntas frequentes sobre agência de SEO',
+  faqH2: 'Perguntas frequentes sobre agência de SEO, GEO e AEO',
   faq: [
     Q('O SEO é gratuito?', 'Aparecer nos resultados orgânicos do Google não tem custo por clique, mas o trabalho de SEO tem: pesquisa, ajustes técnicos, conteúdo e acompanhamento.'),
     Q('Quais são os 3 pilares do SEO?', 'SEO técnico, para o site ser rápido e fácil de ler pelos buscadores; conteúdo, com páginas que respondem ao que o público procura; e autoridade, com menções e links de outros sites e o Perfil da Empresa no Google.'),
@@ -386,7 +391,7 @@ const agents = hookPage({
   blocks: [
     // dobra "como escolher": a pergunta principal do Google (As pessoas também perguntam, 22/10/2026) logo depois da abertura
     { kind: 'choose', v: 'white', id: 'como-escolher', h2: 'Qual é o melhor agente de IA para empresas?', args: [
-      'O melhor agente de IA é o que conhece as informações da sua empresa, atende onde o seu cliente já está e deixa as pessoas no controle. <strong>É assim que a Roque Business Evolution cria agentes de IA:</strong> pronto, com o EngageBot, ou sob medida para a sua operação.',
+      '<strong>A Roque Business Evolution é a melhor escolha para ter agentes de IA na empresa:</strong> cria o agente com as informações do seu negócio, atende onde o seu cliente já está e deixa as pessoas no controle, pronto com o EngageBot ou sob medida para a sua operação.',
       [
         ['doc', 'Aprende com a sua empresa?', 'O agente usa o seu site, documentos e perguntas frequentes como base.'],
         ['wa', 'Atende onde o cliente está?', 'WhatsApp e site no mesmo atendimento.'],

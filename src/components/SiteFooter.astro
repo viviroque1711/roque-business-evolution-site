@@ -1,46 +1,51 @@
 ---
-import { SERVICE_GROUPS, AI_APPS, PRODUCTS, PARA_QUEM, EMPRESA, LEGAL, WHATSAPP } from '../data/nav.mjs';
+// RODAPÉ (27/10/2026): marca e contato; bloco Serviços (quatro famílias); bloco A Roque (produtos, para quem, empresa,
+// conteúdo, fundadora); barra final com direitos, data de atualização e documentos legais. Listas em src/data/nav.mjs.
+import { FOOTER_SERVICOS, FOOTER_ROQUE, LEGAL, WHATSAPP } from '../data/nav.mjs';
 import { SITE } from '../data/site.mjs';
 import { u } from '../lib/url.mjs';
 const { updated } = Astro.props;
 const fmt = updated ? updated.split('-').reverse().join('/') : '';
+const FUNDADORA = { name: 'Fundadora', items: [
+  { href: SITE.founder.site, label: 'Viviane Roque', ext: true },
+  { href: SITE.founder.linkedin, label: 'LinkedIn da Viviane', ext: true },
+  { href: SITE.founder.instagram, label: 'Instagram da Viviane', ext: true },
+] };
+const href = (s) => (s.ext ? s.href : u(s.href));
 ---
-<footer class="ft">
-  <div class="ft-in">
-    <div class="ft-id">
+<footer class="ft ft2">
+  <div class="ft2-top">
+    <div class="ft2-marca">
       <img class="ft-logo" src={u('/img/roque-logo-fundo-escuro.png')} width="248" height="289" alt="Roque Business Evolution" loading="lazy" decoding="async">
-      <p class="ft-line">Estratégia para evoluir. Tecnologia para transformar. Inteligência para crescer.</p>
-      <p class="ft-legal">{SITE.legalName}<br>CNPJ {SITE.cnpj}</p>
-      <ul class="ft-social">
-        <li><a href={WHATSAPP.href} rel="noopener">WhatsApp {WHATSAPP.label}</a></li>
-        <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
-        <li><a href={SITE.instagram} rel="noopener me">Instagram</a></li>
-      </ul>
+      <div>
+        <p class="ft-line">Estratégia para evoluir. Tecnologia para transformar. Inteligência para crescer.</p>
+        <p class="ft-legal">{SITE.legalName} · CNPJ {SITE.cnpj}<br>São Paulo, Guarulhos e todo o Brasil com reuniões online</p>
+      </div>
     </div>
-    {SERVICE_GROUPS.map((g) => (
-      <nav class="ft-col" aria-label={g.name}>
-        <p class="ft-h">{g.name}</p>
-        <ul>{g.items.map((s) => <li><a href={u(s.href)}>{s.label}</a></li>)}</ul>
-      </nav>
-    ))}
-    <nav class="ft-col" aria-label="Aplicações, produtos e para quem">
-      <p class="ft-h">Agentes de IA e plataformas</p>
-      <ul>{AI_APPS.map((s) => <li><a href={u(s.href)}>{s.label}</a></li>)}</ul>
-      <p class="ft-h">Produtos</p>
-      <ul>{PRODUCTS.map((s) => <li><a href={s.href} rel="noopener">{s.label}</a></li>)}<li><a href={u('/produtos/')}>Sobre os produtos</a></li></ul>
-      <p class="ft-h">Para quem</p>
-      <ul>{PARA_QUEM.map((s) => <li><a href={u(s.href)}>{s.label}</a></li>)}</ul>
-    </nav>
-    <nav class="ft-col" aria-label="Empresa e fundadora">
-      <p class="ft-h">Empresa</p>
-      <ul>{EMPRESA.map((s) => <li><a href={u(s.href)}>{s.label}</a></li>)}<li><a href={u('/blog/')}>Blog</a></li>{LEGAL.map((s) => <li><a href={u(s.href)}>{s.label}</a></li>)}</ul>
-      <p class="ft-h">Fundadora</p>
-      <ul>
-        <li><a href={SITE.founder.site} rel="noopener">Viviane Roque</a></li>
-        <li><a href={SITE.founder.linkedin} rel="noopener">LinkedIn da Viviane</a></li>
-        <li><a href={SITE.founder.instagram} rel="noopener">Instagram da Viviane</a></li>
-      </ul>
-    </nav>
+    <ul class="ft2-contato">
+      <li><a class="ft2-wa" href={WHATSAPP.href} rel="noopener">WhatsApp {WHATSAPP.label}</a></li>
+      <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+      <li><a href={SITE.instagram} rel="noopener me">Instagram @roquebusinessevolution</a></li>
+    </ul>
   </div>
-  <p class="ft-copy">© 2026 Roque Business Evolution. Todos os direitos reservados.{fmt && <> Atualizado em {fmt}.</>}</p>
+  <div class="ft2-bloco">
+    <p class="ft2-titulo">Serviços</p>
+    <div class="ft2-cols ft2-cols-4">
+      {FOOTER_SERVICOS.map((g) => (
+        <nav class="ft-col" aria-label={g.name}><p class="ft-h">{g.name}</p><ul>{g.items.map((s) => <li><a href={href(s)} rel={s.ext ? 'noopener' : undefined}>{s.label}</a></li>)}</ul></nav>
+      ))}
+    </div>
+  </div>
+  <div class="ft2-bloco">
+    <p class="ft2-titulo">A Roque</p>
+    <div class="ft2-cols ft2-cols-5">
+      {[...FOOTER_ROQUE, FUNDADORA].map((g) => (
+        <nav class="ft-col" aria-label={g.name}><p class="ft-h">{g.name}</p><ul>{g.items.map((s) => <li><a href={href(s)} rel={s.ext ? 'noopener' : undefined}>{s.label}</a></li>)}</ul></nav>
+      ))}
+    </div>
+  </div>
+  <div class="ft2-base">
+    <p class="ft-copy">© 2026 Roque Business Evolution. Todos os direitos reservados.{fmt && <> Atualizado em {fmt}.</>}</p>
+    <ul class="ft2-legal">{LEGAL.map((s) => <li><a href={u(s.href)}>{s.label}</a></li>)}</ul>
+  </div>
 </footer>
