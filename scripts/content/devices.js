@@ -49,3 +49,10 @@
 (function () { function solta() { [].slice.call(document.querySelectorAll('.rx img[data-src]')).forEach(function (im) { im.src = im.getAttribute('data-src'); im.removeAttribute('data-src'); }); }
   if (document.readyState === 'complete') setTimeout(solta, 3000); else addEventListener('load', function () { setTimeout(solta, 3000); });
   addEventListener('scroll', solta, { passive: true, once: true }); })();
+
+// imagens das dobras de baixo (data-lz): só quando a dobra chega perto da tela (o lazy nativo baixa cedo demais)
+(function () { var imgs = [].slice.call(document.querySelectorAll('img[data-lz]')); if (!imgs.length) return;
+  function solta(im) { im.src = im.getAttribute('data-lz'); im.removeAttribute('data-lz'); }
+  if (!('IntersectionObserver' in window)) { imgs.forEach(solta); return; }
+  var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { solta(e.target); io.unobserve(e.target); } }); }, { rootMargin: '200px 0px' });
+  imgs.forEach(function (im) { io.observe(im); }); })();
