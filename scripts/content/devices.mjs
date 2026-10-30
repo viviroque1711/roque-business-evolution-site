@@ -35,7 +35,7 @@ const scene = (inner, label, extra = '', more = '') => {
   const t = RX_TELAS[name];
   const telas = order.map((k, i) => (parts[k] !== undefined ? rxTela(k, i, parts[k]) : '')).join('');
   const solo = name === 'celular-em-pe' ? ' solo' : '';
-  return `<div class="dv-scene rx-scene${solo} ${extra}" data-dv data-rx role="img" aria-label="${label}"><div class="rx" data-dev="${name}" style="aspect-ratio:${t.w}/${t.h}">${telas}<img class="rx-moldura" src="/img/aparelhos/aparelho-${name}.webp" alt="" width="${t.w}" height="${t.h}" decoding="async"></div>${rest}${more}<i class="dv-floor" aria-hidden="true"></i></div>`;
+  return `<div class="dv-scene rx-scene${solo} ${extra}" data-dv data-rx data-nosnippet role="img" aria-label="${label}"><div class="rx" data-dev="${name}" style="aspect-ratio:${t.w}/${t.h}">${telas}<img class="rx-moldura" src="/img/aparelhos/aparelho-${name}.webp" alt="" width="${t.w}" height="${t.h}" decoding="async"></div>${rest}${more}<i class="dv-floor" aria-hidden="true"></i></div>`;
 };
 
 // ---------------------------------------------------------------- telas

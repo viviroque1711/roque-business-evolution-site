@@ -129,6 +129,22 @@
       "@type": "Answer",
       "text": "Dá para começar pelo básico. Uma consultoria ajuda a priorizar, a evitar erros técnicos e a acelerar. A Roque Business Evolution faz esse papel de consultoria, ou assume o trabalho inteiro."
      }
+    },
+    {
+     "@type": "Question",
+     "name": "Vale a pena fazer SEO numa pequena empresa?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Vale. O SEO coloca a empresa na frente de quem já está procurando o que ela vende, sem pagar por clique, e o resultado se acumula com o tempo. A Roque Business Evolution faz SEO para pequenas empresas com um plano por escrito e acompanhamento no Search Console."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "SEO também ajuda a aparecer nas IAs?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ajuda. As IAs buscam na internet e preferem páginas claras e bem posicionadas; o GEO e o AEO completam esse trabalho. Veja SEO, GEO e AEO . Por isso a Roque Business Evolution faz SEO, GEO e AEO juntos."
+     }
     }
    ]
   }

@@ -323,6 +323,8 @@ const seo = hookPage({
     Q('Qual é a diferença entre SEO e Google Ads?', 'No Google Ads você paga por clique enquanto o anúncio roda. No SEO você aparece nos resultados orgânicos, sem pagar por clique.'),
     Q('Vocês fazem SEO local?', 'Sim. Configuramos o Perfil da Empresa no Google e trabalhamos as buscas da sua região.'),
     Q('SEO também ajuda a aparecer no ChatGPT?', 'Ajuda. As IAs buscam na internet e preferem páginas claras e bem posicionadas. Veja <a href="/geo-aeo/">GEO e SEO para IA</a>.'),
+    Q('Qual é a diferença entre SEO, GEO e AEO?', 'O SEO faz o site aparecer nos resultados do Google; o GEO prepara o conteúdo para as IAs, como ChatGPT, Gemini e Claude, entenderem e citarem a empresa; o AEO deixa a resposta pronta para a pergunta exata do cliente, logo na primeira frase.'),
+    Q('Vocês fazem SEO para pequenas empresas?', 'Sim. Numa pequena empresa, o começo é descobrir o que o cliente pesquisa, deixar o site claro e rápido no celular, cuidar do Perfil da Empresa no Google e publicar respostas para dúvidas reais. Veja o <a href="/blog/seo-para-pequenas-empresas/">passo a passo de SEO para pequenas empresas</a>.'),
   ],
   ctaH2: 'Vamos fazer a sua empresa ser encontrada', ctaP: 'Conte o que você vende e onde estão os seus clientes.',
 });
@@ -356,7 +358,7 @@ const geo = hookPage({
       ['link', 'Presença fora do site', 'Diretórios e listas que as IAs consultam.'],
       ['chart', 'Monitoramento', 'Citações no Bing e perguntas de teste todo mês.'],
     ]] },
-    { kind: 'pillars', v: 'white', id: 'seo-geo-aeo', h2: 'SEO, GEO e AEO: qual é a diferença', one: 'Três nomes para a mesma base, com focos diferentes.', args: [[
+    { kind: 'pillars', v: 'white', id: 'seo-geo-aeo', h2: 'O que é GEO, o que é AEO e qual é a diferença para o SEO', one: 'GEO prepara o site para as IAs citarem a sua empresa; AEO deixa a resposta pronta para a pergunta exata do cliente; o SEO é a base no Google.', args: [[
       ['seo', 'SEO', ['Resultados do Google e do Bing', 'Base técnica e conteúdo', 'Medido no Search Console']],
       ['ia', 'GEO', ['Respostas geradas por IA', 'ChatGPT, Gemini, Claude e Copilot', 'Clareza e consistência da marca']],
       ['doc', 'AEO', ['Respostas diretas a perguntas', 'Perguntas frequentes e definições', 'Trechos que a busca destaca']],

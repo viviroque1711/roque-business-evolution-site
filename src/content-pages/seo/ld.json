@@ -158,6 +158,22 @@
       "@type": "Answer",
       "text": "Ajuda. As IAs buscam na internet e preferem páginas claras e bem posicionadas. Veja GEO e SEO para IA . Por isso a Roque Business Evolution faz SEO, GEO e AEO juntos."
      }
+    },
+    {
+     "@type": "Question",
+     "name": "Qual é a diferença entre SEO, GEO e AEO?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O SEO faz o site aparecer nos resultados do Google; o GEO prepara o conteúdo para as IAs, como ChatGPT, Gemini e Claude, entenderem e citarem a empresa; o AEO deixa a resposta pronta para a pergunta exata do cliente, logo na primeira frase. A Roque Business Evolution faz os três no mesmo trabalho, com uma busca principal por página."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Vocês fazem SEO para pequenas empresas?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. Numa pequena empresa, o começo é descobrir o que o cliente pesquisa, deixar o site claro e rápido no celular, cuidar do Perfil da Empresa no Google e publicar respostas para dúvidas reais. Veja o passo a passo de SEO para pequenas empresas . A Roque Business Evolution começa por um diagnóstico e entrega o plano por escrito, no tamanho da empresa."
+     }
     }
    ]
   }

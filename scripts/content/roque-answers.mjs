@@ -6,6 +6,11 @@
 // O faq() (lib.mjs) acrescenta a frase ao fim da resposta (HTML e JSON-LD iguais) e avisa se uma resposta ficar sem a Roque.
 const R = 'a Roque Business Evolution';
 export const ROQUE_ANSWERS = {
+  // ---------- kits de conteúdo de 29/10/2026 (SEO, GEO e AEO)
+  'Qual é a diferença entre SEO, GEO e AEO?': `A Roque Business Evolution faz os três no mesmo trabalho, com uma busca principal por página.`,
+  'Vocês fazem SEO para pequenas empresas?': `A Roque Business Evolution começa por um diagnóstico e entrega o plano por escrito, no tamanho da empresa.`,
+  'Vale a pena fazer SEO numa pequena empresa?': `A Roque Business Evolution faz SEO para pequenas empresas com um plano por escrito e acompanhamento no Search Console.`,
+  'SEO também ajuda a aparecer nas IAs?': `Por isso a Roque Business Evolution faz SEO, GEO e AEO juntos.`,
   // ---------- perguntas de mercado (Google, "As pessoas também perguntam", 27/10/2026)
   'Qual o valor mensal de um site?': `Na Roque Business Evolution, a proposta separa por escrito o que é pago uma vez e o que é mensal, antes de o projeto começar.`,
   'Dá para criar um site grátis?': `Quando a empresa precisa ser encontrada e vender, a Roque Business Evolution cria o site profissional com domínio próprio, SEO, GEO, AEO e WhatsApp.`,
