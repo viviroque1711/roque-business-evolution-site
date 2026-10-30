@@ -4,7 +4,7 @@
 //   /desenvolvimento-de-software/    -> software sob medida e sistemas personalizados (+ fábrica de software)
 //   /desenvolvimento-de-aplicativos/ -> desenvolvimento de aplicativos (página nova)
 //   /seo/                            -> agência de SEO (+ empresa de SEO, consultoria SEO, SEO local)
-//   /geo-aeo/                        -> GEO e SEO para IA (+ AEO, como aparecer no ChatGPT)
+//   /geo-aeo/                        -> GEO e SEO para IA (+ AEO, como aparecer no ChatGPT, no Gemini, no Claude e nas outras IAs)
 // Visual: abertura preta com objeto 3D próprio (hook3d.js), listas estruturadas, nada de texto corrido (hook3d.css, classes k3-).
 // Regras de verdade: sem números de resultado, sem clientes, sem promessa de posição no Google nem de citação em IA, sem preços.
 import fs from 'node:fs';
@@ -332,9 +332,9 @@ const seo = hookPage({
 // ================================================================== GEO E SEO PARA IA
 const geo = hookPage({
   key: 'geo', path: '/geo-aeo/', og: 'geo-aeo', crumbName: 'GEO e SEO para IA', mode: 'geo',
-  title: 'GEO e SEO para IA: Como Aparecer no ChatGPT | Roque',
+  title: 'GEO e SEO para IA: Como Aparecer no ChatGPT, Gemini, Claude e Outras IAs | Roque',
   description: 'GEO, AEO e SEO para IA: organizamos o site da sua empresa para ChatGPT, Gemini, Claude e Copilot entenderem e poderem citar você. Peça orçamento.',
-  h1: 'GEO e SEO para IA: como a sua empresa aparece no ChatGPT e no Google',
+  h1: 'GEO e SEO para IA: como a sua empresa aparece no ChatGPT, no Gemini, no Claude e nas outras IAs',
   lead: 'GEO (Generative Engine Optimization) e AEO (Answer Engine Optimization) organizam o site da sua empresa para as inteligências artificiais entenderem o que você faz e poderem citar você nas respostas.',
   jump: 'Ver como funciona', objLabel: 'Esfera de pontos com balões de conversa em órbita; um deles cita a empresa',
   msg: 'Olá! Quero preparar o site da minha empresa para as buscas com IA (GEO e AEO).',

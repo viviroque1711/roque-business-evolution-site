@@ -30,7 +30,7 @@ const PAGES = {
   sobre: ['Sobre a Roque Business Evolution', 'E a fundadora Viviane Roque'],
   contato: ['Fale com a Roque', 'WhatsApp +55 11 97396-7161'],
   'pesquisa-de-palavras-chave': ['Pesquisa de palavras-chave', 'Intenção de busca e mapa por página'],
-  'geo-aeo': ['GEO e SEO para IA', 'Como aparecer no ChatGPT e no Google'],
+  'geo-aeo': ['GEO e SEO para IA', 'Como aparecer no ChatGPT, no Gemini, no Claude e nas outras IAs'],
   'marketing-de-conteudo': ['Marketing de conteúdo', 'Estratégia editorial e autoridade temática'],
   'marketing-digital': ['Marketing digital e mídia paga', 'Google Ads, Meta Ads e funis'],
   branding: ['Branding e identidade digital', 'Posicionamento, identidade e tom de voz'],
