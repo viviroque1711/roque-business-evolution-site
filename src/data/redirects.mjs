@@ -10,7 +10,8 @@ export const REDIRECTS = {
   '/solutions/': '/servicos/',
   '/contact/': '/contato/',
   '/products/aurora-premium/': 'https://aurorapremium.com/',
-  '/products/lumo/': 'https://engagebot.com.br/',
+  // TODO(EngageBot): trocar de volta para https://engagebot.com.br/ quando o site novo do EngageBot for publicado (hoje o engagebot.com.br nao e legivel por robos).
+  '/products/lumo/': '/engagebot/',
   '/products/orchestra-agile/': '/desenvolvimento-de-software/',
   // 22/10/2026: "agência de IA" saiu do posicionamento (quase não é pesquisada); a página virou "agentes de IA para empresas".
   '/agencia-de-ia/': '/agentes-de-ia/',

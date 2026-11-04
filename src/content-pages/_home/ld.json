@@ -19,7 +19,8 @@
     "availableLanguage": "pt-BR"
    },
    "sameAs": [
-    "https://www.instagram.com/roquebusinessevolution/"
+    "https://www.instagram.com/roquebusinessevolution/",
+    "https://viviroque.com.br/"
    ],
    "founder": {
     "@id": "https://viviroque.com.br/#viviane-roque"
@@ -31,6 +32,38 @@
     {
      "@id": "https://roquebusinessevolution.com/engagebot/#app"
     }
+   ]
+  },
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://roquebusinessevolution.com/#servicos-profissionais",
+   "name": "Roque Business Evolution",
+   "url": "https://roquebusinessevolution.com/",
+   "telephone": "+55-11-97396-7161",
+   "email": "contato@roquebusinessevolution.com",
+   "parentOrganization": {
+    "@id": "https://roquebusinessevolution.com/#org"
+   },
+   "areaServed": [
+    {
+     "@type": "City",
+     "name": "Guarulhos"
+    },
+    {
+     "@type": "AdministrativeArea",
+     "name": "São Paulo"
+    },
+    {
+     "@type": "Country",
+     "name": "Brasil"
+    }
+   ],
+   "knowsAbout": [
+    "Desenvolvimento de software",
+    "Criação de sites profissionais",
+    "SEO",
+    "GEO",
+    "AEO"
    ]
   },
   {

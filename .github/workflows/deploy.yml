@@ -30,6 +30,8 @@ jobs:
       - run: npm run build
       - name: Checa duplicidade de dados estruturados no HTML gerado
         run: node scripts/ld-count.mjs
+      - name: "Auditoria lida como robô (home: 1 H1, sem domínio fictício, bloco único, JSON-LD válido)"
+        run: node scripts/audit-robo.mjs dist
       - name: Checa que os robôs de busca e de IA entram em todo o site (só em produção)
         if: env.SITE_ENV == 'production'
         run: node scripts/check-robots.mjs dist
