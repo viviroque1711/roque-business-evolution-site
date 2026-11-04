@@ -11,9 +11,10 @@ export const p = (t) => `<p class="read">${t}</p>`;
 export const group = (h3, inner) => `<div class="group"><h3>${esc(h3)}</h3>${inner}</div>`;
 export const note = (t) => `<p class="note">${t}</p>`;
 
-export const ENGAGEBOT = 'https://engagebot.com.br/';
+// TODO(EngageBot): trocar de volta para https://engagebot.com.br/ quando o site novo do EngageBot for publicado (hoje o engagebot.com.br nao e legivel por robos).
+export const ENGAGEBOT = '/engagebot/';
 export const AURORA = 'https://aurorapremium.com/';
-export const aEngage = (label = 'EngageBot') => `<a href="${ENGAGEBOT}" rel="noopener">${label}</a>`;
+export const aEngage = (label = 'EngageBot') => `<a href="${ENGAGEBOT}">${label}</a>`;
 export const aAurora = (label = 'Aurora Premium') => `<a href="${AURORA}" rel="noopener">${label}</a>`;
 
 // ---- FAQ em grupos: vários <h2> temáticos, UM FAQPage com o mesmo texto das perguntas visíveis

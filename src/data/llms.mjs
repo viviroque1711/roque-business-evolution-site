@@ -2,7 +2,7 @@
 export const LLMS_INTRO = {
   title: 'Roque Business Evolution',
   summary: 'Roque Business Evolution é uma empresa de transformação digital: criação de sites, desenvolvimento de site profissional, empresa de desenvolvimento de software e de sistemas personalizados, SEO, GEO e AEO, além de agentes de IA, automação, CRM e dados. Empresa: Roque Business Evolution Serviços Ltda., CNPJ 47.308.584/0001-20. Fundadora: Viviane Roque.',
-  about: 'Contato pelo WhatsApp +55 11 97396-7161 ou contato@roquebusinessevolution.com. Produtos: Aurora Premium (https://aurorapremium.com/), sistema de agendamento e gestão para salões, barbearias, clínicas, spas e pet shops, e EngageBot (https://engagebot.com.br/), atendimento com IA no WhatsApp e no site. Fundadora: https://viviroque.com.br/. Não prometemos posição no Google nem citação em respostas de IA.',
+  about: 'Contato pelo WhatsApp +55 11 97396-7161 ou contato@roquebusinessevolution.com. Produtos: Aurora Premium (https://aurorapremium.com/), sistema de agendamento e gestão para salões, barbearias, clínicas, spas e pet shops, e EngageBot (https://roquebusinessevolution.com/engagebot/), atendimento com IA no WhatsApp e no site. Fundadora: https://viviroque.com.br/. Não prometemos posição no Google nem citação em respostas de IA.',
 };
 export const GROUPS = ['Serviços de estratégia e transformação', 'Presença digital, SEO e conteúdo', 'Aquisição, vendas e relacionamento', 'IA, automação, software e dados', 'Para quem, método e contratação', 'Produtos', 'Blog e glossário', 'Empresa e contato'];
 const S = (group, entrega) => ({ group, entrega });
@@ -36,7 +36,7 @@ export const LLMS = {
   '/diagnostico/': S(4, 'Diagnóstico de maturidade digital e de IA: mapeamento, oportunidades e plano de ação.'),
   '/metodologia/': S(4, 'Metodologia de sete fases e indicadores de desempenho por serviço.'),
   '/como-contratar/': S(4, 'Modalidades de contratação: projetos fechados, recorrentes, consultoria e híbridos.'),
-  '/engagebot/': S(5, 'Como o EngageBot funciona: atendimento com IA no WhatsApp e no site (site do produto: engagebot.com.br).'),
+  '/engagebot/': S(5, 'Como o EngageBot funciona: atendimento com IA no WhatsApp e no site (página do produto na Roque; o site próprio do EngageBot entra depois).'),
   '/produtos/': S(5, 'Aurora Premium e EngageBot, os produtos próprios da Roque Business Evolution.'),
   '/blog/': S(6, 'Guias sobre criação de sites, SEO, GEO e AEO, agentes de IA, automação e adoção segura de IA.'),
   '/glossario/': S(6, 'Glossário de termos de IA, SEO, GEO, AEO, automação, CRM, SaaS e transformação digital.'),

@@ -30,7 +30,7 @@ const ia = servicePage({
       '<b>Consulta a bases de conhecimento</b> da própria empresa.',
       '<b>Integração</b> com CRMs, agendas, bancos de dados e APIs.',
     ])}` },
-    { id: 'agentes-whatsapp', h2: 'Agentes de IA para atendimento no WhatsApp e no site', html: `<p class="read">Agentes de IA podem atender clientes no WhatsApp e no webchat, responder dúvidas frequentes e encaminhar a conversa para uma pessoa quando for preciso.</p><p class="read">Para quem quer começar por aqui, a Roque Business Evolution tem o <a href="https://engagebot.com.br/" rel="noopener">EngageBot</a>, atendimento com inteligência artificial no WhatsApp e no site.</p>${li([
+    { id: 'agentes-whatsapp', h2: 'Agentes de IA para atendimento no WhatsApp e no site', html: `<p class="read">Agentes de IA podem atender clientes no WhatsApp e no webchat, responder dúvidas frequentes e encaminhar a conversa para uma pessoa quando for preciso.</p><p class="read">Para quem quer começar por aqui, a Roque Business Evolution tem o <a href="/engagebot/">EngageBot</a>, atendimento com inteligência artificial no WhatsApp e no site.</p>${li([
       'Recuperação de contatos e acompanhamento comercial.',
       'Encaminhamento para atendentes humanos.',
       'Memória de conversa e recuperação de informações do contexto.',
@@ -51,11 +51,11 @@ const ia = servicePage({
   faq: [
     { q: 'O que faz uma agência de IA?', a: '<p>Uma agência de IA projeta, implanta e acompanha agentes de inteligência artificial e automações que executam tarefas de atendimento, vendas e operação dentro das regras da empresa.</p>' },
     { q: 'Um agente de IA substitui a minha equipe?', a: '<p>Não. O agente cuida das tarefas repetitivas e das dúvidas frequentes, e a conversa é encaminhada para uma pessoa quando o caso pede atenção humana.</p>' },
-    { q: 'A agência de IA atende pelo WhatsApp?', a: '<p>Sim. O atendimento automatizado pode funcionar no WhatsApp e no webchat. Conheça o <a href="https://engagebot.com.br/" rel="noopener">EngageBot</a>, atendimento com IA da Roque Business Evolution.</p>' },
+    { q: 'A agência de IA atende pelo WhatsApp?', a: '<p>Sim. O atendimento automatizado pode funcionar no WhatsApp e no webchat. Conheça o <a href="/engagebot/">EngageBot</a>, atendimento com IA da Roque Business Evolution.</p>' },
     { q: 'É seguro usar IA com os dados dos meus clientes?', a: '<p>Depende de como o projeto é desenhado. Definimos permissões, limites de execução, controle de acesso e regras de aprovação humana, e orientamos sobre proteção de dados e LGPD conforme o escopo. Veja a página de <a href="/transformacao-digital/">transformação digital</a>.</p>' },
     { q: 'Quanto custa contratar uma agência de IA?', a: '<p>Depende do escopo. A proposta separa implantação, mensalidade, ferramentas de terceiros e suporte. Fale pelo WhatsApp para receber um diagnóstico do seu caso.</p>' },
   ],
-  related: [['https://engagebot.com.br/', 'EngageBot'], ['/desenvolvimento-de-software/', 'Desenvolvimento de software'], ['/transformacao-digital/', 'Transformação digital'], ['/seo/', 'SEO e busca com IA']],
+  related: [['/engagebot/', 'EngageBot'], ['/desenvolvimento-de-software/', 'Desenvolvimento de software'], ['/transformacao-digital/', 'Transformação digital'], ['/seo/', 'SEO e busca com IA']],
   ctaH2: 'Vamos conversar sobre a agência de IA para a sua empresa', ctaP: 'Conte o que você quer automatizar ou melhorar no atendimento. A Roque Business Evolution responde pelo WhatsApp.',
 });
 
@@ -157,7 +157,7 @@ const soft = servicePage({
       ['Implantação e documentação', 'Colocamos em produção, com documentação técnica e capacitação.'],
       ['Monitoramento e evolução', 'Acompanhamos, corrigimos e evoluímos o software depois da entrada em produção.'],
     ])}<p class="note">Escopo, propriedade intelectual, infraestrutura, suporte, manutenção e níveis de serviço são formalizados em cada contrato.</p>` },
-    { id: 'produtos-proprios', h2: 'Desenvolvimento de software próprio: o que a Roque Business Evolution também opera', html: `<p class="read">A Roque Business Evolution desenvolve e opera os próprios produtos: o <a href="https://aurorapremium.com/">Aurora Premium</a>, sistema de agendamento e gestão, e o <a href="https://engagebot.com.br/" rel="noopener">EngageBot</a>, atendimento com IA. Eles mostram o tipo de plataforma que a equipe sabe construir e manter.</p>` },
+    { id: 'produtos-proprios', h2: 'Desenvolvimento de software próprio: o que a Roque Business Evolution também opera', html: `<p class="read">A Roque Business Evolution desenvolve e opera os próprios produtos: o <a href="https://aurorapremium.com/">Aurora Premium</a>, sistema de agendamento e gestão, e o <a href="/engagebot/">EngageBot</a>, atendimento com IA. Eles mostram o tipo de plataforma que a equipe sabe construir e manter.</p>` },
   ],
   faq: [
     { q: 'O que é desenvolvimento de software sob medida?', a: '<p>É criar um sistema pensado para o processo e para os dados de uma empresa específica, em vez de adaptar uma ferramenta pronta.</p>' },
@@ -181,16 +181,16 @@ const saas = servicePage({
   serviceDescription: 'Plataformas SaaS e sistemas multiempresa com autenticação, autorização, segregação de dados, integrações e evolução contínua.',
   sections: [
     { id: 'o-que-e-saas', h2: 'O que é desenvolvimento de SaaS e plataforma multiempresa', html: `<p class="read">SaaS (software como serviço) é um sistema usado pela internet, em que cada empresa cliente acessa a sua conta sem instalar nada. Em uma plataforma multiempresa, os dados de cada cliente ficam separados dos demais.</p>${li(['Contas de empresas com dados segregados.', 'Autenticação e autorização por perfil de usuário.', 'Portais de clientes e áreas administrativas.', 'Integração com APIs de terceiros.', 'Dashboards para o cliente e para quem opera a plataforma.'])}` },
-    { id: 'produtos', h2: 'Plataformas SaaS que a Roque Business Evolution cria e opera', html: `${li(['<b><a href="https://aurorapremium.com/">Aurora Premium</a>.</b> Sistema de agendamento e gestão para salões, barbearias, clínicas, spas e pet shops, lançado em 2025.', '<b><a href="https://engagebot.com.br/" rel="noopener">EngageBot</a>.</b> Atendimento com inteligência artificial no WhatsApp e no site.'])}<p class="read">Operar os próprios produtos dá à equipe a experiência de manter uma plataforma no ar, corrigir, medir e evoluir.</p>` },
+    { id: 'produtos', h2: 'Plataformas SaaS que a Roque Business Evolution cria e opera', html: `${li(['<b><a href="https://aurorapremium.com/">Aurora Premium</a>.</b> Sistema de agendamento e gestão para salões, barbearias, clínicas, spas e pet shops, lançado em 2025.', '<b><a href="/engagebot/">EngageBot</a>.</b> Atendimento com inteligência artificial no WhatsApp e no site.'])}<p class="read">Operar os próprios produtos dá à equipe a experiência de manter uma plataforma no ar, corrigir, medir e evoluir.</p>` },
     { id: 'como-comecar', h2: 'Como começar o desenvolvimento de uma plataforma SaaS', html: `<p class="read">A forma mais segura de começar um SaaS é validar a ideia com um MVP e crescer por etapas.</p>${steps([['Diagnóstico', 'Entendemos o problema, o público e o modelo de negócio.'], ['MVP', 'Construímos a primeira versão para validar com clientes reais.'], ['Evolução', 'Adicionamos recursos e integrações conforme os dados de uso.'], ['Operação', 'Monitoramos, corrigimos e damos suporte conforme o contrato.']])}` },
   ],
   faq: [
     { q: 'O que é SaaS?', a: '<p>SaaS é a sigla em inglês para software como serviço: um sistema que o cliente usa pela internet, sem instalar, normalmente por assinatura.</p>' },
     { q: 'O que é um sistema multiempresa?', a: '<p>É uma plataforma única usada por várias empresas, com os dados de cada uma separados e protegidos dos demais.</p>' },
-    { q: 'A Roque Business Evolution já criou plataformas SaaS?', a: '<p>Sim. Desenvolve e opera o <a href="https://aurorapremium.com/">Aurora Premium</a> e o <a href="https://engagebot.com.br/" rel="noopener">EngageBot</a>.</p>' },
+    { q: 'A Roque Business Evolution já criou plataformas SaaS?', a: '<p>Sim. Desenvolve e opera o <a href="https://aurorapremium.com/">Aurora Premium</a> e o <a href="/engagebot/">EngageBot</a>.</p>' },
     { q: 'Posso começar com um MVP?', a: '<p>Sim. Começar por um MVP reduz risco e investimento e permite validar a ideia antes de crescer.</p>' },
   ],
-  related: [['/desenvolvimento-de-software/', 'Desenvolvimento de software'], ['https://engagebot.com.br/', 'EngageBot'], ['/agentes-de-ia/', 'Agentes de IA para empresas'], ['/servicos/', 'Todos os serviços']],
+  related: [['/desenvolvimento-de-software/', 'Desenvolvimento de software'], ['/engagebot/', 'EngageBot'], ['/agentes-de-ia/', 'Agentes de IA para empresas'], ['/servicos/', 'Todos os serviços']],
   ctaH2: 'Vamos desenvolver a sua plataforma SaaS', ctaP: 'Conte a ideia e o público. A Roque Business Evolution responde pelo WhatsApp.',
 });
 
@@ -340,7 +340,7 @@ const sobreFaq = faq([
   { q: 'Quem é a Roque Business Evolution?', a: '<p>A Roque Business Evolution é uma empresa de consultoria, tecnologia e transformação digital fundada por Viviane Roque. Seu nome empresarial é Roque Business Evolution Serviços Ltda.</p>' },
   { q: 'Quem fundou a Roque Business Evolution?', a: '<p>A fundadora é Viviane Roque, que trabalha com tecnologia e gestão de operações desde 1998. Conheça o <a href="https://viviroque.com.br/">site de Viviane Roque</a>.</p>' },
   { q: 'Quais são a missão e a visão da empresa?', a: '<p>A missão é acelerar a evolução de empresas com inteligência artificial, tecnologia e métodos de gestão. A visão é ser referência em soluções integradas de IA e transformação digital para empresas que crescem de forma estruturada, sustentável e orientada por dados.</p>' },
-  { q: 'Que produtos a Roque Business Evolution mantém?', a: '<p>O <a href="https://aurorapremium.com/">Aurora Premium</a>, sistema de agendamento e gestão lançado em 2025, e o <a href="https://engagebot.com.br/" rel="noopener">EngageBot</a>, atendimento com IA.</p>' },
+  { q: 'Que produtos a Roque Business Evolution mantém?', a: '<p>O <a href="https://aurorapremium.com/">Aurora Premium</a>, sistema de agendamento e gestão lançado em 2025, e o <a href="/engagebot/">EngageBot</a>, atendimento com IA.</p>' },
   { q: 'Como falar com a Roque Business Evolution?', a: `<p>Pelo WhatsApp <a href="${wa(SITE.wa.text)}" rel="noopener">+55 11 97396-7161</a> ou pelo e-mail <a href="mailto:${SITE.email}">${SITE.email}</a>.</p>` },
 ], { pagePath: '/sobre/' });
 const sobre = {
@@ -358,7 +358,7 @@ const sobre = {
 <p>Passou pela Ernst & Young e pela NEC, onde atuou em telecomunicações e novas tecnologias, no PMO da Arena Fonte Nova, para a Copa de 2014, e como advisor na Arena Pernambuco. Também trabalhou em manufatura, nos lançamentos de Google e Apple e no desenvolvimento de sistemas para municípios.</p>
 <p>Essa experiência está na origem da Roque Business Evolution: levar tecnologia, inteligência e transformação digital ao pequeno e médio empreendedor, gerando emprego e prosperidade. Conheça o <a href="https://viviroque.com.br/">site de Viviane Roque</a>.</p>
 </div></div></div></section>
-<section class="sec white" id="produtos" aria-labelledby="prod-h"><div class="wrap"><h2 id="prod-h">Produtos da Roque Business Evolution</h2>${li(['<b><a href="https://aurorapremium.com/">Aurora Premium</a>.</b> Sistema de agendamento e gestão para salões, barbearias, clínicas, spas e pet shops, lançado em 2025 e desenvolvido pela Roque Business Evolution.', '<b><a href="https://engagebot.com.br/" rel="noopener">EngageBot</a>.</b> Atendimento com inteligência artificial no WhatsApp e no site.'])}</div></section>
+<section class="sec white" id="produtos" aria-labelledby="prod-h"><div class="wrap"><h2 id="prod-h">Produtos da Roque Business Evolution</h2>${li(['<b><a href="https://aurorapremium.com/">Aurora Premium</a>.</b> Sistema de agendamento e gestão para salões, barbearias, clínicas, spas e pet shops, lançado em 2025 e desenvolvido pela Roque Business Evolution.', '<b><a href="/engagebot/">EngageBot</a>.</b> Atendimento com inteligência artificial no WhatsApp e no site.'])}</div></section>
 <section class="sec mist" id="empresa" aria-labelledby="emp-h"><div class="wrap"><h2 id="emp-h">Roque Business Evolution: empresa responsável pelo site</h2><p class="read">${esc(SITE.legalName)}, CNPJ ${SITE.cnpj}, nome fantasia Roque Business Evolution. E-mail <a href="mailto:${SITE.email}">${SITE.email}</a>.</p></div></section>
 ${sobreFaq.html}
 ${finalCta('Vamos conversar sobre a sua empresa', 'Conte o seu momento. A Roque Business Evolution responde pelo WhatsApp.', 'Olá! Quero conversar com a Roque Business Evolution.')}`,

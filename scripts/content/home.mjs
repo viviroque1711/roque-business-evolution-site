@@ -69,6 +69,25 @@ const homeFaq = faq([
 // (software com as áreas conectadas, sites, aplicativos, IA), EngageBot e o FAQ só da home. FAQ do JSON-LD = FAQ visível.
 const V7 = (f) => read('home-v7/' + f);
 const HOME_FAQ = JSON.parse(V7('faq.json'));
+// Perfis da Roque na home (Instagram e o site da fundadora). TODO(LinkedIn): acrescentar a URL da PÁGINA da empresa no
+// LinkedIn quando a Viviane passar o endereço exato (não inventar).
+const HOME_SAMEAS = [SITE.instagram, SITE.founder.site];
+// Área atendida da Roque (sem endereço: o endereço comercial ainda não foi confirmado). Mesmo nome e telefone da Organization.
+const ProfessionalService = {
+  '@type': 'ProfessionalService',
+  '@id': SITE.url + '/#servicos-profissionais',
+  name: 'Roque Business Evolution',
+  url: SITE.url + '/',
+  telephone: '+55-11-97396-7161',
+  email: SITE.email,
+  parentOrganization: { '@id': SITE.url + '/#org' },
+  areaServed: [
+    { '@type': 'City', name: 'Guarulhos' },
+    { '@type': 'AdministrativeArea', name: 'São Paulo' },
+    { '@type': 'Country', name: 'Brasil' },
+  ],
+  knowsAbout: ['Desenvolvimento de software', 'Criação de sites profissionais', 'SEO', 'GEO', 'AEO'],
+};
 export const home = {
   path: '/', og: 'home',
   title: 'Empresa de Desenvolvimento de Software e Criação de Sites | Roque',
@@ -77,7 +96,7 @@ export const home = {
   css: V7('home.css'),
   js: V7('home.js'),
   body: V7('body.html'),
-  get graph() { return [org(), website(), webpage('/', 'Roque Business Evolution: empresa de desenvolvimento de software e criação de sites'), { '@type': 'FAQPage', '@id': pageUrl('/') + '#faq', mainEntity: HOME_FAQ }]; },
+  get graph() { return [{ ...org(), sameAs: HOME_SAMEAS }, ProfessionalService, website(), webpage('/', 'Roque Business Evolution: empresa de desenvolvimento de software e criação de sites'), { '@type': 'FAQPage', '@id': pageUrl('/') + '#faq', mainEntity: HOME_FAQ }]; },
 };
 
 const FASES_HOME = [['Diagnóstico', 'Negócio, público e processos.'], ['Pesquisa e estratégia', 'Mercado e oportunidades.'], ['Arquitetura', 'Escopo e integrações.'], ['Implementação', 'Construção e conteúdo.'], ['Testes', 'Validação e aprovação.'], ['Publicação', 'Produção e operação.'], ['Evolução', 'Indicadores e melhorias.']];

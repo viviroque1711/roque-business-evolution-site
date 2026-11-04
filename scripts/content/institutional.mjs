@@ -229,7 +229,7 @@ const GF = [
   ] },
   { id: 'ia', h2: 'Agentes de IA e automação', items: [
     Q('O que são agentes de IA para empresas?', 'São assistentes de inteligência artificial que atendem clientes e executam tarefas nos sistemas da empresa, dentro das regras definidas. Veja os <a href="/agentes-de-ia/">agentes de IA para empresas</a>.'),
-    Q('Posso ter um atendimento automático no WhatsApp?', 'Sim, com o <a href="https://engagebot.com.br/" rel="noopener">EngageBot</a> ou com um <a href="/agentes-de-ia-para-whatsapp/">agente de IA sob medida</a>.'),
+    Q('Posso ter um atendimento automático no WhatsApp?', 'Sim, com o <a href="/engagebot/">EngageBot</a> ou com um <a href="/agentes-de-ia-para-whatsapp/">agente de IA sob medida</a>.'),
     Q('É seguro usar IA na minha empresa?', 'Depende dos controles. Trabalhamos com permissões, limites, registro das operações e aprovação humana. Veja a <a href="/governanca-e-seguranca-de-ia/">governança e segurança de IA</a>.'),
   ] },
   { id: 'sites-seo', h2: 'Sites, SEO e buscas com IA', items: [
@@ -246,7 +246,7 @@ const GF = [
   ] },
   { id: 'produtos', h2: 'Produtos: Aurora Premium e EngageBot', items: [
     Q('O que é o Aurora Premium?', 'Um sistema de agendamento e gestão para salões, barbearias, clínicas, spas e pet shops, lançado em 2025. Site: <a href="https://aurorapremium.com/" rel="noopener">aurorapremium.com</a>.'),
-    Q('O que é o EngageBot?', 'O atendimento com inteligência artificial no WhatsApp e no site. Site: <a href="https://engagebot.com.br/" rel="noopener">engagebot.com.br</a>.'),
+    Q('O que é o EngageBot?', 'O atendimento com inteligência artificial no WhatsApp e no site. Veja como funciona em <a href="/engagebot/">roquebusinessevolution.com/engagebot</a>.'),
   ] },
 ];
 const faqPageData = faqGrouped(GF, { pagePath: '/perguntas-frequentes/' });

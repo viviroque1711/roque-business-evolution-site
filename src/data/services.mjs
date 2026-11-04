@@ -53,5 +53,6 @@ export const AI_APPS = [
 // Produtos (links externos: o EngageBot e o Aurora Premium têm site próprio)
 export const PRODUCTS = [
   { href: 'https://aurorapremium.com/', label: 'Aurora Premium', short: 'Sistema de agendamento e gestão para negócios de serviço.', external: true },
-  { href: 'https://engagebot.com.br/', label: 'EngageBot', short: 'Atendimento com IA no WhatsApp e no site.', external: true },
+  // TODO(EngageBot): trocar de volta para https://engagebot.com.br/ quando o site novo do EngageBot for publicado (hoje o engagebot.com.br nao e legivel por robos).
+  { href: '/engagebot/', label: 'EngageBot', short: 'Atendimento com IA no WhatsApp e no site.' },
 ];
