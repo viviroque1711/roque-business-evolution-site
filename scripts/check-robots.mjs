@@ -71,7 +71,10 @@ if (!live) {
     const probs = [];
     if (/noindex|nofollow|none/i.test(robotsMeta)) probs.push('meta robots "' + robotsMeta + '"');
     if (canon !== u) probs.push('canonical ' + canon);
-    if (/data-nosnippet|nosnippet/i.test(h)) probs.push('nosnippet');
+    // nosnippet de PÁGINA INTEIRA (meta robots/googlebot) esconde a página dos resultados e das respostas de IA: barrado.
+    // O atributo data-nosnippet é diferente: só tira UM trecho (ex.: o card "Simulação" da home, que não é conteúdo real) e é o uso
+    // recomendado pelo Google. Por isso só a meta de página entra aqui (auditoria de 04/11/2026).
+    if (/<meta[^>]+name="(?:robots|googlebot)"[^>]*content="[^"]*nosnippet/i.test(h)) probs.push('meta robots com nosnippet (página inteira)');
     probs.length ? bad(p + ' — ' + probs.join('; ')) : semProblema++;
   }
   (semProblema === urls.length ? ok : bad)(`${semProblema}/${urls.length} páginas do sitemap: indexáveis, sem noindex, canonical = próprio endereço`);
