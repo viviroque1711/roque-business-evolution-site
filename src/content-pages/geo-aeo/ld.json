@@ -47,7 +47,7 @@
    "@type": "WebPage",
    "@id": "https://roquebusinessevolution.com/geo-aeo/#page",
    "url": "https://roquebusinessevolution.com/geo-aeo/",
-   "name": "GEO e SEO para IA: Como Aparecer no ChatGPT, Gemini, Claude e Outras IAs",
+   "name": "GEO e SEO para IA: Como Aparecer nas Respostas das IAs",
    "inLanguage": "pt-BR",
    "isPartOf": {
     "@id": "https://roquebusinessevolution.com/#website"
@@ -133,6 +133,14 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Não. Ninguém controla as respostas das IAs. O trabalho aumenta as chances e é acompanhado mês a mês. A Roque Business Evolution acompanha esse resultado com você todo mês."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como saber se a minha empresa aparece nas respostas das IAs?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Faça as perguntas que o seu cliente faria, pela necessidade e não pelo nome da empresa, em várias IAs, como ChatGPT, Gemini, Claude, Copilot e Perplexity. Anote quem aparece e quais sites são citados como fonte, e repita todo mês com a mesma lista de perguntas. O relatório de citações em IA do Bing Webmaster Tools e as visitas que chegam das IAs no Analytics completam a leitura. A Roque Business Evolution faz esse teste na auditoria de GEO e o repete todo mês nos projetos."
      }
     },
     {

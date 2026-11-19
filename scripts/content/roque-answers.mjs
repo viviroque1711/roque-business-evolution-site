@@ -99,6 +99,7 @@ export const ROQUE_ANSWERS = {
   'Vocês ajudam a aparecer no Google Maps em Guarulhos?': `A Roque Business Evolution trabalha site e perfil juntos, com relatórios para você acompanhar.`,
   'Vocês atendem também em São Paulo e em outras cidades?': `A Roque Business Evolution segue o mesmo método em qualquer cidade.`,
   // ---------- criação de sites
+  'Por que os orçamentos de criação de site variam tanto?': `Na Roque Business Evolution, a proposta chega por escrito com esses seis itens discriminados e o prazo de cada etapa.`,
   'Quanto tempo leva para criar um site profissional?': `Na Roque Business Evolution, o prazo vem por escrito na proposta e você aprova cada etapa.`,
   'O site já sai pronto para aparecer no Google?': `É assim que a Roque Business Evolution entrega todo site, e o próprio site da Roque foi feito desse jeito.`,
   'Vocês fazem criação de sites com SEO?': `A Roque Business Evolution entrega SEO, GEO e AEO desde o primeiro dia, não como serviço à parte.`,
