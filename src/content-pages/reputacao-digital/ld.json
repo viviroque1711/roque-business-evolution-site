@@ -113,6 +113,14 @@
     },
     {
      "@type": "Question",
+     "name": "Como responder uma avaliação negativa no Google?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Responda rápido, com calma e em público: agradeça, cite o problema sem discutir, diga o que a empresa fez ou vai fazer e ofereça um canal direto para resolver. Não ofereça vantagem em troca de mudar a nota. A resposta é lida por quem pesquisa a empresa depois, e uma resposta cuidadosa mostra como você trata os clientes. A Roque Business Evolution monta com você o modelo de resposta e o fluxo para cada avaliação ser respondida no prazo."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Vocês respondem avaliações por nós?",
      "acceptedAnswer": {
       "@type": "Answer",

@@ -121,6 +121,14 @@
     },
     {
      "@type": "Question",
+     "name": "Quando vale a pena fazer software sob medida?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Quando o processo é o diferencial da sua empresa, quando a equipe passa dados de um sistema para outro em planilhas ou quando cada área trabalha com um número diferente. Se o processo é padrão, um sistema pronto costuma bastar. Na dúvida, um MVP testa a ideia com usuários reais antes de investir no sistema completo. A Roque Business Evolution faz esse diagnóstico com você antes de propor qualquer desenvolvimento."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "O que é um MVP?",
      "acceptedAnswer": {
       "@type": "Answer",

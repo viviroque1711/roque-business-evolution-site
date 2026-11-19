@@ -137,6 +137,14 @@
     },
     {
      "@type": "Question",
+     "name": "Quanto tempo o SEO leva para dar resultado?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Em geral, de 4 meses a 1 ano, segundo orientação do próprio Google para quem contrata SEO: é o tempo de fazer as melhorias e de o Google ler e avaliar as páginas de novo. O prazo depende da concorrência, do ponto de partida do site e da constância do trabalho, e o avanço aparece antes nas impressões do Search Console do que nos cliques. A Roque Business Evolution mostra esse avanço mês a mês, com os números do Search Console."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Qual é a diferença entre SEO e Google Ads?",
      "acceptedAnswer": {
       "@type": "Answer",

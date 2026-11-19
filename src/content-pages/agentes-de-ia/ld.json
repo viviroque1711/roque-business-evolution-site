@@ -113,6 +113,14 @@
     },
     {
      "@type": "Question",
+     "name": "Agente de IA vale a pena para uma pequena empresa?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Vale quando existe uma tarefa que se repete todo dia, como responder as mesmas perguntas no WhatsApp, qualificar contatos ou marcar horários. Comece por uma só, meça o tempo que ela toma hoje e compare depois. Se as perguntas mudam muito ou o volume é baixo, um bom atendimento humano pode bastar por enquanto. A Roque Business Evolution começa por um agente piloto nessa tarefa e mede o resultado com você."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Como posso criar uma IA para a minha empresa?",
      "acceptedAnswer": {
       "@type": "Answer",

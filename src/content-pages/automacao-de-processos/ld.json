@@ -113,10 +113,26 @@
     },
     {
      "@type": "Question",
+     "name": "Por onde começar a automação de processos numa pequena empresa?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Comece pela tarefa que passa em 4 testes: é repetitiva, é frequente, é previsível e dá para medir tempo e erros antes e depois. Liste as tarefas que se repetem na semana, passe cada uma pelos testes e automatize primeiro a que passar nos quatro. A Roque Business Evolution faz esse mapeamento com você e indica por onde começar."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Automação e inteligência artificial são a mesma coisa?",
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Não. A automação segue regras definidas. A IA acrescenta interpretação de linguagem e decisões mais flexíveis. Os dois podem trabalhar juntos, e a agentes de IA da Roque faz essa combinação."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Preciso trocar meus sistemas para automatizar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Normalmente não. A automação de processos conecta os sistemas que a empresa já usa, como formulário, CRM, planilha e WhatsApp, por meio de integrações, e só faz sentido trocar uma ferramenta quando ela impede a integração. A Roque Business Evolution começa integrando o que você já usa."
      }
     },
     {

@@ -121,6 +121,14 @@
     },
     {
      "@type": "Question",
+     "name": "Preciso de site se já tenho Instagram?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim, se você quer ser encontrado por quem ainda não conhece a sua empresa. O Instagram mostra a empresa para quem já segue você; o site aparece para quem procura no Google pela necessidade e é o que as IAs leem para citar empresas. O perfil pertence à plataforma, e o site é seu. O melhor é usar os dois juntos: o post leva ao site, e o site leva ao WhatsApp. A Roque Business Evolution cria o site com o botão do WhatsApp e os links das suas redes."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Quanto custa a criação de um site profissional?",
      "acceptedAnswer": {
       "@type": "Answer",
