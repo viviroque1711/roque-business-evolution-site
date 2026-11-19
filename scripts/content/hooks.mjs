@@ -332,7 +332,7 @@ const seo = hookPage({
 // ================================================================== GEO E SEO PARA IA
 const geo = hookPage({
   key: 'geo', path: '/geo-aeo/', og: 'geo-aeo', crumbName: 'GEO e SEO para IA', mode: 'geo',
-  title: 'GEO e SEO para IA: Como Aparecer no ChatGPT, Gemini, Claude e Outras IAs | Roque',
+  title: 'GEO e SEO para IA: Como Aparecer nas Respostas das IAs | Roque',
   description: 'GEO, AEO e SEO para IA: organizamos o site da sua empresa para ChatGPT, Gemini, Claude e Copilot entenderem e poderem citar você. Peça orçamento.',
   h1: 'GEO e SEO para IA: como a sua empresa aparece no ChatGPT, no Gemini, no Claude e nas outras IAs',
   lead: 'GEO (Generative Engine Optimization) e AEO (Answer Engine Optimization) organizam o site da sua empresa para as inteligências artificiais entenderem o que você faz e poderem citar você nas respostas.',
@@ -371,6 +371,7 @@ const geo = hookPage({
     Q('O que é AEO?', 'AEO (Answer Engine Optimization) é organizar respostas diretas para as perguntas do seu cliente, no formato que buscadores e assistentes destacam.'),
     Q('Como fazer a minha empresa aparecer no ChatGPT?', 'Com um site claro e bem posicionado nas buscas, respostas diretas, dados consistentes em vários lugares e páginas liberadas para os robôs de IA. É o trabalho de GEO.'),
     Q('Dá para garantir que a minha empresa seja citada pelas IAs?', 'Não. Ninguém controla as respostas das IAs. O trabalho aumenta as chances e é acompanhado mês a mês.'),
+    Q('Como saber se a minha empresa aparece nas respostas das IAs?', 'Faça as perguntas que o seu cliente faria, pela necessidade e não pelo nome da empresa, em várias IAs, como ChatGPT, Gemini, Claude, Copilot e Perplexity. Anote quem aparece e quais sites são citados como fonte, e repita todo mês com a mesma lista de perguntas. O relatório de citações em IA do Bing Webmaster Tools e as visitas que chegam das IAs no Analytics completam a leitura.'),
     Q('Como medir o resultado de GEO?', 'Pelo relatório de citações em IA do Bing Webmaster Tools, por perguntas de teste feitas todo mês às IAs e pelo tráfego que chega de ferramentas de IA.'),
     Q('O que é llms.txt?', 'É um arquivo em texto simples que resume o site para as inteligências artificiais, página por página.'),
   ],

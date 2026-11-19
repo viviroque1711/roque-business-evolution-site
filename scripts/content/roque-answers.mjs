@@ -138,6 +138,7 @@ export const ROQUE_ANSWERS = {
   'O que é AEO?': `A Roque Business Evolution aplica o AEO em cada página, com perguntas e respostas iguais no texto e nos dados estruturados.`,
   'Como fazer a minha empresa aparecer no ChatGPT?': `A Roque Business Evolution faz esse trabalho completo, e o próprio site da Roque segue esse método.`,
   'Dá para garantir que a minha empresa seja citada pelas IAs?': `A Roque Business Evolution acompanha esse resultado com você todo mês.`,
+  'Como saber se a minha empresa aparece nas respostas das IAs?': `A Roque Business Evolution faz esse teste na auditoria de GEO e o repete todo mês nos projetos.`,
   'Como medir o resultado de GEO?': `A Roque Business Evolution entrega esse acompanhamento em relatório mensal.`,
   'O que é llms.txt?': `A Roque Business Evolution cria e mantém o llms.txt nos projetos de GEO, e o site da Roque tem o seu.`,
   // ---------- governança
