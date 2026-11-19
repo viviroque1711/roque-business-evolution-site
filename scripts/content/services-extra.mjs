@@ -183,9 +183,9 @@ export const crm = servicePage({
 
 export const reputacao = servicePage({
   path: '/reputacao-digital/', og: 'reputacao-digital', crumbName: 'Reputação digital',
-  title: 'Reputação Digital e Relacionamento com Clientes | Roque',
-  description: 'Reputação digital: coleta legítima de avaliações, feedback, fidelização e campanhas de reativação de clientes. Roque Business Evolution.',
-  h1: 'Reputação digital e relacionamento com clientes para fortalecer a confiança na sua empresa',
+  title: 'Agência de Reputação Digital e Avaliações no Google | Roque',
+  description: 'Agência de reputação digital: avaliações no Google pedidas e respondidas no prazo, feedback, fidelização e reativação de clientes. Roque.',
+  h1: 'Agência de reputação digital e relacionamento com clientes para fortalecer a confiança na sua empresa',
   lead: 'O trabalho de reputação digital da Roque Business Evolution fortalece a confiança no seu negócio: organiza a coleta legítima de avaliações, acompanha o que dizem sobre a empresa e cria fluxos de relacionamento e fidelização.',
   msg: 'Olá! Quero conversar sobre reputação digital e relacionamento com clientes.',
   serviceName: 'Reputação digital e relacionamento com clientes', serviceType: 'Gestão de reputação digital',
@@ -199,6 +199,8 @@ export const reputacao = servicePage({
     Q('O que é reputação digital?', 'É a imagem da empresa na internet, formada por avaliações, comentários, menções e pelo conteúdo que ela publica.'),
     Q('Como conseguir mais avaliações de forma legítima?', 'Pedindo feedback no momento certo da jornada, de forma simples e sem oferecer vantagens por avaliações positivas. O fluxo de solicitação é desenhado junto com você.'),
     Q('Como responder uma avaliação negativa no Google?', 'Responda rápido, com calma e em público: agradeça, cite o problema sem discutir, diga o que a empresa fez ou vai fazer e ofereça um canal direto para resolver. Não ofereça vantagem em troca de mudar a nota. A resposta é lida por quem pesquisa a empresa depois, e uma resposta cuidadosa mostra como você trata os clientes.'),
+    Q('Em quanto tempo devo responder uma avaliação no Google?', 'Combine um prazo e cumpra: responder todas as avaliações, positivas e negativas, em até 48 horas é um bom ponto de partida. Funciona como um SLA da reputação: a equipe sabe quem responde e até quando, e quem pesquisa a empresa vê que ninguém fica sem retorno.'),
+    Q('Avaliações no Google ajudam a empresa a aparecer nas respostas das IAs?', 'Ajudam a formar a imagem que o Google e as IAs, como ChatGPT, Gemini, Claude, Copilot e Perplexity, encontram sobre a empresa, junto com o site e as outras fontes públicas. Avaliações reais, recentes e respondidas mostram como a empresa atende. Ninguém garante citação numa IA, mas uma reputação cuidada é parte do trabalho de <a href="/geo-aeo/">GEO e AEO</a>.'),
     Q('Vocês respondem avaliações por nós?', 'Podemos automatizar respostas iniciais, sempre com supervisão, e orientar o tom das respostas.'),
     Q('Reputação digital ajuda nas buscas locais?', 'Sim. Avaliações e informações consistentes ajudam a presença local, que faz parte do trabalho de <a href="/seo/">SEO</a>.'),
   ],

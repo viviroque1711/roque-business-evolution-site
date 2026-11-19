@@ -47,7 +47,7 @@
    "@type": "WebPage",
    "@id": "https://roquebusinessevolution.com/reputacao-digital/#page",
    "url": "https://roquebusinessevolution.com/reputacao-digital/",
-   "name": "Reputação Digital e Relacionamento com Clientes",
+   "name": "Agência de Reputação Digital e Avaliações no Google",
    "inLanguage": "pt-BR",
    "isPartOf": {
     "@id": "https://roquebusinessevolution.com/#website"
@@ -117,6 +117,22 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Responda rápido, com calma e em público: agradeça, cite o problema sem discutir, diga o que a empresa fez ou vai fazer e ofereça um canal direto para resolver. Não ofereça vantagem em troca de mudar a nota. A resposta é lida por quem pesquisa a empresa depois, e uma resposta cuidadosa mostra como você trata os clientes. A Roque Business Evolution monta com você o modelo de resposta e o fluxo para cada avaliação ser respondida no prazo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Em quanto tempo devo responder uma avaliação no Google?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Combine um prazo e cumpra: responder todas as avaliações, positivas e negativas, em até 48 horas é um bom ponto de partida. Funciona como um SLA da reputação: a equipe sabe quem responde e até quando, e quem pesquisa a empresa vê que ninguém fica sem retorno. A Roque Business Evolution define esse prazo e o fluxo de resposta com a sua equipe."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Avaliações no Google ajudam a empresa a aparecer nas respostas das IAs?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ajudam a formar a imagem que o Google e as IAs, como ChatGPT, Gemini, Claude, Copilot e Perplexity, encontram sobre a empresa, junto com o site e as outras fontes públicas. Avaliações reais, recentes e respondidas mostram como a empresa atende. Ninguém garante citação numa IA, mas uma reputação cuidada é parte do trabalho de GEO e AEO . A Roque Business Evolution trabalha reputação, SEO, GEO e AEO juntos."
      }
     },
     {

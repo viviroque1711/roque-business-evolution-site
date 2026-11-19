@@ -198,6 +198,8 @@ export const ROQUE_ANSWERS = {
   // ---------- reputação
   'O que é reputação digital?': `A Roque Business Evolution organiza a sua reputação digital com avaliações legítimas e respostas no tom certo.`,
   'Como conseguir mais avaliações de forma legítima?': `A Roque Business Evolution desenha esse fluxo com você.`,
+  'Em quanto tempo devo responder uma avaliação no Google?': `A Roque Business Evolution define esse prazo e o fluxo de resposta com a sua equipe.`,
+  'Avaliações no Google ajudam a empresa a aparecer nas respostas das IAs?': `A Roque Business Evolution trabalha reputação, SEO, GEO e AEO juntos.`,
   'Vocês respondem avaliações por nós?': `A Roque Business Evolution define esse tom com você.`,
   'Reputação digital ajuda nas buscas locais?': `A Roque Business Evolution trabalha reputação e SEO local juntos.`,
   // ---------- SaaS
