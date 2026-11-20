@@ -116,7 +116,15 @@
      "name": "Quanto custa desenvolver um software sob medida?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Depende do escopo, das integrações e do prazo. Peça um orçamento pelo WhatsApp; a proposta chega com etapas, entregas e prazo. Na Roque Business Evolution, a proposta chega depois do diagnóstico, por escrito, e você aprova cada etapa."
+      "text": "O preço de um software sob medida depende de cinco coisas: quantas áreas da empresa entram no sistema, com quais sistemas ele precisa se integrar, quantos perfis de usuário ele tem, se o projeto começa por um MVP ou pelo sistema completo e quem cuida do sistema depois da entrega. Por isso não existe preço de tabela: o valor sai do escopo. Na Roque Business Evolution, a proposta chega depois do diagnóstico, por escrito, e você aprova cada etapa."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Como reduzir o custo de um software sob medida?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Comece por um MVP com as áreas que mais trocam planilha entre si e deixe o resto para as próximas etapas. Antes do orçamento, liste os sistemas que a empresa já usa, para as integrações entrarem no escopo desde o início, e defina quais perfis de usuário precisam entrar agora. A Roque Business Evolution começa os projetos pelo MVP e combina por escrito o que entra em cada etapa."
      }
     },
     {

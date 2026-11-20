@@ -129,6 +129,7 @@ export const ROQUE_ANSWERS = {
   // ---------- software sob medida
   'O que é software sob medida?': `A Roque Business Evolution desenvolve software sob medida, do diagnóstico ao sistema em produção.`,
   'Quanto custa desenvolver um software sob medida?': `Na Roque Business Evolution, a proposta chega depois do diagnóstico, por escrito, e você aprova cada etapa.`,
+  'Como reduzir o custo de um software sob medida?': `A Roque Business Evolution começa os projetos pelo MVP e combina por escrito o que entra em cada etapa.`,
   'O que é um MVP?': `A Roque Business Evolution começa os projetos de software pelo MVP.`,
   'Vocês fazem integração de sistemas?': `A Roque Business Evolution faz a integração como parte do projeto.`,
   'De quem é o software desenvolvido?': `A Roque Business Evolution deixa tudo isso por escrito antes de começar.`,
