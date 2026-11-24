@@ -121,6 +121,14 @@
     },
     {
      "@type": "Question",
+     "name": "Dá para criar o site da empresa com IA?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dá: construtores com IA montam um site simples em minutos e servem para começar. Para o site trazer cliente, cinco decisões continuam com você: o que o site diz sobre o seu serviço, qual busca cada página responde, como as IAs, como ChatGPT, Gemini e Claude, leem a sua empresa (perguntas frequentes, dados organizados e robôs de IA liberados), como a visita vira contato no WhatsApp e de quem é o domínio. A IA é ferramenta; a estratégia é sua. A Roque Business Evolution define essas cinco decisões com você no diagnóstico, antes de criar o site."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Preciso de site se já tenho Instagram?",
      "acceptedAnswer": {
       "@type": "Answer",

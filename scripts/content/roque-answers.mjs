@@ -7,6 +7,7 @@
 const R = 'a Roque Business Evolution';
 export const ROQUE_ANSWERS = {
   'Agente de IA vale a pena para uma pequena empresa?': `A Roque Business Evolution começa por um agente piloto nessa tarefa e mede o resultado com você.`,
+  'Dá para criar o site da empresa com IA?': `A Roque Business Evolution define essas cinco decisões com você no diagnóstico, antes de criar o site.`,
   'Preciso de site se já tenho Instagram?': `A Roque Business Evolution cria o site com o botão do WhatsApp e os links das suas redes.`,
   'Quando vale a pena fazer software sob medida?': `A Roque Business Evolution faz esse diagnóstico com você antes de propor qualquer desenvolvimento.`,
   'Quanto tempo o SEO leva para dar resultado?': `A Roque Business Evolution mostra esse avanço mês a mês, com os números do Search Console.`,
