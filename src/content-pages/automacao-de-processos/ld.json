@@ -121,6 +121,14 @@
     },
     {
      "@type": "Question",
+     "name": "Preciso mapear o processo antes de automatizar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim. Automatizar um processo bagunçado só faz o erro acontecer mais rápido. Antes, desenhe o processo como ele é hoje: quem faz cada etapa, em que ordem e em qual ferramenta. Marque onde o trabalho espera e onde volta para ser refeito, corte o que não precisa existir, dê um responsável a cada etapa e anote quanto tempo leva e quantos erros dá hoje. Com o processo claro e medido, a automação acelera o que funciona e você consegue comparar o antes e o depois. A Roque Business Evolution desenha o processo com você, como ele é hoje, antes de automatizar qualquer etapa."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Automação e inteligência artificial são a mesma coisa?",
      "acceptedAnswer": {
       "@type": "Answer",

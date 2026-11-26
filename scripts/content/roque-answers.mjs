@@ -12,6 +12,7 @@ export const ROQUE_ANSWERS = {
   'Quando vale a pena fazer software sob medida?': `A Roque Business Evolution faz esse diagnóstico com você antes de propor qualquer desenvolvimento.`,
   'Quanto tempo o SEO leva para dar resultado?': `A Roque Business Evolution mostra esse avanço mês a mês, com os números do Search Console.`,
   'Como responder uma avaliação negativa no Google?': `A Roque Business Evolution monta com você o modelo de resposta e o fluxo para cada avaliação ser respondida no prazo.`,
+  'Preciso mapear o processo antes de automatizar?': `A Roque Business Evolution desenha o processo com você, como ele é hoje, antes de automatizar qualquer etapa.`,
   'Por onde começar a automação de processos numa pequena empresa?': `A Roque Business Evolution faz esse mapeamento com você e indica por onde começar.`,
   // ---------- kits de conteúdo de 29/10/2026 (SEO, GEO e AEO)
   'Qual é a diferença entre SEO, GEO e AEO?': `A Roque Business Evolution faz os três no mesmo trabalho, com uma busca principal por página.`,
