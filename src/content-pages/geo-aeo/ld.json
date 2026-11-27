@@ -129,6 +129,14 @@
     },
     {
      "@type": "Question",
+     "name": "Por que as IAs recomendam o concorrente e não a minha empresa?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Porque as IAs indicam quem elas conseguem encontrar, entender e confirmar. Antes de responder, elas pesquisam na internet, leem as páginas que respondem à pergunta com clareza e conferem se as informações se repetem em outros lugares, como o Perfil da Empresa no Google, avaliações, diretórios e listas. Se o site não aparece nessa pesquisa, fala de um jeito vago, tem dados diferentes de um lugar para outro ou bloqueia os robôs das IAs no robots.txt, a resposta cita quem está mais claro. Isso vale para ChatGPT, Gemini, Claude, Copilot e Perplexity. A Roque Business Evolution cuida dessas cinco frentes no projeto de GEO e mede o resultado todo mês."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Dá para garantir que a minha empresa seja citada pelas IAs?",
      "acceptedAnswer": {
       "@type": "Answer",
